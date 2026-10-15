@@ -1,4 +1,8 @@
 (() => {
+  // Resolve every local image from this script's directory. GitHub Pages serves
+  // project sites below /bang/, so page-relative URLs can otherwise escape the
+  // project path when the page is opened without a trailing slash.
+  const APP_BASE = new URL('./', document.currentScript.src);
   const definitions = new Map(window.BANG_SCREENS.map(screen => [screen.id, {...screen,text:window.BANG_DIALOGUES[screen.id]||[]}] ));
   const host = document.querySelector('#reference-screen');
   const stage = document.createElement('div');
@@ -10,7 +14,7 @@
     const element = document.createElement(tag); element.className = className; parent.append(element); return element;
   }
   function image(src, x, y, w, h, parent = stage) {
-    const img = node('img', 'design-image', parent);img.src = src;img.alt = '';img.draggable = false;
+    const img = node('img', 'design-image', parent);img.src = new URL(src, APP_BASE).href;img.alt = '';img.draggable = false;
     Object.assign(img.style, { left:`${x}px`, top:`${y}px`, width:`${w}px`, height:`${h}px` });return img;
   }
   function box(element, data) {Object.assign(element.style,{left:`${data.x}px`,top:`${data.y}px`,width:`${data.w}px`,height:`${data.h}px`});}
@@ -111,7 +115,7 @@
       if(screen.id===33)renderPlayerTable();
       if(screen.speech){for(const bubble of screen.speech){
         const el=node('div','design-speech');box(el,bubble);
-        const art=image('assets/말풍선.png',0,0,bubble.w,bubble.h,el);art.classList.add('design-speech-art');art.setAttribute('aria-hidden','true');
+        const art=image('assets/speech-bubble.png',0,0,bubble.w,bubble.h,el);art.classList.add('design-speech-art');art.setAttribute('aria-hidden','true');
         const copy=node('span','design-speech-copy',el);copy.textContent=bubble.text;
       }}
       window.BangInteractions?.mount(screen,stage);
