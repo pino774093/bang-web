@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <script>document.documentElement.classList.add('bang-fonts-pending');</script>
+  <script src="fonts.js?v=adobe-ready-2"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#c89769">
+  <meta name="description" content="BANG! 보드게임 설명서 홈 화면">
+  <title>BANG! | 보드게임 설명서</title>
+  <link rel="stylesheet" href="styles.css?v=default-dissolve-700ms-1">
+  <link rel="stylesheet" href="screens.css?v=chapter3-role-face-shadow-2">
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><filter id="dark-paper-filter" color-interpolation-filters="sRGB"><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncR type="linear" slope="1" intercept="-.82"/><feFuncG type="linear" slope="1" intercept="-.82"/><feFuncB type="linear" slope="1" intercept="-.82"/></feComponentTransfer></filter></defs></svg>
+  <div id="app">
+  <main id="home" class="home" aria-label="BANG! 보드게임 설명서 홈" data-node-id="5:4">
+    <div class="wood" aria-hidden="true"><img src="assets/wood.png" alt="" width="360" height="540"></div>
+    <img class="paper" src="assets/paper.png" alt="" aria-hidden="true" data-node-id="5:83">
+    <img class="frame" src="assets/frame.png" alt="" aria-hidden="true" data-node-id="5:6">
+    <img class="logo-backing" src="assets/logo-backing-vector.svg" alt="" aria-hidden="true" data-node-id="5:86">
+    <h1 class="logo-slot" data-node-id="5:85"><img class="logo" src="assets/bang-logo.png" alt="BANG!" width="1697" height="927"></h1>
+    <div class="poster-back" aria-hidden="true" data-node-id="5:235"><img src="assets/poster-back.png" alt=""></div>
+    <img class="poster" src="assets/poster.png" alt="WANTED. 총을 든 서부 카우보이의 현상수배 전단. 현상금 10,000달러." data-node-id="5:87">
+    <nav class="menu" aria-label="게임 안내">
+      <div class="menu-row menu-row-rules">
+        <img class="sheriff" src="assets/sheriff.svg" width="67" height="66" alt="" aria-hidden="true" data-node-id="8:311">
+        <button class="menu-button" type="button" id="start-game" data-node-id="8:326"><img src="assets/rules-decoration.svg" alt="" aria-hidden="true" width="222" height="79"><span class="button-label">게임 설명 시작 &gt;</span></button>
+      </div>
+      <div class="menu-row menu-row-cards">
+        <img class="sheriff" src="assets/sheriff.svg" width="67" height="66" alt="" aria-hidden="true" data-node-id="8:308">
+        <button class="menu-button" type="button" aria-disabled="true" data-node-id="5:237"><img src="assets/cards-decoration.svg" alt="" aria-hidden="true" width="222" height="79"><span class="button-label">카드 세부 설명 &gt;</span></button>
+      </div>
+    </nav>
+  </main>
+  <main id="intro" class="intro" aria-label="게임 설명 시작" data-node-id="8:330" hidden inert>
+    <div class="wood" aria-hidden="true"><img src="assets/intro-wood.png" alt="" width="360" height="540"></div>
+    <img class="intro-paper" src="assets/intro-paper.png" alt="" aria-hidden="true" data-node-id="8:360">
+    <img class="frame" src="assets/intro-frame.png" alt="" aria-hidden="true" data-node-id="8:333">
+    <button id="intro-back" class="intro-back" type="button" aria-label="홈으로 돌아가기" data-node-id="8:374"><img src="assets/back-vector.svg" alt="" width="68" height="68" aria-hidden="true"></button>
+    <article class="intro-panel" aria-label="뱅! 게임 소개" data-node-id="8:409">
+      <h1 class="sr-only" id="intro-heading" tabindex="-1">뱅! 게임 소개</h1>
+      <!-- Edit these lines directly; they are visible, selectable HTML text. -->
+      <p class="intro-copy">
+        <span>‘뱅!’은</span>
+        <span>서부 시대를 배경으로 펼쳐지는</span>
+        <span>무법자 무리와</span>
+        <span>그들의 표적인 보안관 사이의</span>
+        <span>총격전 게임입니다.</span>
+      </p>
+      <span class="intro-next-hint">&gt; 클릭!</span>
+    </article>
+  </main>
+  <main id="reference-screen" class="reference-screen" hidden inert></main>
+  </div>
+  <script src="data/dialogues.js?v=game-deck-wording-1" defer></script>
+  <script src="data/screens.js?v=local-flow-1" defer></script>
+  <script src="data/extra-screen.js?v=local-flow-1" defer></script>
+  <script src="data/figma-flow.js?v=role-card-reveal-1" defer></script>
+  <script src="data/cards.js?v=local-flow-1" defer></script>
+  <script src="data/card-descriptions.js?v=base-card-descriptions-1" defer></script>
+  <script src="card-library.js?v=catalog-home-arrow-1" defer></script>
+  <script src="music.js?v=alternating-playlist-continuous-2" defer></script>
+  <script src="screen-renderer.js?v=bang-card-layer-absolute-2" defer></script>
+  <script src="interactions.js?v=remington-sequence-hold-1" defer></script>
+  <script src="app.js?v=chapter2-role-lineup-dissolve-5" defer></script>
+  <script src="sound-effects.js?v=button-and-paper-flip-2" defer></script>
+</body>
+</html>

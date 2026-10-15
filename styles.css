@@ -1,0 +1,131 @@
+:root {
+  color-scheme: light;
+  background: #241a12;
+  --duration-screen: 600ms;
+  --duration-dissolve: 700ms;
+  --duration-card: 500ms;
+  --duration-flip: 700ms;
+  --duration-dialogue: 400ms;
+  --duration-role-entrance: 900ms;
+  --stagger-role-card: 450ms;
+  --ease-natural: ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  :root { --duration-screen: 1ms; --duration-dissolve: 1ms; --duration-dialogue: 1ms; --duration-role-entrance: 1ms; --stagger-role-card: 0ms; }
+}
+/* Keep the first composition hidden until the Adobe webfont finishes loading. */
+html.bang-fonts-pending #app { visibility: hidden; }
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px)
+    env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+/* A fixed composition in Figma. Container units scale all its layers together. */
+.home { position: relative; width: min(100%, 390px); aspect-ratio: 390 / 844; container-type: inline-size; overflow: hidden; background: white; isolation: isolate; }
+.home > img, .wood, .logo-slot, .poster-back, .menu { position: absolute; }
+.home img { display: block; pointer-events: none; user-select: none; }
+.wood { inset: 0; background: #c89769; }
+.wood img { width: 100%; height: 100%; object-fit: cover; opacity: .67; }
+.paper { left: 4.7179487cqw; top: 4.3333333cqw; width: 91.0769231cqw; height: 207.4871795cqw; }
+/* Node exports include the irregular strokes outside their layout bounds. */
+.frame { left: 1.2820513cqw; top: 3.5897436cqw; width: 96.4102564cqw; height: 211.7948718cqw; }
+.logo-backing { left: 6.1538462cqw; top: 13.0769231cqw; width: 88.7179487cqw; height: 55.8974359cqw; }
+.logo-slot { margin: 0; left: 10.7030898cqw; top: 17.9953927cqw; width: 78.0631515cqw; height: 47.1421112cqw; display: grid; place-items: center; }
+.logo { width: 74.8351282cqw; height: 40.8792308cqw; object-fit: cover; transform: rotate(-4.9161076deg); }
+.poster-back { left: 10cqw; top: 56.9230769cqw; width: 78.7179487cqw; height: 108.7179487cqw; border: .2564103cqw solid transparent; }
+.poster-back img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.poster { left: 9.2307692cqw; top: 55.6410256cqw; width: 78.7179487cqw; height: 108.7179487cqw; object-fit: cover; }
+.menu { inset: 0; pointer-events: none; }
+.menu-row { position: absolute; left: 12.5641026cqw; width: 73.3333333cqw; height: 20.2564103cqw; display: flex; align-items: flex-start; }
+.menu-row-rules { top: 164.3589744cqw; }
+.menu-row-cards { top: 184.6153846cqw; }
+.sheriff { flex: none; width: 17.1794872cqw; height: 16.9230769cqw; }
+.menu-button { position: absolute; left: 16.4102564cqw; margin: 0; padding: 0; border: 0; background: transparent; width: 56.9230769cqw; height: 20.2564103cqw; pointer-events: auto; cursor: default; -webkit-tap-highlight-color: transparent; }
+.menu-row-rules .menu-button { top: -1.025641cqw; }
+.menu-row-cards .menu-button { top: .2564103cqw; }
+.menu-button img { width: 56.9230769cqw; height: 20.2564103cqw; }
+.menu-button:focus-visible { outline: .7692308cqw solid #fff; outline-offset: .7692308cqw; }
+/* The isolated frame export has a white matte; multiply preserves its ink over the paper. */
+.frame { mix-blend-mode: multiply; }
+.logo-backing { mix-blend-mode: multiply; }
+/* Keep the sign above the overlapping poster edge as on the canvas. */
+.logo-slot { z-index: 1; }
+
+/* Route container: the home composition above remains unchanged. */
+#app { width: min(100%, 390px); max-width: 390px; min-width: 0; flex: 0 1 390px; }
+#app .home { width: 100%; }
+#app { position: relative; isolation: isolate; }
+#app > .screen-transition-layer { position: absolute; inset: 0 auto auto 0; width: 100%; height: auto; aspect-ratio: 390 / 844; z-index: 10; pointer-events: none; overflow: hidden; }
+[hidden] { display: none !important; }
+.intro { position: relative; width: 100%; aspect-ratio: 390 / 844; container-type: inline-size; overflow: hidden; background: white; isolation: isolate; }
+.intro > img { position: absolute; }
+.intro img { display: block; pointer-events: none; user-select: none; }
+.intro-paper { left: 4.4615385cqw; top: 4.4615385cqw; width: 91.0769231cqw; height: 207.4871795cqw; }
+.intro-back { position: absolute; left: 1.2820513cqw; top: 1.5384615cqw; width: 17.4358974cqw; height: 17.4358974cqw; border: 0; padding: 0; background: transparent; cursor: pointer; }
+.intro-back img { width: 100%; height: 100%; }
+.intro-panel { position: absolute; left: 7.6923077cqw; top: 48.2051282cqw; width: 84.3589744cqw; height: 96.9230769cqw; border-radius: 15.1282051cqw; overflow: hidden; background: #111; }
+.intro-panel > img { width: 100%; height: 100%; }
+.intro-back:focus-visible { outline: 2px solid white; outline-offset: 3px; }
+#start-game { cursor: pointer; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+#app[aria-busy="true"] { pointer-events: none; }
+/* Editable UI typography: Adobe Fonts kit xde7urj. */
+body,button,input,select,textarea {font-family:"omnigothic","Apple SD Gothic Neo","Malgun Gothic",sans-serif;}
+.button-label {
+  position: absolute;
+  left: 28.0205128cqw;
+  top: 9.5692308cqw;
+  transform: translate(-50%, -50%);
+  width: 39.5923077cqw;
+  min-height: 9.7630769cqw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "omnigothic", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  font-size: 4.6153846cqw;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1.2;
+  color: #fff;
+  white-space: nowrap;
+}
+.menu-row-cards .button-label { top: 9.5179487cqw; }
+.intro-copy, .intro-next-hint {
+  position: absolute;
+  margin: 0;
+  font-family: "omnigothic", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.0003;
+  letter-spacing: -.02em;
+  text-align: center;
+}
+.intro-copy {
+  left: 8.7179487cqw;
+  top: 19.7435897cqw;
+  width: 67.6923077cqw;
+  height: 40.2564103cqw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3.5897436cqw;
+  font-size: 4.1025641cqw;
+  color: #fff;
+}
+.intro-copy span { display: block; }
+.intro-next-hint {
+  left: 69.3589744cqw;
+  top: 87.1794872cqw;
+  transform: translate(-50%, -50%);
+  font-size: 3.5897436cqw;
+  color: #aa2e1b;
+  white-space: nowrap;
+}

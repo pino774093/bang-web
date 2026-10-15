@@ -1,0 +1,1031 @@
+[
+  {
+    "figmaId": "47:2539",
+    "screenId": 13,
+    "name": "home",
+    "score": 7.51,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "5:4",
+    "screenId": 14,
+    "name": "home",
+    "score": 68.51,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "35:1451",
+    "screenId": 133,
+    "name": "게임설명시작2",
+    "score": 18.47,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "42:1479",
+    "screenId": 134,
+    "name": "게임설명시작2",
+    "score": 18.96,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "42:1515",
+    "screenId": 135,
+    "name": "게임설명시작2",
+    "score": 18.08,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "42:1535",
+    "screenId": 136,
+    "name": "게임설명시작2",
+    "score": 17.96,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "5:229",
+    "screenId": 137,
+    "name": "게임설명시작2",
+    "score": 6.58,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "8:330",
+    "screenId": 15,
+    "name": "게임설명시작1-1",
+    "score": 0,
+    "method": "unique-name"
+  },
+  {
+    "figmaId": "47:80",
+    "screenId": 16,
+    "name": "게임설명시작1-2-1",
+    "score": 4.7,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:94",
+    "screenId": 17,
+    "name": "게임설명시작1-2-1",
+    "score": 5.49,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "8:398",
+    "screenId": 18,
+    "name": "게임설명시작1-2-1",
+    "score": 4.78,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "8:422",
+    "screenId": 19,
+    "name": "게임설명시작1-2-2",
+    "score": 0,
+    "method": "unique-name"
+  },
+  {
+    "figmaId": "8:435",
+    "screenId": 20,
+    "name": "게임설명시작1-2-3",
+    "score": 0,
+    "method": "unique-name"
+  },
+  {
+    "figmaId": "8:449",
+    "screenId": 21,
+    "name": "게임설명시작1-2-4",
+    "score": 0,
+    "method": "unique-name"
+  },
+  {
+    "figmaId": "8:473",
+    "screenId": 22,
+    "name": "게임설명시작1-2-5",
+    "score": 0,
+    "method": "unique-name"
+  },
+  {
+    "figmaId": "8:489",
+    "screenId": 23,
+    "name": "게임설명시작1-3-1",
+    "score": 0,
+    "method": "unique-name"
+  },
+  {
+    "figmaId": "8:514",
+    "screenId": 24,
+    "name": "게임설명시작1-3-2",
+    "score": 7.2,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "8:501",
+    "screenId": 25,
+    "name": "게임설명시작1-3-2",
+    "score": 6.85,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "8:566",
+    "screenId": 26,
+    "name": "게임설명시작1-3-3",
+    "score": 8.21,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "8:581",
+    "screenId": 27,
+    "name": "게임설명시작1-3-3",
+    "score": 8.23,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "8:540",
+    "screenId": 28,
+    "name": "게임설명시작1-3-3",
+    "score": 8.09,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "8:649",
+    "screenId": 29,
+    "name": "게임설명시작1-3-4",
+    "score": 8.37,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "8:667",
+    "screenId": 30,
+    "name": "게임설명시작1-3-4",
+    "score": 8.46,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "8:685",
+    "screenId": 31,
+    "name": "게임설명시작1-3-4",
+    "score": 8.55,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "8:596",
+    "screenId": 32,
+    "name": "게임설명시작1-3-4",
+    "score": 8.28,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "8:703",
+    "screenId": 33,
+    "name": "게임설명시작1-4-1",
+    "score": 0,
+    "method": "unique-name"
+  },
+  {
+    "figmaId": "30:726",
+    "screenId": 146,
+    "name": "카드 세부 설명1-1",
+    "score": 0,
+    "method": "unique-name"
+  },
+  {
+    "figmaId": "30:931",
+    "screenId": 34,
+    "name": "게임설명시작1-5-1",
+    "score": 0,
+    "method": "unique-name"
+  },
+  {
+    "figmaId": "30:943",
+    "screenId": 35,
+    "name": "게임설명시작1-5-2",
+    "score": 0,
+    "method": "unique-name"
+  },
+  {
+    "figmaId": "30:960",
+    "screenId": 36,
+    "name": "게임설명시작1-5-3",
+    "score": 6.31,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "35:1114",
+    "screenId": 37,
+    "name": "게임설명시작1-5-3",
+    "score": 4.0,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "35:1131",
+    "screenId": 38,
+    "name": "게임설명시작1-5-3",
+    "score": 5.5,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "42:1728",
+    "screenId": 39,
+    "name": "게임설명시작1-5-3",
+    "score": 4.82,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "35:1076",
+    "screenId": 40,
+    "name": "게임설명시작1-5-3",
+    "score": 6.23,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "35:1260",
+    "screenId": 41,
+    "name": "게임설명시작1-5-3",
+    "score": 6.32,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "35:1092",
+    "screenId": 42,
+    "name": "게임설명시작1-5-3",
+    "score": 6.32,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "35:1212",
+    "screenId": 43,
+    "name": "게임설명시작1-5-3",
+    "score": 5.71,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "35:1228",
+    "screenId": 44,
+    "name": "게임설명시작1-5-3",
+    "score": 3.36,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "35:1374",
+    "screenId": 45,
+    "name": "게임설명시작1-5-3",
+    "score": 4.02,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "35:1390",
+    "screenId": 46,
+    "name": "게임설명시작1-5-3",
+    "score": 4.92,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "35:1406",
+    "screenId": 47,
+    "name": "게임설명시작1-5-3",
+    "score": 5.89,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "35:1060",
+    "screenId": 48,
+    "name": "게임설명시작1-5-3",
+    "score": 6.31,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "35:1427",
+    "screenId": 1,
+    "name": "chapter 1",
+    "score": 0,
+    "method": "unique-name"
+  },
+  {
+    "figmaId": "47:519",
+    "screenId": 138,
+    "name": "역할선택로딩",
+    "score": 51.79,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:686",
+    "screenId": 139,
+    "name": "역할선택로딩",
+    "score": 51.79,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:2124",
+    "screenId": 140,
+    "name": "역할선택로딩",
+    "score": 51.79,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:2444",
+    "screenId": 141,
+    "name": "역할선택로딩",
+    "score": 51.79,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "42:1635",
+    "screenId": 142,
+    "name": "역할선택로딩",
+    "score": 0.0,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "42:1644",
+    "screenId": 143,
+    "name": "역할선택로딩",
+    "score": 0.0,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "42:1652",
+    "screenId": 144,
+    "name": "역할선택로딩",
+    "score": 0.0,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "42:1660",
+    "screenId": 145,
+    "name": "역할선택로딩",
+    "score": 0.0,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "42:1695",
+    "screenId": 7,
+    "name": "chapter1",
+    "score": 0.0,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "42:1668",
+    "screenId": 8,
+    "name": "chapter1",
+    "score": 0.0,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "42:1687",
+    "screenId": 2,
+    "name": "chapter 2",
+    "score": 0,
+    "method": "unique-name"
+  },
+  {
+    "figmaId": "42:1946",
+    "screenId": 3,
+    "name": "chapter 3",
+    "score": 0,
+    "method": "unique-name"
+  },
+  {
+    "figmaId": "42:1954",
+    "screenId": 9,
+    "name": "chapter3",
+    "score": 0.0,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "42:1974",
+    "screenId": 10,
+    "name": "chapter3",
+    "score": 0.0,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "42:1991",
+    "screenId": 11,
+    "name": "chapter3",
+    "score": 0.0,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "42:2008",
+    "screenId": 12,
+    "name": "chapter3",
+    "score": 0.0,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "42:1966",
+    "screenId": 4,
+    "name": "chapter 4",
+    "score": 0,
+    "method": "unique-name"
+  },
+  {
+    "figmaId": "42:1983",
+    "screenId": 5,
+    "name": "chapter 5",
+    "score": 0,
+    "method": "unique-name"
+  },
+  {
+    "figmaId": "42:2000",
+    "screenId": 6,
+    "name": "chapter 6",
+    "score": 0,
+    "method": "unique-name"
+  },
+  {
+    "figmaId": "47:540",
+    "screenId": 49,
+    "name": "게임설명시작2-1-1",
+    "score": 8.4,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:580",
+    "screenId": 50,
+    "name": "게임설명시작2-1-1",
+    "score": 8.5,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:1099",
+    "screenId": 51,
+    "name": "게임설명시작2-1-1",
+    "score": 8.5,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:2018",
+    "screenId": 52,
+    "name": "게임설명시작2-1-1",
+    "score": 8.5,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "42:2123",
+    "screenId": 53,
+    "name": "게임설명시작2-1-1",
+    "score": 8.76,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:2038",
+    "screenId": 54,
+    "name": "게임설명시작2-1-1",
+    "score": 13.24,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:600",
+    "screenId": 55,
+    "name": "게임설명시작2-1-1",
+    "score": 13.24,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:1119",
+    "screenId": 56,
+    "name": "게임설명시작2-1-1",
+    "score": 13.24,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "42:2150",
+    "screenId": 57,
+    "name": "게임설명시작2-1-1",
+    "score": 8.6,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:620",
+    "screenId": 58,
+    "name": "게임설명시작2-1-1",
+    "score": 11.92,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:1139",
+    "screenId": 59,
+    "name": "게임설명시작2-1-1",
+    "score": 11.92,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:1059",
+    "screenId": 60,
+    "name": "게임설명시작2-1-1",
+    "score": 8.4,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:2058",
+    "screenId": 61,
+    "name": "게임설명시작2-1-1",
+    "score": 11.92,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "42:2176",
+    "screenId": 62,
+    "name": "게임설명시작2-1-1",
+    "score": 8.28,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:2081",
+    "screenId": 63,
+    "name": "게임설명시작2-1-1",
+    "score": 10.86,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:1162",
+    "screenId": 64,
+    "name": "게임설명시작2-1-1",
+    "score": 10.86,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:643",
+    "screenId": 65,
+    "name": "게임설명시작2-1-1",
+    "score": 10.86,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "42:2043",
+    "screenId": 66,
+    "name": "게임설명시작2-1-1",
+    "score": 52.76,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:670",
+    "screenId": 67,
+    "name": "게임설명시작2-1-1",
+    "score": 52.6,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:1189",
+    "screenId": 68,
+    "name": "게임설명시작2-1-1",
+    "score": 52.3,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:2108",
+    "screenId": 69,
+    "name": "게임설명시작2-1-1",
+    "score": 52.43,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "42:2202",
+    "screenId": 70,
+    "name": "게임설명시작2-1-1",
+    "score": 6.0,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:1978",
+    "screenId": 71,
+    "name": "게임설명시작2-1-1",
+    "score": 8.4,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:698",
+    "screenId": 72,
+    "name": "게임설명시작2-1-1",
+    "score": 9.12,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:1217",
+    "screenId": 73,
+    "name": "게임설명시작2-1-1",
+    "score": 9.12,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:2136",
+    "screenId": 74,
+    "name": "게임설명시작2-1-1",
+    "score": 9.12,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:132",
+    "screenId": 75,
+    "name": "게임설명시작2-1-1",
+    "score": 7.55,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:718",
+    "screenId": 76,
+    "name": "게임설명시작2-1-1",
+    "score": 10.67,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:1237",
+    "screenId": 77,
+    "name": "게임설명시작2-1-1",
+    "score": 10.67,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:2156",
+    "screenId": 78,
+    "name": "게임설명시작2-1-1",
+    "score": 10.67,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "42:2223",
+    "screenId": 79,
+    "name": "게임설명시작2-1-1",
+    "score": 5.91,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:738",
+    "screenId": 80,
+    "name": "게임설명시작2-1-1",
+    "score": 9.03,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:1257",
+    "screenId": 81,
+    "name": "게임설명시작2-1-1",
+    "score": 9.03,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "42:2064",
+    "screenId": 82,
+    "name": "게임설명시작2-1-1",
+    "score": 8.81,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:2176",
+    "screenId": 83,
+    "name": "게임설명시작2-1-1",
+    "score": 9.03,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "42:2243",
+    "screenId": 84,
+    "name": "게임설명시작2-1-1",
+    "score": 20.61,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:2197",
+    "screenId": 85,
+    "name": "게임설명시작2-1-1",
+    "score": 20.35,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:759",
+    "screenId": 86,
+    "name": "게임설명시작2-1-1",
+    "score": 20.35,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:1278",
+    "screenId": 87,
+    "name": "게임설명시작2-1-1",
+    "score": 20.35,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:23",
+    "screenId": 88,
+    "name": "게임설명시작2-1-1",
+    "score": 27.34,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:779",
+    "screenId": 89,
+    "name": "게임설명시작2-1-1",
+    "score": 27.08,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:1298",
+    "screenId": 90,
+    "name": "게임설명시작2-1-1",
+    "score": 27.08,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:2217",
+    "screenId": 91,
+    "name": "게임설명시작2-1-1",
+    "score": 27.08,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:38",
+    "screenId": 92,
+    "name": "게임설명시작2-1-1",
+    "score": 17.94,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:1017",
+    "screenId": 93,
+    "name": "게임설명시작2-1-1",
+    "score": 9.54,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:801",
+    "screenId": 94,
+    "name": "게임설명시작2-1-1",
+    "score": 17.69,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:1320",
+    "screenId": 95,
+    "name": "게임설명시작2-1-1",
+    "score": 17.69,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:2239",
+    "screenId": 96,
+    "name": "게임설명시작2-1-1",
+    "score": 17.68,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:58",
+    "screenId": 97,
+    "name": "게임설명시작2-1-1",
+    "score": 15.58,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:2261",
+    "screenId": 98,
+    "name": "게임설명시작2-1-1",
+    "score": 15.56,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:823",
+    "screenId": 99,
+    "name": "게임설명시작2-1-1",
+    "score": 15.56,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:1342",
+    "screenId": 100,
+    "name": "게임설명시작2-1-1",
+    "score": 15.56,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:116",
+    "screenId": 101,
+    "name": "게임설명시작2-1-1",
+    "score": 17.18,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:2282",
+    "screenId": 102,
+    "name": "게임설명시작2-1-1",
+    "score": 17.17,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:844",
+    "screenId": 103,
+    "name": "게임설명시작2-1-1",
+    "score": 17.17,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:560",
+    "screenId": 104,
+    "name": "게임설명시작2-1-1",
+    "score": 8.65,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:1363",
+    "screenId": 105,
+    "name": "게임설명시작2-1-1",
+    "score": 17.17,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:231",
+    "screenId": 106,
+    "name": "게임설명시작2-1-1",
+    "score": 19.46,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:2306",
+    "screenId": 107,
+    "name": "게임설명시작2-1-1",
+    "score": 19.24,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:868",
+    "screenId": 108,
+    "name": "게임설명시작2-1-1",
+    "score": 19.24,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:1387",
+    "screenId": 109,
+    "name": "게임설명시작2-1-1",
+    "score": 19.24,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:216",
+    "screenId": 110,
+    "name": "게임설명시작2-1-1",
+    "score": 19.3,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:2328",
+    "screenId": 111,
+    "name": "게임설명시작2-1-1",
+    "score": 19.06,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:890",
+    "screenId": 112,
+    "name": "게임설명시작2-1-1",
+    "score": 19.06,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:1409",
+    "screenId": 113,
+    "name": "게임설명시작2-1-1",
+    "score": 19.06,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:479",
+    "screenId": 114,
+    "name": "게임설명시작2-1-1",
+    "score": 13.04,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:1079",
+    "screenId": 115,
+    "name": "게임설명시작2-1-1",
+    "score": 8.65,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:2349",
+    "screenId": 116,
+    "name": "게임설명시작2-1-1",
+    "score": 13.03,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:911",
+    "screenId": 117,
+    "name": "게임설명시작2-1-1",
+    "score": 13.03,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:1430",
+    "screenId": 118,
+    "name": "게임설명시작2-1-1",
+    "score": 13.03,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:253",
+    "screenId": 119,
+    "name": "게임설명시작2-1-1",
+    "score": 25.68,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:2456",
+    "screenId": 120,
+    "name": "게임설명시작2-1-1",
+    "score": 25.21,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:939",
+    "screenId": 121,
+    "name": "게임설명시작2-1-1",
+    "score": 25.21,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:2377",
+    "screenId": 122,
+    "name": "게임설명시작2-1-1",
+    "score": 25.21,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:286",
+    "screenId": 123,
+    "name": "게임설명시작2-1-1",
+    "score": 17.17,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:956",
+    "screenId": 124,
+    "name": "게임설명시작2-1-1",
+    "score": 17.16,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:2394",
+    "screenId": 125,
+    "name": "게임설명시작2-1-1",
+    "score": 17.42,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:1998",
+    "screenId": 126,
+    "name": "게임설명시작2-1-1",
+    "score": 8.65,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:2473",
+    "screenId": 127,
+    "name": "게임설명시작2-1-1",
+    "score": 17.42,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:310",
+    "screenId": 128,
+    "name": "게임설명시작2-1-1",
+    "score": 21.44,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:976",
+    "screenId": 129,
+    "name": "게임설명시작2-1-1",
+    "score": 22.07,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:2414",
+    "screenId": 130,
+    "name": "게임설명시작2-1-1",
+    "score": 16.87,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "42:2091",
+    "screenId": 131,
+    "name": "게임설명시작2-1-1",
+    "score": 5.38,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "42:2024",
+    "screenId": 132,
+    "name": "게임설명시작2-1-1",
+    "score": 8.56,
+    "method": "text-and-asset-geometry"
+  },
+  {
+    "figmaId": "47:2493",
+    "screenId": 147,
+    "name": "게임설명시작2-1-1",
+    "score": null,
+    "method": "additional-local-frame"
+  }
+]

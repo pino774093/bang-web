@@ -1,0 +1,2206 @@
+[
+  {
+    "src": "assets/source/b0c41932d208.png",
+    "name": "Group 18 (1).png",
+    "width": 512,
+    "height": 375,
+    "bbox": [
+      21,
+      16,
+      492,
+      360
+    ],
+    "category": "illustration-or-composite",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/16a27dfc6ee4.png",
+    "name": "Group 18 (2)부관.png",
+    "width": 512,
+    "height": 375,
+    "bbox": [
+      21,
+      16,
+      491,
+      360
+    ],
+    "category": "illustration-or-composite",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/e1bb026c9c8d.png",
+    "name": "Group 18 (2)부관원근.png",
+    "width": 1200,
+    "height": 1800,
+    "bbox": [
+      105,
+      713,
+      1102,
+      1316
+    ],
+    "category": "illustration-or-composite",
+    "corner": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/8e09903add10.png",
+    "name": "Group 18.png",
+    "width": 339,
+    "height": 248,
+    "bbox": [
+      14,
+      10,
+      325,
+      238
+    ],
+    "category": "illustration-or-composite",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/efb93c417eb5.jpg",
+    "name": "나무 질감.jpeg",
+    "width": 360,
+    "height": 540,
+    "bbox": [
+      0,
+      0,
+      360,
+      540
+    ],
+    "category": "illustration-or-composite",
+    "corner": [
+      99,
+      47,
+      26,
+      255
+    ]
+  },
+  {
+    "src": "assets/source/5ee84b308d8e.png",
+    "name": "뱅! 소스 (영)/BANG!.png",
+    "width": 1697,
+    "height": 927,
+    "bbox": [
+      31,
+      19,
+      1671,
+      872
+    ],
+    "category": "illustration-or-composite",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/2256956e89fd.png",
+    "name": "뱅! 소스 (영)/Group 18 (2)부관원근.png",
+    "width": 1200,
+    "height": 1800,
+    "bbox": [
+      110,
+      714,
+      1102,
+      1316
+    ],
+    "category": "illustration-or-composite",
+    "corner": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/b5c9d8fc3fbc.png",
+    "name": "뱅! 소스 (영)/Group 18 (2)부관원근레밍턴.png",
+    "width": 1200,
+    "height": 1800,
+    "bbox": [
+      110,
+      714,
+      1102,
+      1316
+    ],
+    "category": "illustration-or-composite",
+    "corner": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/90abd2f01f42.png",
+    "name": "뱅! 소스 (영)/제목 없음-1.png",
+    "width": 1200,
+    "height": 1800,
+    "bbox": [
+      114,
+      712,
+      1092,
+      1305
+    ],
+    "category": "illustration-or-composite",
+    "corner": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/af53d6639d93.png",
+    "name": "뱅! 소스 (영)/제목 없음-1레밍턴.png",
+    "width": 1200,
+    "height": 1800,
+    "bbox": [
+      114,
+      712,
+      1092,
+      1305
+    ],
+    "category": "illustration-or-composite",
+    "corner": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/df8be253da44.png",
+    "name": "뱅! 소스 (영)/총알.png",
+    "width": 1447,
+    "height": 1087,
+    "bbox": [
+      0,
+      23,
+      1427,
+      1087
+    ],
+    "category": "illustration-or-composite",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/5a0e0d3df831.png",
+    "name": "뱅! 소스 (영)/카드 png/게임 카드/갈색 테두리/01_bang.png",
+    "width": 250,
+    "height": 389,
+    "bbox": [
+      0,
+      0,
+      250,
+      389
+    ],
+    "category": "game-card",
+    "corner": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/9384cc3713f4.png",
+    "name": "뱅! 소스 (영)/카드 png/게임 카드/갈색 테두리/02_birra.png",
+    "width": 250,
+    "height": 389,
+    "bbox": [
+      0,
+      0,
+      250,
+      389
+    ],
+    "category": "game-card",
+    "corner": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/be697a4b1076.png",
+    "name": "뱅! 소스 (영)/카드 png/게임 카드/갈색 테두리/03_catbalou.png",
+    "width": 250,
+    "height": 389,
+    "bbox": [
+      0,
+      0,
+      250,
+      389
+    ],
+    "category": "game-card",
+    "corner": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/b4a6c5bdc863.png",
+    "name": "뱅! 소스 (영)/카드 png/게임 카드/갈색 테두리/04_duello.png",
+    "width": 250,
+    "height": 389,
+    "bbox": [
+      0,
+      0,
+      250,
+      389
+    ],
+    "category": "game-card",
+    "corner": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/a5f80a4e9024.png",
+    "name": "뱅! 소스 (영)/카드 png/게임 카드/갈색 테두리/05_gatling.png",
+    "width": 250,
+    "height": 389,
+    "bbox": [
+      0,
+      0,
+      250,
+      389
+    ],
+    "category": "game-card",
+    "corner": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/a169ce38d4dc.png",
+    "name": "뱅! 소스 (영)/카드 png/게임 카드/갈색 테두리/06_emporio.png",
+    "width": 250,
+    "height": 389,
+    "bbox": [
+      0,
+      0,
+      250,
+      389
+    ],
+    "category": "game-card",
+    "corner": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/c1349cb9f4b2.png",
+    "name": "뱅! 소스 (영)/카드 png/게임 카드/갈색 테두리/07_indiani.png",
+    "width": 250,
+    "height": 389,
+    "bbox": [
+      0,
+      0,
+      250,
+      389
+    ],
+    "category": "game-card",
+    "corner": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/3c5415a57bbb.png",
+    "name": "뱅! 소스 (영)/카드 png/게임 카드/갈색 테두리/08_mancato.png",
+    "width": 250,
+    "height": 389,
+    "bbox": [
+      0,
+      0,
+      250,
+      389
+    ],
+    "category": "game-card",
+    "corner": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/f57c88659224.png",
+    "name": "뱅! 소스 (영)/카드 png/게임 카드/갈색 테두리/09_panico.png",
+    "width": 250,
+    "height": 389,
+    "bbox": [
+      0,
+      0,
+      250,
+      389
+    ],
+    "category": "game-card",
+    "corner": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/e310d82c7659.png",
+    "name": "뱅! 소스 (영)/카드 png/게임 카드/갈색 테두리/10_saloon.png",
+    "width": 250,
+    "height": 389,
+    "bbox": [
+      0,
+      0,
+      250,
+      389
+    ],
+    "category": "game-card",
+    "corner": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/80ccf3e31b87.png",
+    "name": "뱅! 소스 (영)/카드 png/게임 카드/갈색 테두리/11_diligenza.png",
+    "width": 250,
+    "height": 389,
+    "bbox": [
+      0,
+      0,
+      250,
+      389
+    ],
+    "category": "game-card",
+    "corner": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/1683bc137cbd.png",
+    "name": "뱅! 소스 (영)/카드 png/게임 카드/갈색 테두리/12_wellsfargo.png",
+    "width": 250,
+    "height": 389,
+    "bbox": [
+      0,
+      0,
+      250,
+      389
+    ],
+    "category": "game-card",
+    "corner": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/bb8c32a675c5.png",
+    "name": "뱅! 소스 (영)/카드 png/게임 카드/파란색 테두리/01_barile.png",
+    "width": 250,
+    "height": 389,
+    "bbox": [
+      0,
+      0,
+      250,
+      389
+    ],
+    "category": "game-card",
+    "corner": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/cce09364ccb4.png",
+    "name": "뱅! 소스 (영)/카드 png/게임 카드/파란색 테두리/02_dinamite.png",
+    "width": 250,
+    "height": 389,
+    "bbox": [
+      0,
+      0,
+      250,
+      389
+    ],
+    "category": "game-card",
+    "corner": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/c097d2967251.png",
+    "name": "뱅! 소스 (영)/카드 png/게임 카드/파란색 테두리/03_prigione.png",
+    "width": 250,
+    "height": 389,
+    "bbox": [
+      0,
+      0,
+      250,
+      389
+    ],
+    "category": "game-card",
+    "corner": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/56ed33e6e8e9.png",
+    "name": "뱅! 소스 (영)/카드 png/게임 카드/파란색 테두리/03_volcanic.png",
+    "width": 250,
+    "height": 389,
+    "bbox": [
+      0,
+      0,
+      250,
+      389
+    ],
+    "category": "game-card",
+    "corner": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/515c587cb90b.png",
+    "name": "뱅! 소스 (영)/카드 png/게임 카드/파란색 테두리/04_mustang.png",
+    "width": 250,
+    "height": 389,
+    "bbox": [
+      0,
+      0,
+      250,
+      389
+    ],
+    "category": "game-card",
+    "corner": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/805071d5f9a0.png",
+    "name": "뱅! 소스 (영)/카드 png/게임 카드/파란색 테두리/05_remington.png",
+    "width": 250,
+    "height": 389,
+    "bbox": [
+      0,
+      0,
+      250,
+      389
+    ],
+    "category": "game-card",
+    "corner": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/d8656571a545.png",
+    "name": "뱅! 소스 (영)/카드 png/게임 카드/파란색 테두리/06_carabine.png",
+    "width": 250,
+    "height": 389,
+    "bbox": [
+      0,
+      0,
+      250,
+      389
+    ],
+    "category": "game-card",
+    "corner": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/8b455ca5c077.png",
+    "name": "뱅! 소스 (영)/카드 png/게임 카드/파란색 테두리/07_schofield.png",
+    "width": 250,
+    "height": 389,
+    "bbox": [
+      0,
+      0,
+      250,
+      389
+    ],
+    "category": "game-card",
+    "corner": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/b27aa9c160a2.png",
+    "name": "뱅! 소스 (영)/카드 png/게임 카드/파란색 테두리/08_mirino.png",
+    "width": 250,
+    "height": 389,
+    "bbox": [
+      0,
+      0,
+      250,
+      389
+    ],
+    "category": "game-card",
+    "corner": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/12725739f83b.png",
+    "name": "뱅! 소스 (영)/카드 png/게임 카드/파란색 테두리/09_winchester.png",
+    "width": 250,
+    "height": 389,
+    "bbox": [
+      0,
+      0,
+      250,
+      389
+    ],
+    "category": "game-card",
+    "corner": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/757f357ff0f3.png",
+    "name": "뱅! 소스 (영)/카드 png/역할 카드/01_vice.png",
+    "width": 250,
+    "height": 389,
+    "bbox": [
+      0,
+      0,
+      250,
+      389
+    ],
+    "category": "role-card",
+    "corner": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/b0263f0280be.png",
+    "name": "뱅! 소스 (영)/카드 png/역할 카드/02_fuorilegge.png",
+    "width": 250,
+    "height": 389,
+    "bbox": [
+      0,
+      0,
+      250,
+      389
+    ],
+    "category": "role-card",
+    "corner": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/d4e08673ff46.png",
+    "name": "뱅! 소스 (영)/카드 png/역할 카드/03_rinnegato.png",
+    "width": 250,
+    "height": 389,
+    "bbox": [
+      0,
+      0,
+      250,
+      389
+    ],
+    "category": "role-card",
+    "corner": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/ad085a1ec7d6.png",
+    "name": "뱅! 소스 (영)/카드 png/역할 카드/04_sceriffo.png",
+    "width": 250,
+    "height": 389,
+    "bbox": [
+      0,
+      0,
+      250,
+      389
+    ],
+    "category": "role-card",
+    "corner": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/7da014c6a399.png",
+    "name": "뱅! 소스 (영)/카드 png/역할 카드/뒷장.png",
+    "width": 949,
+    "height": 1381,
+    "bbox": [
+      0,
+      0,
+      949,
+      1381
+    ],
+    "category": "role-card",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/9095f362956a.png",
+    "name": "뱅! 소스 (영)/카드 png/인물 카드/01_bartcassidy.png",
+    "width": 250,
+    "height": 389,
+    "bbox": [
+      0,
+      0,
+      250,
+      389
+    ],
+    "category": "character-card",
+    "corner": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/b03988eedff1.png",
+    "name": "뱅! 소스 (영)/카드 png/인물 카드/02_blackjack.png",
+    "width": 250,
+    "height": 389,
+    "bbox": [
+      0,
+      0,
+      250,
+      389
+    ],
+    "category": "character-card",
+    "corner": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/729d930d5cb8.png",
+    "name": "뱅! 소스 (영)/카드 png/인물 카드/03_calamityjanet.png",
+    "width": 250,
+    "height": 389,
+    "bbox": [
+      0,
+      0,
+      250,
+      389
+    ],
+    "category": "character-card",
+    "corner": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/85ad942c0493.png",
+    "name": "뱅! 소스 (영)/카드 png/인물 카드/04_elgringo.png",
+    "width": 250,
+    "height": 389,
+    "bbox": [
+      0,
+      0,
+      250,
+      389
+    ],
+    "category": "character-card",
+    "corner": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/4eab85c8269f.png",
+    "name": "뱅! 소스 (영)/카드 png/인물 카드/05_jessejones.png",
+    "width": 250,
+    "height": 389,
+    "bbox": [
+      0,
+      0,
+      250,
+      389
+    ],
+    "category": "character-card",
+    "corner": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/993830afff7c.png",
+    "name": "뱅! 소스 (영)/카드 png/인물 카드/06_jourdonnais.png",
+    "width": 250,
+    "height": 389,
+    "bbox": [
+      0,
+      0,
+      250,
+      389
+    ],
+    "category": "character-card",
+    "corner": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/a9398ce31efc.png",
+    "name": "뱅! 소스 (영)/카드 png/인물 카드/07_kitcarlson.png",
+    "width": 250,
+    "height": 389,
+    "bbox": [
+      0,
+      0,
+      250,
+      389
+    ],
+    "category": "character-card",
+    "corner": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/c32a3755732f.png",
+    "name": "뱅! 소스 (영)/카드 png/인물 카드/08_luckyduke.png",
+    "width": 250,
+    "height": 389,
+    "bbox": [
+      0,
+      0,
+      250,
+      389
+    ],
+    "category": "character-card",
+    "corner": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/e9dc480bde60.png",
+    "name": "뱅! 소스 (영)/카드 png/인물 카드/09_paulregret.png",
+    "width": 250,
+    "height": 389,
+    "bbox": [
+      0,
+      0,
+      250,
+      389
+    ],
+    "category": "character-card",
+    "corner": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/6b7d57012bf0.png",
+    "name": "뱅! 소스 (영)/카드 png/인물 카드/10_pedroramirez.png",
+    "width": 250,
+    "height": 389,
+    "bbox": [
+      0,
+      0,
+      250,
+      389
+    ],
+    "category": "character-card",
+    "corner": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/056ab23b811b.png",
+    "name": "뱅! 소스 (영)/카드 png/인물 카드/11_rosedoolan.png",
+    "width": 250,
+    "height": 389,
+    "bbox": [
+      0,
+      0,
+      250,
+      389
+    ],
+    "category": "character-card",
+    "corner": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/6ea3268c4b3b.png",
+    "name": "뱅! 소스 (영)/카드 png/인물 카드/12_sidketchum.png",
+    "width": 250,
+    "height": 389,
+    "bbox": [
+      0,
+      0,
+      250,
+      389
+    ],
+    "category": "character-card",
+    "corner": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/fa149aa68e46.png",
+    "name": "뱅! 소스 (영)/카드 png/인물 카드/13_slab.png",
+    "width": 250,
+    "height": 389,
+    "bbox": [
+      0,
+      0,
+      250,
+      389
+    ],
+    "category": "character-card",
+    "corner": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/eaa4246b8f65.png",
+    "name": "뱅! 소스 (영)/카드 png/인물 카드/14_suzylafayette.png",
+    "width": 250,
+    "height": 389,
+    "bbox": [
+      0,
+      0,
+      250,
+      389
+    ],
+    "category": "character-card",
+    "corner": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/32e2420dfc5c.png",
+    "name": "뱅! 소스 (영)/카드 png/인물 카드/15_vulturesam.png",
+    "width": 250,
+    "height": 389,
+    "bbox": [
+      0,
+      0,
+      250,
+      389
+    ],
+    "category": "character-card",
+    "corner": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/f40c9f87a621.png",
+    "name": "뱅! 소스 (영)/카드 png/인물 카드/16_willythekid.png",
+    "width": 250,
+    "height": 389,
+    "bbox": [
+      0,
+      0,
+      250,
+      389
+    ],
+    "category": "character-card",
+    "corner": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/98e83b4f8ec7.png",
+    "name": "뱅! 소스 (영)/카드 png/일러스트.png",
+    "width": 1067,
+    "height": 1474,
+    "bbox": [
+      0,
+      0,
+      1067,
+      1474
+    ],
+    "category": "illustration-or-composite",
+    "corner": [
+      0,
+      0,
+      0,
+      255
+    ]
+  },
+  {
+    "src": "assets/source/d0dbfd26cfe9.png",
+    "name": "뱅! 소스 (영)/카드 png/아이콘과 한국어 규칙 카드.png",
+    "width": 1536,
+    "height": 1024,
+    "bbox": [
+      0,
+      4,
+      1532,
+      1024
+    ],
+    "category": "illustration-or-composite",
+    "corner": [
+      1,
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/eb13191c82f5.png",
+    "name": "뱅! 소스 (영)/카드뭉텅이원근.png",
+    "width": 1200,
+    "height": 1800,
+    "bbox": [
+      214,
+      540,
+      978,
+      1446
+    ],
+    "category": "illustration-or-composite",
+    "corner": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/58abce583417.png",
+    "name": "뱅! 소스 (영)/세피아 서부 현상수배 포스터.png",
+    "width": 1067,
+    "height": 1474,
+    "bbox": [
+      53,
+      28,
+      1054,
+      1426
+    ],
+    "category": "illustration-or-composite",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/7e5faea56f62.png",
+    "name": "뱅! 소스 (영)/세피아 서부극 게임 매트__end__.png",
+    "width": 1473,
+    "height": 1068,
+    "bbox": [
+      0,
+      38,
+      1411,
+      1024
+    ],
+    "category": "illustration-or-composite",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/d291b32da533.png",
+    "name": "뱅! 소스 (영)/우드그레인 BANG! 카드 덱.png",
+    "width": 838,
+    "height": 1088,
+    "bbox": [
+      12,
+      0,
+      835,
+      1088
+    ],
+    "category": "illustration-or-composite",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/55a03dc4a17e.png",
+    "name": "뱅! 소스 (한)/게임/01_bang.png",
+    "width": 750,
+    "height": 1167,
+    "bbox": [
+      0,
+      0,
+      750,
+      1167
+    ],
+    "category": "game-card",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/a69eb5e96031.png",
+    "name": "뱅! 소스 (한)/게임/01_barile.png",
+    "width": 750,
+    "height": 1167,
+    "bbox": [
+      0,
+      0,
+      750,
+      1167
+    ],
+    "category": "game-card",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/0cd0b2fdc8d7.png",
+    "name": "뱅! 소스 (한)/게임/02_birra.png",
+    "width": 750,
+    "height": 1167,
+    "bbox": [
+      0,
+      0,
+      750,
+      1167
+    ],
+    "category": "game-card",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/cef6186b5667.png",
+    "name": "뱅! 소스 (한)/게임/02_dinamite.png",
+    "width": 750,
+    "height": 1167,
+    "bbox": [
+      0,
+      0,
+      750,
+      1167
+    ],
+    "category": "game-card",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/11c803e9a7b7.png",
+    "name": "뱅! 소스 (한)/게임/03_catbalou.png",
+    "width": 750,
+    "height": 1167,
+    "bbox": [
+      0,
+      0,
+      750,
+      1167
+    ],
+    "category": "game-card",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/1274c0838f3f.png",
+    "name": "뱅! 소스 (한)/게임/03_prigione.png",
+    "width": 750,
+    "height": 1167,
+    "bbox": [
+      0,
+      0,
+      750,
+      1167
+    ],
+    "category": "game-card",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/fffa21c4451a.png",
+    "name": "뱅! 소스 (한)/게임/03_volcanic.png",
+    "width": 750,
+    "height": 1167,
+    "bbox": [
+      0,
+      0,
+      750,
+      1167
+    ],
+    "category": "game-card",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/714e49f9233e.png",
+    "name": "뱅! 소스 (한)/게임/04_duello.png",
+    "width": 750,
+    "height": 1167,
+    "bbox": [
+      0,
+      0,
+      750,
+      1167
+    ],
+    "category": "game-card",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/2afdc49b17a4.png",
+    "name": "뱅! 소스 (한)/게임/04_mustang.png",
+    "width": 750,
+    "height": 1167,
+    "bbox": [
+      0,
+      0,
+      750,
+      1167
+    ],
+    "category": "game-card",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/572282fced18.png",
+    "name": "뱅! 소스 (한)/게임/05_gatling.png",
+    "width": 750,
+    "height": 1167,
+    "bbox": [
+      0,
+      0,
+      750,
+      1167
+    ],
+    "category": "game-card",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/3b2142a0b48b.png",
+    "name": "뱅! 소스 (한)/게임/05_remington.png",
+    "width": 750,
+    "height": 1167,
+    "bbox": [
+      0,
+      0,
+      750,
+      1167
+    ],
+    "category": "game-card",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/9bc25b235ba6.png",
+    "name": "뱅! 소스 (한)/게임/06_carabine.png",
+    "width": 750,
+    "height": 1167,
+    "bbox": [
+      0,
+      0,
+      750,
+      1167
+    ],
+    "category": "game-card",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/6a90d71e9aa1.png",
+    "name": "뱅! 소스 (한)/게임/06_emporio.png",
+    "width": 750,
+    "height": 1167,
+    "bbox": [
+      0,
+      0,
+      750,
+      1167
+    ],
+    "category": "game-card",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/795106d871a1.png",
+    "name": "뱅! 소스 (한)/게임/07_indiani.png",
+    "width": 750,
+    "height": 1167,
+    "bbox": [
+      0,
+      0,
+      750,
+      1167
+    ],
+    "category": "game-card",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/67833469509c.png",
+    "name": "뱅! 소스 (한)/게임/07_schofield.png",
+    "width": 750,
+    "height": 1167,
+    "bbox": [
+      0,
+      0,
+      750,
+      1167
+    ],
+    "category": "game-card",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/ee41cc12944c.png",
+    "name": "뱅! 소스 (한)/게임/08_mancato.png",
+    "width": 750,
+    "height": 1167,
+    "bbox": [
+      0,
+      0,
+      750,
+      1167
+    ],
+    "category": "game-card",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/7ec9e54c2860.png",
+    "name": "뱅! 소스 (한)/게임/08_mirino.png",
+    "width": 750,
+    "height": 1167,
+    "bbox": [
+      0,
+      0,
+      750,
+      1167
+    ],
+    "category": "game-card",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/d8d30be68a7f.png",
+    "name": "뱅! 소스 (한)/게임/09_panico.png",
+    "width": 750,
+    "height": 1167,
+    "bbox": [
+      0,
+      0,
+      750,
+      1167
+    ],
+    "category": "game-card",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/9a516027b2cc.png",
+    "name": "뱅! 소스 (한)/게임/09_winchester.png",
+    "width": 750,
+    "height": 1167,
+    "bbox": [
+      0,
+      0,
+      750,
+      1167
+    ],
+    "category": "game-card",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/c42c239eeb85.png",
+    "name": "뱅! 소스 (한)/게임/10_saloon.png",
+    "width": 750,
+    "height": 1167,
+    "bbox": [
+      0,
+      0,
+      750,
+      1167
+    ],
+    "category": "game-card",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/28f86facc130.png",
+    "name": "뱅! 소스 (한)/게임/11_diligenza.png",
+    "width": 750,
+    "height": 1167,
+    "bbox": [
+      0,
+      0,
+      750,
+      1167
+    ],
+    "category": "game-card",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/0e664496a1ad.png",
+    "name": "뱅! 소스 (한)/게임/12_wellsfargo.png",
+    "width": 750,
+    "height": 1167,
+    "bbox": [
+      0,
+      0,
+      750,
+      1167
+    ],
+    "category": "game-card",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/1fa3a43f0d9d.png",
+    "name": "뱅! 소스 (한)/역할/01_vice.png",
+    "width": 750,
+    "height": 1167,
+    "bbox": [
+      0,
+      0,
+      750,
+      1167
+    ],
+    "category": "role-card",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/9cca1423aeb9.png",
+    "name": "뱅! 소스 (한)/역할/02_fuorilegge.png",
+    "width": 750,
+    "height": 1167,
+    "bbox": [
+      0,
+      0,
+      750,
+      1167
+    ],
+    "category": "role-card",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/beb46b812adf.png",
+    "name": "뱅! 소스 (한)/역할/03_rinnegato.png",
+    "width": 750,
+    "height": 1167,
+    "bbox": [
+      0,
+      0,
+      750,
+      1167
+    ],
+    "category": "role-card",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/b5810e1df969.png",
+    "name": "뱅! 소스 (한)/역할/04_sceriffo.png",
+    "width": 750,
+    "height": 1167,
+    "bbox": [
+      0,
+      0,
+      750,
+      1167
+    ],
+    "category": "role-card",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/577469d0a18b.png",
+    "name": "뱅! 소스 (한)/인물/01_bartcassidy.png",
+    "width": 750,
+    "height": 1167,
+    "bbox": [
+      0,
+      0,
+      750,
+      1167
+    ],
+    "category": "character-card",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/1a4ed3440e70.png",
+    "name": "뱅! 소스 (한)/인물/02_blackjack.png",
+    "width": 750,
+    "height": 1167,
+    "bbox": [
+      0,
+      0,
+      750,
+      1167
+    ],
+    "category": "character-card",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/e86137929b0d.png",
+    "name": "뱅! 소스 (한)/인물/03_calamityjanet.png",
+    "width": 750,
+    "height": 1167,
+    "bbox": [
+      0,
+      0,
+      750,
+      1167
+    ],
+    "category": "character-card",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/94ea3853e5e3.png",
+    "name": "뱅! 소스 (한)/인물/04_elgringo.png",
+    "width": 750,
+    "height": 1167,
+    "bbox": [
+      0,
+      0,
+      750,
+      1167
+    ],
+    "category": "character-card",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/4c8a1498e59d.png",
+    "name": "뱅! 소스 (한)/인물/05_jessejones.png",
+    "width": 750,
+    "height": 1167,
+    "bbox": [
+      0,
+      0,
+      750,
+      1167
+    ],
+    "category": "character-card",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/8513b5fe6ac7.png",
+    "name": "뱅! 소스 (한)/인물/06_jourdonnais.png",
+    "width": 750,
+    "height": 1167,
+    "bbox": [
+      0,
+      0,
+      750,
+      1167
+    ],
+    "category": "character-card",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/74791afd3970.png",
+    "name": "뱅! 소스 (한)/인물/07_kitcarlson.png",
+    "width": 750,
+    "height": 1167,
+    "bbox": [
+      0,
+      0,
+      750,
+      1167
+    ],
+    "category": "character-card",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/bc0f90b76bc9.png",
+    "name": "뱅! 소스 (한)/인물/08_luckyduke.png",
+    "width": 750,
+    "height": 1167,
+    "bbox": [
+      0,
+      0,
+      750,
+      1167
+    ],
+    "category": "character-card",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/e6fa416fe54d.png",
+    "name": "뱅! 소스 (한)/인물/09_paulregret.png",
+    "width": 750,
+    "height": 1167,
+    "bbox": [
+      0,
+      0,
+      750,
+      1167
+    ],
+    "category": "character-card",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/12e26fb255b5.png",
+    "name": "뱅! 소스 (한)/인물/10_pedroramirez.png",
+    "width": 750,
+    "height": 1167,
+    "bbox": [
+      0,
+      0,
+      750,
+      1167
+    ],
+    "category": "character-card",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/75375d450a77.png",
+    "name": "뱅! 소스 (한)/인물/11_rosedoolan.png",
+    "width": 750,
+    "height": 1167,
+    "bbox": [
+      0,
+      0,
+      750,
+      1167
+    ],
+    "category": "character-card",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/9e6aeffe1c88.png",
+    "name": "뱅! 소스 (한)/인물/12_sidketchum.png",
+    "width": 750,
+    "height": 1167,
+    "bbox": [
+      0,
+      0,
+      750,
+      1167
+    ],
+    "category": "character-card",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/0285ddee8610.png",
+    "name": "뱅! 소스 (한)/인물/13_slab.png",
+    "width": 750,
+    "height": 1167,
+    "bbox": [
+      0,
+      0,
+      750,
+      1167
+    ],
+    "category": "character-card",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/171f1ec2cebd.png",
+    "name": "뱅! 소스 (한)/인물/14_suzylafayette.png",
+    "width": 750,
+    "height": 1167,
+    "bbox": [
+      0,
+      0,
+      750,
+      1167
+    ],
+    "category": "character-card",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/51a4251d00c2.png",
+    "name": "뱅! 소스 (한)/인물/15_vulturesam.png",
+    "width": 750,
+    "height": 1167,
+    "bbox": [
+      0,
+      0,
+      750,
+      1167
+    ],
+    "category": "character-card",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/source/53aaf60cf79c.png",
+    "name": "뱅! 소스 (한)/인물/16_willythekid.png",
+    "width": 750,
+    "height": 1167,
+    "bbox": [
+      0,
+      0,
+      750,
+      1167
+    ],
+    "category": "character-card",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/local-figma/575307c544192014be8bfbe7af3d8e2190097aed.png",
+    "name": "575307c544192014be8bfbe7af3d8e2190097aed.png",
+    "width": 238,
+    "height": 346,
+    "bbox": [
+      0,
+      0,
+      238,
+      346
+    ],
+    "category": "embedded-original",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/local-figma/035a64ac30b602f75ea7d25ab388202b88676e56.png",
+    "name": "035a64ac30b602f75ea7d25ab388202b88676e56.png",
+    "width": 425,
+    "height": 232,
+    "bbox": [
+      7,
+      14,
+      418,
+      218
+    ],
+    "category": "embedded-original",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/local-figma/0d50084790574c4244a84e599dbe968d2062b2d8.png",
+    "name": "0d50084790574c4244a84e599dbe968d2062b2d8.png",
+    "width": 1697,
+    "height": 927,
+    "bbox": [
+      31,
+      19,
+      1671,
+      872
+    ],
+    "category": "embedded-original",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "src": "assets/local-figma/a72b7ea1c79e268c9b2b5b84e4f3914d5261e247.png",
+    "name": "a72b7ea1c79e268c9b2b5b84e4f3914d5261e247.png",
+    "width": 370,
+    "height": 370,
+    "bbox": [
+      0,
+      0,
+      370,
+      370
+    ],
+    "category": "embedded-original",
+    "corner": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  {
+    "src": "assets/local-figma/ffabd4a2d4fe972be943226a741f89bb3d017795.png",
+    "name": "ffabd4a2d4fe972be943226a741f89bb3d017795.png",
+    "width": 250,
+    "height": 389,
+    "bbox": [
+      0,
+      0,
+      250,
+      389
+    ],
+    "category": "embedded-original",
+    "corner": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  {
+    "src": "assets/local-figma/16d42a9c1639855b253b527f4645064e14ac3059.png",
+    "name": "16d42a9c1639855b253b527f4645064e14ac3059.png",
+    "width": 250,
+    "height": 389,
+    "bbox": [
+      0,
+      0,
+      250,
+      389
+    ],
+    "category": "embedded-original",
+    "corner": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  {
+    "src": "assets/local-figma/57dd8d2821159afb840f424c5cbed7e2f71c5e60.jpg",
+    "name": "57dd8d2821159afb840f424c5cbed7e2f71c5e60.jpg",
+    "width": 180,
+    "height": 270,
+    "bbox": [
+      0,
+      0,
+      180,
+      270
+    ],
+    "category": "embedded-original",
+    "corner": [
+      95,
+      40,
+      20,
+      255
+    ]
+  },
+  {
+    "src": "assets/local-figma/c0c667f51aaf8f9ab07a49efb454f32a3074662b.png",
+    "name": "c0c667f51aaf8f9ab07a49efb454f32a3074662b.png",
+    "width": 250,
+    "height": 389,
+    "bbox": [
+      0,
+      0,
+      250,
+      389
+    ],
+    "category": "embedded-original",
+    "corner": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  {
+    "src": "assets/local-figma/c5a3dbe8467b1014615a8313f6b5e9f9b2eb59ca.png",
+    "name": "c5a3dbe8467b1014615a8313f6b5e9f9b2eb59ca.png",
+    "width": 267,
+    "height": 369,
+    "bbox": [
+      0,
+      0,
+      264,
+      369
+    ],
+    "category": "embedded-original",
+    "corner": [
+      42,
+      0,
+      0,
+      6
+    ]
+  },
+  {
+    "src": "assets/local-figma/bf1b0d5c7f8e06303c43f571928bf110fd3e64bd.jpg",
+    "name": "bf1b0d5c7f8e06303c43f571928bf110fd3e64bd.jpg",
+    "width": 360,
+    "height": 540,
+    "bbox": [
+      0,
+      0,
+      360,
+      540
+    ],
+    "category": "embedded-original",
+    "corner": [
+      99,
+      47,
+      26,
+      255
+    ]
+  },
+  {
+    "src": "assets/local-figma/1c18f8a09fa5768446e1151dc373a95f9fba37ab.png",
+    "name": "1c18f8a09fa5768446e1151dc373a95f9fba37ab.png",
+    "width": 250,
+    "height": 389,
+    "bbox": [
+      0,
+      0,
+      250,
+      389
+    ],
+    "category": "embedded-original",
+    "corner": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  {
+    "src": "assets/local-figma/fa10039b01858ebbfde55877396b0243c470d430.png",
+    "name": "fa10039b01858ebbfde55877396b0243c470d430.png",
+    "width": 740,
+    "height": 740,
+    "bbox": [
+      0,
+      0,
+      740,
+      740
+    ],
+    "category": "embedded-original",
+    "corner": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  {
+    "src": "assets/local-figma/23a49e267080eefd7bd843ebebb6d43ef0c033ce.png",
+    "name": "23a49e267080eefd7bd843ebebb6d43ef0c033ce.png",
+    "width": 1067,
+    "height": 1474,
+    "bbox": [
+      0,
+      0,
+      1055,
+      1474
+    ],
+    "category": "embedded-original",
+    "corner": [
+      42,
+      42,
+      0,
+      6
+    ]
+  },
+  {
+    "src": "assets/local-figma/e252b25fe7192b5cf1057d021bdfc99295696f16.png",
+    "name": "e252b25fe7192b5cf1057d021bdfc99295696f16.png",
+    "width": 949,
+    "height": 1381,
+    "bbox": [
+      0,
+      0,
+      949,
+      1381
+    ],
+    "category": "embedded-original",
+    "corner": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+]

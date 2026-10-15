@@ -1,0 +1,6760 @@
+[
+  {
+    "sourceNode": "5:237",
+    "sourceName": "Group 1",
+    "sourceFrame": "5:4",
+    "sourceFrameName": "home",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 30,
+        "localID": 726
+      },
+      "transitionType": "DISSOLVE",
+      "transitionDuration": 0.5,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ],
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "30:726",
+    "destinationName": "카드 세부 설명1-1",
+    "destinationFrame": "30:726",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "8:253",
+    "sourceName": "부관-뒷면",
+    "sourceFrame": "8:262",
+    "sourceFrameName": "Component 1",
+    "trigger": {
+      "interactionType": "ON_HOVER"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 4294967295,
+        "localID": 4294967295
+      },
+      "transitionType": "SMART_ANIMATE",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE"
+    },
+    "destinationNode": "4294967295:4294967295",
+    "destinationName": null,
+    "destinationFrame": null,
+    "targetStatus": "none-or-sentinel"
+  },
+  {
+    "sourceNode": "8:258",
+    "sourceName": "속성 1=부관",
+    "sourceFrame": "8:262",
+    "sourceFrameName": "Component 1",
+    "trigger": {
+      "interactionType": "ON_HOVER"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 8,
+        "localID": 261
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.30000001192092896,
+      "easingType": "OUT_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "SWAP_STATE",
+      "easingFunction": [
+        0,
+        0,
+        0.5799999833106995,
+        1
+      ]
+    },
+    "destinationNode": "8:261",
+    "destinationName": "속성 1=부관-뒷면",
+    "destinationFrame": "8:262",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "8:261",
+    "sourceName": "속성 1=부관-뒷면",
+    "sourceFrame": "8:262",
+    "sourceFrameName": "Component 1",
+    "trigger": {
+      "interactionType": "ON_HOVER"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 8,
+        "localID": 258
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.30000001192092896,
+      "easingType": "OUT_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "SWAP_STATE",
+      "easingFunction": [
+        0,
+        0,
+        0.5799999833106995,
+        1
+      ]
+    },
+    "destinationNode": "8:258",
+    "destinationName": "속성 1=부관",
+    "destinationFrame": "8:262",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "8:304",
+    "sourceName": "보안관",
+    "sourceFrame": "5:229",
+    "sourceFrameName": "게임설명시작2",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 35,
+        "localID": 1451
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.5,
+      "easingType": "CUSTOM_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ],
+      "transitionResetScrollPosition": true,
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "35:1451",
+    "destinationName": "게임설명시작2",
+    "destinationFrame": "35:1451",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "8:304",
+    "sourceName": "보안관",
+    "sourceFrame": "5:229",
+    "sourceFrameName": "게임설명시작2",
+    "trigger": {
+      "interactionType": "DRAG"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 4294967295,
+        "localID": 4294967295
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.5,
+      "easingType": "CUSTOM_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "4294967295:4294967295",
+    "destinationName": null,
+    "destinationFrame": null,
+    "targetStatus": "none-or-sentinel"
+  },
+  {
+    "sourceNode": "8:326",
+    "sourceName": "Group 5",
+    "sourceFrame": "5:4",
+    "sourceFrameName": "home",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 2539
+      },
+      "transitionType": "SLIDE_FROM_RIGHT",
+      "transitionDuration": 1.4052858352661133,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        52.88999938964844,
+        10.90999984741211,
+        0
+      ],
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "47:2539",
+    "destinationName": "home",
+    "destinationFrame": "47:2539",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "8:374",
+    "sourceName": "Group 5",
+    "sourceFrame": "8:330",
+    "sourceFrameName": "게임설명시작1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 5,
+        "localID": 4
+      },
+      "transitionType": "DISSOLVE",
+      "transitionDuration": 0.30000001192092896,
+      "easingType": "OUT_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0,
+        0,
+        0.5799999833106995,
+        1
+      ],
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "5:4",
+    "destinationName": "home",
+    "destinationFrame": "5:4",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "8:402",
+    "sourceName": "Group 5",
+    "sourceFrame": "8:398",
+    "sourceFrameName": "게임설명시작1-2-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 8,
+        "localID": 330
+      },
+      "transitionType": "DISSOLVE",
+      "transitionDuration": 0.30000001192092896,
+      "easingType": "OUT_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0,
+        0,
+        0.5799999833106995,
+        1
+      ],
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "8:330",
+    "destinationName": "게임설명시작1-1",
+    "destinationFrame": "8:330",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "8:409",
+    "sourceName": "Group 6",
+    "sourceFrame": "8:330",
+    "sourceFrameName": "게임설명시작1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 8,
+        "localID": 398
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.30000001192092896,
+      "easingType": "OUT_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0,
+        0,
+        0.5799999833106995,
+        1
+      ],
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "8:398",
+    "destinationName": "게임설명시작1-2-1",
+    "destinationFrame": "8:398",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "8:420",
+    "sourceName": "> 카드를 클릭하세요!",
+    "sourceFrame": "5:229",
+    "sourceFrameName": "게임설명시작2",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 8,
+        "localID": 305
+      },
+      "transitionType": "INSTANT_TRANSITION",
+      "transitionDuration": 1.0220937728881836,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "SCROLL_TO",
+      "easingFunction": [
+        1,
+        100,
+        15,
+        0
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "8:305",
+    "destinationName": "Rectangle 7",
+    "destinationFrame": "5:229",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "8:420",
+    "sourceName": "> 카드를 클릭하세요!",
+    "sourceFrame": "5:229",
+    "sourceFrameName": "게임설명시작2",
+    "trigger": {
+      "interactionType": "DRAG"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 4294967295,
+        "localID": 4294967295
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.0220937728881836,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        100,
+        15,
+        0
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "4294967295:4294967295",
+    "destinationName": null,
+    "destinationFrame": null,
+    "targetStatus": "none-or-sentinel"
+  },
+  {
+    "sourceNode": "8:426",
+    "sourceName": "Group 5",
+    "sourceFrame": "8:422",
+    "sourceFrameName": "게임설명시작1-2-2",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 8,
+        "localID": 398
+      },
+      "transitionType": "DISSOLVE",
+      "transitionDuration": 0.30000001192092896,
+      "easingType": "OUT_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0,
+        0,
+        0.5799999833106995,
+        1
+      ],
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "8:398",
+    "destinationName": "게임설명시작1-2-1",
+    "destinationFrame": "8:398",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "8:439",
+    "sourceName": "Group 5",
+    "sourceFrame": "8:435",
+    "sourceFrameName": "게임설명시작1-2-3",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 8,
+        "localID": 422
+      },
+      "transitionType": "DISSOLVE",
+      "transitionDuration": 0.6000000238418579,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ],
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "8:422",
+    "destinationName": "게임설명시작1-2-2",
+    "destinationFrame": "8:422",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "8:453",
+    "sourceName": "Group 5",
+    "sourceFrame": "8:449",
+    "sourceFrameName": "게임설명시작1-2-4",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 8,
+        "localID": 435
+      },
+      "transitionType": "DISSOLVE",
+      "transitionDuration": 0.30000001192092896,
+      "easingType": "OUT_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0,
+        0,
+        0.5799999833106995,
+        1
+      ],
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "8:435",
+    "destinationName": "게임설명시작1-2-3",
+    "destinationFrame": "8:435",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "8:457",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "8:449",
+    "sourceFrameName": "게임설명시작1-2-4",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 8,
+        "localID": 473
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.30000001192092896,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ]
+    },
+    "destinationNode": "8:473",
+    "destinationName": "게임설명시작1-2-5",
+    "destinationFrame": "8:473",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "8:461",
+    "sourceName": "Group 7",
+    "sourceFrame": "8:398",
+    "sourceFrameName": "게임설명시작1-2-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 8,
+        "localID": 422
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.30000001192092896,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ],
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "8:422",
+    "destinationName": "게임설명시작1-2-2",
+    "destinationFrame": "8:422",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "8:463",
+    "sourceName": "Group 8",
+    "sourceFrame": "8:422",
+    "sourceFrameName": "게임설명시작1-2-2",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 8,
+        "localID": 435
+      },
+      "transitionType": "DISSOLVE",
+      "transitionDuration": 0.5,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ],
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "8:435",
+    "destinationName": "게임설명시작1-2-3",
+    "destinationFrame": "8:435",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "8:468",
+    "sourceName": "Group 9",
+    "sourceFrame": "8:435",
+    "sourceFrameName": "게임설명시작1-2-3",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 8,
+        "localID": 449
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.5,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ]
+    },
+    "destinationNode": "8:449",
+    "destinationName": "게임설명시작1-2-4",
+    "destinationFrame": "8:449",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "8:477",
+    "sourceName": "Group 5",
+    "sourceFrame": "8:473",
+    "sourceFrameName": "게임설명시작1-2-5",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 8,
+        "localID": 449
+      },
+      "transitionType": "DISSOLVE",
+      "transitionDuration": 0.30000001192092896,
+      "easingType": "OUT_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0,
+        0,
+        0.5799999833106995,
+        1
+      ],
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "8:449",
+    "destinationName": "게임설명시작1-2-4",
+    "destinationFrame": "8:449",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "8:481",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "8:473",
+    "sourceFrameName": "게임설명시작1-2-5",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 8,
+        "localID": 489
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.6000000238418579,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ],
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "8:489",
+    "destinationName": "게임설명시작1-3-1",
+    "destinationFrame": "8:489",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "8:493",
+    "sourceName": "Group 5",
+    "sourceFrame": "8:489",
+    "sourceFrameName": "게임설명시작1-3-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 8,
+        "localID": 473
+      },
+      "transitionType": "DISSOLVE",
+      "transitionDuration": 0.30000001192092896,
+      "easingType": "OUT_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0,
+        0,
+        0.5799999833106995,
+        1
+      ],
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "8:473",
+    "destinationName": "게임설명시작1-2-5",
+    "destinationFrame": "8:473",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "8:497",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "8:489",
+    "sourceFrameName": "게임설명시작1-3-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 8,
+        "localID": 501
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.6000000238418579,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ]
+    },
+    "destinationNode": "8:501",
+    "destinationName": "게임설명시작1-3-2",
+    "destinationFrame": "8:501",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "8:505",
+    "sourceName": "Group 5",
+    "sourceFrame": "8:501",
+    "sourceFrameName": "게임설명시작1-3-2",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 8,
+        "localID": 489
+      },
+      "transitionType": "DISSOLVE",
+      "transitionDuration": 0.30000001192092896,
+      "easingType": "OUT_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0,
+        0,
+        0.5799999833106995,
+        1
+      ],
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "8:489",
+    "destinationName": "게임설명시작1-3-1",
+    "destinationFrame": "8:489",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "8:509",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "8:501",
+    "sourceFrameName": "게임설명시작1-3-2",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 8,
+        "localID": 514
+      },
+      "transitionType": "DISSOLVE",
+      "transitionDuration": 0.6000000238418579,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ]
+    },
+    "destinationNode": "8:514",
+    "destinationName": "게임설명시작1-3-2",
+    "destinationFrame": "8:514",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "8:518",
+    "sourceName": "Group 5",
+    "sourceFrame": "8:514",
+    "sourceFrameName": "게임설명시작1-3-2",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 8,
+        "localID": 489
+      },
+      "transitionType": "DISSOLVE",
+      "transitionDuration": 0.30000001192092896,
+      "easingType": "OUT_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0,
+        0,
+        0.5799999833106995,
+        1
+      ],
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "8:489",
+    "destinationName": "게임설명시작1-3-1",
+    "destinationFrame": "8:489",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "8:522",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "8:514",
+    "sourceFrameName": "게임설명시작1-3-2",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 8,
+        "localID": 540
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.6000000238418579,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ]
+    },
+    "destinationNode": "8:540",
+    "destinationName": "게임설명시작1-3-3",
+    "destinationFrame": "8:540",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "8:544",
+    "sourceName": "Group 5",
+    "sourceFrame": "8:540",
+    "sourceFrameName": "게임설명시작1-3-3",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 8,
+        "localID": 514
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.6000000238418579,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ]
+    },
+    "destinationNode": "8:514",
+    "destinationName": "게임설명시작1-3-2",
+    "destinationFrame": "8:514",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "8:548",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "8:540",
+    "sourceFrameName": "게임설명시작1-3-3",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT",
+      "transitionTimeout": 0.4000000059604645
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 8,
+        "localID": 566
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.6000000238418579,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ]
+    },
+    "destinationNode": "8:566",
+    "destinationName": "게임설명시작1-3-3",
+    "destinationFrame": "8:566",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "8:570",
+    "sourceName": "Group 5",
+    "sourceFrame": "8:566",
+    "sourceFrameName": "게임설명시작1-3-3",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 8,
+        "localID": 514
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.6000000238418579,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ]
+    },
+    "destinationNode": "8:514",
+    "destinationName": "게임설명시작1-3-2",
+    "destinationFrame": "8:514",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "8:574",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "8:566",
+    "sourceFrameName": "게임설명시작1-3-3",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT",
+      "transitionTimeout": 0.6000000238418579
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 8,
+        "localID": 581
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.6000000238418579,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ]
+    },
+    "destinationNode": "8:581",
+    "destinationName": "게임설명시작1-3-3",
+    "destinationFrame": "8:581",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "8:585",
+    "sourceName": "Group 5",
+    "sourceFrame": "8:581",
+    "sourceFrameName": "게임설명시작1-3-3",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 8,
+        "localID": 514
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.6000000238418579,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ]
+    },
+    "destinationNode": "8:514",
+    "destinationName": "게임설명시작1-3-2",
+    "destinationFrame": "8:514",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "8:589",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "8:581",
+    "sourceFrameName": "게임설명시작1-3-3",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 8,
+        "localID": 596
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.6000000238418579,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ]
+    },
+    "destinationNode": "8:596",
+    "destinationName": "게임설명시작1-3-4",
+    "destinationFrame": "8:596",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "8:600",
+    "sourceName": "Group 5",
+    "sourceFrame": "8:596",
+    "sourceFrameName": "게임설명시작1-3-4",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 8,
+        "localID": 581
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.6000000238418579,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ]
+    },
+    "destinationNode": "8:581",
+    "destinationName": "게임설명시작1-3-3",
+    "destinationFrame": "8:581",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "8:604",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "8:596",
+    "sourceFrameName": "게임설명시작1-3-4",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT",
+      "transitionTimeout": 0.10000000149011612
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 8,
+        "localID": 649
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.6000000238418579,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ]
+    },
+    "destinationNode": "8:649",
+    "destinationName": "게임설명시작1-3-4",
+    "destinationFrame": "8:649",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "8:653",
+    "sourceName": "Group 5",
+    "sourceFrame": "8:649",
+    "sourceFrameName": "게임설명시작1-3-4",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 8,
+        "localID": 581
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.6000000238418579,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ]
+    },
+    "destinationNode": "8:581",
+    "destinationName": "게임설명시작1-3-3",
+    "destinationFrame": "8:581",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "8:657",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "8:649",
+    "sourceFrameName": "게임설명시작1-3-4",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT",
+      "transitionTimeout": 0.10000000149011612
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 8,
+        "localID": 667
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.6000000238418579,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ]
+    },
+    "destinationNode": "8:667",
+    "destinationName": "게임설명시작1-3-4",
+    "destinationFrame": "8:667",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "8:671",
+    "sourceName": "Group 5",
+    "sourceFrame": "8:667",
+    "sourceFrameName": "게임설명시작1-3-4",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 8,
+        "localID": 581
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.6000000238418579,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ]
+    },
+    "destinationNode": "8:581",
+    "destinationName": "게임설명시작1-3-3",
+    "destinationFrame": "8:581",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "8:675",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "8:667",
+    "sourceFrameName": "게임설명시작1-3-4",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT",
+      "transitionTimeout": 0.10000000149011612
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 8,
+        "localID": 685
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.6000000238418579,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ]
+    },
+    "destinationNode": "8:685",
+    "destinationName": "게임설명시작1-3-4",
+    "destinationFrame": "8:685",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "8:689",
+    "sourceName": "Group 5",
+    "sourceFrame": "8:685",
+    "sourceFrameName": "게임설명시작1-3-4",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 8,
+        "localID": 581
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.6000000238418579,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ]
+    },
+    "destinationNode": "8:581",
+    "destinationName": "게임설명시작1-3-3",
+    "destinationFrame": "8:581",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "8:693",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "8:685",
+    "sourceFrameName": "게임설명시작1-3-4",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 80
+      },
+      "transitionType": "DISSOLVE",
+      "transitionDuration": 0.5,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ],
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "47:80",
+    "destinationName": "게임설명시작1-2-1",
+    "destinationFrame": "47:80",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "8:707",
+    "sourceName": "Group 5",
+    "sourceFrame": "8:703",
+    "sourceFrameName": "게임설명시작1-4-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 94
+      },
+      "transitionType": "DISSOLVE",
+      "transitionDuration": 0.6000000238418579,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ],
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "47:94",
+    "destinationName": "게임설명시작1-2-1",
+    "destinationFrame": "47:94",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "8:711",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "8:703",
+    "sourceFrameName": "게임설명시작1-4-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 42,
+        "localID": 1687
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.5,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ]
+    },
+    "destinationNode": "42:1687",
+    "destinationName": "chapter 2",
+    "destinationFrame": "42:1687",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "30:749",
+    "sourceName": "Rectangle 7",
+    "sourceFrame": "30:726",
+    "sourceFrameName": "카드 세부 설명1-1",
+    "trigger": {
+      "interactionType": "DRAG"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 4294967295,
+        "localID": 4294967295
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.5,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ]
+    },
+    "destinationNode": "4294967295:4294967295",
+    "destinationName": null,
+    "destinationFrame": null,
+    "targetStatus": "none-or-sentinel"
+  },
+  {
+    "sourceNode": "30:939",
+    "sourceName": "Group 6",
+    "sourceFrame": "30:931",
+    "sourceFrameName": "게임설명시작1-5-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 30,
+        "localID": 943
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.30000001192092896,
+      "easingType": "OUT_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0,
+        0,
+        0.5799999833106995,
+        1
+      ],
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "30:943",
+    "destinationName": "게임설명시작1-5-2",
+    "destinationFrame": "30:943",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "30:947",
+    "sourceName": "Group 5",
+    "sourceFrame": "30:943",
+    "sourceFrameName": "게임설명시작1-5-2",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 30,
+        "localID": 931
+      },
+      "transitionType": "DISSOLVE",
+      "transitionDuration": 0.30000001192092896,
+      "easingType": "OUT_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0,
+        0,
+        0.5799999833106995,
+        1
+      ],
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "30:931",
+    "destinationName": "게임설명시작1-5-1",
+    "destinationFrame": "30:931",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "30:951",
+    "sourceName": "Group 6",
+    "sourceFrame": "30:943",
+    "sourceFrameName": "게임설명시작1-5-2",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 30,
+        "localID": 960
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.30000001192092896,
+      "easingType": "OUT_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0,
+        0,
+        0.5799999833106995,
+        1
+      ],
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "30:960",
+    "destinationName": "게임설명시작1-5-3",
+    "destinationFrame": "30:960",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "30:953",
+    "sourceName": "플레이어 님은 ‘마피아 게임’을 아시나요? ‘뱅!’도 그 마피아 게임처럼 서로의 정체를 숨기며 진행하는 게임입니다.",
+    "sourceFrame": "30:943",
+    "sourceFrameName": "게임설명시작1-5-2",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 4294967295,
+        "localID": 4294967295
+      },
+      "transitionType": "INSTANT_TRANSITION",
+      "transitionDuration": 0.5,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "SCROLL_TO",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ]
+    },
+    "destinationNode": "4294967295:4294967295",
+    "destinationName": null,
+    "destinationFrame": null,
+    "targetStatus": "none-or-sentinel"
+  },
+  {
+    "sourceNode": "30:964",
+    "sourceName": "Group 5",
+    "sourceFrame": "30:960",
+    "sourceFrameName": "게임설명시작1-5-3",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 30,
+        "localID": 943
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.5,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ]
+    },
+    "destinationNode": "30:943",
+    "destinationName": "게임설명시작1-5-2",
+    "destinationFrame": "30:943",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "30:968",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "30:960",
+    "sourceFrameName": "게임설명시작1-5-3",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT",
+      "transitionTimeout": 0.4000000059604645
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 35,
+        "localID": 1060
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.5,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ]
+    },
+    "destinationNode": "35:1060",
+    "destinationName": "게임설명시작1-5-3",
+    "destinationFrame": "35:1060",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "35:1064",
+    "sourceName": "Group 5",
+    "sourceFrame": "35:1060",
+    "sourceFrameName": "게임설명시작1-5-3",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 30,
+        "localID": 943
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.6000000238418579,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ]
+    },
+    "destinationNode": "30:943",
+    "destinationName": "게임설명시작1-5-2",
+    "destinationFrame": "30:943",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "35:1068",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "35:1060",
+    "sourceFrameName": "게임설명시작1-5-3",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT",
+      "transitionTimeout": 0.20000000298023224
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 35,
+        "localID": 1076
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.5,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ]
+    },
+    "destinationNode": "35:1076",
+    "destinationName": "게임설명시작1-5-3",
+    "destinationFrame": "35:1076",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "35:1071",
+    "sourceName": "Component 2",
+    "sourceFrame": "35:1060",
+    "sourceFrameName": "게임설명시작1-5-3",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 8,
+        "localID": 258
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.5,
+      "easingType": "OUT_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "SWAP_STATE",
+      "easingFunction": [
+        0,
+        0,
+        0.5799999833106995,
+        1
+      ],
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "8:258",
+    "destinationName": "속성 1=부관",
+    "destinationFrame": "8:262",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "35:1080",
+    "sourceName": "Group 5",
+    "sourceFrame": "35:1076",
+    "sourceFrameName": "게임설명시작1-5-3",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 30,
+        "localID": 943
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.6000000238418579,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ]
+    },
+    "destinationNode": "30:943",
+    "destinationName": "게임설명시작1-5-2",
+    "destinationFrame": "30:943",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "35:1084",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "35:1076",
+    "sourceFrameName": "게임설명시작1-5-3",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT",
+      "transitionTimeout": 0.20000000298023224
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 35,
+        "localID": 1092
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.5,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ]
+    },
+    "destinationNode": "35:1092",
+    "destinationName": "게임설명시작1-5-3",
+    "destinationFrame": "35:1092",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "35:1087",
+    "sourceName": "Component 2",
+    "sourceFrame": "35:1076",
+    "sourceFrameName": "게임설명시작1-5-3",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 8,
+        "localID": 258
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.5,
+      "easingType": "OUT_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "SWAP_STATE",
+      "easingFunction": [
+        0,
+        0,
+        0.5799999833106995,
+        1
+      ],
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "8:258",
+    "destinationName": "속성 1=부관",
+    "destinationFrame": "8:262",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "35:1096",
+    "sourceName": "Group 5",
+    "sourceFrame": "35:1092",
+    "sourceFrameName": "게임설명시작1-5-3",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 30,
+        "localID": 943
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.6000000238418579,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ]
+    },
+    "destinationNode": "30:943",
+    "destinationName": "게임설명시작1-5-2",
+    "destinationFrame": "30:943",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "35:1100",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "35:1092",
+    "sourceFrameName": "게임설명시작1-5-3",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 35,
+        "localID": 1260
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.5,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ]
+    },
+    "destinationNode": "35:1260",
+    "destinationName": "게임설명시작1-5-3",
+    "destinationFrame": "35:1260",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "35:1103",
+    "sourceName": "Component 2",
+    "sourceFrame": "35:1092",
+    "sourceFrameName": "게임설명시작1-5-3",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 8,
+        "localID": 258
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.5,
+      "easingType": "OUT_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "SWAP_STATE",
+      "easingFunction": [
+        0,
+        0,
+        0.5799999833106995,
+        1
+      ],
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "8:258",
+    "destinationName": "속성 1=부관",
+    "destinationFrame": "8:262",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "35:1118",
+    "sourceName": "Group 5",
+    "sourceFrame": "35:1114",
+    "sourceFrameName": "게임설명시작1-5-3",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 35,
+        "localID": 1260
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.6000000238418579,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ]
+    },
+    "destinationNode": "35:1260",
+    "destinationName": "게임설명시작1-5-3",
+    "destinationFrame": "35:1260",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "35:1122",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "35:1114",
+    "sourceFrameName": "게임설명시작1-5-3",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 35,
+        "localID": 1131
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.0220937728881836,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        100,
+        15,
+        0
+      ],
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "35:1131",
+    "destinationName": "게임설명시작1-5-3",
+    "destinationFrame": "35:1131",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "35:1135",
+    "sourceName": "Group 5",
+    "sourceFrame": "35:1131",
+    "sourceFrameName": "게임설명시작1-5-3",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 35,
+        "localID": 1114
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.6000000238418579,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ]
+    },
+    "destinationNode": "35:1114",
+    "destinationName": "게임설명시작1-5-3",
+    "destinationFrame": "35:1114",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "35:1139",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "35:1131",
+    "sourceFrameName": "게임설명시작1-5-3",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 42,
+        "localID": 1728
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.0220937728881836,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        100,
+        15,
+        0
+      ],
+      "transitionResetScrollPosition": true,
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "42:1728",
+    "destinationName": "게임설명시작1-5-3",
+    "destinationFrame": "42:1728",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "35:1216",
+    "sourceName": "Group 5",
+    "sourceFrame": "35:1212",
+    "sourceFrameName": "게임설명시작1-5-3",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 42,
+        "localID": 1728
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.30000001192092896,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "42:1728",
+    "destinationName": "게임설명시작1-5-3",
+    "destinationFrame": "42:1728",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "35:1220",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "35:1212",
+    "sourceFrameName": "게임설명시작1-5-3",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 35,
+        "localID": 1228
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.0220937728881836,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        100,
+        15,
+        0
+      ]
+    },
+    "destinationNode": "35:1228",
+    "destinationName": "게임설명시작1-5-3",
+    "destinationFrame": "35:1228",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "35:1223",
+    "sourceName": "Component 2",
+    "sourceFrame": "35:1212",
+    "sourceFrameName": "게임설명시작1-5-3",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 8,
+        "localID": 258
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.5,
+      "easingType": "OUT_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "SWAP_STATE",
+      "easingFunction": [
+        0,
+        0,
+        0.5799999833106995,
+        1
+      ],
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "8:258",
+    "destinationName": "속성 1=부관",
+    "destinationFrame": "8:262",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "35:1232",
+    "sourceName": "Group 5",
+    "sourceFrame": "35:1228",
+    "sourceFrameName": "게임설명시작1-5-3",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 35,
+        "localID": 1212
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.6000000238418579,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ]
+    },
+    "destinationNode": "35:1212",
+    "destinationName": "게임설명시작1-5-3",
+    "destinationFrame": "35:1212",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "35:1236",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "35:1228",
+    "sourceFrameName": "게임설명시작1-5-3",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 35,
+        "localID": 1374
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.5,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ],
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "35:1374",
+    "destinationName": "게임설명시작1-5-3",
+    "destinationFrame": "35:1374",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "35:1239",
+    "sourceName": "Component 2",
+    "sourceFrame": "35:1228",
+    "sourceFrameName": "게임설명시작1-5-3",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 8,
+        "localID": 258
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.5,
+      "easingType": "OUT_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "SWAP_STATE",
+      "easingFunction": [
+        0,
+        0,
+        0.5799999833106995,
+        1
+      ],
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "8:258",
+    "destinationName": "속성 1=부관",
+    "destinationFrame": "8:262",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "35:1264",
+    "sourceName": "Group 5",
+    "sourceFrame": "35:1260",
+    "sourceFrameName": "게임설명시작1-5-3",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 30,
+        "localID": 943
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.6000000238418579,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ]
+    },
+    "destinationNode": "30:943",
+    "destinationName": "게임설명시작1-5-2",
+    "destinationFrame": "30:943",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "35:1268",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "35:1260",
+    "sourceFrameName": "게임설명시작1-5-3",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 35,
+        "localID": 1114
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.0220937728881836,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        100,
+        15,
+        0
+      ]
+    },
+    "destinationNode": "35:1114",
+    "destinationName": "게임설명시작1-5-3",
+    "destinationFrame": "35:1114",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "35:1271",
+    "sourceName": "Component 2",
+    "sourceFrame": "35:1260",
+    "sourceFrameName": "게임설명시작1-5-3",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 8,
+        "localID": 258
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.5,
+      "easingType": "OUT_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "SWAP_STATE",
+      "easingFunction": [
+        0,
+        0,
+        0.5799999833106995,
+        1
+      ],
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "8:258",
+    "destinationName": "속성 1=부관",
+    "destinationFrame": "8:262",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "35:1378",
+    "sourceName": "Group 5",
+    "sourceFrame": "35:1374",
+    "sourceFrameName": "게임설명시작1-5-3",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 35,
+        "localID": 1228
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.6000000238418579,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ]
+    },
+    "destinationNode": "35:1228",
+    "destinationName": "게임설명시작1-5-3",
+    "destinationFrame": "35:1228",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "35:1382",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "35:1374",
+    "sourceFrameName": "게임설명시작1-5-3",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 35,
+        "localID": 1390
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.5,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ]
+    },
+    "destinationNode": "35:1390",
+    "destinationName": "게임설명시작1-5-3",
+    "destinationFrame": "35:1390",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "35:1385",
+    "sourceName": "Component 2",
+    "sourceFrame": "35:1374",
+    "sourceFrameName": "게임설명시작1-5-3",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 8,
+        "localID": 258
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.5,
+      "easingType": "OUT_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "SWAP_STATE",
+      "easingFunction": [
+        0,
+        0,
+        0.5799999833106995,
+        1
+      ],
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "8:258",
+    "destinationName": "속성 1=부관",
+    "destinationFrame": "8:262",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "35:1394",
+    "sourceName": "Group 5",
+    "sourceFrame": "35:1390",
+    "sourceFrameName": "게임설명시작1-5-3",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 35,
+        "localID": 1374
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.6000000238418579,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ]
+    },
+    "destinationNode": "35:1374",
+    "destinationName": "게임설명시작1-5-3",
+    "destinationFrame": "35:1374",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "35:1398",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "35:1390",
+    "sourceFrameName": "게임설명시작1-5-3",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 35,
+        "localID": 1406
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.5,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ]
+    },
+    "destinationNode": "35:1406",
+    "destinationName": "게임설명시작1-5-3",
+    "destinationFrame": "35:1406",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "35:1401",
+    "sourceName": "Component 2",
+    "sourceFrame": "35:1390",
+    "sourceFrameName": "게임설명시작1-5-3",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 8,
+        "localID": 258
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.5,
+      "easingType": "OUT_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "SWAP_STATE",
+      "easingFunction": [
+        0,
+        0,
+        0.5799999833106995,
+        1
+      ],
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "8:258",
+    "destinationName": "속성 1=부관",
+    "destinationFrame": "8:262",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "35:1410",
+    "sourceName": "Group 5",
+    "sourceFrame": "35:1406",
+    "sourceFrameName": "게임설명시작1-5-3",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 35,
+        "localID": 1390
+      },
+      "transitionType": "DISSOLVE",
+      "transitionDuration": 0.5,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ]
+    },
+    "destinationNode": "35:1390",
+    "destinationName": "게임설명시작1-5-3",
+    "destinationFrame": "35:1390",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "35:1414",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "35:1406",
+    "sourceFrameName": "게임설명시작1-5-3",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 5,
+        "localID": 229
+      },
+      "transitionType": "DISSOLVE",
+      "transitionDuration": 1.0220937728881836,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        100,
+        15,
+        0
+      ],
+      "transitionResetScrollPosition": true,
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "5:229",
+    "destinationName": "게임설명시작2",
+    "destinationFrame": "5:229",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "35:1417",
+    "sourceName": "Component 2",
+    "sourceFrame": "35:1406",
+    "sourceFrameName": "게임설명시작1-5-3",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 8,
+        "localID": 258
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.5,
+      "easingType": "OUT_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "SWAP_STATE",
+      "easingFunction": [
+        0,
+        0,
+        0.5799999833106995,
+        1
+      ],
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "8:258",
+    "destinationName": "속성 1=부관",
+    "destinationFrame": "8:262",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "35:1463",
+    "sourceName": "부관",
+    "sourceFrame": "5:229",
+    "sourceFrameName": "게임설명시작2",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 42,
+        "localID": 1479
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.5,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ],
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "42:1479",
+    "destinationName": "게임설명시작2",
+    "destinationFrame": "42:1479",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "35:1464",
+    "sourceName": "무법자",
+    "sourceFrame": "5:229",
+    "sourceFrameName": "게임설명시작2",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 42,
+        "localID": 1515
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.5,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ],
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "42:1515",
+    "destinationName": "게임설명시작2",
+    "destinationFrame": "42:1515",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "35:1465",
+    "sourceName": "배신자",
+    "sourceFrame": "5:229",
+    "sourceFrameName": "게임설명시작2",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 42,
+        "localID": 1535
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.5,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ],
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "42:1535",
+    "destinationName": "게임설명시작2",
+    "destinationFrame": "42:1535",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "42:1495",
+    "sourceName": "Group 5",
+    "sourceFrame": "5:229",
+    "sourceFrameName": "게임설명시작2",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 2539
+      },
+      "transitionType": "DISSOLVE",
+      "transitionDuration": 0.30000001192092896,
+      "easingType": "OUT_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0,
+        0,
+        0.5799999833106995,
+        1
+      ],
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "47:2539",
+    "destinationName": "home",
+    "destinationFrame": "47:2539",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "42:1501",
+    "sourceName": "Group 5",
+    "sourceFrame": "35:1451",
+    "sourceFrameName": "게임설명시작2",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 5,
+        "localID": 229
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.5,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ]
+    },
+    "destinationNode": "5:229",
+    "destinationName": "게임설명시작2",
+    "destinationFrame": "5:229",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "42:1507",
+    "sourceName": "Group 5",
+    "sourceFrame": "42:1479",
+    "sourceFrameName": "게임설명시작2",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 5,
+        "localID": 229
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.5,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ]
+    },
+    "destinationNode": "5:229",
+    "destinationName": "게임설명시작2",
+    "destinationFrame": "5:229",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "42:1530",
+    "sourceName": "Group 5",
+    "sourceFrame": "42:1515",
+    "sourceFrameName": "게임설명시작2",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 5,
+        "localID": 229
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.5,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ]
+    },
+    "destinationNode": "5:229",
+    "destinationName": "게임설명시작2",
+    "destinationFrame": "5:229",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "42:1550",
+    "sourceName": "Group 5",
+    "sourceFrame": "42:1535",
+    "sourceFrameName": "게임설명시작2",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 5,
+        "localID": 229
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.5,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ]
+    },
+    "destinationNode": "5:229",
+    "destinationName": "게임설명시작2",
+    "destinationFrame": "5:229",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "42:1593",
+    "sourceName": "Group 6",
+    "sourceFrame": "35:1451",
+    "sourceFrameName": "게임설명시작2",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 42,
+        "localID": 1635
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.0220937728881836,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        100,
+        15,
+        0
+      ],
+      "transitionResetScrollPosition": true,
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "42:1635",
+    "destinationName": "역할선택로딩",
+    "destinationFrame": "42:1635",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "42:1599",
+    "sourceName": "Group 6",
+    "sourceFrame": "42:1479",
+    "sourceFrameName": "게임설명시작2",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 42,
+        "localID": 1644
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.0220937728881836,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        100,
+        15,
+        0
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "42:1644",
+    "destinationName": "역할선택로딩",
+    "destinationFrame": "42:1644",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "42:1611",
+    "sourceName": "Group 6",
+    "sourceFrame": "42:1515",
+    "sourceFrameName": "게임설명시작2",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 42,
+        "localID": 1652
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.0220937728881836,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        100,
+        15,
+        0
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "42:1652",
+    "destinationName": "역할선택로딩",
+    "destinationFrame": "42:1652",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "42:1617",
+    "sourceName": "Group 6",
+    "sourceFrame": "42:1535",
+    "sourceFrameName": "게임설명시작2",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 42,
+        "localID": 1660
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.0220937728881836,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        100,
+        15,
+        0
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "42:1660",
+    "destinationName": "역할선택로딩",
+    "destinationFrame": "42:1660",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "42:1634",
+    "sourceName": "chapter 1",
+    "sourceFrame": "35:1427",
+    "sourceFrameName": "chapter 1",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT",
+      "transitionTimeout": 0.10000000149011612
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 42,
+        "localID": 1668
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.20000000298023224,
+      "easingType": "CUSTOM_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "42:1668",
+    "destinationName": "chapter1",
+    "destinationFrame": "42:1668",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "42:1642",
+    "sourceName": "실제 게임에서는 역할을 선택하는 것이 아닌, 랜덤으로 뽑아야 합니다.",
+    "sourceFrame": "42:1635",
+    "sourceFrameName": "역할선택로딩",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT",
+      "transitionTimeout": 1.2000000476837158
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 42,
+        "localID": 1946
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.30000001192092896,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "42:1946",
+    "destinationName": "chapter 3",
+    "destinationFrame": "42:1946",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "42:1651",
+    "sourceName": "실제 게임에서는 역할을 선택하는 것이 아닌, 랜덤으로 뽑아야 합니다.",
+    "sourceFrame": "42:1644",
+    "sourceFrameName": "역할선택로딩",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT",
+      "transitionTimeout": 1.2000000476837158
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 42,
+        "localID": 1966
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.30000001192092896,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "42:1966",
+    "destinationName": "chapter 4",
+    "destinationFrame": "42:1966",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "42:1659",
+    "sourceName": "실제 게임에서는 역할을 선택하는 것이 아닌, 랜덤으로 뽑아야 합니다.",
+    "sourceFrame": "42:1652",
+    "sourceFrameName": "역할선택로딩",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT",
+      "transitionTimeout": 1.2000000476837158
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 42,
+        "localID": 1983
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.30000001192092896,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "42:1983",
+    "destinationName": "chapter 5",
+    "destinationFrame": "42:1983",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "42:1667",
+    "sourceName": "실제 게임에서는 역할을 선택하는 것이 아닌, 랜덤으로 뽑아야 합니다.",
+    "sourceFrame": "42:1660",
+    "sourceFrameName": "역할선택로딩",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT",
+      "transitionTimeout": 1.2000000476837158
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 42,
+        "localID": 2000
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.30000001192092896,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "42:2000",
+    "destinationName": "chapter 6",
+    "destinationFrame": "42:2000",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "42:1676",
+    "sourceName": "기본 설명",
+    "sourceFrame": "42:1668",
+    "sourceFrameName": "chapter1",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT",
+      "transitionTimeout": 1.5
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 8,
+        "localID": 330
+      },
+      "transitionType": "DISSOLVE",
+      "transitionDuration": 0.5,
+      "easingType": "CUSTOM_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ],
+      "transitionResetScrollPosition": true,
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "8:330",
+    "destinationName": "게임설명시작1-1",
+    "destinationFrame": "8:330",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "42:1694",
+    "sourceName": "chapter 2",
+    "sourceFrame": "42:1687",
+    "sourceFrameName": "chapter 2",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT",
+      "transitionTimeout": 0.10000000149011612
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 42,
+        "localID": 1695
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.20000000298023224,
+      "easingType": "CUSTOM_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "42:1695",
+    "destinationName": "chapter1",
+    "destinationFrame": "42:1695",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "42:1703",
+    "sourceName": "역할 알기",
+    "sourceFrame": "42:1695",
+    "sourceFrameName": "chapter1",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT",
+      "transitionTimeout": 1.5
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 30,
+        "localID": 931
+      },
+      "transitionType": "DISSOLVE",
+      "transitionDuration": 0.5,
+      "easingType": "CUSTOM_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ],
+      "transitionResetScrollPosition": true,
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "30:931",
+    "destinationName": "게임설명시작1-5-1",
+    "destinationFrame": "30:931",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "42:1732",
+    "sourceName": "Group 5",
+    "sourceFrame": "42:1728",
+    "sourceFrameName": "게임설명시작1-5-3",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 35,
+        "localID": 1131
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.6000000238418579,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ]
+    },
+    "destinationNode": "35:1131",
+    "destinationName": "게임설명시작1-5-3",
+    "destinationFrame": "35:1131",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "42:1736",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "42:1728",
+    "sourceFrameName": "게임설명시작1-5-3",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 35,
+        "localID": 1212
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.0220937728881836,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        100,
+        15,
+        0
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "35:1212",
+    "destinationName": "게임설명시작1-5-3",
+    "destinationFrame": "35:1212",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "42:1953",
+    "sourceName": "chapter 3",
+    "sourceFrame": "42:1946",
+    "sourceFrameName": "chapter 3",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT",
+      "transitionTimeout": 0.10000000149011612
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 42,
+        "localID": 1954
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.20000000298023224,
+      "easingType": "CUSTOM_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "42:1954",
+    "destinationName": "chapter3",
+    "destinationFrame": "42:1954",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "42:1962",
+    "sourceName": "체험 하기",
+    "sourceFrame": "42:1954",
+    "sourceFrameName": "chapter3",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT",
+      "transitionTimeout": 1.600000023841858
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 42,
+        "localID": 2043
+      },
+      "transitionType": "DISSOLVE",
+      "transitionDuration": 0.699999988079071,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ],
+      "transitionResetScrollPosition": true,
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "42:2043",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "42:2043",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "42:1973",
+    "sourceName": "chapter 3",
+    "sourceFrame": "42:1966",
+    "sourceFrameName": "chapter 4",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT",
+      "transitionTimeout": 0.10000000149011612
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 42,
+        "localID": 1974
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.20000000298023224,
+      "easingType": "CUSTOM_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "42:1974",
+    "destinationName": "chapter3",
+    "destinationFrame": "42:1974",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "42:1982",
+    "sourceName": "체험 하기",
+    "sourceFrame": "42:1974",
+    "sourceFrameName": "chapter3",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 670
+      },
+      "transitionType": "SLIDE_FROM_RIGHT",
+      "transitionDuration": 1.0220937728881836,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        100,
+        15,
+        0
+      ]
+    },
+    "destinationNode": "47:670",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:670",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "42:1990",
+    "sourceName": "chapter 3",
+    "sourceFrame": "42:1983",
+    "sourceFrameName": "chapter 5",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT",
+      "transitionTimeout": 0.10000000149011612
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 42,
+        "localID": 1991
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.20000000298023224,
+      "easingType": "CUSTOM_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "42:1991",
+    "destinationName": "chapter3",
+    "destinationFrame": "42:1991",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "42:1999",
+    "sourceName": "체험 하기",
+    "sourceFrame": "42:1991",
+    "sourceFrameName": "chapter3",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 1189
+      },
+      "transitionType": "SLIDE_FROM_RIGHT",
+      "transitionDuration": 1.0220937728881836,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        100,
+        15,
+        0
+      ]
+    },
+    "destinationNode": "47:1189",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:1189",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "42:2007",
+    "sourceName": "chapter 3",
+    "sourceFrame": "42:2000",
+    "sourceFrameName": "chapter 6",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT",
+      "transitionTimeout": 0.10000000149011612
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 42,
+        "localID": 2008
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.20000000298023224,
+      "easingType": "CUSTOM_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "42:2008",
+    "destinationName": "chapter3",
+    "destinationFrame": "42:2008",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "42:2016",
+    "sourceName": "체험 하기",
+    "sourceFrame": "42:2008",
+    "sourceFrameName": "chapter3",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 2108
+      },
+      "transitionType": "SLIDE_FROM_RIGHT",
+      "transitionDuration": 1.0220937728881836,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        100,
+        15,
+        0
+      ]
+    },
+    "destinationNode": "47:2108",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:2108",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "42:2032",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "42:2024",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 42,
+        "localID": 2064
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.4052858352661133,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        52.88999938964844,
+        10.90999984741211,
+        0
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "42:2064",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "42:2064",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "42:2055",
+    "sourceName": "보안관",
+    "sourceFrame": "42:2043",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT",
+      "transitionTimeout": 1.100000023841858
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 42,
+        "localID": 2024
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.4052858352661133,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        52.88999938964844,
+        10.90999984741211,
+        0
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "42:2024",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "42:2024",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "42:2072",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "42:2064",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 1017
+      },
+      "transitionType": "SLIDE_FROM_RIGHT",
+      "transitionDuration": 1.0220937728881836,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        100,
+        15,
+        0
+      ]
+    },
+    "destinationNode": "47:1017",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:1017",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "42:2099",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "42:2091",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 42,
+        "localID": 2123
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.4052858352661133,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        52.88999938964844,
+        10.90999984741211,
+        0
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "42:2123",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "42:2123",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "42:2149",
+    "sourceName": "Group 21",
+    "sourceFrame": "42:2123",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 42,
+        "localID": 2150
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.4052858352661133,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        52.88999938964844,
+        10.90999984741211,
+        0
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "42:2150",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "42:2150",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "42:2161",
+    "sourceName": "Group 20",
+    "sourceFrame": "42:2150",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 42,
+        "localID": 2176
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.4052858352661133,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        52.88999938964844,
+        10.90999984741211,
+        0
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "42:2176",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "42:2176",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "42:2190",
+    "sourceName": "Group 19",
+    "sourceFrame": "42:2176",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 132
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.4052858352661133,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        52.88999938964844,
+        10.90999984741211,
+        0
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "47:132",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:132",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "42:2206",
+    "sourceName": "Group 5",
+    "sourceFrame": "42:2202",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 132
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.30000001192092896,
+      "easingType": "OUT_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0,
+        0,
+        0.5799999833106995,
+        1
+      ]
+    },
+    "destinationNode": "47:132",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:132",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "42:2210",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "42:2202",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 42,
+        "localID": 2223
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.4052858352661133,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        52.88999938964844,
+        10.90999984741211,
+        0
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "42:2223",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "42:2223",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "42:2231",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "42:2223",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 42,
+        "localID": 2243
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.4052858352661133,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        52.88999938964844,
+        10.90999984741211,
+        0
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "42:2243",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "42:2243",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "42:2270",
+    "sourceName": "제목 없음-1 1",
+    "sourceFrame": "42:2243",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 23
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.30000001192092896,
+      "easingType": "OUT_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0,
+        0,
+        0.5799999833106995,
+        1
+      ]
+    },
+    "destinationNode": "47:23",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:23",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:32",
+    "sourceName": "우드그레인 BANG! 카드 덱 1",
+    "sourceFrame": "47:23",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 38
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.30000001192092896,
+      "easingType": "OUT_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0,
+        0,
+        0.5799999833106995,
+        1
+      ],
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "47:38",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:38",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:76",
+    "sourceName": "Group 22",
+    "sourceFrame": "47:58",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 116
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.30000001192092896,
+      "easingType": "OUT_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0,
+        0,
+        0.5799999833106995,
+        1
+      ]
+    },
+    "destinationNode": "47:116",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:116",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:84",
+    "sourceName": "Group 5",
+    "sourceFrame": "47:80",
+    "sourceFrameName": "게임설명시작1-2-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 8,
+        "localID": 685
+      },
+      "transitionType": "DISSOLVE",
+      "transitionDuration": 0.30000001192092896,
+      "easingType": "OUT_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0,
+        0,
+        0.5799999833106995,
+        1
+      ],
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "8:685",
+    "destinationName": "게임설명시작1-3-4",
+    "destinationFrame": "8:685",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:88",
+    "sourceName": "Group 7",
+    "sourceFrame": "47:80",
+    "sourceFrameName": "게임설명시작1-2-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 94
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.30000001192092896,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ],
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "47:94",
+    "destinationName": "게임설명시작1-2-1",
+    "destinationFrame": "47:94",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:98",
+    "sourceName": "Group 5",
+    "sourceFrame": "47:94",
+    "sourceFrameName": "게임설명시작1-2-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 80
+      },
+      "transitionType": "DISSOLVE",
+      "transitionDuration": 0.30000001192092896,
+      "easingType": "OUT_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0,
+        0,
+        0.5799999833106995,
+        1
+      ],
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "47:80",
+    "destinationName": "게임설명시작1-2-1",
+    "destinationFrame": "47:80",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:102",
+    "sourceName": "Group 7",
+    "sourceFrame": "47:94",
+    "sourceFrameName": "게임설명시작1-2-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 8,
+        "localID": 703
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.30000001192092896,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ],
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "8:703",
+    "destinationName": "게임설명시작1-4-1",
+    "destinationFrame": "8:703",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:140",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "47:132",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 42,
+        "localID": 2202
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.4052858352661133,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        52.88999938964844,
+        10.90999984741211,
+        0
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "42:2202",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "42:2202",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:154",
+    "sourceName": "01_bang 2",
+    "sourceFrame": "47:38",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT",
+      "transitionTimeout": 1
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 58
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.30000001192092896,
+      "easingType": "OUT_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0,
+        0,
+        0.5799999833106995,
+        1
+      ]
+    },
+    "destinationNode": "47:58",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:58",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:229",
+    "sourceName": "제목 없음-1 1",
+    "sourceFrame": "47:216",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 479
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.800000011920929,
+      "easingType": "IN_BACK_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.30000001192092896,
+        -0.05000000074505806,
+        0.699999988079071,
+        -0.5
+      ]
+    },
+    "destinationNode": "47:479",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:479",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:244",
+    "sourceName": "제목 없음-1 1",
+    "sourceFrame": "47:231",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT",
+      "transitionTimeout": 0.019999999552965164
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 216
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.0220937728881836,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        100,
+        15,
+        0
+      ]
+    },
+    "destinationNode": "47:216",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:216",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:266",
+    "sourceName": "제목 없음-1 1",
+    "sourceFrame": "47:253",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 286
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.800000011920929,
+      "easingType": "IN_BACK_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.30000001192092896,
+        -0.05000000074505806,
+        0.699999988079071,
+        -0.5
+      ]
+    },
+    "destinationNode": "47:286",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:286",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:304",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "47:286",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 310
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.800000011920929,
+      "easingType": "IN_BACK_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.30000001192092896,
+        -0.05000000074505806,
+        0.699999988079071,
+        -0.5
+      ]
+    },
+    "destinationNode": "47:310",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:310",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:326",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "47:310",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 519
+      },
+      "transitionType": "SLIDE_FROM_RIGHT",
+      "transitionDuration": 1.0220937728881836,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        100,
+        15,
+        0
+      ],
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "47:519",
+    "destinationName": "역할선택로딩",
+    "destinationFrame": "47:519",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:428",
+    "sourceName": "Group 5",
+    "sourceFrame": "47:116",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 231
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.800000011920929,
+      "easingType": "IN_BACK_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.30000001192092896,
+        -0.05000000074505806,
+        0.699999988079071,
+        -0.5
+      ]
+    },
+    "destinationNode": "47:231",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:231",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:492",
+    "sourceName": "제목 없음-1 1",
+    "sourceFrame": "47:479",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 253
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.800000011920929,
+      "easingType": "IN_BACK_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.30000001192092896,
+        -0.05000000074505806,
+        0.699999988079071,
+        -0.5
+      ]
+    },
+    "destinationNode": "47:253",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:253",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:500",
+    "sourceName": "Group 22",
+    "sourceFrame": "47:479",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 253
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.800000011920929,
+      "easingType": "IN_BACK_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.30000001192092896,
+        -0.05000000074505806,
+        0.699999988079071,
+        -0.5
+      ]
+    },
+    "destinationNode": "47:253",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:253",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:512",
+    "sourceName": "Group 25",
+    "sourceFrame": "47:479",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 253
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.800000011920929,
+      "easingType": "IN_BACK_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.30000001192092896,
+        -0.05000000074505806,
+        0.699999988079071,
+        -0.5
+      ]
+    },
+    "destinationNode": "47:253",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:253",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:533",
+    "sourceName": "Group 6",
+    "sourceFrame": "47:519",
+    "sourceFrameName": "역할선택로딩",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 5,
+        "localID": 4
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.0220937728881836,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        100,
+        15,
+        0
+      ],
+      "transitionResetScrollPosition": true,
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "5:4",
+    "destinationName": "home",
+    "destinationFrame": "5:4",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:548",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "47:540",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 560
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.4052858352661133,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        52.88999938964844,
+        10.90999984741211,
+        0
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "47:560",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:560",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:568",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "47:560",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 580
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.4052858352661133,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        52.88999938964844,
+        10.90999984741211,
+        0
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "47:580",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:580",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:588",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "47:580",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 600
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.4052858352661133,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        52.88999938964844,
+        10.90999984741211,
+        0
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "47:600",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:600",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:608",
+    "sourceName": "Group 21",
+    "sourceFrame": "47:600",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 620
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.4052858352661133,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        52.88999938964844,
+        10.90999984741211,
+        0
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "47:620",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:620",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:631",
+    "sourceName": "Group 20",
+    "sourceFrame": "47:620",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 643
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.4052858352661133,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        52.88999938964844,
+        10.90999984741211,
+        0
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "47:643",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:643",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:657",
+    "sourceName": "Group 19",
+    "sourceFrame": "47:643",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 718
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.4052858352661133,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        52.88999938964844,
+        10.90999984741211,
+        0
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "47:718",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:718",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:685",
+    "sourceName": "보안관",
+    "sourceFrame": "47:670",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT",
+      "transitionTimeout": 1.100000023841858
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 540
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.4052858352661133,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        52.88999938964844,
+        10.90999984741211,
+        0
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "47:540",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:540",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:694",
+    "sourceName": "Group 6",
+    "sourceFrame": "47:686",
+    "sourceFrameName": "역할선택로딩",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 5,
+        "localID": 4
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.0220937728881836,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        100,
+        15,
+        0
+      ],
+      "transitionResetScrollPosition": true,
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "5:4",
+    "destinationName": "home",
+    "destinationFrame": "5:4",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:702",
+    "sourceName": "Group 5",
+    "sourceFrame": "47:698",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 718
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.30000001192092896,
+      "easingType": "OUT_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0,
+        0,
+        0.5799999833106995,
+        1
+      ]
+    },
+    "destinationNode": "47:718",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:718",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:706",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "47:698",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 738
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.4052858352661133,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        52.88999938964844,
+        10.90999984741211,
+        0
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "47:738",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:738",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:726",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "47:718",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 698
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.4052858352661133,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        52.88999938964844,
+        10.90999984741211,
+        0
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "47:698",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:698",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:747",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "47:738",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 759
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.4052858352661133,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        52.88999938964844,
+        10.90999984741211,
+        0
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "47:759",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:759",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:772",
+    "sourceName": "제목 없음-1 1",
+    "sourceFrame": "47:759",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 779
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.30000001192092896,
+      "easingType": "OUT_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0,
+        0,
+        0.5799999833106995,
+        1
+      ]
+    },
+    "destinationNode": "47:779",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:779",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:791",
+    "sourceName": "우드그레인 BANG! 카드 덱 1",
+    "sourceFrame": "47:779",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 801
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.30000001192092896,
+      "easingType": "OUT_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0,
+        0,
+        0.5799999833106995,
+        1
+      ],
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "47:801",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:801",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:816",
+    "sourceName": "01_bang 2",
+    "sourceFrame": "47:801",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT",
+      "transitionTimeout": 1
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 823
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.30000001192092896,
+      "easingType": "OUT_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0,
+        0,
+        0.5799999833106995,
+        1
+      ]
+    },
+    "destinationNode": "47:823",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:823",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:838",
+    "sourceName": "Group 22",
+    "sourceFrame": "47:823",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 844
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.30000001192092896,
+      "easingType": "OUT_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0,
+        0,
+        0.5799999833106995,
+        1
+      ]
+    },
+    "destinationNode": "47:844",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:844",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:861",
+    "sourceName": "Group 5",
+    "sourceFrame": "47:844",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 868
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.800000011920929,
+      "easingType": "IN_BACK_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.30000001192092896,
+        -0.05000000074505806,
+        0.699999988079071,
+        -0.5
+      ]
+    },
+    "destinationNode": "47:868",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:868",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:881",
+    "sourceName": "제목 없음-1 1",
+    "sourceFrame": "47:868",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT",
+      "transitionTimeout": 0.019999999552965164
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 890
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.0220937728881836,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        100,
+        15,
+        0
+      ]
+    },
+    "destinationNode": "47:890",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:890",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:903",
+    "sourceName": "제목 없음-1 1",
+    "sourceFrame": "47:890",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 911
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.800000011920929,
+      "easingType": "IN_BACK_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.30000001192092896,
+        -0.05000000074505806,
+        0.699999988079071,
+        -0.5
+      ]
+    },
+    "destinationNode": "47:911",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:911",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:924",
+    "sourceName": "제목 없음-1 1",
+    "sourceFrame": "47:911",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 939
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.800000011920929,
+      "easingType": "IN_BACK_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.30000001192092896,
+        -0.05000000074505806,
+        0.699999988079071,
+        -0.5
+      ]
+    },
+    "destinationNode": "47:939",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:939",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:932",
+    "sourceName": "Group 22",
+    "sourceFrame": "47:911",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 939
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.800000011920929,
+      "easingType": "IN_BACK_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.30000001192092896,
+        -0.05000000074505806,
+        0.699999988079071,
+        -0.5
+      ]
+    },
+    "destinationNode": "47:939",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:939",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:935",
+    "sourceName": "Group 25",
+    "sourceFrame": "47:911",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 939
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.800000011920929,
+      "easingType": "IN_BACK_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.30000001192092896,
+        -0.05000000074505806,
+        0.699999988079071,
+        -0.5
+      ]
+    },
+    "destinationNode": "47:939",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:939",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:952",
+    "sourceName": "제목 없음-1 1",
+    "sourceFrame": "47:939",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 956
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.800000011920929,
+      "easingType": "IN_BACK_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.30000001192092896,
+        -0.05000000074505806,
+        0.699999988079071,
+        -0.5
+      ]
+    },
+    "destinationNode": "47:956",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:956",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:972",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "47:956",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 976
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.800000011920929,
+      "easingType": "IN_BACK_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.30000001192092896,
+        -0.05000000074505806,
+        0.699999988079071,
+        -0.5
+      ]
+    },
+    "destinationNode": "47:976",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:976",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:992",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "47:976",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 686
+      },
+      "transitionType": "SLIDE_FROM_RIGHT",
+      "transitionDuration": 1.0220937728881836,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        100,
+        15,
+        0
+      ],
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "47:686",
+    "destinationName": "역할선택로딩",
+    "destinationFrame": "47:686",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:1025",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "47:1017",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 42,
+        "localID": 2091
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.4052858352661133,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        52.88999938964844,
+        10.90999984741211,
+        0
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "42:2091",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "42:2091",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:1067",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "47:1059",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 1079
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.4052858352661133,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        52.88999938964844,
+        10.90999984741211,
+        0
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "47:1079",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:1079",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:1087",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "47:1079",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 1099
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.4052858352661133,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        52.88999938964844,
+        10.90999984741211,
+        0
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "47:1099",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:1099",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:1107",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "47:1099",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 1119
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.4052858352661133,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        52.88999938964844,
+        10.90999984741211,
+        0
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "47:1119",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:1119",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:1127",
+    "sourceName": "Group 21",
+    "sourceFrame": "47:1119",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 1139
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.4052858352661133,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        52.88999938964844,
+        10.90999984741211,
+        0
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "47:1139",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:1139",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:1150",
+    "sourceName": "Group 20",
+    "sourceFrame": "47:1139",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 1162
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.4052858352661133,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        52.88999938964844,
+        10.90999984741211,
+        0
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "47:1162",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:1162",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:1176",
+    "sourceName": "Group 19",
+    "sourceFrame": "47:1162",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 1237
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.4052858352661133,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        52.88999938964844,
+        10.90999984741211,
+        0
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "47:1237",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:1237",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:1204",
+    "sourceName": "보안관",
+    "sourceFrame": "47:1189",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK",
+      "transitionTimeout": 1.100000023841858
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 1059
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.4052858352661133,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        52.88999938964844,
+        10.90999984741211,
+        0
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "47:1059",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:1059",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:1221",
+    "sourceName": "Group 5",
+    "sourceFrame": "47:1217",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 1237
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.30000001192092896,
+      "easingType": "OUT_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0,
+        0,
+        0.5799999833106995,
+        1
+      ]
+    },
+    "destinationNode": "47:1237",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:1237",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:1225",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "47:1217",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 1257
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.4052858352661133,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        52.88999938964844,
+        10.90999984741211,
+        0
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "47:1257",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:1257",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:1245",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "47:1237",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 1217
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.4052858352661133,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        52.88999938964844,
+        10.90999984741211,
+        0
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "47:1217",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:1217",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:1266",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "47:1257",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 1278
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.4052858352661133,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        52.88999938964844,
+        10.90999984741211,
+        0
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "47:1278",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:1278",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:1291",
+    "sourceName": "제목 없음-1 1",
+    "sourceFrame": "47:1278",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 1298
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.30000001192092896,
+      "easingType": "OUT_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0,
+        0,
+        0.5799999833106995,
+        1
+      ]
+    },
+    "destinationNode": "47:1298",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:1298",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:1310",
+    "sourceName": "우드그레인 BANG! 카드 덱 1",
+    "sourceFrame": "47:1298",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 1320
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.30000001192092896,
+      "easingType": "OUT_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0,
+        0,
+        0.5799999833106995,
+        1
+      ],
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "47:1320",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:1320",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:1335",
+    "sourceName": "01_bang 2",
+    "sourceFrame": "47:1320",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT",
+      "transitionTimeout": 1
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 1342
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.30000001192092896,
+      "easingType": "OUT_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0,
+        0,
+        0.5799999833106995,
+        1
+      ]
+    },
+    "destinationNode": "47:1342",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:1342",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:1357",
+    "sourceName": "Group 22",
+    "sourceFrame": "47:1342",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 1363
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.30000001192092896,
+      "easingType": "OUT_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0,
+        0,
+        0.5799999833106995,
+        1
+      ]
+    },
+    "destinationNode": "47:1363",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:1363",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:1380",
+    "sourceName": "Group 5",
+    "sourceFrame": "47:1363",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 1387
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.800000011920929,
+      "easingType": "IN_BACK_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.30000001192092896,
+        -0.05000000074505806,
+        0.699999988079071,
+        -0.5
+      ]
+    },
+    "destinationNode": "47:1387",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:1387",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:1400",
+    "sourceName": "제목 없음-1 1",
+    "sourceFrame": "47:1387",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT",
+      "transitionTimeout": 0.019999999552965164
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 1409
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.0220937728881836,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        100,
+        15,
+        0
+      ]
+    },
+    "destinationNode": "47:1409",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:1409",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:1422",
+    "sourceName": "제목 없음-1 1",
+    "sourceFrame": "47:1409",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 1430
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.800000011920929,
+      "easingType": "IN_BACK_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.30000001192092896,
+        -0.05000000074505806,
+        0.699999988079071,
+        -0.5
+      ]
+    },
+    "destinationNode": "47:1430",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:1430",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:1454",
+    "sourceName": "Group 25",
+    "sourceFrame": "47:1430",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 2456
+      },
+      "transitionType": "DISSOLVE",
+      "transitionDuration": 1.0220937728881836,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        100,
+        15,
+        0
+      ]
+    },
+    "destinationNode": "47:2456",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:2456",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:1986",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "47:1978",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 1998
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.4052858352661133,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        52.88999938964844,
+        10.90999984741211,
+        0
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "47:1998",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:1998",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:2006",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "47:1998",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 2018
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.4052858352661133,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        52.88999938964844,
+        10.90999984741211,
+        0
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "47:2018",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:2018",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:2026",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "47:2018",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 2038
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.4052858352661133,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        52.88999938964844,
+        10.90999984741211,
+        0
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "47:2038",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:2038",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:2046",
+    "sourceName": "Group 21",
+    "sourceFrame": "47:2038",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 2058
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.4052858352661133,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        52.88999938964844,
+        10.90999984741211,
+        0
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "47:2058",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:2058",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:2069",
+    "sourceName": "Group 20",
+    "sourceFrame": "47:2058",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 2081
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.4052858352661133,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        52.88999938964844,
+        10.90999984741211,
+        0
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "47:2081",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:2081",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:2095",
+    "sourceName": "Group 19",
+    "sourceFrame": "47:2081",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 2156
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.4052858352661133,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        52.88999938964844,
+        10.90999984741211,
+        0
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "47:2156",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:2156",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:2123",
+    "sourceName": "보안관",
+    "sourceFrame": "47:2108",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK",
+      "transitionTimeout": 1.100000023841858
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 1978
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.4052858352661133,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        52.88999938964844,
+        10.90999984741211,
+        0
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "47:1978",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:1978",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:2132",
+    "sourceName": "Group 6",
+    "sourceFrame": "47:2124",
+    "sourceFrameName": "역할선택로딩",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 5,
+        "localID": 4
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.0220937728881836,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        100,
+        15,
+        0
+      ],
+      "transitionResetScrollPosition": true,
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "5:4",
+    "destinationName": "home",
+    "destinationFrame": "5:4",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:2140",
+    "sourceName": "Group 5",
+    "sourceFrame": "47:2136",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 2156
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.30000001192092896,
+      "easingType": "OUT_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0,
+        0,
+        0.5799999833106995,
+        1
+      ]
+    },
+    "destinationNode": "47:2156",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:2156",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:2144",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "47:2136",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 2176
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.4052858352661133,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        52.88999938964844,
+        10.90999984741211,
+        0
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "47:2176",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:2176",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:2164",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "47:2156",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 2136
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.4052858352661133,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        52.88999938964844,
+        10.90999984741211,
+        0
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "47:2136",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:2136",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:2185",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "47:2176",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 2197
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.4052858352661133,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        52.88999938964844,
+        10.90999984741211,
+        0
+      ],
+      "transitionResetScrollPosition": true
+    },
+    "destinationNode": "47:2197",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:2197",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:2210",
+    "sourceName": "제목 없음-1 1",
+    "sourceFrame": "47:2197",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 2217
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.30000001192092896,
+      "easingType": "OUT_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0,
+        0,
+        0.5799999833106995,
+        1
+      ]
+    },
+    "destinationNode": "47:2217",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:2217",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:2229",
+    "sourceName": "우드그레인 BANG! 카드 덱 1",
+    "sourceFrame": "47:2217",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 2239
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.30000001192092896,
+      "easingType": "OUT_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0,
+        0,
+        0.5799999833106995,
+        1
+      ],
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "47:2239",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:2239",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:2254",
+    "sourceName": "01_bang 2",
+    "sourceFrame": "47:2239",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT",
+      "transitionTimeout": 1
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 2261
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.30000001192092896,
+      "easingType": "OUT_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0,
+        0,
+        0.5799999833106995,
+        1
+      ]
+    },
+    "destinationNode": "47:2261",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:2261",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:2276",
+    "sourceName": "Group 22",
+    "sourceFrame": "47:2261",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 2282
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.30000001192092896,
+      "easingType": "OUT_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0,
+        0,
+        0.5799999833106995,
+        1
+      ]
+    },
+    "destinationNode": "47:2282",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:2282",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:2299",
+    "sourceName": "Group 5",
+    "sourceFrame": "47:2282",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 2306
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.800000011920929,
+      "easingType": "IN_BACK_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.30000001192092896,
+        -0.05000000074505806,
+        0.699999988079071,
+        -0.5
+      ]
+    },
+    "destinationNode": "47:2306",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:2306",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:2319",
+    "sourceName": "제목 없음-1 1",
+    "sourceFrame": "47:2306",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT",
+      "transitionTimeout": 0.019999999552965164
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 2328
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.0220937728881836,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        100,
+        15,
+        0
+      ]
+    },
+    "destinationNode": "47:2328",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:2328",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:2341",
+    "sourceName": "제목 없음-1 1",
+    "sourceFrame": "47:2328",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 2349
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.800000011920929,
+      "easingType": "IN_BACK_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.30000001192092896,
+        -0.05000000074505806,
+        0.699999988079071,
+        -0.5
+      ]
+    },
+    "destinationNode": "47:2349",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:2349",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:2362",
+    "sourceName": "제목 없음-1 1",
+    "sourceFrame": "47:2349",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 2377
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.800000011920929,
+      "easingType": "IN_BACK_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.30000001192092896,
+        -0.05000000074505806,
+        0.699999988079071,
+        -0.5
+      ]
+    },
+    "destinationNode": "47:2377",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:2377",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:2370",
+    "sourceName": "Group 22",
+    "sourceFrame": "47:2349",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 2377
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.800000011920929,
+      "easingType": "IN_BACK_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.30000001192092896,
+        -0.05000000074505806,
+        0.699999988079071,
+        -0.5
+      ]
+    },
+    "destinationNode": "47:2377",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:2377",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:2373",
+    "sourceName": "Group 25",
+    "sourceFrame": "47:2349",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 2377
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.800000011920929,
+      "easingType": "IN_BACK_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.30000001192092896,
+        -0.05000000074505806,
+        0.699999988079071,
+        -0.5
+      ]
+    },
+    "destinationNode": "47:2377",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:2377",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:2390",
+    "sourceName": "제목 없음-1 1",
+    "sourceFrame": "47:2377",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 2394
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.800000011920929,
+      "easingType": "IN_BACK_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.30000001192092896,
+        -0.05000000074505806,
+        0.699999988079071,
+        -0.5
+      ]
+    },
+    "destinationNode": "47:2394",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:2394",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:2392",
+    "sourceName": "BANG! 2",
+    "sourceFrame": "47:2377",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT"
+    },
+    "action": {
+      "connectionType": "NONE"
+    },
+    "destinationNode": null,
+    "destinationName": null,
+    "destinationFrame": null,
+    "targetStatus": "none-or-sentinel"
+  },
+  {
+    "sourceNode": "47:2410",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "47:2394",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 2414
+      },
+      "transitionType": "DISSOLVE",
+      "transitionDuration": 0.800000011920929,
+      "easingType": "IN_BACK_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.30000001192092896,
+        -0.05000000074505806,
+        0.699999988079071,
+        -0.5
+      ],
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "47:2414",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:2414",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:2430",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "47:2414",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 2124
+      },
+      "transitionType": "SLIDE_FROM_RIGHT",
+      "transitionDuration": 1.0220937728881836,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        100,
+        15,
+        0
+      ],
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "47:2124",
+    "destinationName": "역할선택로딩",
+    "destinationFrame": "47:2124",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:2438",
+    "sourceName": "01_bang 1",
+    "sourceFrame": "47:2394",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 2408
+      },
+      "transitionType": "SCROLL_ANIMATE",
+      "transitionDuration": 1.0220937728881836,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "SCROLL_TO",
+      "easingFunction": [
+        1,
+        100,
+        15,
+        0
+      ],
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "47:2408",
+    "destinationName": "빈티지 BANG 카드 더미 1",
+    "destinationFrame": "47:2394",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:2452",
+    "sourceName": "Group 6",
+    "sourceFrame": "47:2444",
+    "sourceFrameName": "역할선택로딩",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 5,
+        "localID": 4
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.0220937728881836,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        100,
+        15,
+        0
+      ],
+      "transitionResetScrollPosition": true,
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "5:4",
+    "destinationName": "home",
+    "destinationFrame": "5:4",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:2469",
+    "sourceName": "제목 없음-1 1",
+    "sourceFrame": "47:2456",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 2473
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.800000011920929,
+      "easingType": "IN_BACK_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.30000001192092896,
+        -0.05000000074505806,
+        0.699999988079071,
+        -0.5
+      ]
+    },
+    "destinationNode": "47:2473",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:2473",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:2471",
+    "sourceName": "BANG! 2",
+    "sourceFrame": "47:2456",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "AFTER_TIMEOUT"
+    },
+    "action": {
+      "connectionType": "NONE"
+    },
+    "destinationNode": null,
+    "destinationName": null,
+    "destinationFrame": null,
+    "targetStatus": "none-or-sentinel"
+  },
+  {
+    "sourceNode": "47:2489",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "47:2473",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 2493
+      },
+      "transitionType": "DISSOLVE",
+      "transitionDuration": 0.800000011920929,
+      "easingType": "IN_BACK_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.30000001192092896,
+        -0.05000000074505806,
+        0.699999988079071,
+        -0.5
+      ],
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "47:2493",
+    "destinationName": "게임설명시작2-1-1",
+    "destinationFrame": "47:2493",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:2492",
+    "sourceName": "01_bang 1",
+    "sourceFrame": "47:2473",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 2487
+      },
+      "transitionType": "SCROLL_ANIMATE",
+      "transitionDuration": 1.0220937728881836,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "SCROLL_TO",
+      "easingFunction": [
+        1,
+        100,
+        15,
+        0
+      ],
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "47:2487",
+    "destinationName": "빈티지 BANG 카드 더미 1",
+    "destinationFrame": "47:2473",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:2509",
+    "sourceName": "Rectangle 8",
+    "sourceFrame": "47:2493",
+    "sourceFrameName": "게임설명시작2-1-1",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 47,
+        "localID": 2444
+      },
+      "transitionType": "SLIDE_FROM_RIGHT",
+      "transitionDuration": 1.0220937728881836,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        100,
+        15,
+        0
+      ],
+      "transitionResetVideoPosition": false
+    },
+    "destinationNode": "47:2444",
+    "destinationName": "역할선택로딩",
+    "destinationFrame": "47:2444",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:2567",
+    "sourceName": "Group 26",
+    "sourceFrame": "47:2539",
+    "sourceFrameName": "home",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 35,
+        "localID": 1427
+      },
+      "transitionType": "SLIDE_FROM_RIGHT",
+      "transitionDuration": 1.0220937728881836,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        100,
+        15,
+        0
+      ]
+    },
+    "destinationNode": "35:1427",
+    "destinationName": "chapter 1",
+    "destinationFrame": "35:1427",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:2568",
+    "sourceName": "Group 27",
+    "sourceFrame": "47:2539",
+    "sourceFrameName": "home",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 42,
+        "localID": 1687
+      },
+      "transitionType": "SLIDE_FROM_RIGHT",
+      "transitionDuration": 1.0220937728881836,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        100,
+        15,
+        0
+      ]
+    },
+    "destinationNode": "42:1687",
+    "destinationName": "chapter 2",
+    "destinationFrame": "42:1687",
+    "targetStatus": "resolved"
+  },
+  {
+    "sourceNode": "47:2575",
+    "sourceName": "Group 28",
+    "sourceFrame": "47:2539",
+    "sourceFrameName": "home",
+    "trigger": {
+      "interactionType": "ON_CLICK"
+    },
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 5,
+        "localID": 229
+      },
+      "transitionType": "SLIDE_FROM_RIGHT",
+      "transitionDuration": 1.0220937728881836,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        100,
+        15,
+        0
+      ]
+    },
+    "destinationNode": "5:229",
+    "destinationName": "게임설명시작2",
+    "destinationFrame": "5:229",
+    "targetStatus": "resolved"
+  }
+]

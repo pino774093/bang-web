@@ -1,0 +1,941 @@
+{
+  "sourceRoot": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기",
+  "assets": [
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/Group 18 (1).png",
+      "relativeSource": "Group 18 (1).png",
+      "displayName": "Group 18 (1).png",
+      "category": "illustration-or-composite",
+      "width": 512,
+      "height": 375,
+      "bytes": 343040
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/Group 18 (2)부관.png",
+      "relativeSource": "Group 18 (2)부관.png",
+      "displayName": "Group 18 (2)부관.png",
+      "category": "illustration-or-composite",
+      "width": 512,
+      "height": 375,
+      "bytes": 351226
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/Group 18 (2)부관원근.png",
+      "relativeSource": "Group 18 (2)부관원근.png",
+      "displayName": "Group 18 (2)부관원근.png",
+      "category": "illustration-or-composite",
+      "width": 1200,
+      "height": 1800,
+      "bytes": 1005699
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/Group 18.png",
+      "relativeSource": "Group 18.png",
+      "displayName": "Group 18.png",
+      "category": "illustration-or-composite",
+      "width": 339,
+      "height": 248,
+      "bytes": 158609
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/figma.fig",
+      "relativeSource": "figma.fig",
+      "displayName": "figma.fig",
+      "category": "local-figma-archive",
+      "width": null,
+      "height": null,
+      "bytes": 9489796
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/나무 질감.jpeg",
+      "relativeSource": "나무 질감.jpeg",
+      "displayName": "나무 질감.jpeg",
+      "category": "illustration-or-composite",
+      "width": null,
+      "height": null,
+      "bytes": 103976
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/BANG!.png",
+      "relativeSource": "뱅! 소스 (영)/BANG!.png",
+      "displayName": "뱅! 소스 (영)/BANG!.png",
+      "category": "illustration-or-composite",
+      "width": 1697,
+      "height": 927,
+      "bytes": 1106600
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/Group 18 (2)부관원근.png",
+      "relativeSource": "뱅! 소스 (영)/Group 18 (2)부관원근.png",
+      "displayName": "뱅! 소스 (영)/Group 18 (2)부관원근.png",
+      "category": "illustration-or-composite",
+      "width": 1200,
+      "height": 1800,
+      "bytes": 985647
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/Group 18 (2)부관원근레밍턴.png",
+      "relativeSource": "뱅! 소스 (영)/Group 18 (2)부관원근레밍턴.png",
+      "displayName": "뱅! 소스 (영)/Group 18 (2)부관원근레밍턴.png",
+      "category": "illustration-or-composite",
+      "width": 1200,
+      "height": 1800,
+      "bytes": 894721
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/제목 없음-1.png",
+      "relativeSource": "뱅! 소스 (영)/제목 없음-1.png",
+      "displayName": "뱅! 소스 (영)/제목 없음-1.png",
+      "category": "illustration-or-composite",
+      "width": 1200,
+      "height": 1800,
+      "bytes": 931615
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/제목 없음-1레밍턴.png",
+      "relativeSource": "뱅! 소스 (영)/제목 없음-1레밍턴.png",
+      "displayName": "뱅! 소스 (영)/제목 없음-1레밍턴.png",
+      "category": "illustration-or-composite",
+      "width": 1200,
+      "height": 1800,
+      "bytes": 839306
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/총알.png",
+      "relativeSource": "뱅! 소스 (영)/총알.png",
+      "displayName": "뱅! 소스 (영)/총알.png",
+      "category": "illustration-or-composite",
+      "width": 1447,
+      "height": 1087,
+      "bytes": 1257712
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/카드 png/게임 카드/갈색 테두리/01_bang.png",
+      "relativeSource": "뱅! 소스 (영)/카드 png/게임 카드/갈색 테두리/01_bang.png",
+      "displayName": "뱅! 소스 (영)/카드 png/게임 카드/갈색 테두리/01_bang.png",
+      "category": "game-card",
+      "width": 250,
+      "height": 389,
+      "bytes": 129311
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/카드 png/게임 카드/갈색 테두리/02_birra.png",
+      "relativeSource": "뱅! 소스 (영)/카드 png/게임 카드/갈색 테두리/02_birra.png",
+      "displayName": "뱅! 소스 (영)/카드 png/게임 카드/갈색 테두리/02_birra.png",
+      "category": "game-card",
+      "width": 250,
+      "height": 389,
+      "bytes": 124021
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/카드 png/게임 카드/갈색 테두리/03_catbalou.png",
+      "relativeSource": "뱅! 소스 (영)/카드 png/게임 카드/갈색 테두리/03_catbalou.png",
+      "displayName": "뱅! 소스 (영)/카드 png/게임 카드/갈색 테두리/03_catbalou.png",
+      "category": "game-card",
+      "width": 250,
+      "height": 389,
+      "bytes": 122664
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/카드 png/게임 카드/갈색 테두리/04_duello.png",
+      "relativeSource": "뱅! 소스 (영)/카드 png/게임 카드/갈색 테두리/04_duello.png",
+      "displayName": "뱅! 소스 (영)/카드 png/게임 카드/갈색 테두리/04_duello.png",
+      "category": "game-card",
+      "width": 250,
+      "height": 389,
+      "bytes": 146847
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/카드 png/게임 카드/갈색 테두리/05_gatling.png",
+      "relativeSource": "뱅! 소스 (영)/카드 png/게임 카드/갈색 테두리/05_gatling.png",
+      "displayName": "뱅! 소스 (영)/카드 png/게임 카드/갈색 테두리/05_gatling.png",
+      "category": "game-card",
+      "width": 250,
+      "height": 389,
+      "bytes": 127621
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/카드 png/게임 카드/갈색 테두리/06_emporio.png",
+      "relativeSource": "뱅! 소스 (영)/카드 png/게임 카드/갈색 테두리/06_emporio.png",
+      "displayName": "뱅! 소스 (영)/카드 png/게임 카드/갈색 테두리/06_emporio.png",
+      "category": "game-card",
+      "width": 250,
+      "height": 389,
+      "bytes": 149299
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/카드 png/게임 카드/갈색 테두리/07_indiani.png",
+      "relativeSource": "뱅! 소스 (영)/카드 png/게임 카드/갈색 테두리/07_indiani.png",
+      "displayName": "뱅! 소스 (영)/카드 png/게임 카드/갈색 테두리/07_indiani.png",
+      "category": "game-card",
+      "width": 250,
+      "height": 389,
+      "bytes": 148202
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/카드 png/게임 카드/갈색 테두리/08_mancato.png",
+      "relativeSource": "뱅! 소스 (영)/카드 png/게임 카드/갈색 테두리/08_mancato.png",
+      "displayName": "뱅! 소스 (영)/카드 png/게임 카드/갈색 테두리/08_mancato.png",
+      "category": "game-card",
+      "width": 250,
+      "height": 389,
+      "bytes": 128069
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/카드 png/게임 카드/갈색 테두리/09_panico.png",
+      "relativeSource": "뱅! 소스 (영)/카드 png/게임 카드/갈색 테두리/09_panico.png",
+      "displayName": "뱅! 소스 (영)/카드 png/게임 카드/갈색 테두리/09_panico.png",
+      "category": "game-card",
+      "width": 250,
+      "height": 389,
+      "bytes": 128117
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/카드 png/게임 카드/갈색 테두리/10_saloon.png",
+      "relativeSource": "뱅! 소스 (영)/카드 png/게임 카드/갈색 테두리/10_saloon.png",
+      "displayName": "뱅! 소스 (영)/카드 png/게임 카드/갈색 테두리/10_saloon.png",
+      "category": "game-card",
+      "width": 250,
+      "height": 389,
+      "bytes": 134284
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/카드 png/게임 카드/갈색 테두리/11_diligenza.png",
+      "relativeSource": "뱅! 소스 (영)/카드 png/게임 카드/갈색 테두리/11_diligenza.png",
+      "displayName": "뱅! 소스 (영)/카드 png/게임 카드/갈색 테두리/11_diligenza.png",
+      "category": "game-card",
+      "width": 250,
+      "height": 389,
+      "bytes": 123615
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/카드 png/게임 카드/갈색 테두리/12_wellsfargo.png",
+      "relativeSource": "뱅! 소스 (영)/카드 png/게임 카드/갈색 테두리/12_wellsfargo.png",
+      "displayName": "뱅! 소스 (영)/카드 png/게임 카드/갈색 테두리/12_wellsfargo.png",
+      "category": "game-card",
+      "width": 250,
+      "height": 389,
+      "bytes": 134443
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/카드 png/게임 카드/파란색 테두리/01_barile.png",
+      "relativeSource": "뱅! 소스 (영)/카드 png/게임 카드/파란색 테두리/01_barile.png",
+      "displayName": "뱅! 소스 (영)/카드 png/게임 카드/파란색 테두리/01_barile.png",
+      "category": "game-card",
+      "width": 250,
+      "height": 389,
+      "bytes": 132647
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/카드 png/게임 카드/파란색 테두리/02_dinamite.png",
+      "relativeSource": "뱅! 소스 (영)/카드 png/게임 카드/파란색 테두리/02_dinamite.png",
+      "displayName": "뱅! 소스 (영)/카드 png/게임 카드/파란색 테두리/02_dinamite.png",
+      "category": "game-card",
+      "width": 250,
+      "height": 389,
+      "bytes": 143951
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/카드 png/게임 카드/파란색 테두리/03_prigione.png",
+      "relativeSource": "뱅! 소스 (영)/카드 png/게임 카드/파란색 테두리/03_prigione.png",
+      "displayName": "뱅! 소스 (영)/카드 png/게임 카드/파란색 테두리/03_prigione.png",
+      "category": "game-card",
+      "width": 250,
+      "height": 389,
+      "bytes": 148877
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/카드 png/게임 카드/파란색 테두리/03_volcanic.png",
+      "relativeSource": "뱅! 소스 (영)/카드 png/게임 카드/파란색 테두리/03_volcanic.png",
+      "displayName": "뱅! 소스 (영)/카드 png/게임 카드/파란색 테두리/03_volcanic.png",
+      "category": "game-card",
+      "width": 250,
+      "height": 389,
+      "bytes": 69601
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/카드 png/게임 카드/파란색 테두리/04_mustang.png",
+      "relativeSource": "뱅! 소스 (영)/카드 png/게임 카드/파란색 테두리/04_mustang.png",
+      "displayName": "뱅! 소스 (영)/카드 png/게임 카드/파란색 테두리/04_mustang.png",
+      "category": "game-card",
+      "width": 250,
+      "height": 389,
+      "bytes": 132131
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/카드 png/게임 카드/파란색 테두리/05_remington.png",
+      "relativeSource": "뱅! 소스 (영)/카드 png/게임 카드/파란색 테두리/05_remington.png",
+      "displayName": "뱅! 소스 (영)/카드 png/게임 카드/파란색 테두리/05_remington.png",
+      "category": "game-card",
+      "width": 250,
+      "height": 389,
+      "bytes": 69510
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/카드 png/게임 카드/파란색 테두리/06_carabine.png",
+      "relativeSource": "뱅! 소스 (영)/카드 png/게임 카드/파란색 테두리/06_carabine.png",
+      "displayName": "뱅! 소스 (영)/카드 png/게임 카드/파란색 테두리/06_carabine.png",
+      "category": "game-card",
+      "width": 250,
+      "height": 389,
+      "bytes": 61853
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/카드 png/게임 카드/파란색 테두리/07_schofield.png",
+      "relativeSource": "뱅! 소스 (영)/카드 png/게임 카드/파란색 테두리/07_schofield.png",
+      "displayName": "뱅! 소스 (영)/카드 png/게임 카드/파란색 테두리/07_schofield.png",
+      "category": "game-card",
+      "width": 250,
+      "height": 389,
+      "bytes": 67292
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/카드 png/게임 카드/파란색 테두리/08_mirino.png",
+      "relativeSource": "뱅! 소스 (영)/카드 png/게임 카드/파란색 테두리/08_mirino.png",
+      "displayName": "뱅! 소스 (영)/카드 png/게임 카드/파란색 테두리/08_mirino.png",
+      "category": "game-card",
+      "width": 250,
+      "height": 389,
+      "bytes": 127014
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/카드 png/게임 카드/파란색 테두리/09_winchester.png",
+      "relativeSource": "뱅! 소스 (영)/카드 png/게임 카드/파란색 테두리/09_winchester.png",
+      "displayName": "뱅! 소스 (영)/카드 png/게임 카드/파란색 테두리/09_winchester.png",
+      "category": "game-card",
+      "width": 250,
+      "height": 389,
+      "bytes": 63653
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/카드 png/역할 카드/01_vice.png",
+      "relativeSource": "뱅! 소스 (영)/카드 png/역할 카드/01_vice.png",
+      "displayName": "뱅! 소스 (영)/카드 png/역할 카드/01_vice.png",
+      "category": "role-card",
+      "width": 250,
+      "height": 389,
+      "bytes": 126021
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/카드 png/역할 카드/02_fuorilegge.png",
+      "relativeSource": "뱅! 소스 (영)/카드 png/역할 카드/02_fuorilegge.png",
+      "displayName": "뱅! 소스 (영)/카드 png/역할 카드/02_fuorilegge.png",
+      "category": "role-card",
+      "width": 250,
+      "height": 389,
+      "bytes": 105664
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/카드 png/역할 카드/03_rinnegato.png",
+      "relativeSource": "뱅! 소스 (영)/카드 png/역할 카드/03_rinnegato.png",
+      "displayName": "뱅! 소스 (영)/카드 png/역할 카드/03_rinnegato.png",
+      "category": "role-card",
+      "width": 250,
+      "height": 389,
+      "bytes": 111667
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/카드 png/역할 카드/04_sceriffo.png",
+      "relativeSource": "뱅! 소스 (영)/카드 png/역할 카드/04_sceriffo.png",
+      "displayName": "뱅! 소스 (영)/카드 png/역할 카드/04_sceriffo.png",
+      "category": "role-card",
+      "width": 250,
+      "height": 389,
+      "bytes": 133079
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/카드 png/역할 카드/뒷장.png",
+      "relativeSource": "뱅! 소스 (영)/카드 png/역할 카드/뒷장.png",
+      "displayName": "뱅! 소스 (영)/카드 png/역할 카드/뒷장.png",
+      "category": "role-card",
+      "width": 949,
+      "height": 1381,
+      "bytes": 2430957
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/카드 png/인물 카드/01_bartcassidy.png",
+      "relativeSource": "뱅! 소스 (영)/카드 png/인물 카드/01_bartcassidy.png",
+      "displayName": "뱅! 소스 (영)/카드 png/인물 카드/01_bartcassidy.png",
+      "category": "character-card",
+      "width": 250,
+      "height": 389,
+      "bytes": 138724
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/카드 png/인물 카드/02_blackjack.png",
+      "relativeSource": "뱅! 소스 (영)/카드 png/인물 카드/02_blackjack.png",
+      "displayName": "뱅! 소스 (영)/카드 png/인물 카드/02_blackjack.png",
+      "category": "character-card",
+      "width": 250,
+      "height": 389,
+      "bytes": 139197
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/카드 png/인물 카드/03_calamityjanet.png",
+      "relativeSource": "뱅! 소스 (영)/카드 png/인물 카드/03_calamityjanet.png",
+      "displayName": "뱅! 소스 (영)/카드 png/인물 카드/03_calamityjanet.png",
+      "category": "character-card",
+      "width": 250,
+      "height": 389,
+      "bytes": 133665
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/카드 png/인물 카드/04_elgringo.png",
+      "relativeSource": "뱅! 소스 (영)/카드 png/인물 카드/04_elgringo.png",
+      "displayName": "뱅! 소스 (영)/카드 png/인물 카드/04_elgringo.png",
+      "category": "character-card",
+      "width": 250,
+      "height": 389,
+      "bytes": 139606
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/카드 png/인물 카드/05_jessejones.png",
+      "relativeSource": "뱅! 소스 (영)/카드 png/인물 카드/05_jessejones.png",
+      "displayName": "뱅! 소스 (영)/카드 png/인물 카드/05_jessejones.png",
+      "category": "character-card",
+      "width": 250,
+      "height": 389,
+      "bytes": 135462
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/카드 png/인물 카드/06_jourdonnais.png",
+      "relativeSource": "뱅! 소스 (영)/카드 png/인물 카드/06_jourdonnais.png",
+      "displayName": "뱅! 소스 (영)/카드 png/인물 카드/06_jourdonnais.png",
+      "category": "character-card",
+      "width": 250,
+      "height": 389,
+      "bytes": 150058
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/카드 png/인물 카드/07_kitcarlson.png",
+      "relativeSource": "뱅! 소스 (영)/카드 png/인물 카드/07_kitcarlson.png",
+      "displayName": "뱅! 소스 (영)/카드 png/인물 카드/07_kitcarlson.png",
+      "category": "character-card",
+      "width": 250,
+      "height": 389,
+      "bytes": 139466
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/카드 png/인물 카드/08_luckyduke.png",
+      "relativeSource": "뱅! 소스 (영)/카드 png/인물 카드/08_luckyduke.png",
+      "displayName": "뱅! 소스 (영)/카드 png/인물 카드/08_luckyduke.png",
+      "category": "character-card",
+      "width": 250,
+      "height": 389,
+      "bytes": 129962
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/카드 png/인물 카드/09_paulregret.png",
+      "relativeSource": "뱅! 소스 (영)/카드 png/인물 카드/09_paulregret.png",
+      "displayName": "뱅! 소스 (영)/카드 png/인물 카드/09_paulregret.png",
+      "category": "character-card",
+      "width": 250,
+      "height": 389,
+      "bytes": 127912
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/카드 png/인물 카드/10_pedroramirez.png",
+      "relativeSource": "뱅! 소스 (영)/카드 png/인물 카드/10_pedroramirez.png",
+      "displayName": "뱅! 소스 (영)/카드 png/인물 카드/10_pedroramirez.png",
+      "category": "character-card",
+      "width": 250,
+      "height": 389,
+      "bytes": 129134
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/카드 png/인물 카드/11_rosedoolan.png",
+      "relativeSource": "뱅! 소스 (영)/카드 png/인물 카드/11_rosedoolan.png",
+      "displayName": "뱅! 소스 (영)/카드 png/인물 카드/11_rosedoolan.png",
+      "category": "character-card",
+      "width": 250,
+      "height": 389,
+      "bytes": 137796
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/카드 png/인물 카드/12_sidketchum.png",
+      "relativeSource": "뱅! 소스 (영)/카드 png/인물 카드/12_sidketchum.png",
+      "displayName": "뱅! 소스 (영)/카드 png/인물 카드/12_sidketchum.png",
+      "category": "character-card",
+      "width": 250,
+      "height": 389,
+      "bytes": 133955
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/카드 png/인물 카드/13_slab.png",
+      "relativeSource": "뱅! 소스 (영)/카드 png/인물 카드/13_slab.png",
+      "displayName": "뱅! 소스 (영)/카드 png/인물 카드/13_slab.png",
+      "category": "character-card",
+      "width": 250,
+      "height": 389,
+      "bytes": 136144
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/카드 png/인물 카드/14_suzylafayette.png",
+      "relativeSource": "뱅! 소스 (영)/카드 png/인물 카드/14_suzylafayette.png",
+      "displayName": "뱅! 소스 (영)/카드 png/인물 카드/14_suzylafayette.png",
+      "category": "character-card",
+      "width": 250,
+      "height": 389,
+      "bytes": 133815
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/카드 png/인물 카드/15_vulturesam.png",
+      "relativeSource": "뱅! 소스 (영)/카드 png/인물 카드/15_vulturesam.png",
+      "displayName": "뱅! 소스 (영)/카드 png/인물 카드/15_vulturesam.png",
+      "category": "character-card",
+      "width": 250,
+      "height": 389,
+      "bytes": 135586
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/카드 png/인물 카드/16_willythekid.png",
+      "relativeSource": "뱅! 소스 (영)/카드 png/인물 카드/16_willythekid.png",
+      "displayName": "뱅! 소스 (영)/카드 png/인물 카드/16_willythekid.png",
+      "category": "character-card",
+      "width": 250,
+      "height": 389,
+      "bytes": 125940
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/카드 png/일러스트.png",
+      "relativeSource": "뱅! 소스 (영)/카드 png/일러스트.png",
+      "displayName": "뱅! 소스 (영)/카드 png/일러스트.png",
+      "category": "illustration-or-composite",
+      "width": 1067,
+      "height": 1474,
+      "bytes": 2447151
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/카드 png/제목 없음-1레밍턴.png",
+      "relativeSource": "뱅! 소스 (영)/카드 png/제목 없음-1레밍턴.png",
+      "displayName": "뱅! 소스 (영)/카드 png/제목 없음-1레밍턴.png",
+      "category": "illustration-or-composite",
+      "width": 1200,
+      "height": 1800,
+      "bytes": 839306
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/카드 png/아이콘과 한국어 규칙 카드.png",
+      "relativeSource": "뱅! 소스 (영)/카드 png/아이콘과 한국어 규칙 카드.png",
+      "displayName": "뱅! 소스 (영)/카드 png/아이콘과 한국어 규칙 카드.png",
+      "category": "illustration-or-composite",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2122719
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/카드뭉텅이원근.png",
+      "relativeSource": "뱅! 소스 (영)/카드뭉텅이원근.png",
+      "displayName": "뱅! 소스 (영)/카드뭉텅이원근.png",
+      "category": "illustration-or-composite",
+      "width": 1200,
+      "height": 1800,
+      "bytes": 1170187
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/세피아 서부 현상수배 포스터.png",
+      "relativeSource": "뱅! 소스 (영)/세피아 서부 현상수배 포스터.png",
+      "displayName": "뱅! 소스 (영)/세피아 서부 현상수배 포스터.png",
+      "category": "illustration-or-composite",
+      "width": 1067,
+      "height": 1474,
+      "bytes": 2889836
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/세피아 서부극 게임 매트__end__.png",
+      "relativeSource": "뱅! 소스 (영)/세피아 서부극 게임 매트__end__.png",
+      "displayName": "뱅! 소스 (영)/세피아 서부극 게임 매트__end__.png",
+      "category": "illustration-or-composite",
+      "width": 1473,
+      "height": 1068,
+      "bytes": 2912964
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (영)/우드그레인 BANG! 카드 덱.png",
+      "relativeSource": "뱅! 소스 (영)/우드그레인 BANG! 카드 덱.png",
+      "displayName": "뱅! 소스 (영)/우드그레인 BANG! 카드 덱.png",
+      "category": "illustration-or-composite",
+      "width": 838,
+      "height": 1088,
+      "bytes": 1600710
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (한)/게임/01_bang.png",
+      "relativeSource": "뱅! 소스 (한)/게임/01_bang.png",
+      "displayName": "뱅! 소스 (한)/게임/01_bang.png",
+      "category": "game-card",
+      "width": 750,
+      "height": 1167,
+      "bytes": 584051
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (한)/게임/01_barile.png",
+      "relativeSource": "뱅! 소스 (한)/게임/01_barile.png",
+      "displayName": "뱅! 소스 (한)/게임/01_barile.png",
+      "category": "game-card",
+      "width": 750,
+      "height": 1167,
+      "bytes": 550386
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (한)/게임/02_birra.png",
+      "relativeSource": "뱅! 소스 (한)/게임/02_birra.png",
+      "displayName": "뱅! 소스 (한)/게임/02_birra.png",
+      "category": "game-card",
+      "width": 750,
+      "height": 1167,
+      "bytes": 493678
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (한)/게임/02_dinamite.png",
+      "relativeSource": "뱅! 소스 (한)/게임/02_dinamite.png",
+      "displayName": "뱅! 소스 (한)/게임/02_dinamite.png",
+      "category": "game-card",
+      "width": 750,
+      "height": 1167,
+      "bytes": 529250
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (한)/게임/03_catbalou.png",
+      "relativeSource": "뱅! 소스 (한)/게임/03_catbalou.png",
+      "displayName": "뱅! 소스 (한)/게임/03_catbalou.png",
+      "category": "game-card",
+      "width": 750,
+      "height": 1167,
+      "bytes": 482410
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (한)/게임/03_prigione.png",
+      "relativeSource": "뱅! 소스 (한)/게임/03_prigione.png",
+      "displayName": "뱅! 소스 (한)/게임/03_prigione.png",
+      "category": "game-card",
+      "width": 750,
+      "height": 1167,
+      "bytes": 566062
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (한)/게임/03_volcanic.png",
+      "relativeSource": "뱅! 소스 (한)/게임/03_volcanic.png",
+      "displayName": "뱅! 소스 (한)/게임/03_volcanic.png",
+      "category": "game-card",
+      "width": 750,
+      "height": 1167,
+      "bytes": 206546
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (한)/게임/04_duello.png",
+      "relativeSource": "뱅! 소스 (한)/게임/04_duello.png",
+      "displayName": "뱅! 소스 (한)/게임/04_duello.png",
+      "category": "game-card",
+      "width": 750,
+      "height": 1167,
+      "bytes": 526271
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (한)/게임/04_mustang.png",
+      "relativeSource": "뱅! 소스 (한)/게임/04_mustang.png",
+      "displayName": "뱅! 소스 (한)/게임/04_mustang.png",
+      "category": "game-card",
+      "width": 750,
+      "height": 1167,
+      "bytes": 498605
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (한)/게임/05_gatling.png",
+      "relativeSource": "뱅! 소스 (한)/게임/05_gatling.png",
+      "displayName": "뱅! 소스 (한)/게임/05_gatling.png",
+      "category": "game-card",
+      "width": 750,
+      "height": 1167,
+      "bytes": 548163
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (한)/게임/05_remington.png",
+      "relativeSource": "뱅! 소스 (한)/게임/05_remington.png",
+      "displayName": "뱅! 소스 (한)/게임/05_remington.png",
+      "category": "game-card",
+      "width": 750,
+      "height": 1167,
+      "bytes": 234055
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (한)/게임/06_carabine.png",
+      "relativeSource": "뱅! 소스 (한)/게임/06_carabine.png",
+      "displayName": "뱅! 소스 (한)/게임/06_carabine.png",
+      "category": "game-card",
+      "width": 750,
+      "height": 1167,
+      "bytes": 185998
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (한)/게임/06_emporio.png",
+      "relativeSource": "뱅! 소스 (한)/게임/06_emporio.png",
+      "displayName": "뱅! 소스 (한)/게임/06_emporio.png",
+      "category": "game-card",
+      "width": 750,
+      "height": 1167,
+      "bytes": 574041
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (한)/게임/07_indiani.png",
+      "relativeSource": "뱅! 소스 (한)/게임/07_indiani.png",
+      "displayName": "뱅! 소스 (한)/게임/07_indiani.png",
+      "category": "game-card",
+      "width": 750,
+      "height": 1167,
+      "bytes": 582272
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (한)/게임/07_schofield.png",
+      "relativeSource": "뱅! 소스 (한)/게임/07_schofield.png",
+      "displayName": "뱅! 소스 (한)/게임/07_schofield.png",
+      "category": "game-card",
+      "width": 750,
+      "height": 1167,
+      "bytes": 227741
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (한)/게임/08_mancato.png",
+      "relativeSource": "뱅! 소스 (한)/게임/08_mancato.png",
+      "displayName": "뱅! 소스 (한)/게임/08_mancato.png",
+      "category": "game-card",
+      "width": 750,
+      "height": 1167,
+      "bytes": 488572
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (한)/게임/08_mirino.png",
+      "relativeSource": "뱅! 소스 (한)/게임/08_mirino.png",
+      "displayName": "뱅! 소스 (한)/게임/08_mirino.png",
+      "category": "game-card",
+      "width": 750,
+      "height": 1167,
+      "bytes": 486740
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (한)/게임/09_panico.png",
+      "relativeSource": "뱅! 소스 (한)/게임/09_panico.png",
+      "displayName": "뱅! 소스 (한)/게임/09_panico.png",
+      "category": "game-card",
+      "width": 750,
+      "height": 1167,
+      "bytes": 494614
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (한)/게임/09_winchester.png",
+      "relativeSource": "뱅! 소스 (한)/게임/09_winchester.png",
+      "displayName": "뱅! 소스 (한)/게임/09_winchester.png",
+      "category": "game-card",
+      "width": 750,
+      "height": 1167,
+      "bytes": 194690
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (한)/게임/10_saloon.png",
+      "relativeSource": "뱅! 소스 (한)/게임/10_saloon.png",
+      "displayName": "뱅! 소스 (한)/게임/10_saloon.png",
+      "category": "game-card",
+      "width": 750,
+      "height": 1167,
+      "bytes": 519133
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (한)/게임/11_diligenza.png",
+      "relativeSource": "뱅! 소스 (한)/게임/11_diligenza.png",
+      "displayName": "뱅! 소스 (한)/게임/11_diligenza.png",
+      "category": "game-card",
+      "width": 750,
+      "height": 1167,
+      "bytes": 446694
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (한)/게임/12_wellsfargo.png",
+      "relativeSource": "뱅! 소스 (한)/게임/12_wellsfargo.png",
+      "displayName": "뱅! 소스 (한)/게임/12_wellsfargo.png",
+      "category": "game-card",
+      "width": 750,
+      "height": 1167,
+      "bytes": 524506
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (한)/역할/01_vice.png",
+      "relativeSource": "뱅! 소스 (한)/역할/01_vice.png",
+      "displayName": "뱅! 소스 (한)/역할/01_vice.png",
+      "category": "role-card",
+      "width": 750,
+      "height": 1167,
+      "bytes": 382149
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (한)/역할/02_fuorilegge.png",
+      "relativeSource": "뱅! 소스 (한)/역할/02_fuorilegge.png",
+      "displayName": "뱅! 소스 (한)/역할/02_fuorilegge.png",
+      "category": "role-card",
+      "width": 750,
+      "height": 1167,
+      "bytes": 258889
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (한)/역할/03_rinnegato.png",
+      "relativeSource": "뱅! 소스 (한)/역할/03_rinnegato.png",
+      "displayName": "뱅! 소스 (한)/역할/03_rinnegato.png",
+      "category": "role-card",
+      "width": 750,
+      "height": 1167,
+      "bytes": 273570
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (한)/역할/04_sceriffo.png",
+      "relativeSource": "뱅! 소스 (한)/역할/04_sceriffo.png",
+      "displayName": "뱅! 소스 (한)/역할/04_sceriffo.png",
+      "category": "role-card",
+      "width": 750,
+      "height": 1167,
+      "bytes": 394545
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (한)/인물/01_bartcassidy.png",
+      "relativeSource": "뱅! 소스 (한)/인물/01_bartcassidy.png",
+      "displayName": "뱅! 소스 (한)/인물/01_bartcassidy.png",
+      "category": "character-card",
+      "width": 750,
+      "height": 1167,
+      "bytes": 590246
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (한)/인물/02_blackjack.png",
+      "relativeSource": "뱅! 소스 (한)/인물/02_blackjack.png",
+      "displayName": "뱅! 소스 (한)/인물/02_blackjack.png",
+      "category": "character-card",
+      "width": 750,
+      "height": 1167,
+      "bytes": 520216
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (한)/인물/03_calamityjanet.png",
+      "relativeSource": "뱅! 소스 (한)/인물/03_calamityjanet.png",
+      "displayName": "뱅! 소스 (한)/인물/03_calamityjanet.png",
+      "category": "character-card",
+      "width": 750,
+      "height": 1167,
+      "bytes": 515781
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (한)/인물/04_elgringo.png",
+      "relativeSource": "뱅! 소스 (한)/인물/04_elgringo.png",
+      "displayName": "뱅! 소스 (한)/인물/04_elgringo.png",
+      "category": "character-card",
+      "width": 750,
+      "height": 1167,
+      "bytes": 526449
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (한)/인물/05_jessejones.png",
+      "relativeSource": "뱅! 소스 (한)/인물/05_jessejones.png",
+      "displayName": "뱅! 소스 (한)/인물/05_jessejones.png",
+      "category": "character-card",
+      "width": 750,
+      "height": 1167,
+      "bytes": 550606
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (한)/인물/06_jourdonnais.png",
+      "relativeSource": "뱅! 소스 (한)/인물/06_jourdonnais.png",
+      "displayName": "뱅! 소스 (한)/인물/06_jourdonnais.png",
+      "category": "character-card",
+      "width": 750,
+      "height": 1167,
+      "bytes": 590526
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (한)/인물/07_kitcarlson.png",
+      "relativeSource": "뱅! 소스 (한)/인물/07_kitcarlson.png",
+      "displayName": "뱅! 소스 (한)/인물/07_kitcarlson.png",
+      "category": "character-card",
+      "width": 750,
+      "height": 1167,
+      "bytes": 544048
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (한)/인물/08_luckyduke.png",
+      "relativeSource": "뱅! 소스 (한)/인물/08_luckyduke.png",
+      "displayName": "뱅! 소스 (한)/인물/08_luckyduke.png",
+      "category": "character-card",
+      "width": 750,
+      "height": 1167,
+      "bytes": 481257
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (한)/인물/09_paulregret.png",
+      "relativeSource": "뱅! 소스 (한)/인물/09_paulregret.png",
+      "displayName": "뱅! 소스 (한)/인물/09_paulregret.png",
+      "category": "character-card",
+      "width": 750,
+      "height": 1167,
+      "bytes": 479018
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (한)/인물/10_pedroramirez.png",
+      "relativeSource": "뱅! 소스 (한)/인물/10_pedroramirez.png",
+      "displayName": "뱅! 소스 (한)/인물/10_pedroramirez.png",
+      "category": "character-card",
+      "width": 750,
+      "height": 1167,
+      "bytes": 487817
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (한)/인물/11_rosedoolan.png",
+      "relativeSource": "뱅! 소스 (한)/인물/11_rosedoolan.png",
+      "displayName": "뱅! 소스 (한)/인물/11_rosedoolan.png",
+      "category": "character-card",
+      "width": 750,
+      "height": 1167,
+      "bytes": 550222
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (한)/인물/12_sidketchum.png",
+      "relativeSource": "뱅! 소스 (한)/인물/12_sidketchum.png",
+      "displayName": "뱅! 소스 (한)/인물/12_sidketchum.png",
+      "category": "character-card",
+      "width": 750,
+      "height": 1167,
+      "bytes": 525390
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (한)/인물/13_slab.png",
+      "relativeSource": "뱅! 소스 (한)/인물/13_slab.png",
+      "displayName": "뱅! 소스 (한)/인물/13_slab.png",
+      "category": "character-card",
+      "width": 750,
+      "height": 1167,
+      "bytes": 540899
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (한)/인물/14_suzylafayette.png",
+      "relativeSource": "뱅! 소스 (한)/인물/14_suzylafayette.png",
+      "displayName": "뱅! 소스 (한)/인물/14_suzylafayette.png",
+      "category": "character-card",
+      "width": 750,
+      "height": 1167,
+      "bytes": 508750
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (한)/인물/15_vulturesam.png",
+      "relativeSource": "뱅! 소스 (한)/인물/15_vulturesam.png",
+      "displayName": "뱅! 소스 (한)/인물/15_vulturesam.png",
+      "category": "character-card",
+      "width": 750,
+      "height": 1167,
+      "bytes": 469938
+    },
+    {
+      "source": "/Users/parkseojin/대학/1-2/미디어디자인/week6 ; 보드게임 설명서 만들기/뱅! 소스 (한)/인물/16_willythekid.png",
+      "relativeSource": "뱅! 소스 (한)/인물/16_willythekid.png",
+      "displayName": "뱅! 소스 (한)/인물/16_willythekid.png",
+      "category": "character-card",
+      "width": 750,
+      "height": 1167,
+      "bytes": 471703
+    }
+  ]
+}

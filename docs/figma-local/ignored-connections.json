@@ -1,0 +1,102 @@
+[
+  {
+    "source": "8:304",
+    "reason": "no-destination",
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 4294967295,
+        "localID": 4294967295
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.5,
+      "easingType": "CUSTOM_CUBIC",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ],
+      "transitionResetScrollPosition": true
+    }
+  },
+  {
+    "source": "8:420",
+    "reason": "no-destination",
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 4294967295,
+        "localID": 4294967295
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 1.0220937728881836,
+      "easingType": "GENTLE_SPRING",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        1,
+        100,
+        15,
+        0
+      ],
+      "transitionResetScrollPosition": true
+    }
+  },
+  {
+    "source": "30:749",
+    "reason": "no-destination",
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 4294967295,
+        "localID": 4294967295
+      },
+      "transitionType": "SMART_ANIMATE",
+      "transitionDuration": 0.5,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "NAVIGATE",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ]
+    }
+  },
+  {
+    "source": "30:953",
+    "reason": "no-destination",
+    "action": {
+      "transitionNodeID": {
+        "sessionID": 4294967295,
+        "localID": 4294967295
+      },
+      "transitionType": "INSTANT_TRANSITION",
+      "transitionDuration": 0.5,
+      "easingType": "EASE_IN",
+      "connectionType": "INTERNAL_NODE",
+      "navigationType": "SCROLL_TO",
+      "easingFunction": [
+        0.41999998688697815,
+        0,
+        1,
+        1
+      ]
+    }
+  },
+  {
+    "source": "47:2392",
+    "reason": "no-destination",
+    "action": {
+      "connectionType": "NONE"
+    }
+  },
+  {
+    "source": "47:2471",
+    "reason": "no-destination",
+    "action": {
+      "connectionType": "NONE"
+    }
+  }
+]

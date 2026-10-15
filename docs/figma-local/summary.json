@@ -1,0 +1,24 @@
+{
+  "source": "reference/최신로컬사본.fig",
+  "sha256": "5269b7571b77fa416c71d717bef1b2981ffc44316120fee3bc6d0a53f6f937f0",
+  "exportedAt": "2026-10-15T15:08:23.075Z",
+  "nodes": 2707,
+  "topLevelFrames": 148,
+  "mobile390x844": 147,
+  "layersWithStoredInteractions": 219,
+  "layersWithActiveInteractions": 219,
+  "activeInteractions": 221,
+  "actionCount": 221,
+  "triggerCounts": {
+    "ON_CLICK": 161,
+    "ON_HOVER": 3,
+    "DRAG": 3,
+    "AFTER_TIMEOUT": 54
+  },
+  "targetCounts": {
+    "resolved": 214,
+    "none-or-sentinel": 7
+  },
+  "embeddedImages": 52,
+  "applicationModified": false
+}
