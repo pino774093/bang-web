@@ -2,6 +2,10 @@
 .reference-screen { position:relative; width:100%; aspect-ratio:390 / 844; overflow:hidden; }
 .design-stage { width:390px; height:844px; position:absolute; inset:0 auto auto 0; transform-origin:0 0; isolation:isolate; overflow:hidden; background:#fff; font-family:"omnigothic","Apple SD Gothic Neo","Malgun Gothic",sans-serif; }
 .design-image { position:absolute; display:block; max-width:none; pointer-events:none; user-select:none; }
+.design-stage:is([data-screen="114"],[data-screen="116"],[data-screen="117"],[data-screen="118"]) .chapter-three-discard-pile { z-index:50 !important; }
+.design-stage:is([data-screen="114"],[data-screen="116"],[data-screen="117"],[data-screen="118"]) .chapter-three-deck-stack { z-index:100 !important; }
+.design-stage:is([data-screen="114"],[data-screen="116"],[data-screen="117"],[data-screen="118"]) .chapter-three-bang-card { z-index:200 !important; }
+.design-stage:is([data-screen="119"],[data-screen="120"],[data-screen="121"],[data-screen="122"]) .chapter-three-bang-logo { z-index:300 !important; }
 .design-stage[data-screen="17"] .design-image[data-screen-asset-index="0"] { z-index:3; }
 .design-wood { position:absolute; inset:0; background:#c89769; }
 .design-wood img { object-fit:cover; opacity:.67; }

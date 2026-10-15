@@ -67,10 +67,14 @@
         const layer=target||img;
         layer.style.transformOrigin='0 0';layer.style.transform=`matrix(${a},${b},${c},${d},${x},${y})`;
         if([114,116,117,118].includes(screen.id)){
-          if(asset.name==='discard pile')img.style.zIndex='1';
-          // The played Bang! card sits above the table art and piles, while
-          // the separate BANG! deck graphic remains the topmost card layer.
-          if(asset.name?.includes('/01_bang.png'))img.style.zIndex='100';
+          if(asset.name==='discard pile'){
+            img.classList.add('chapter-three-discard-pile');img.style.zIndex='50';
+          }
+          // The drawn Bang! card must sit above both the discard pile and the
+          // perspective deck stack; the separate logo layer remains highest.
+          if(asset.name?.includes('/01_bang.png')){
+            img.classList.add('chapter-three-bang-card');img.style.zIndex='200';
+          }
         }
         if(asset.clip)img.style.clipPath=asset.clip;
         if(asset.opacity!==undefined)img.style.opacity=asset.opacity;
@@ -83,10 +87,11 @@
           const [[a,c,x],[b,d,y]]=bangDeck.matrix;
           const deck=image(bangDeck.src,0,0,bangDeck.width,bangDeck.height);
           deck.dataset.screenAssetIndex='bang-deck-front';
-          deck.style.transformOrigin='0 0';deck.style.transform=`matrix(${a},${b},${c},${d},${x},${y})`;deck.style.zIndex='101';
+          deck.classList.add('chapter-three-deck-stack');
+          deck.style.transformOrigin='0 0';deck.style.transform=`matrix(${a},${b},${c},${d},${x},${y})`;deck.style.zIndex='100';
         }
       }
-      if(screen.id>=119 && screen.id<=122){const bang=image('assets/bang-logo.png',153,179,185,101);bang.style.transform='rotate(-29deg)';}
+      if(screen.id>=119 && screen.id<=122){const bang=image('assets/bang-logo.png',153,179,185,101);bang.classList.add('chapter-three-bang-logo');bang.style.transform='rotate(-29deg)';}
       if(screen.kind==='chapter-menu'){
         image('assets/logo-backing-vector.svg',56,25,277,174);
         const logo=image('assets/bang-logo.png',0,0,1697,927);logo.style.transformOrigin='0 0';logo.style.transform='matrix(.134494,-.011541,.011711,.134122,74.16,53.825)';
