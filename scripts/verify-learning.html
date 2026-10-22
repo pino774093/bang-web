@@ -1,0 +1,71 @@
+<!doctype html><meta charset="utf-8"><title>BANG! 학습 흐름 검증</title>
+<script src="../fonts.js?v=xde7urj-unified-3"></script><link rel="stylesheet" href="../fonts.css?v=xde7urj-unified-1">
+<style>body{font:14px system-ui;display:flex;gap:24px;margin:20px;background:#eee}iframe{width:390px;height:844px;border:0;flex:none}pre{white-space:pre-wrap;max-width:560px}</style>
+<iframe src="../index.html?review=1" title="390×844 검증 화면"></iframe><pre id="report">검증 준비 중…</pre>
+<script>
+const iframe=document.querySelector('iframe'),report=document.querySelector('#report');
+const wait=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+iframe.onload=async()=>{
+  const w=iframe.contentWindow,results=[],errors=[];
+  const check=(name,ok,detail='')=>{results.push({name,ok,detail});report.textContent=results.map(r=>(r.ok?'✓ ':'✗ ')+r.name+(r.detail?' — '+r.detail:'')).join('\n');};
+  w.addEventListener('error',event=>errors.push(event.message));
+  w.addEventListener('unhandledrejection',event=>errors.push(String(event.reason)));
+  try{
+    await w.document.fonts.ready;
+    const before=JSON.stringify(Object.fromEntries(Object.entries(w.BANG_FIGMA_FLOW.frames).filter(([id])=>!id.startsWith('learn:'))));
+    check('iframe 크기 390×844',w.innerWidth===390&&w.innerHeight===844);
+    const ids=[w.BANG_FIGMA_FLOW.home,w.BANG_FIGMA_FLOW.menu,...[...w.BangLearning.frames.keys()].filter(id=>w.BANG_FIGMA_FLOW.frames['learn:'+id]).map(id=>'learn:'+id)];
+    const broken=[],missing=[],empty=[],overflow=[],focusShift=[],menuIcons=[];
+    for(const id of ids){
+      w.BangRouter.go(id,{instant:true,force:true,replace:true});
+      for(let n=0;n<100&&w.document.querySelector('#app').hasAttribute('aria-busy');n++)await wait(20);
+      const root=w.document.querySelector('#learning-screen .learning-stage');
+      if(!root.children.length)empty.push(id);
+      for(const image of root.querySelectorAll('img'))if(!image.complete||!image.naturalWidth)broken.push(id+' '+image.getAttribute('src'));
+      if(w.document.documentElement.scrollWidth>390)overflow.push(id);
+      const control=root.querySelector('.learning-hotspot');if(control){control.focus();if(root.scrollTop||root.scrollLeft)focusShift.push(id);}
+      for(const menu of root.querySelectorAll('[aria-label="목차 열기"]'))if(!menu.querySelector('img[src$="0a3d10c2-d2f3-4d00-b8a6-9dace2b6209f.svg"]'))menuIcons.push(id);
+      for(const link of w.BangLearning.frames.get(id.replace(/^learn:/,''))?.links||[]){
+        if(link.trigger==='ON_CLICK'&&!['42:2064','8:258'].includes(link.to)&&!root.querySelector(`[data-node-id="${link.source}"]`)&&id.startsWith('learn:')&&w.BANG_LEARNING_SCENES.scenes[id.slice(6)])missing.push(id+' '+link.source);
+      }
+    }
+    check('학습 화면 '+ids.length+'개 렌더링',!empty.length,empty.join(', '));
+    check('학습 이미지 로드',!broken.length,[...new Set(broken)].join('\n'));
+    check('390px 가로 넘침 없음',!overflow.length,overflow.join(', '));
+    check('학습 버튼 포커스 시 화면 밀림 없음',!focusShift.length,focusShift.join(', '));
+    check('Figma 클릭 대상 연결',!missing.length,missing.join(', '));
+    check('목차 열기 아이콘은 세 줄로 통일',!menuIcons.length,menuIcons.join(', '));
+    w.BangRouter.go('learn:94:185',{instant:true,force:true,replace:true});await wait(100);
+    const roles=[...w.document.querySelectorAll('.learning-stage .design-card-target')];
+    const roleNames=['보안관','부관','무법자','배신자'];
+    check('역할 탐색의 위치와 이름 대응',roles.length===4&&roles.every((n,i)=>n.getAttribute('aria-label')===roleNames[i]));
+    const detailProblems=[];
+    for(const id of ['94:200','94:224','94:248','94:272']){
+      w.BangRouter.go('learn:'+id,{instant:true,force:true,replace:true});await wait(100);
+      const root=w.document.querySelector('.learning-stage'),copy=root.querySelector('.learning-role-copy'),box=root.getBoundingClientRect(),rect=copy.getBoundingClientRect();
+      if(rect.bottom>box.bottom-60||!root.querySelector('[aria-label="역할 목록으로 돌아가기"]'))detailProblems.push(id);
+    }
+    check('역할 상세 문구 잘림과 복귀 버튼',!detailProblems.length,detailProblems.join(', '));
+    w.BangRouter.go('learn:139:351',{instant:true,force:true,replace:true});await wait(100);
+    const finalButton=w.document.querySelector('.learning-stage [data-source-node="139:364"]');
+    finalButton.click();await wait(50);
+    check('STEP 3 원본 마지막 뒤에 새 설명으로 연결',w.BangRouter.current==='learn:turn-timing');
+    w.BangRouter.go('home',{instant:true,force:true,replace:true});await wait(100);
+    const stage=w.document.querySelector('.learning-stage');
+    stage.querySelector('[aria-label="카드&규칙 찾기"]').click();await wait(1000);
+    check('기존 카드 도감 유지',!!w.document.querySelector('#reference-screen .card-library'));
+    w.BangRouter.go('home',{instant:true,force:true,replace:true});await wait(100);
+    stage.querySelector('[aria-label="게임 시뮬레이션"]').click();await wait(1100);
+    check('홈의 시뮬레이션 버튼은 원래 5:229로 이동',w.BangRouter.current==='5:229');
+    check('시뮬레이션에 원래 화면 렌더러 사용',!w.document.querySelector('#reference-screen').hidden&&w.document.querySelector('#learning-screen').hidden);
+    check('기존 네 역할 선택 동작 유지',w.document.querySelectorAll('#reference-screen .figma-hotspot[data-target-frame]').length>=4);
+    check('기존 프레임 및 연결 데이터 불변',before===JSON.stringify(Object.fromEntries(Object.entries(w.BANG_FIGMA_FLOW.frames).filter(([id])=>!id.startsWith('learn:')))));
+    check('JavaScript 실행 오류 없음',!errors.length,errors.join('\n'));
+    w.BangRouter.go('home',{instant:true,replace:true});
+    // Release the inspection-only pause before the user continues browsing.
+    const liveURL=new URL(w.location.href);liveURL.searchParams.delete('review');
+    w.history.replaceState(w.history.state,'',liveURL.href);w.BangLearning.activate();
+    document.title=results.every(r=>r.ok)?'PASS — BANG! 학습 흐름 검증':'FAIL — BANG! 학습 흐름 검증';
+  }catch(error){check('검증 실행',false,error.stack);document.title='FAIL — BANG! 학습 흐름 검증';}
+};
+</script>

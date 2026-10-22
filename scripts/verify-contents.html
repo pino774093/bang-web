@@ -1,0 +1,88 @@
+<!doctype html><meta charset="utf-8"><title>하위 목차 검증 중</title>
+<style>body{display:flex;gap:24px;margin:20px;background:#eee;font:14px sans-serif}iframe{width:390px;height:844px;border:0;flex:none}pre{white-space:pre-wrap;max-width:550px}</style>
+<iframe src="../index.html?review=1" title="390×844 목차 테스트"></iframe><pre>검증 준비 중…</pre>
+<script>
+const iframe=document.querySelector('iframe'),report=document.querySelector('pre');
+iframe.onload=async()=>{
+ const w=iframe.contentWindow,d=w.document,results=[],errors=[];
+ const wait=ms=>new Promise(r=>setTimeout(r,ms));
+ const check=(name,ok)=>{results.push({name,ok});report.textContent=results.map(r=>(r.ok?'✓ ':'✗ ')+r.name).join('\n');};
+ const root=()=>d.querySelector('.learning-stage');
+ const go=async id=>{w.BangRouter.go('learn:'+id,{instant:true,force:true,replace:true});await wait(80);};
+ const open=async()=>{await go('131:1182');root().querySelector('[aria-label="목차 열기"]').click();await wait(350);};
+ const step=i=>root().querySelector(`.learning-drawer-step[data-step="${i}"]`);
+ const topics=()=>[...root().querySelectorAll('.learning-contents-topics.is-expanded button')];
+ const drag=(star,from,to,cancel=false)=>{
+  star.setPointerCapture=()=>{};
+  star.dispatchEvent(new w.PointerEvent('pointerdown',{pointerId:4,button:0,clientY:from,bubbles:true}));
+  star.dispatchEvent(new w.PointerEvent('pointermove',{pointerId:4,clientY:to,bubbles:true}));
+  star.dispatchEvent(new w.PointerEvent(cancel?'pointercancel':'pointerup',{pointerId:4,clientY:to,bubbles:true}));
+ };
+ w.addEventListener('error',e=>errors.push(e.message));
+ w.addEventListener('unhandledrejection',e=>errors.push(String(e.reason)));
+ try{
+  await d.fonts.ready;await open();
+  const original=w.BangRouter.current;
+  check('390×844 모바일 목차',w.innerWidth===390&&w.innerHeight===844&&!!root().querySelector('.learning-drawer'));
+  const footer=root().querySelector('.learning-drawer-shortcuts'),closedTop=parseFloat(footer.style.top);
+  let star=root().querySelector('[role=slider]'),r=star.getBoundingClientRect(),target=step(1).getBoundingClientRect();
+  drag(star,r.top+r.height/2,target.top+21);await wait(350);
+  check('별을 STEP 1에 놓으면 목차만 펼침',step(1).getAttribute('aria-expanded')==='true'&&w.BangRouter.current===original);
+  check('구성·개인 세팅·전체 세팅',topics().map(n=>n.textContent).join('|')==='— 구성|— 개인 세팅|— 전체 세팅');
+  check('별 이동 지점과 연결선 확장',star.getAttribute('aria-valuemax')==='8'&&parseFloat(root().querySelector('.learning-drawer-track').style.height)>443);
+  check('바로가기 버튼이 아래로 이동',parseFloat(footer.style.top)>closedTop);
+  const child=topics()[1].getBoundingClientRect();r=star.getBoundingClientRect();drag(star,r.top+r.height/2,child.top+child.height/2);await wait(800);
+  check('별을 개인 세팅에 놓으면 인트로 없이 이동',w.BangRouter.current==='learn:8:489'&&!root().querySelector('.learning-drawer'));
+  const failed=[];
+  for(let i=0;i<3;i++)for(const [label,to]of w.BangContents.steps[i].topics){
+   await open();step(i+1).click();await wait(300);
+   const b=topics().find(n=>n.dataset.target===to);b.click();await wait(750);
+   if(w.BangRouter.current!=='learn:'+to)failed.push(label);
+  }
+  check('STEP 1~3 소목차 13개 직접 이동',failed.length===0);
+  await open();step(1).click();step(2).click();await wait(350);
+  check('다른 STEP 선택 시 이전 목차 접힘',step(1).getAttribute('aria-expanded')==='false'&&step(2).getAttribute('aria-expanded')==='true'&&topics().length===5);
+  check('닫힌 하위 목차는 포커스 대상에서 제외',root().querySelector('#learning-topics-0').inert);
+  const viewport=root().querySelector('.learning-contents-scroll');viewport.scrollTop=viewport.scrollHeight;await wait(50);
+  const v=viewport.getBoundingClientRect(),f=root().querySelector('.learning-drawer-shortcuts').getBoundingClientRect();
+  check('스크롤하면 하단 바로가기 모두 접근',viewport.scrollTop>0&&f.bottom<=v.bottom+1);
+  await open();step(3).click();await wait(350);star=root().querySelector('[role=slider]');r=star.getBoundingClientRect();
+  const before=w.BangRouter.current;drag(star,r.top+r.height/2,r.top+90,true);check('드래그 취소 시 이동 없음',w.BangRouter.current===before);
+  const scrollArea=root().querySelector('.learning-contents-scroll');scrollArea.scrollTop=0;
+  star.setPointerCapture=()=>{};r=star.getBoundingClientRect();
+  const edge=scrollArea.getBoundingClientRect().bottom-5;
+  star.dispatchEvent(new w.PointerEvent('pointerdown',{pointerId:6,button:0,clientY:r.top+r.height/2,bubbles:true}));
+  star.dispatchEvent(new w.PointerEvent('pointermove',{pointerId:6,clientY:edge,bubbles:true}));await wait(180);
+  check('별을 화면 아래로 드래그하면 자동 스크롤',scrollArea.scrollTop>0);
+  star.dispatchEvent(new w.PointerEvent('pointercancel',{pointerId:6,clientY:edge,bubbles:true}));
+  step(4).click();check('미완성 STEP은 준비 안내 유지',!!root().querySelector('.learning-message'));
+  await open();star=root().querySelector('[role=slider]');star.dispatchEvent(new w.KeyboardEvent('keydown',{key:'Home',bubbles:true}));star.dispatchEvent(new w.KeyboardEvent('keydown',{key:'Enter',bubbles:true}));await wait(350);
+  star.dispatchEvent(new w.KeyboardEvent('keydown',{key:'ArrowDown',bubbles:true}));star.dispatchEvent(new w.KeyboardEvent('keydown',{key:'Enter',bubbles:true}));await wait(750);
+  check('키보드 별 선택으로 구성 화면 이동',w.BangRouter.current==='learn:8:398');
+  iframe.style.width='320px';await wait(100);await open();
+  star=root().querySelector('[role=slider]');r=star.getBoundingClientRect();target=step(1).getBoundingClientRect();
+  drag(star,r.top+r.height/2,target.top+target.height*.3);await wait(350);
+  check('320px 축소 화면에서도 별 드래그 좌표 일치',step(1).getAttribute('aria-expanded')==='true');
+  iframe.style.width='390px';await wait(100);
+  await open();step(1).click();await wait(350);
+  check('목차 글자는 모두 400',[...root().querySelectorAll('.learning-drawer button,.learning-drawer h2,.learning-drawer span')].every(n=>w.getComputedStyle(n).fontWeight==='400'));
+  root().querySelector('[aria-label="목차 닫기"]').click();
+  check('닫기 슬라이드 시작',!!root().querySelector('.is-closing'));await wait(350);
+  check('슬라이드 후 목차 제거',!root().querySelector('.learning-drawer'));
+  check('가로 넘침·실행 오류 없음',d.documentElement.scrollWidth===390&&errors.length===0);
+  let currentMarkers=true;
+  for(const [id,number,label]of [['35:1390',2,'배신자'],['94:272',2,'배신자'],['136:37',1,'전체 세팅'],['139:351',3,'카드 버리기']]){
+   await go(id);root().querySelector('[aria-label="목차 열기"]').click();await wait(350);
+   const currentStar=root().querySelector('[role=slider]');
+   currentMarkers&&=currentStar.getAttribute('aria-valuenow')===String(number)&&root().querySelectorAll('.learning-contents-topics.is-expanded').length===0;
+   step(number).click();await wait(350);
+   currentMarkers&&=currentStar.getAttribute('aria-valuetext')===`Step ${number} ${label}`&&w.BangRouter.current==='learn:'+id;
+   step(number).click();await wait(350);currentMarkers&&=currentStar.getAttribute('aria-valuenow')===String(number);
+  }
+  check('열 때 STEP 표시 → 펼치면 현재 하위 페이지 → 접으면 STEP 표시',currentMarkers);
+  await open();step(1).click();
+  const liveURL=new URL(w.location.href);liveURL.searchParams.delete('review');w.history.replaceState(w.history.state,'',liveURL.href);
+  document.title=results.every(r=>r.ok)?'PASS — 펼치는 목차 검증':'FAIL — 펼치는 목차 검증';
+ }catch(error){check(error.stack,false);document.title='FAIL — 펼치는 목차 검증';}
+};
+</script>

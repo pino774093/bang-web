@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-22",
+  "browser": "Google Chrome",
+  "viewport": {"width": 390, "height": 844},
+  "harness": "scripts/verify-learning.html",
+  "renderedLearningStates": 59,
+  "checks": {
+    "allLearningStatesRender": "pass",
+    "localImagesLoad": "pass",
+    "noHorizontalOverflow": "pass",
+    "noFocusScrollShift": "pass",
+    "figmaClickSourcesPresent": "pass",
+    "roleNamesMatchCardPositions": "pass",
+    "roleDetailTextAndReturnControls": "pass",
+    "existingCardLibrary": "pass",
+    "simulationEntryIsOriginal5229": "pass",
+    "simulationUsesOriginalRenderer": "pass",
+    "originalFourRoleChoices": "pass",
+    "originalFrameGraphUnchanged": "pass",
+    "noJavaScriptRuntimeErrors": "pass",
+    "sourceSyntaxAndWhitespace": "pass",
+    "adobeKitLoaderSuccessAndFailureVmTest": "pass",
+    "stepThreeToStepFourRuntimeDataVmTest": "pass"
+  },
+  "unchangedSourceFiles": ["interactions.js", "screen-renderer.js", "data/figma-flow.js", "data/screens.js", "data/dialogues.js", "styles.css", "screens.css"],
+  "limitations": [
+    "STEP 1 bullet explanation to overall setup destination awaits confirmation.",
+    "STEP 3 continues to STEP 4 as confirmed; the unfinished STEP 4 currently displays a preparation notice.",
+    "Some STEP 2 layouts reuse existing implementation because additional Figma design context requests were rate limited.",
+    "Full uninterrupted STEP 1–3 completion is not claimed while the STEP 1 destination remains unresolved."
+  ]
+}

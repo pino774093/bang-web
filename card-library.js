@@ -1,5 +1,10 @@
 (() => {
- const names={bang:'뱅!',birra:'맥주',catbalou:'캣 벌로우',duello:'결투',gatling:'기관총',emporio:'잡화점',indiani:'인디언',mancato:'빗나감!',panico:'강탈',saloon:'주점',diligenza:'역마차',wellsfargo:'웰스 파고',barile:'술통',dinamite:'다이너마이트',prigione:'감옥',volcanic:'볼캐닉',mustang:'머스탱',remington:'레밍턴',carabine:'카빈',schofield:'스코필드',mirino:'조준경',winchester:'윈체스터',vice:'부관',fuorilegge:'무법자',rinnegato:'배신자',sceriffo:'보안관',bartcassidy:'바트 캐시디',blackjack:'블랙 잭',calamityjanet:'캘러미티 자넷',elgringo:'엘 그링고',jessejones:'제시 존스',jourdonnais:'주르도네',kitcarlson:'키트 칼슨',luckyduke:'럭키 듀크',paulregret:'폴 리그레트',pedroramirez:'페드로 라미레즈',rosedoolan:'로즈 둘란',sidketchum:'시드 케첨',slab:'슬랩 더 킬러',suzylafayette:'수지 라파예트',vulturesam:'벌처 샘',willythekid:'윌리 더 키드'};
+ // Catalog-only title override; keep the source Figma and simulation data intact.
+ const catalogTitle=window.BANG_DIALOGUES?.[146]?.find(line=>line.text==='카드 세부 설명');
+ if(catalogTitle){catalogTitle.text='카드 도감';catalogTitle.w=80;}
+ const catalogScreen=window.BANG_SCREENS?.find(screen=>screen.id===146);if(catalogScreen)catalogScreen.name='카드 도감';
+ const catalogFrame=window.BANG_FIGMA_FLOW?.frames[window.BANG_FIGMA_FLOW.cards];if(catalogFrame)catalogFrame.name='카드 도감';
+ const names={bang:'뱅!',birra:'맥주',catbalou:'캣 벌로우',duello:'결투',gatling:'기관총',emporio:'잡화점',indiani:'인디언',mancato:'빗나감!',panico:'강탈',saloon:'주점',diligenza:'역마차',wellsfargo:'웰스 파고',barile:'통',dinamite:'다이너마이트',prigione:'감옥',volcanic:'볼캐닉',mustang:'야생마',remington:'레밍턴',carabine:'카빈',schofield:'스코필드',mirino:'조준경',winchester:'윈체스터',vice:'부관',fuorilegge:'무법자',rinnegato:'배신자',sceriffo:'보안관',bartcassidy:'바트 캐시디',blackjack:'블랙 잭',calamityjanet:'캘러미티 자넷',elgringo:'엘 그링고',jessejones:'제시 존스',jourdonnais:'주르도네',kitcarlson:'키트 칼슨',luckyduke:'럭키 듀크',paulregret:'폴 리그레트',pedroramirez:'페드로 라미레즈',rosedoolan:'로즈 둘란',sidketchum:'시드 케첨',slab:'슬랩 더 킬러',suzylafayette:'수지 라파예트',vulturesam:'벌처 샘',willythekid:'윌리 더 키드'};
  const roleIds=new Set(['vice','fuorilegge','rinnegato','sceriffo']);
  const characterIds=new Set(['bartcassidy','blackjack','calamityjanet','elgringo','jessejones','jourdonnais','kitcarlson','luckyduke','paulregret','pedroramirez','rosedoolan','sidketchum','slab','suzylafayette','vulturesam','willythekid']);
  const categories=[{id:'game',label:'게임 카드'},{id:'role',label:'역할 카드'},{id:'character',label:'인물 카드'}];
@@ -16,6 +21,7 @@
  let activeCategory='game';
  window.BangCards={mount(stage){
   stage.querySelectorAll('.card-library').forEach(x=>x.remove());
+  window.BangLearning?.mountSearchTabs(stage,'cards');
   const area=document.createElement('section');area.className='card-library';area.setAttribute('aria-label','카드 목록 및 상세 보기');stage.append(area);
   const nav=document.createElement('nav');nav.className='card-library-nav';nav.setAttribute('aria-label','이전 화면 이동');area.append(nav);
   function button(label,action,parent=nav){const b=document.createElement('button');b.type='button';b.textContent=label;b.onclick=action;parent.append(b);return b;}
@@ -32,8 +38,37 @@
    const label=document.createElement('p');label.className='card-library-category-label';label.textContent=categories.find(item=>item.id===category).label;
    const title=document.createElement('h2');title.textContent=name(card);const img=document.createElement('img');img.src=card.src;img.alt=name(card);
    const description=document.createElement('p');description.className='card-library-description';description.textContent=window.BANG_CARD_DESCRIPTIONS?.[card.name.replace(/^\d+_/,'')]||'이 카드의 설명을 준비 중입니다.';
-   detail.append(label,title,img,description);
+   const page=window.BANG_CARD_DETAIL_PAGES?.[card.name.replace(/^\d+_/,'')];
+   if(page)renderDetailPage(detail,card,page);else detail.append(label,title,img,description);
   }else{arrowBack(nav,()=>window.BangRouter.go('home'),'홈으로 돌아가기');renderList();}
+  function renderDetailPage(detail,card,page){
+   detail.classList.add('card-guide');
+   const add=(tag,cls,parent,text)=>{const n=document.createElement(tag);n.className=cls;if(text)n.textContent=text;parent.append(n);return n;};
+   const hero=add('header','card-guide-hero',detail);
+   add('p','card-guide-type',hero,page.type);
+   add('h2','',hero,page.title);
+   const image=add('img','card-guide-image',hero);image.src=card.src;image.alt=page.title;
+   function section(title){const section=add('section','card-guide-section',detail);add('h3','',section,title);return section;}
+   const effect=section(page.effectTitle||'카드 효과');page.effect.forEach((line,i)=>{const p=add('p','',effect);add(i===0?'strong':'span','',p,line);});
+   const core=section('핵심 규칙');core.classList.add('card-guide-core');
+   const coreList=add('ul','card-guide-core-list',core);page.coreRules.forEach(line=>add('li','',coreList,line));
+   function accordion(parent,entry){
+    const row=add('details','card-guide-accordion',parent);add('summary','',row,entry.title);
+    if(entry.points){const list=add('ul','',row);entry.points.forEach(point=>add('li','',list,point));}
+    else add('p','',row,entry.answer);
+   }
+   if(page.rules?.length){const rules=section('자세한 규칙');page.rules.forEach(entry=>accordion(rules,entry));}
+   if(page.faq?.length){const faq=section('자주 묻는 질문');page.faq.forEach(entry=>accordion(faq,{...entry,title:'Q. '+entry.title}));}
+   const related=section('관련 카드');const grid=add('div','card-guide-related',related);
+   page.related.forEach(([key,title])=>{
+    const entry=catalog.find(({card})=>card.name.replace(/^\d+_/,'')===key);if(!entry)return;
+    const link=button(title,()=>window.BangRouter.go(BANG_FIGMA_FLOW.cards,{card:entry.index}),grid);link.className='card-guide-related-card';
+    link.setAttribute('aria-label',title+' 상세 설명');link.textContent='';
+    const img=add('img','',link);img.src=entry.card.src;img.alt='';img.loading='lazy';add('span','',link,title);
+   });
+   const source=add('a','card-guide-source',detail,'기준: BANG! 기본판 공식 규칙');source.href=page.source;source.target='_blank';source.rel='noopener noreferrer';
+   if(page.faqSource){const faqSource=add('a','card-guide-source',detail,'세부 판정: 공식 FAQ');faqSource.href=page.faqSource;faqSource.target='_blank';faqSource.rel='noopener noreferrer';}
+  }
   function renderList(){
    area.querySelector('.card-library-content')?.remove();
    const content=document.createElement('div');content.className='card-library-content';area.append(content);
@@ -56,7 +91,7 @@
     const heading=document.createElement('h2');heading.className='card-library-heading';heading.textContent=item.label;section.append(heading);
     const grid=document.createElement('div');grid.className='card-library-grid';section.append(grid);
     for(const {card,index}of catalog.filter(entry=>entry.category===item.id)){
-     const b=document.createElement('button');b.type='button';b.setAttribute('aria-label',name(card));const img=document.createElement('img');img.src=card.src;img.alt=name(card);img.loading='lazy';b.append(img);b.onclick=()=>window.BangRouter.go(BANG_FIGMA_FLOW.cards,{card:index});grid.append(b);
+     const b=document.createElement('button');b.type='button';b.setAttribute('aria-label',name(card));const img=document.createElement('img');img.src=card.src;img.alt=name(card);img.loading='lazy';b.append(img);const caption=document.createElement('span');caption.className='card-library-card-name';caption.textContent=name(card);b.append(caption);b.onclick=()=>window.BangRouter.go(BANG_FIGMA_FLOW.cards,{card:index});grid.append(b);
     }
    }
    const rules=document.createElement('section');rules.className='card-library-rules';rules.setAttribute('aria-labelledby','card-library-rules-title');

@@ -2,6 +2,7 @@
   const flow=window.BANG_FIGMA_FLOW;
   const app=document.querySelector('#app');
   const surfaces={home:document.querySelector('#home'),intro:document.querySelector('#intro'),screen:document.querySelector('#reference-screen')};
+  if(window.BangLearning)surfaces.learning=window.BangLearning.surface;
   let current=null,revision=0,animation=null,transitionLayer=null,motionAnimations=[],motionLayer=null,motionRestores=[],dialogueLayer=null,dialogueAnimations=[];
   const roleLineupOriginalOpacity=new WeakMap();
   const reduced=matchMedia('(prefers-reduced-motion: reduce)');
@@ -27,7 +28,7 @@
     const route=id===flow.home?'#/home':id===flow.intro?'#/intro':'#/figma/'+id;
     return route+(Number.isInteger(card)?'?card='+card:'');
   }
-  function stop(){window.BangInteractions.cancel();}
+  function stop(){window.BangInteractions.cancel();window.BangLearning?.cancel();}
   function clearTransition(){
     animation?.cancel();motionAnimations.forEach(player=>player.cancel());dialogueAnimations.forEach(player=>player.cancel());transitionLayer?.remove();motionLayer?.remove();dialogueLayer?.remove();
     motionRestores.forEach(([element,opacity])=>{if(element.isConnected)element.style.opacity=opacity;});
@@ -325,7 +326,7 @@
     ],{duration,easing,fill:'forwards'}));
   }
   function show(id,{hideRoleLineup=false}={}){
-    stop();const frame=flow.frames[id];const mode=id===flow.home?'home':id===flow.intro?'intro':'screen';
+    stop();const frame=flow.frames[id];const mode=window.BangLearning?.has(id)?'learning':id===flow.home?'home':id===flow.intro?'intro':'screen';
     for(const [name,surface]of Object.entries(surfaces)){surface.hidden=name!==mode;surface.inert=name!==mode;}
     if(mode==='screen'){
       if(!window.BangDesign.render(frame.screenId,id))throw new Error('Missing screen for Figma frame '+id);
@@ -342,13 +343,13 @@
       });
     }
     current=id;document.title=(id===flow.home?'BANG!':frame.name)+' | 인터랙티브 설명서';
-    const root=mode==='screen'?surfaces.screen.querySelector('.design-stage'):surfaces[mode];
+    const root=mode==='learning'?window.BangLearning.render(id):mode==='screen'?surfaces.screen.querySelector('.design-stage'):surfaces[mode];
     const selectedRole=showcaseRoleByScreen.get(frame.screenId)??roleSelectionSlotByScreen.get(frame.screenId);
     if(mode==='screen'&&selectedRole!==undefined){
       const thumbnail=root.querySelector(`[data-screen-asset-index="${selectedRole}"]`);
       if(thumbnail)thumbnail.style.opacity='0';
     }
-    window.BangInteractions.mountFrame(frame,root);
+    if(mode!=='learning')window.BangInteractions.mountFrame(frame,root);
     return root;
   }
   async function change(id,{instant=false,action={},motion=null}={}){
@@ -428,6 +429,7 @@
       clearTransition();app.removeAttribute('aria-busy');
       root.tabIndex=-1;root.focus({preventScroll:true});
       window.BangInteractions.activate();
+      if(window.BangLearning?.has(id))window.BangLearning.activate();
     }catch(error){if(error.name!=='AbortError'){console.error(error);app.dispatchEvent(new CustomEvent('bang-error',{detail:error.message}));}}
     finally{if(token===revision){clearTransition();app.removeAttribute('aria-busy');}}
   }
@@ -452,5 +454,5 @@
   window.addEventListener('popstate',()=>{lastURL='';sync();});
   window.addEventListener('hashchange',()=>{if(current!==fromURL())sync();});
   const id=fromURL();if(!history.state?.bang)history.replaceState({bang:true,index:0,frame:id},'');
-  show(id);window.BangInteractions.activate();
+  show(id);window.BangInteractions.activate();if(window.BangLearning?.has(id))window.BangLearning.activate();
 })();

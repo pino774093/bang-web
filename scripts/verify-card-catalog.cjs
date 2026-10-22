@@ -1,0 +1,35 @@
+const fs=require('fs'),vm=require('vm'),assert=require('assert');
+const dataContext={window:{}};vm.createContext(dataContext);
+for(const path of ['data/cards.js','data/card-detail-pages.js'])vm.runInContext(fs.readFileSync(path,'utf8'),dataContext);
+const cards=dataContext.window.BANG_CARDS,pages=dataContext.window.BANG_CARD_DETAIL_PAGES;
+const entries=cards.map((card,index)=>({card,index,key:card.name.replace(/^\d+_/,'')})).filter(e=>e.key!=='뒷장');
+assert.equal(entries.length,42);assert.equal(Object.keys(pages).length,42);
+const source=fs.readFileSync('card-library.js','utf8');
+const renderer=source.slice(source.indexOf('  function renderDetailPage('),source.indexOf('  function renderList('));
+let routeChecks=0;
+for(const entry of entries){
+ const page=pages[entry.key];assert(page,entry.key);
+ assert(page.coreRules.length>=2&&page.coreRules.length<=4,entry.key+' core count');
+ assert(page.rules.length&&page.faq.length,entry.key+' missing rules/FAQ');
+ assert(fs.existsSync(entry.card.src),entry.key+' asset');
+ assert(!/해요|있어요|없어요|돼요|한다[.!]|할 수 있다[.!]/.test(JSON.stringify(page)),entry.key+' informal prose');
+ assert.equal(new Set(page.rules.map(r=>r.title)).size,page.rules.length,entry.key+' repeated rule heading');
+ const nodes=[],calls=[];
+ const node=tag=>{const n={tag,children:[],className:'',classList:{add(){}},append(...items){items.forEach(x=>{x.parent=this;this.children.push(x);});},setAttribute(k,v){this[k]=v;}};nodes.push(n);return n;};
+ const context={window:{BangRouter:{go:(route,options)=>calls.push({route,...options})}},BANG_FIGMA_FLOW:{cards:'30:726'},document:{createElement:node},catalog:entries,button(label,action,parent){const b=node('button');b.onclick=action;parent.append(b);return b;}};
+ vm.createContext(context);vm.runInContext(renderer,context);context.renderDetailPage(node('article'),entry.card,page);
+ const hero=nodes.find(n=>n.className==='card-guide-hero');assert.equal(hero.children.map(n=>n.tag).join(','),'p,h2,img');
+ const core=nodes.find(n=>n.className==='card-guide-core-list');assert.equal(core.children.length,page.coreRules.length);
+ for(let n=core;n;n=n.parent)assert.notEqual(n.tag,'details');
+ const details=nodes.filter(n=>n.tag==='details');assert.equal(details.length,page.rules.length+page.faq.length);assert(details.every(n=>!n.open));
+ const headings=nodes.filter(n=>n.tag==='h3');assert.equal(headings[0].textContent,page.effectTitle||'카드 효과');
+ const related=nodes.filter(n=>n.className==='card-guide-related-card');assert.equal(related.length,page.related.length,entry.key+' broken related link');
+ for(const link of related){link.onclick();const target=calls.pop();assert.equal(target.route,'30:726');assert(pages[cards[target.card].name.replace(/^\d+_/,'')]);routeChecks++;}
+}
+assert.equal(entries.filter(e=>pages[e.key].type==='갈색 게임 카드').length,12);
+assert.equal(entries.filter(e=>pages[e.key].type==='파란색 게임 카드').length,10);
+assert.equal(entries.filter(e=>pages[e.key].kind==='character').length,16);
+assert.equal(entries.filter(e=>pages[e.key].kind==='role').length,4);
+const summary=entries.map(e=>({key:e.key,title:pages[e.key].title,core:pages[e.key].coreRules.length,rules:pages[e.key].rules.map(r=>r.title),faq:pages[e.key].faq.length}));
+fs.writeFileSync('/tmp/bang-card-catalog-summary.json',JSON.stringify(summary,null,2));
+console.log(`PASS: 42 pages, always-visible core rules, closed accordions, formal prose, existing hero layout, ${routeChecks} related-card routes.`);

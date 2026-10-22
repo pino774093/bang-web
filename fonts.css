@@ -1,0 +1,8 @@
+/* One Adobe Fonts family and regular weight for every editable UI label. */
+:root {--bang-font-family:"omnigothic","Apple SD Gothic Neo","Malgun Gothic",sans-serif;}
+html body,#app,#app *,button,input,select,textarea,option,pre,code,kbd,samp {
+  font-family:var(--bang-font-family);
+}
+html body,body *,body *::before,body *::after {
+  font-weight:400 !important;
+}

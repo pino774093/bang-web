@@ -1,0 +1,70 @@
+<!doctype html><meta charset="utf-8"><title>STEP 3 검증 중</title>
+<style>body{display:flex;gap:24px;margin:20px;background:#eee;font:14px sans-serif}iframe{width:390px;height:844px;border:0;flex:none}pre{white-space:pre-wrap;max-width:550px}</style>
+<iframe src="../index.html?review=1" title="390×844 STEP 3 테스트"></iframe><pre>검증 준비 중…</pre>
+<script>
+const iframe=document.querySelector('iframe'),report=document.querySelector('pre');
+iframe.onload=async()=>{
+ const w=iframe.contentWindow,d=w.document,results=[],errors=[];
+ const wait=ms=>new Promise(r=>setTimeout(r,ms));
+ const check=(name,ok)=>{results.push({name,ok});report.textContent=results.map(r=>(r.ok?'✓ ':'✗ ')+r.name).join('\n');};
+ const go=async id=>{w.BangRouter.go(id.startsWith('learn:')?id:'learn:'+id,{instant:true,force:true,replace:true});await wait(100);};
+ const stage=()=>d.querySelector('.learning-stage');
+ const click=async selector=>{const n=stage().querySelector(selector);if(!n)throw Error('대상 없음: '+selector);n.click();await wait(750);};
+ w.addEventListener('error',e=>errors.push(e.message));w.addEventListener('unhandledrejection',e=>errors.push(String(e.reason)));
+ try{
+  await d.fonts.ready;
+  const original=JSON.stringify(Object.fromEntries(Object.entries(w.BANG_FIGMA_FLOW.frames).filter(([id])=>!id.startsWith('learn:'))));
+  check('모바일 390×844',w.innerWidth===390&&w.innerHeight===844);
+  await go('131:1182');await click('[data-source-node="131:1186"]');check('원본 도입 → 원본 카드 뽑기',w.BangRouter.current==='learn:139:236');
+  await click('.learning-dialogue-next');check('원본 뽑기 → 원본 카드 사용',w.BangRouter.current==='learn:139:249');
+  check('윌리 더 키드 능력 문구 교정',stage().textContent.includes('윌리 더 키드의 능력'));
+  await click('.learning-dialogue-next');check('원본 카드 사용 → 원본 카드 버리기',w.BangRouter.current==='learn:139:265');
+  await click('.learning-dialogue-next');check('원본 카드 버리기 애니메이션 유지',w.BangRouter.current==='learn:139:351');
+  await click('.learning-dialogue-next');check('원본 프레임을 모두 본 뒤 새 타이밍 설명',w.BangRouter.current==='learn:turn-timing');
+  check('추가 설명 상단은 두 소주제만 표시',stage().querySelectorAll('.turn-progress button').length===2);
+  const tabs=[...stage().querySelectorAll('[role=tab]')];let tabOK=true,fit=true;const measurements=[];
+  for(let i=0;i<4;i++){
+   tabs[i].click();await wait(100);
+   tabOK&&=tabs[i].getAttribute('aria-selected')==='true'&&stage().querySelectorAll('[role=tabpanel] .turn-card').length===2;
+   const sheet=stage().querySelector('.turn-sheet');fit&&=sheet.scrollWidth<=sheet.clientWidth&&sheet.scrollHeight<=sheet.clientHeight+1;measurements.push(`${i}: ${sheet.scrollHeight}/${sheet.clientHeight}`);
+  }
+  check('상황별 탭 4개와 카드 예시',tabOK);check('타이밍 설명은 패널 안에 표시 '+measurements.join(', '),fit);
+  check('상대 턴의 예외·2인 맥주 제한 포함',w.BangTurnLesson&&(()=>{tabs[1].click();return stage().textContent.includes('마지막 2명')&&stage().textContent.includes('결투·인디언');})());
+  tabs[0].dispatchEvent(new w.KeyboardEvent('keydown',{key:'End',bubbles:true}));check('키보드로 상황 탭 전환',tabs[3].getAttribute('aria-selected')==='true');
+  await click('.turn-next');check('타이밍 → 내 턴 주의사항',w.BangRouter.current==='learn:turn-cautions');
+  const details=[...stage().querySelectorAll('details')];check('선택형 주의사항 6개',details.length===6);
+  for(const item of details){item.open=true;await wait(50);}
+  check('한 번에 한 규칙 펼치기',stage().querySelectorAll('details[open]').length===1);
+  details[3].open=true;await wait(50);check('감옥 실패와 다이너마이트 결과 설명',details[3].textContent.includes('취소하지는'));
+  await click('.turn-next');check('주의사항 다음은 STEP 4 준비 안내',!!stage().querySelector('.learning-message'));
+  await go('turn-timing');await click('[aria-label="목차 열기"]');await click('.learning-drawer-step[data-step="3"]');check('오버레이 STEP 3 소주제 5개',stage().querySelectorAll('.learning-contents-topics.is-expanded button').length===5);check('오버레이 목차 글자 400', [...stage().querySelectorAll('.learning-drawer h2,.learning-drawer button,.learning-drawer span')].every(n=>w.getComputedStyle(n).fontWeight==='400'));
+  await click('.learning-contents-subtopic[data-target="turn-cautions"]');check('오버레이 → 주의사항 직접 이동',w.BangRouter.current==='learn:turn-cautions'&&!stage().querySelector('.learning-drawer'));
+  w.BangRouter.go(w.BANG_FIGMA_FLOW.menu,{instant:true,force:true,replace:true});await wait(100);check('전체 STEP 목차 소주제 2개',stage().querySelectorAll('.turn-menu-topics button').length===2);check('전체 STEP 목차 글자 400',[...stage().querySelectorAll('p,button')].every(n=>w.getComputedStyle(n).fontWeight==='400'));
+  await click('.turn-menu-topics button:first-child');check('전체 목차 → 타이밍 직접 이동',w.BangRouter.current==='learn:turn-timing');
+  const dialogueCases=[['8:330','8:398'],['8:398','8:422'],['139:236','139:249'],['139:249','139:265'],['139:265','139:351']];
+  let dialogueOK=true,hitOK=true;
+  for(const [id,next] of dialogueCases){
+   await go(id);const cover=stage().querySelector('.learning-dialogue-next');
+   if(!cover){dialogueOK=false;continue;}
+   const rect=cover.getBoundingClientRect();const hit=d.elementFromPoint(rect.left+rect.width/2,rect.top+Math.min(50,rect.height/2));hitOK&&=hit===cover;
+   cover.click();await wait(750);dialogueOK&&=w.BangRouter.current==='learn:'+next;
+  }
+  check('설명창 전체 클릭은 기존 다음 연결로 이동',dialogueOK);check('설명창 빈 공간도 클릭 영역',hitOK);
+  await go('turn-timing');check('설명·제목·버튼 모두 400',[...stage().querySelectorAll('p,h1,h2,button,span')].every(n=>w.getComputedStyle(n).fontWeight==='400'));
+  let bounds=true,broken=false;
+  for(const id of ['turn-start','turn-timing','turn-cautions']){
+   await go(id);await wait(100);const root=stage().getBoundingClientRect(),footer=stage().querySelector('.turn-footer').getBoundingClientRect();
+   bounds&&=d.documentElement.scrollWidth===390&&footer.bottom<=root.top+844+1&&stage().querySelector('.turn-sheet').scrollWidth<=332;
+   broken||=[...stage().querySelectorAll('img')].some(img=>!img.complete||!img.naturalWidth);
+  }
+  check('새 화면 3개 가로 넘침·하단 잘림 없음',bounds);check('재사용 이미지 정상 로드',!broken);
+  check('기존 시뮬레이션 프레임·연결 불변',original===JSON.stringify(Object.fromEntries(Object.entries(w.BANG_FIGMA_FLOW.frames).filter(([id])=>!id.startsWith('learn:')))));
+  check('실행 오류 없음',errors.length===0);
+  await go('turn-timing');stage().querySelector('[role=tab]').click();
+    // Release the inspection-only pause before the user continues browsing.
+    const liveURL=new URL(w.location.href);liveURL.searchParams.delete('review');
+    w.history.replaceState(w.history.state,'',liveURL.href);w.BangLearning.activate();
+  document.title=results.every(r=>r.ok)?'PASS — STEP 3 모바일 검증':'FAIL — STEP 3 모바일 검증';
+ }catch(error){check(error.stack,false);document.title='FAIL — STEP 3 모바일 검증';}
+};
+</script>

@@ -1,0 +1,21 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><title>뱅! 카드 모바일 검증</title><style>body{margin:0;background:#303030;color:white;font:14px sans-serif}#result{margin:4px}iframe{display:block;width:390px;height:844px;border:0;margin:auto}</style><p id="result">390×844 검증 중…</p><iframe title="뱅! 카드 상세 모바일 화면" src="../index.html#/figma/30:726?card=0"></iframe><script>
+const f=document.querySelector('iframe'),out=document.querySelector('#result');
+f.onload=async()=>{let count=0;const w=f.contentWindow,d=f.contentDocument;const check=(condition,label)=>{if(!condition)throw Error(label);count++;};const wait=async(fn)=>{for(let i=0;i<100;i++){if(fn())return;await new Promise(r=>setTimeout(r,50));}throw Error('화면 이동 대기 초과');};try{
+ await wait(()=>d.querySelector('.card-guide'));await d.fonts.ready;
+ const guide=d.querySelector('.card-guide'),area=d.querySelector('.card-library');
+ check(Math.abs(d.querySelector('.design-stage').getBoundingClientRect().width-390)<1,'390px 너비');
+ check(guide.querySelector('h2').textContent==='뱅! (BANG!)','제목');
+ check(guide.querySelector('.card-guide-image').complete&&guide.querySelector('.card-guide-image').naturalWidth>0,'원본 카드 이미지');
+ const rows=[...guide.querySelectorAll('details')];check(rows.length===w.BANG_CARD_DETAIL_PAGES.bang.rules.length+(w.BANG_CARD_DETAIL_PAGES.bang.faq?.length||0),'규칙과 남은 FAQ 개수');check([...guide.querySelectorAll('h3')].some(h=>h.textContent==='자주 묻는 질문'),'상황별 FAQ 표시');check(guide.querySelectorAll('.card-guide-core-list li').length===3&&!guide.querySelector('.card-guide-core').closest('details'),'핵심 규칙 항상 표시');
+ check(rows.every(x=>!x.open),'접힌 초기 상태');
+ for(const row of rows){row.querySelector('summary').click();check(row.open,'항목 펼치기');check(area.scrollWidth<=area.clientWidth+1,'내용 가로 넘침 없음');row.querySelector('summary').click();check(!row.open,'항목 접기');}
+ const links=[...guide.querySelectorAll('.card-guide-related-card')];check(links.length===6,'관련 카드 6개');
+ const page=w.BANG_CARD_DETAIL_PAGES.bang;
+ for(const [key,title]of page.related){const link=[...d.querySelectorAll('.card-guide-related-card')].find(b=>b.textContent===title);link.click();await wait(()=>!d.querySelector('.card-guide')&&d.querySelector('.card-library-detail'));check(d.querySelector('.card-library-detail h2').textContent.length>0,'관련 카드 이동 '+key);w.BangRouter.go(w.BANG_FIGMA_FLOW.cards,{card:0});await wait(()=>d.querySelector('.card-guide'));}
+ check(!!d.querySelector('.search-page-tabs [aria-current="page"]'),'하단 전환 메뉴');
+ const a=area.getBoundingClientRect(),tabs=d.querySelector('.search-page-tabs').getBoundingClientRect();check(a.bottom<tabs.top,'스크롤 영역과 하단 메뉴 분리');
+ check(d.querySelector('.card-library').scrollHeight>d.querySelector('.card-library').clientHeight,'세로 스크롤');
+ check(!/해요|있어요/.test(d.querySelector('.card-guide').textContent),'격식체');
+ out.textContent='PASS · '+count+'개 검사 · 390×844 · 이미지/접기·펼치기/관련 카드/하단 메뉴/가로 넘침';d.querySelector('.card-library').scrollTop=0;
+}catch(e){out.textContent='FAIL · '+e.message;}};
+</script></html>

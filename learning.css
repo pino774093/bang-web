@@ -1,0 +1,228 @@
+/* Scoped to the new learning surface; existing simulation styles are unchanged. */
+#learning-screen,.learning-stage {overflow:clip;}
+.learning-stage .learning-layer {box-sizing:border-box;}
+.learning-stage p,.learning-stage ol {margin:0;}
+.learning-stage ol {padding:0;list-style-position:outside;}
+.learning-stage button {font:inherit;color:inherit;border:0;padding:0;background:transparent;}
+.learning-stage img {user-select:none;pointer-events:none;}
+.learning-stage .learning-control {cursor:pointer;-webkit-tap-highlight-color:transparent;}
+.learning-stage .learning-control:focus-visible {outline:2px solid #fff;outline-offset:3px;}
+.learning-stage .learning-control[style*="display:contents"]:focus-visible {outline:none;}
+.learning-stage .learning-control[style*="display:contents"]:focus-visible > :last-child {outline:2px solid #fff;outline-offset:3px;}
+.learning-outer-frame {position:absolute;left:5px;top:14px;width:376px;height:826px;mix-blend-mode:multiply;pointer-events:none;}
+.learning-home-button-art {position:absolute;display:block;pointer-events:none;}
+.learning-stage .learning-hotspot {position:absolute;z-index:30;background:transparent;cursor:pointer;}
+.learning-player-count {position:absolute;left:39px;top:192px;width:312px;height:46px;display:flex;align-items:center;justify-content:center;gap:20px;border-radius:16px;background:#111;color:#fff;font-size:16px;}
+.learning-player-count select {font:inherit;color:#fff;border:0;border-bottom:1px solid #fff;background:#111;padding:4px 14px;}
+.learning-role-panel {position:absolute;left:0;width:390px;height:321px;background:#111;border-radius:59px 59px 0 0;color:#fff;}
+.learning-role-copy {position:absolute;left:28px;right:28px;top:93px;transform:translateY(-50%);white-space:pre-line;text-align:center;font-size:16px;line-height:30px;font-weight:400;}
+.learning-role-name {position:absolute;left:83px;top:38px;margin:0;font-size:28px;line-height:28px;font-weight:600;}
+.learning-role-panel:has(.learning-role-name) {height:459px;}
+.learning-role-panel:has(.learning-role-name) .learning-role-copy {left:46px;right:15px;top:95px;transform:none;text-align:left;font-size:16px;line-height:30px;}
+.learning-role-next {position:absolute;right:20px;top:212px;color:#aa2e1b!important;font-size:14px!important;cursor:pointer;}
+.learning-role-panel:has(.learning-role-name) .learning-role-next {top:342px;}
+.learning-role-exploration {height:321px;}
+.learning-role-exploration .learning-role-copy {top:48px;transform:none;line-height:18px;}
+.learning-role-exploration .learning-role-next {left:131px;right:auto;top:174px;bottom:auto;}
+.learning-role-hint {position:absolute;left:131px;top:138px;font-size:14px;color:#aa2e1b;}
+.learning-menu-button {position:absolute;left:8px;top:10px;width:63.211px;height:64px;cursor:pointer;z-index:2;}
+.learning-menu-button > div {position:absolute;inset:-4.91% -3.33% 0 -3.88%;}
+.learning-menu-button img {display:block;width:100%;height:100%;}
+.learning-step-label {position:absolute;left:55px;top:15px;padding:14px 20px 14px 27px;border-radius:16px;background:#111;color:#fff;font-size:14px;}
+.learning-message {position:absolute;left:30px;right:30px;bottom:28px;padding:16px;background:#111;color:#fff;border:2px solid #c89769;border-radius:12px;font-size:15px;text-align:center;z-index:100;line-height:1.5;}
+.learning-drawer-backdrop {position:absolute;inset:0;background:#0007;z-index:80;}
+.learning-drawer {position:absolute;inset:0 auto 0 0;width:300px;padding:0;background:#141414 url('assets/intro-wood.png') center/100% 100%;box-shadow:4px 0 8px #0008;color:#fff;overflow:hidden;isolation:isolate;}
+/* Keep the original dot texture and wood artwork as separate, reusable layers. */
+.learning-drawer::after {content:'';position:absolute;left:-24px;top:9px;width:310px;height:820px;background:url('assets/intro-paper.png') center/100% 100%;filter:grayscale(1) brightness(.5) contrast(6) brightness(.25);pointer-events:none;z-index:-2;}
+.learning-drawer::before {content:'';position:absolute;left:-69px;top:0;width:369px;height:844px;background:url('assets/frame.png') center/100% 100%;mix-blend-mode:multiply;pointer-events:none;z-index:-1;}
+.learning-drawer h2 {position:absolute;left:42px;top:32px;margin:0;font-size:28px;line-height:28px;font-weight:600;color:#fff;}
+.learning-stage .learning-drawer-close {position:absolute;top:9px;left:230px;width:64px;height:64px;cursor:pointer;}
+.learning-drawer-close img {display:block;width:64px;height:64px;}
+.learning-stage .learning-drawer-step {position:absolute;left:18px;display:flex;flex-direction:column;justify-content:space-between;width:240px;height:70px;padding:12px 0 10px 56px;color:#fff;background:transparent;font-size:16px;line-height:16px;text-align:left;cursor:pointer;isolation:isolate;white-space:nowrap;}
+.learning-drawer-step::before {content:'';position:absolute;left:-18px;top:-16px;width:275px;height:103px;background:url('assets/rules-decoration.svg') center/100% 100% no-repeat;filter:grayscale(1) brightness(.15);z-index:-1;pointer-events:none;}
+.learning-drawer-step::after {content:'';position:absolute;inset:0;border:1px solid #191919;z-index:-1;pointer-events:none;}
+.learning-drawer-step span:first-child {font-size:17px;line-height:17px;font-weight:400;}
+.learning-drawer-step span:last-child {font-weight:400;}
+.learning-drawer-track {position:absolute;left:41px;top:138px;width:1px;height:443px;background:#fff;pointer-events:none;}
+.learning-drawer-dot {position:absolute;left:37px;width:9.27px;height:9.27px;border-radius:50%;background:#fff;pointer-events:none;}
+.learning-stage .learning-drawer-star {position:absolute;left:20px;width:44px;height:34px;background:url('assets/learning/09d7a0bd-35f8-42a1-b880-759f57b3ea4d.svg') center/34.515px 34px no-repeat;touch-action:none;cursor:grab;z-index:2;}
+.learning-drawer-star.is-dragging {cursor:grabbing;}
+.learning-drawer-star:focus-visible {outline:2px solid #fff;outline-offset:4px;}
+.learning-drawer-step.is-drag-target {outline:1px solid #fff;outline-offset:-1px;}
+@media(prefers-reduced-motion:no-preference){.learning-drawer{animation:learning-drawer-enter .3s ease-out;}@keyframes learning-drawer-enter{from{transform:translateX(-100%)}to{transform:translateX(0)}}}
+
+.learning-drawer-shortcuts {position:absolute;left:30px;right:30px;top:675px;display:grid;gap:7px;}
+.learning-stage .learning-drawer-shortcut {display:flex;align-items:center;gap:12px;min-height:42px;padding:7px 12px;color:#fff;background:#111d;border:1px solid #ffffff30;text-align:left;font-size:15px;line-height:22px;cursor:pointer;}
+.learning-drawer-shortcut svg {width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;}
+.learning-drawer-shortcut:focus-visible {outline:2px solid #fff;outline-offset:2px;}
+@media(hover:hover){.learning-drawer-shortcut:hover {background:#292929;}}
+
+/* STEP 3 additions reuse the existing paper, timber, cards and rough buttons. */
+.turn-lesson {position:absolute;inset:0;isolation:isolate;color:#fff;}
+.turn-wood,.turn-paper,.turn-frame {position:absolute;pointer-events:none;z-index:-1;}
+.turn-wood {inset:0;width:390px;height:844px;}
+.turn-paper {left:21px;top:19px;width:350px;height:804px;}
+.turn-frame {left:5px;top:14px;width:376px;height:826px;mix-blend-mode:multiply;}
+.learning-stage .turn-menu {position:absolute;left:5px;top:6px;width:68px;height:68px;cursor:pointer;}
+.turn-menu img {width:100%;height:100%;}
+.turn-step {position:absolute;left:55px;top:15px;height:46px;box-sizing:border-box;display:flex;align-items:center;margin:0;padding:0 20px 0 18.45px;border:1px solid #000;background:#111;border-radius:16px;font-size:14px;line-height:1;letter-spacing:-.28px;z-index:1;pointer-events:none;}
+.turn-heading {position:absolute;left:32px;right:32px;top:83px;margin:0;color:#111;text-align:center;font-size:24px;line-height:30px;letter-spacing:-.7px;}
+.turn-heading:has(+ .turn-progress) {text-wrap:balance;}
+.turn-progress {position:absolute;left:29px;right:29px;top:151px;display:flex;gap:3px;}
+.learning-stage .turn-progress button {flex:1;padding:7px 1px;background:#211b17;color:#fff;font-size:12px;line-height:19px;border-bottom:3px solid transparent;cursor:pointer;}
+.learning-stage .turn-progress [aria-current] {border-color:#ff321c;color:#ffcf9b;}
+.turn-sheet {position:absolute;left:29px;top:203px;width:332px;height:522px;padding:20px;background:#111;border-radius:25px;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#b58b63 #111;font-size:15px;line-height:1.7;}
+.turn-sheet h2 {margin:0 0 13px;font-size:19px;line-height:1.5;letter-spacing:-.3px;}
+.turn-sheet p {margin:12px 0;}
+.turn-sheet .turn-small {font-size:13px;color:#d3c5b3;}
+.turn-card-example {display:flex;align-items:center;justify-content:center;gap:16px;margin:12px 0 16px;min-height:94px;}
+.turn-card {display:block;width:59px;height:92px;object-fit:contain;filter:drop-shadow(3px 3px 1px #000b);}
+.turn-order {color:#efc89d;font-size:25px;}
+.turn-sheet .turn-callout {padding:9px 11px;border-left:3px solid #dd9b58;background:#281f19;color:#f3d6b4;font-size:13px;line-height:1.65;}
+.turn-tabs {display:grid;grid-template-columns:repeat(4,1fr);gap:5px;}
+.learning-stage .turn-tabs button {padding:8px 1px;min-height:42px;border:1px solid #8d7052;color:#e7d5be;font-size:14px;cursor:pointer;}
+.learning-stage .turn-tabs [aria-selected=true] {background:#e3bf91;color:#111;border-color:#e3bf91;}
+.turn-sheet .turn-points {padding-left:18px;margin:0;}
+.turn-points li {padding-left:2px;margin:10px 0;}
+.turn-points em {color:#ffd39c;font-style:normal;text-decoration:underline;text-decoration-color:#af5c37;text-underline-offset:4px;}
+.turn-rule {border-bottom:1px solid #5c4837;}
+.turn-rule summary {min-height:52px;padding:13px 18px 13px 0;position:relative;list-style:none;cursor:pointer;line-height:1.7;font-size:14px;}
+.turn-rule summary::-webkit-details-marker {display:none;}
+.turn-rule summary::after {content:'+';position:absolute;right:0;top:13px;color:#edbf89;}
+.turn-rule[open] summary::after {content:'−';}
+.turn-rule[open] summary {color:#ffd39c;}
+.learning-stage .turn-text-link {display:inline-flex;align-items:center;min-height:40px;color:#f1ca9d;text-decoration:underline;text-underline-offset:4px;font-size:13px;cursor:pointer;}
+.turn-footer {position:absolute;left:29px;right:29px;top:749px;display:flex;justify-content:flex-end;}
+.learning-stage .turn-next {width:226px;min-height:62px;padding:12px 18px;background:url('assets/rules-decoration.svg') center/100% 100% no-repeat;color:#fff;font-size:16px;cursor:pointer;}
+.turn-lesson button:focus-visible,.turn-rule summary:focus-visible {outline:2px solid #eab67d;outline-offset:2px;}
+.turn-sheet:focus-visible {outline:2px solid #eab67d;outline-offset:2px;}
+.turn-drawer-topics {position:absolute;left:73px;top:414px;display:flex;gap:10px;}
+.learning-stage .turn-drawer-topics button {min-height:29px;font-size:11px;line-height:17px;}
+.turn-menu-topics {position:absolute;left:99px;top:548px;display:flex;gap:12px;z-index:35;}
+.learning-stage .turn-menu-topics button {min-height:31px;font-size:12px;line-height:18px;color:#111;}
+
+.turn-tab-content .turn-card-example {min-height:76px;margin:8px 0 12px;}
+.turn-tab-content .turn-card {width:48px;height:75px;}
+.turn-tab-content .turn-points {font-size:14px;line-height:1.65;}
+.turn-tab-content .turn-points li {margin:8px 0;}
+
+.learning-menu-icon {position:absolute;inset:-4.91% -3.33% 0 -3.88%;pointer-events:none;}
+.learning-menu-icon img {display:block;width:100%;height:100%;}
+
+.learning-stage .learning-dialogue-next {position:absolute;z-index:31;background:transparent;cursor:pointer;-webkit-tap-highlight-color:transparent;}
+.learning-dialogue-next:focus-visible {outline:2px solid #eab67d;outline-offset:-4px;}
+
+.learning-stage .turn-progress button {font-size:14px;white-space:nowrap;}
+
+.learning-drawer-backdrop.is-closing {pointer-events:none;}
+@media(prefers-reduced-motion:no-preference){
+  .learning-drawer-backdrop.is-closing {animation:learning-backdrop-exit .25s ease-in forwards;}
+  .learning-drawer-backdrop.is-closing .learning-drawer {animation:learning-drawer-exit .25s ease-in forwards;}
+  @keyframes learning-drawer-exit {from{transform:translateX(0)}to{transform:translateX(-100%)}}
+  @keyframes learning-backdrop-exit {from{background-color:#0007}to{background-color:transparent}}
+}
+
+.learning-stage .learning-drawn-card {transform-origin:center;z-index:2;}
+
+.learning-stage .learning-used-card {transform-origin:center;z-index:5;}
+
+/* The remaining fan overlaps Remington as it leaves the hand. */
+.learning-stage[data-learning-frame="139:249"] :is([data-node-id="139:319"],[data-node-id="139:320"],[data-node-id="139:321"]) {z-index:6;}
+
+/* Keep the original 300px saloon contents; only its timeline expands. */
+.learning-drawer h2,.learning-stage .learning-drawer-close {z-index:4;}
+.learning-contents-scroll {position:absolute;left:0;right:14px;top:99px;bottom:20px;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#75604a transparent;touch-action:pan-y;}
+.learning-contents-body {position:relative;min-height:100%;}
+.learning-contents-body .learning-drawer-step,.learning-contents-body>.learning-drawer-dot {transition:top .28s ease;}
+.learning-contents-body .learning-drawer-step[aria-expanded=true] {color:#f5d0a3;}
+.learning-contents-body .learning-drawer-track {transition:height .28s ease;}
+.learning-contents-topics {position:absolute;left:0;right:0;height:0;overflow:hidden;opacity:0;transform:translateY(-8px);transition:top .28s ease,height .28s ease,opacity .2s ease,transform .28s ease;}
+.learning-contents-topics.is-expanded {opacity:1;transform:translateY(0);}
+.learning-stage .learning-contents-subtopic {position:absolute;left:67px;width:191px;height:40px;padding:5px 7px;color:#fff;background:#111b;border-bottom:1px solid #ffffff20;text-align:left;font-size:14px;line-height:20px;cursor:pointer;}
+.learning-contents-subtopic.is-drag-target {color:#f5d0a3;outline:1px solid #c89b69;outline-offset:-1px;}
+.learning-contents-subtopic:focus-visible {outline:2px solid #eab67d;outline-offset:-2px;}
+.learning-contents-body .learning-drawer-star {z-index:3;transition:top .28s ease;}
+.learning-contents-body .learning-drawer-star.is-dragging {transition:none;}
+.learning-contents-body .learning-drawer-shortcuts {right:16px;transition:top .28s ease;}
+@media(prefers-reduced-motion:reduce){
+  .learning-contents-body * {transition:none!important;scroll-behavior:auto!important;}
+}
+
+.learning-contents-body .learning-drawer-track {z-index:2;}
+.learning-contents-body>.learning-drawer-dot {z-index:2;}
+
+.learning-stage .learning-dialogue-back {position:absolute;z-index:31;background:transparent;cursor:pointer;-webkit-tap-highlight-color:transparent;}
+.learning-dialogue-back:focus-visible {outline:2px solid #eab67d;outline-offset:-4px;}
+.learning-dialogue-label {position:absolute;transform:translate(-50%,-50%);white-space:nowrap;line-height:1;pointer-events:none;}
+.turn-sheet {padding-bottom:52px;}
+.turn-dialogue-navigation {position:absolute;left:49px;top:684px;width:292px;height:34px;display:flex;justify-content:space-between;background:#111;}
+.learning-stage .turn-dialogue-navigation button {padding:5px 0;color:#aa2e1b;font-size:14px;line-height:20px;cursor:pointer;}
+
+/* Keep every section badge behind its contents control. Drawer stays above both. */
+.learning-stage :is(.learning-menu-normalized,.learning-menu-button,.turn-menu) {z-index:40;}
+
+/* Search entry uses the existing timber, parchment and rough button artwork. */
+.search-choice-heading {position:absolute;left:30px;right:30px;top:186px;margin:0;text-align:center;color:#111;font-size:30px;line-height:1.3;}
+.search-choice-buttons {position:absolute;left:66px;right:66px;top:337px;display:flex;flex-direction:column;gap:28px;}
+.learning-stage .search-choice-button {width:100%;height:84px;padding:12px 20px;background:url('assets/rules-decoration.svg') center/100% 100% no-repeat;color:#fff;font-size:22px;line-height:1.3;cursor:pointer;}
+.learning-stage .search-choice-back {z-index:40;}
+
+.search-choice .turn-paper {left:18.41px;top:16.93px;width:355.18px;height:809.15px;}
+.search-choice .search-choice-heading {color:#fff;}
+.learning-stage .search-choice-button {display:flex;align-items:center;justify-content:center;gap:10px;}
+.search-choice-button svg {flex:none;width:27px;height:27px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;pointer-events:none;}
+
+/* Shared bottom navigation for card lists, card details and situation search. */
+.search-page-tabs {position:absolute;left:35px;top:764px;width:320px;height:54px;box-sizing:border-box;padding:0 8px 6px 2px;z-index:45;display:flex;align-items:center;justify-content:center;gap:10px;border-radius:0;background:transparent url('assets/search-tabs-decoration.svg') center/100% 100% no-repeat;color:#fff;}
+.design-stage .search-page-tabs button {min-height:44px;padding:6px 8px;border:0;background:transparent;color:#fff;font:inherit;font-size:16px;line-height:1.3;cursor:pointer;}
+.design-stage .search-page-tabs button[aria-current="page"] {color:#fff;text-decoration:underline;text-underline-offset:5px;}
+.search-page-divider {color:#fff;pointer-events:none;}
+.search-page-tabs button:focus-visible {outline:2px solid #eab67d;outline-offset:-3px;}
+.design-stage:has(> .search-page-tabs) .card-library {height:642px;}
+.search-situations-pending {position:absolute;left:35px;right:35px;top:355px;color:#fff;text-align:center;font-size:16px;line-height:1.6;}
+
+/* Darken the inactive destination while retaining the shared rough outer edge. */
+.search-page-tabs {gap:0;padding:4px 10px 10px 5px;}
+.design-stage .search-page-tabs button {flex:1;min-width:0;min-height:36px;height:36px;padding:4px 5px;}
+.design-stage .search-page-tabs button:not([aria-current="page"]) {background:transparent;color:#d4c8bd;}
+.search-page-divider {flex:none;width:14px;text-align:center;}
+
+/* Card search content panel reaches the inner timber edge; header stays clear. */
+.design-stage[data-screen="146"] .design-panel {left:18px!important;width:354px!important;height:732px!important;}
+
+/* Shade the complete inactive half, following the original artwork alpha. */
+.search-page-tabs {isolation:isolate;}
+.search-page-tabs::before {content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(to right,rgba(17,17,17,.504) 0 50%,transparent 50% 100%);-webkit-mask:url('assets/search-tabs-decoration.svg') center/100% 100% no-repeat;mask:url('assets/search-tabs-decoration.svg') center/100% 100% no-repeat;}
+.search-page-tabs:has(>button:first-child[aria-current="page"])::before {background:linear-gradient(to right,transparent 0 50%,rgba(17,17,17,.504) 50% 100%);}
+.design-stage[data-screen="146"] .design-panel {border-bottom-left-radius:0!important;border-bottom-right-radius:0!important;}
+
+.card-library-card-name {display:block;margin-top:7px;color:#fff;font-size:13px;line-height:1.4;text-align:center;overflow-wrap:anywhere;}
+
+/* BANG! detail pilot, scoped to the card catalog. The original artwork stays intact. */
+.card-library-detail.card-guide {padding:0 4px 20px;text-align:left;font-size:14px;line-height:1.65;overflow-wrap:anywhere;}
+.card-guide-hero {text-align:center;padding-bottom:12px;}
+.card-guide .card-guide-image {display:block;width:240px;max-width:100%;height:420px;object-fit:contain;margin:0 auto 12px;filter:drop-shadow(3px 3px 1px #000b);}
+.card-guide-hero h2 {margin:8px 0 24px;font-size:23px;line-height:1.3;}
+.card-guide-type {margin:5px 0;color:#eab67d;font-size:13px;}
+.card-guide-section {padding:14px 0;border-top:1px solid #66503a;}
+.card-guide-section h3 {margin:0 0 9px;font-size:18px;line-height:1.4;color:#eab67d;}
+.card-guide-section p {margin:6px 0;}
+.card-guide-section strong {color:#ffcf9b;}
+.card-guide-accordion {margin-top:8px;border:1px solid #66503a;border-radius:9px;background:#1b1713;}
+.card-guide-accordion summary {position:relative;padding:12px 30px 12px 11px;list-style:none;cursor:pointer;line-height:1.5;}
+.card-guide-accordion summary::-webkit-details-marker {display:none;}
+.card-guide-accordion summary::after {content:'+';position:absolute;right:12px;top:11px;color:#ff563e;font-size:19px;}
+.card-guide-accordion[open] summary::after {content:'−';}
+.card-guide-accordion[open] summary {border-bottom:1px solid #66503a;}
+.card-guide-accordion ul {margin:10px 12px 12px;padding-left:17px;}
+.card-guide-accordion li+li {margin-top:8px;}
+.card-guide-accordion>p {padding:5px 11px 9px;}
+.card-guide-related {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px 10px;}
+.card-library .card-guide-related-card {display:flex;flex-direction:column;align-items:center;gap:6px;min-width:0;padding:0;border:0;background:transparent;color:#fff;font:inherit;font-size:12px;line-height:1.4;cursor:pointer;}
+.card-guide-related-card img {width:65px;height:102px;object-fit:contain;filter:drop-shadow(2px 3px 1px #000b);}
+.card-guide-source {display:block;margin-top:5px;color:#cdb89b;font-size:12px;}
+.card-guide :is(summary,button,a):focus-visible {outline:2px solid #eab67d;outline-offset:2px;}
+
+.card-guide-core-list {margin:0;padding-left:20px;}
+.card-guide-core-list li+li {margin-top:9px;}
+.card-guide-core-list li::marker {color:#eab67d;}

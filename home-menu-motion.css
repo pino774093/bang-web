@@ -1,0 +1,38 @@
+/* Home only: keep the original badge and button artwork unchanged. */
+.learning-stage[data-learning-frame="5:4"] .home-menu-stamped > .learning-home-button-art,
+.learning-stage[data-learning-frame="5:4"] .home-menu-stamped > [data-node-id] {
+ translate:0 2px;
+ transition:translate 90ms ease-out;
+}
+.learning-stage[data-learning-frame="5:4"] .home-menu-stamped > .learning-home-button-art {
+ filter:brightness(.74);
+ transition:filter 100ms ease-out,translate 90ms ease-out;
+}
+/* Match the original SVG's circle: cx=33, cy=33, r=9 in a 67×66 badge. */
+.learning-stage[data-learning-frame="5:4"] .home-star-selected::after {
+ content:'';
+ position:absolute;
+ left:24px;
+ top:24px;
+ width:18px;
+ height:18px;
+ border-radius:50%;
+ background:#111;
+ pointer-events:none;
+ clip-path:inset(0);
+ animation:home-star-fill 260ms ease-in-out both;
+}
+@keyframes home-star-fill {
+ from {clip-path:inset(0 0 100% 0);}
+ to {clip-path:inset(0);}
+}
+@media(prefers-reduced-motion:reduce) {
+ .learning-stage[data-learning-frame="5:4"] .home-menu-stamped > .learning-home-button-art,
+ .learning-stage[data-learning-frame="5:4"] .home-menu-stamped > [data-node-id] {
+  translate:0 0;
+  transition:none;
+ }
+ .learning-stage[data-learning-frame="5:4"] .home-star-selected::after {animation:none;}
+}
+
+.learning-stage[data-learning-frame="5:4"] .home-star-selected.home-star-filled::after {animation:none;clip-path:inset(0);}
