@@ -1,0 +1,75 @@
+/* STEP 4–5 only: existing wood, parchment, rough buttons and card illustrations. */
+.field-lesson {position:absolute;inset:0;isolation:isolate;color:#fff;}
+.field-wood,.field-paper,.field-frame {position:absolute;pointer-events:none;z-index:-1;}
+.field-wood {inset:0;width:390px;height:844px;}
+.field-paper {left:21px;top:19px;width:350px;height:804px;}
+.field-frame {left:5px;top:14px;width:376px;height:826px;mix-blend-mode:multiply;}
+.learning-stage .field-menu {position:absolute;left:5px;top:6px;width:68px;height:68px;z-index:40;cursor:pointer;}
+.field-menu img {display:block;width:100%;height:100%;}
+.field-step-label {position:absolute;left:55px;top:15px;height:46px;margin:0;padding:0 20px 0 19px;display:flex;align-items:center;background:#111;border:1px solid #000;border-radius:16px;font-size:14px;z-index:1;}
+.field-title {position:absolute;top:86px;left:28px;right:28px;margin:0;color:#111;text-align:center;font-size:24px;line-height:30px;letter-spacing:-.7px;}
+.field-tabs {position:absolute;left:28px;right:28px;top:132px;display:flex;gap:4px;}
+.learning-stage .field-tab {flex:1;min-width:0;min-height:43px;padding:7px 3px;background:#211b17;color:#fff;border-bottom:3px solid transparent;font-size:13px;line-height:19px;cursor:pointer;}
+.learning-stage .field-tab[aria-current="page"] {border-color:#ff321c;color:#ffcf9b;}
+.field-body {position:absolute;left:28px;top:186px;width:334px;height:568px;padding:0 0 18px;box-sizing:border-box;border-radius:28px 28px 0 0;background:#111;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#b58b63 #111;font-size:14px;line-height:1.65;}
+.field-body>h2,.field-controls,.field-actions,.field-body>.field-detail,.field-card-links,.field-role-list,.field-role-copy {margin-left:14px;margin-right:14px;}
+.field-instruction {padding:11px 14px 8px;font-size:13px;line-height:1.5;}
+.field-table-window {width:334px;overflow:hidden;background:#ecd0a7 url('assets/intro-paper.png') center/390px 844px;}
+.field-table-scene {position:relative;left:-28px;width:390px;height:286px;}
+.field-table-art {position:absolute;left:0;top:-175px;width:390px;height:600px;pointer-events:none;}
+.field-path {position:absolute;left:0;top:0;width:390px;height:300px;pointer-events:none;}
+.field-path polyline {fill:none;stroke:#ffb35e;stroke-width:3;stroke-dasharray:6 4;stroke-linejoin:round;}
+.learning-stage .field-seat {position:absolute;width:50px;height:50px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;line-height:1.05;cursor:pointer;outline:2px solid #75614c;outline-offset:3px;}
+.field-seat-name {font-size:18px;}
+.field-seat-distance {font-size:13px;line-height:18px;}
+.learning-stage .field-seat.is-reachable {outline-color:#eea85a;}
+.learning-stage .field-seat.is-target {outline:3px solid #ff321c;}
+.learning-stage .field-seat.is-eliminated {color:#111;outline:2px dashed #887963;}
+.field-seat.is-eliminated .field-seat-name {text-decoration:line-through;}
+.field-distance-status {padding:9px 14px;border-top:1px solid #88613e;border-bottom:1px solid #88613e;}
+.field-distance-status h2 {margin:0 0 3px;font-size:17px;line-height:1.4;color:#eab67d;}
+.field-distance-status.is-reachable h2 {color:#ffcf9b;}
+.field-distance-status p {margin:0;font-size:12px;line-height:1.6;overflow-wrap:anywhere;}
+.field-small {font-size:12px;line-height:1.5;color:#c7b9a8;}
+.field-section-title {font-size:18px;line-height:1.4;color:#eab67d;margin-top:14px;margin-bottom:10px;}
+.field-note {font-size:13px;line-height:1.6;margin:11px 0;}
+.field-weapon-list {display:flex;gap:8px;overflow-x:auto;padding:4px 2px 8px;scrollbar-width:thin;}
+.learning-stage .field-weapon {flex:0 0 70px;display:flex;flex-direction:column;align-items:center;gap:3px;min-height:120px;padding:0 1px 5px;border-bottom:3px solid #51402f;cursor:pointer;font-size:12px;line-height:1.4;}
+.field-weapon img {width:58px;height:86px;object-fit:contain;filter:drop-shadow(2px 3px 1px #000b);}
+.learning-stage .field-weapon[aria-pressed="true"] {border-color:#ff321c;color:#ffcf9b;}
+.field-effect-list {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;}
+.learning-stage .field-effect {display:flex;flex-direction:column;align-items:center;gap:5px;font-size:12px;line-height:1.4;cursor:pointer;padding-bottom:5px;border-bottom:2px solid #51402f;}
+.field-effect img {width:45px;height:70px;object-fit:contain;filter:drop-shadow(2px 3px 1px #000b);}
+.field-effect::after {content:'꺼짐';color:#b2a391;font-size:11px;}
+.field-effect[aria-pressed="true"]::after {content:'적용 중';color:#ffcf9b;}
+.learning-stage .field-effect[aria-pressed="true"] {border-color:#ff321c;}
+.field-effect:disabled {opacity:.45;cursor:default;}
+.field-reverse {font-size:12px;line-height:1.6;border-left:2px solid #b58b63;padding-left:9px;margin:10px 0;}
+.field-actions {display:flex;gap:9px;padding:10px 0;}
+.learning-stage .field-action {flex:1;min-height:38px;padding:6px;border:1px solid #88613e;color:#eab67d;font-size:13px;cursor:pointer;}
+.field-detail {border-top:1px solid #66503a;}
+.field-detail summary {position:relative;list-style:none;padding:13px 22px 13px 0;cursor:pointer;color:#eab67d;font-size:14px;line-height:1.5;}
+.field-detail summary::-webkit-details-marker {display:none;}
+.field-detail summary::after {content:'+';position:absolute;right:0;top:11px;color:#ff563e;font-size:19px;}
+.field-detail[open] summary::after {content:'−';}
+.field-detail p {margin:0 0 15px;line-height:1.7;font-size:13px;}
+.field-footer {position:absolute;left:28px;right:28px;top:774px;display:flex;justify-content:space-between;}
+.learning-stage .field-footer button {width:142px;height:48px;padding:0 7px 5px 0;background:url('assets/rules-decoration.svg') center/100% 100% no-repeat;color:#fff;font-size:15px;cursor:pointer;}
+.field-step-5 .field-tabs {display:grid;grid-template-columns:1fr 1fr;}
+.field-step-5 .field-body {top:232px;height:522px;padding-top:4px;}
+.field-tip-list {margin:0 14px 16px;padding-left:19px;}
+.field-tip-list li {padding:8px 0 11px;border-bottom:1px solid #443626;}
+.field-tip-list li::marker {color:#eab67d;}
+.field-card-links {display:flex;flex-wrap:wrap;gap:4px 14px;padding-top:12px;}
+.learning-stage .field-card-link {min-height:38px;padding:7px 0;color:#eab67d;text-decoration:underline;text-underline-offset:4px;font-size:13px;cursor:pointer;}
+.field-role-list {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px;}
+.learning-stage .field-role {display:flex;flex-direction:column;align-items:center;gap:6px;padding-bottom:7px;border-bottom:3px solid #51402f;cursor:pointer;font-size:13px;}
+.field-role img {width:61px;height:95px;object-fit:contain;filter:drop-shadow(2px 3px 1px #000b);}
+.learning-stage .field-role[aria-pressed="true"] {border-color:#ff321c;color:#ffcf9b;}
+.field-role-copy h3 {margin:16px 0 6px;font-size:18px;color:#eab67d;}
+.field-role-copy p {font-size:14px;line-height:1.7;margin:0 0 13px;}
+.field-role-tip {color:#ffcf9b;}
+.field-lesson :is(button,summary):focus-visible {outline:2px solid #eab67d;outline-offset:2px;}
+
+.field-lesson .field-note {margin:11px 0;}
+.field-body {word-break:keep-all;overflow-wrap:anywhere;}

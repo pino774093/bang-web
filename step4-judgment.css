@@ -1,0 +1,45 @@
+/* Same STEP 4 canvas and dialogue; additions are scoped to the judgment scene. */
+.judgment-process {position:absolute;left:32px;right:32px;top:178px;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;list-style:none;}
+.judgment-process-step {position:relative;box-sizing:border-box;height:110px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:11px;border:1px solid #8a6745;border-radius:14px;background:#2d231b;color:#f0d3ac;box-shadow:2px 3px 1px #0007;}
+.judgment-process-step+.judgment-process-step::before {content:'→';position:absolute;left:-20px;top:41px;color:#8e2a19;font-size:19px;line-height:24px;}
+.judgment-process-icon {width:44px;height:44px;display:flex;align-items:center;justify-content:center;}
+.judgment-process-icon svg {display:block;width:44px;height:44px;fill:none;stroke:currentColor;stroke-width:2;stroke-linejoin:round;stroke-linecap:round;}
+.judgment-suits {display:flex;align-items:center;justify-content:center;gap:4px;font-size:28px;line-height:40px;}
+.judgment-suits>span:first-child {color:#ee6c50;}
+.judgment-process-label {font-size:12px;line-height:19px;white-space:nowrap;}
+.learning-stage .judgment-reveal {position:absolute;left:170px;top:309px;width:50px;height:78px;perspective:650px;cursor:pointer;}
+.judgment-flipper {position:absolute;inset:0;display:block;transform-origin:center;filter:drop-shadow(3px 3px 1px #000b);}
+.judgment-flipper img {position:absolute;inset:0;width:100%;height:100%;object-fit:contain;}
+.judgment-flipper .judgment-card-front {display:none;}
+.judgment-reveal.is-revealed .judgment-card-back {display:none;}
+.judgment-reveal.is-revealed .judgment-card-front {display:block;}
+.judgment-reveal-hint {position:absolute;left:28px;right:28px;top:395px;margin:0;text-align:center;color:#6b4930;font-size:11px;line-height:18px;}
+.judgment-examples-label {position:absolute;left:28px;right:28px;top:421px;margin:0;text-align:center;color:#37261b;font-size:12px;line-height:20px;}
+.judgment-examples {position:absolute;left:44px;right:44px;top:448px;display:flex;justify-content:space-between;}
+.learning-stage .judgment-example {width:78px;display:flex;flex-direction:column;align-items:center;gap:6px;cursor:pointer;color:#111;font-size:12px;line-height:18px;}
+.judgment-example img {width:64px;height:100px;object-fit:contain;filter:drop-shadow(3px 3px 1px #000b);}
+.judgment-example[aria-pressed=true] img {filter:drop-shadow(0 0 3px #de3014) drop-shadow(3px 3px 1px #000b);}
+.judgment-example[aria-pressed=true] span {text-decoration:underline;text-decoration-color:#aa2e1b;text-underline-offset:3px;}
+.judgment-story .attack-story-text {font-size:15px;line-height:25px;}
+.judgment-story .attack-story-note {font-size:12px;line-height:20px;margin-top:14px;}
+@media(prefers-reduced-motion:reduce){.judgment-flipper {transition:none;}}
+
+/* Intro and examples are separate frames; conditions never replace the dialogue. */
+.judgment-intro-scene .judgment-process {top:270px;}
+.learning-stage .judgment-example-scene .judgment-reveal {left:157px;top:163px;width:76px;height:118px;}
+.judgment-example-scene .judgment-reveal-hint {top:291px;font-size:10px;}
+.judgment-example-scene .judgment-examples-label {top:319px;}
+.judgment-example-scene .judgment-examples {top:345px;}
+.judgment-condition {position:absolute;left:28px;right:28px;top:481px;box-sizing:border-box;padding:9px 12px;background:#e7c898;border:1px solid #9c754b;box-shadow:2px 3px 1px #0004;color:#37261b;opacity:0;visibility:hidden;transform:translateY(-12px);transition:transform .24s ease,opacity .24s ease,visibility .24s;pointer-events:none;}
+.judgment-condition.is-open {opacity:1;visibility:visible;transform:translateY(0);}
+.judgment-condition p {margin:0;font-size:12px;line-height:19px;word-break:keep-all;text-align:center;}
+.judgment-condition p+p {margin-top:3px;}
+@media(prefers-reduced-motion:reduce){.judgment-condition {transition:none;}}
+
+/* The explanation-only frame uses the empty space below the process graphic. */
+.judgment-intro-scene .attack-story-dialogue {top:484px;height:421px;}
+.judgment-intro-scene .attack-story-navigation,
+.learning-stage .judgment-intro-scene .attack-story-navigation button {height:360px;}
+.judgment-intro-scene .attack-story-navigation span {top:312px;}
+
+.judgment-intro-card {position:absolute;left:95px;top:157px;width:200px;height:300px;object-fit:contain;}

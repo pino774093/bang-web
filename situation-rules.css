@@ -1,0 +1,36 @@
+/* Only situation search: original frame, heading, back and footer stay in place. */
+.situation-rules-page .search-choice-heading {top:109px;font-size:27px;}
+.situation-rules-scroll {position:absolute;left:34px;right:34px;top:169px;bottom:104px;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#8a6745 transparent;color:#fff;padding:0 4px 12px;box-sizing:border-box;}
+.situation-rules-intro {margin:0 0 15px;text-align:center;font-size:12px;line-height:20px;color:#d3c5b3;}
+.situation-rule {border-top:1px solid #846344;}
+.situation-rule:last-child {border-bottom:1px solid #846344;}
+.situation-rule-heading {margin:0;font-size:16px;}
+.learning-stage .situation-rule-toggle {display:flex;align-items:center;gap:12px;width:100%;min-height:61px;padding:12px 6px;color:#fff;text-align:left;background:transparent;border:0;cursor:pointer;font-size:16px;font-weight:400;line-height:24px;}
+.situation-rule-number {color:#b78858;font-size:12px;}
+.situation-rule-marker {margin-left:auto;color:#e9a060;font-size:21px;}
+.situation-rule-toggle[aria-expanded=true] .situation-rule-title {color:#f0b575;}
+.situation-rule-toggle:focus-visible {outline:2px solid #eab67d;outline-offset:-2px;}
+.situation-rule-panel {padding:0 6px 18px;font-size:14px;line-height:1.8;word-break:keep-all;overflow-wrap:break-word;}
+.situation-rule-panel[hidden] {display:none;}
+.situation-rule-panel ul {margin:0;padding-left:17px;}
+.situation-rule-panel li+li {margin-top:11px;}
+.situation-rule-important {margin:17px 0 0;padding:10px 0 0;border-top:1px solid #84634480;color:#f0b575;font-weight:400;}
+
+/* More room for card references and each sentence, without shortening the rules. */
+.situation-rules-scroll {left:30px;right:30px;padding:0 6px 28px;}
+.situation-rules-intro {font-size:14px;line-height:24px;margin-bottom:20px;}
+.learning-stage .situation-rule-toggle {min-height:70px;padding:16px 6px;font-size:18px;line-height:27px;}
+.situation-rule-panel {padding:8px 6px 30px;font-size:16px;line-height:29px;}
+.situation-rule-panel .situation-rule-list {list-style:none;margin:0;padding:0;}
+.situation-rule-panel .situation-rule-item+li {margin-top:30px;padding-top:26px;border-top:1px solid #84634455;}
+.situation-rule-prose p {margin:0;}
+.situation-rule-prose p+p {margin-top:12px;}
+.situation-rule-cards {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 14px;justify-items:center;margin:0 0 22px;}
+.situation-rule-card {margin:0;width:100%;max-width:124px;text-align:center;}
+.situation-rule-card img {display:block;width:100px;height:156px;object-fit:contain;margin:0 auto;filter:drop-shadow(3px 3px 1px #000b);}
+.situation-rule-card figcaption {margin-top:10px;color:#ead6bd;font-size:13px;line-height:22px;word-break:keep-all;}
+.situation-rule-important {margin:28px 0 0;padding-top:18px;font-size:16px;line-height:29px;}
+
+/* Fixed guidance stays directly above the existing bottom switcher. */
+.situation-rules-page .situation-rules-scroll {bottom:162px;}
+.situation-catalog-hint {position:absolute;left:36px;right:36px;top:695px;margin:0;color:#d3c5b3;font-size:12px;line-height:20px;text-align:center;word-break:keep-all;pointer-events:none;}

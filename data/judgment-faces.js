@@ -1,0 +1,2 @@
+/* Game-card faces verified byte-for-byte against the supplied source folder. No backs or role/character cards. */
+window.BANG_JUDGMENT_FACES = ["01_bang", "02_birra", "03_catbalou", "04_duello", "05_gatling", "06_emporio", "07_indiani", "08_mancato", "09_panico", "10_saloon", "11_diligenza", "12_wellsfargo", "01_barile", "02_dinamite", "03_prigione", "03_volcanic", "04_mustang", "05_remington", "06_carabine", "07_schofield", "08_mirino", "09_winchester"];

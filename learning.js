@@ -2,34 +2,77 @@
 (() => {
   const data=window.BANG_LEARNING_SCENES,flow=window.BANG_FIGMA_FLOW;
   const frames=new Map(data.frames.map(frame=>[frame.id,frame]));
+  const introGoal=frames.get('8:330');
+  frames.set('intro-goal',{...introGoal,id:'intro-goal',text:['서로의 역할을 추리하고 각자의 목표를 완수하세요!','> 클릭!']});
   // Confirmed learning continuation; retain the untouched Figma export as the audit source.
   const stepThreeEnd=frames.get('139:351');
-  frames.set(stepThreeEnd.id,{...stepThreeEnd,links:stepThreeEnd.links.map(link=>link.to==='42:2064'?{...link,to:'turn-timing'}:link)});
+  frames.set(stepThreeEnd.id,{...stepThreeEnd,links:stepThreeEnd.links.map(link=>link.to==='42:2064'?{...link,to:'attack-introduction'}:link)});
   for(const frame of window.BangTurnLesson.frames)frames.set(frame.id,frame);
+  for(const id of ['turn-timing','turn-cautions'])frames.set(id,{id,name:'Step 4',step:3,text:[],links:[],redirect:'attack-introduction'});
+  for(const frame of window.BangFieldLesson.frames)frames.set(frame.id,frame);
   frames.set('search-menu',{id:'search-menu',name:'카드&규칙 찾기',text:['카드&규칙 찾기'],links:[]});
   frames.set('search-situations',{id:'search-situations',name:'상황별 규칙',text:['상황별 규칙'],links:[]});
   // Extend only the isolated learning graph; the original simulation graph stays intact.
   const continueTo=(id,oldTarget,newTarget)=>{const f=frames.get(id);frames.set(id,{...f,links:f.links.map(l=>l.to===oldTarget?{...l,to:newTarget}:l)});};
   continueTo('139:249','42:2064','139:265');
-  continueTo('139:265','42:2064','139:351');
+  continueTo('139:265','42:2064','attack-introduction');
+  continueTo('139:265','139:351','attack-introduction');
   continueTo('139:236','42:2064','139:249');
+  // Personal setup: reveal Sheriff → life points → character bullets → Sheriff +1 → table setup.
+  continueTo('8:330','8:398','intro-goal');
+  continueTo('8:685','47:80','128:996');
+  continueTo('128:996','47:80','128:1017');
+  continueTo('128:1017','47:80','128:1063');
+  const setupLast=frames.get('136:197');
+  frames.set('setup-share-abilities',{...setupLast,id:'setup-share-abilities',step:1,text:['각자 가진 인물 카드의 능력이 무엇인지 다른 사람들과 공유합니다.','> 클릭!','Step 1 : 전체 세팅'],links:setupLast.links.map(link=>({...link}))});
+  continueTo('136:197','42:1687','setup-share-abilities');
   const menuIds=new Set(['94:60','124:745','131:1141']);
   const covers=new Set(['35:1427','42:1668','42:1687','42:1695','131:1124','131:1132']);
-  const stepStarts=['35:1427','42:1687','131:1124'];
-  const titles=['카드 종류 설명 & 세팅','각 역할과 승리 조건','내 턴에는 뭘 해야할까?','누구를 공격할 수 있을까?','초보자들을 위한 Tip!'];
-  let active=null,timer=null,drawer=null,restoreFocus=null,menuInert=[],drawerCloseTimer=null,drawAnimations=[],drawerCleanup=null;
+  const stepStarts=['35:1427','42:1687','131:1124','attack-introduction','tips-end'];
+  const titles=['카드 종류 설명 & 세팅','각 역할과 승리 조건','내 턴에는 뭘 해야할까?','사정거리와 판정','초보자들을 위한 Tip!'];
+  const introStarts=['35:1427','42:1687','131:1124','step4-intro','step5-intro'];
+  const introDefinitions=new Map([
+    ['35:1427',{step:1,to:'8:330'}],['42:1668',{step:1,to:'8:330'}],
+    ['42:1687',{step:2,to:'30:931'}],['42:1695',{step:2,to:'30:931'}],
+    ['131:1124',{step:3,to:'131:1182'}],['131:1132',{step:3,to:'131:1182'}],
+    ['step4-intro',{step:4,to:'attack-introduction'}],['step5-intro',{step:5,to:'tips-end'}]
+  ]);
+  for(const [id,info]of introDefinitions)if(!frames.has(id))frames.set(id,{id,step:info.step,name:'Step '+info.step,text:['Step '+info.step],links:[]});
+  let pendingIntro=null,introAdvance=null,autoAdvanceCleanup=null;
+
+  let active=null,timer=null,drawer=null,restoreFocus=null,menuInert=[],drawerCloseTimer=null,drawAnimations=[],drawerCleanup=null,mainContentsCleanup=null;
   const route=id=>id===flow.home||id===flow.menu?id:'learn:'+id;
   for(const frame of frames.values()){
     if(frame.id===flow.home||frame.id===flow.menu||frame.id===flow.cards||menuIds.has(frame.id))continue;
     flow.frames[route(frame.id)]={id:route(frame.id),name:frame.id.startsWith('139:')?'Step 3 : 내 턴':frame.text.find(t=>/^Step /.test(t))||frame.name,screenId:null,hotspots:[],automatic:[]};
   }
+  window.BangRoleExplore.register(flow);
   const surface=document.createElement('main');surface.id='learning-screen';surface.className='reference-screen';surface.hidden=true;surface.inert=true;
   const stage=document.createElement('div');stage.className='design-stage learning-stage';surface.append(stage);document.querySelector('#app').append(surface);
   new ResizeObserver(()=>{stage.style.transform=`scale(${surface.clientWidth/390})`;}).observe(surface);
   function source(id){return id.startsWith('learn:')?id.slice(6):id;}
   function has(id){return id===flow.home||id===flow.menu||id?.startsWith('learn:');}
   function element(tag,cls,parent=stage){const n=document.createElement(tag);n.className=cls;parent.append(n);return n;}
-  function go(id,options={}){if(id==='140:427'){message('Step 4는 준비 중입니다.');return;}closeMenu(false);return window.BangRouter.go(route(id),{action:{transitionType:'DISSOLVE'},...options});}
+  let searchReturn=flow.home;
+  try{searchReturn=sessionStorage.getItem('bang-search-return')||flow.home;}catch{}
+  function go(id,options={}){
+    if(id==='search-menu'){
+      const current=window.BangRouter.current;
+      if(current&&current!==flow.cards&&!['learn:search-menu','learn:search-situations'].includes(current)){
+        searchReturn=current;try{sessionStorage.setItem('bang-search-return',current);}catch{}
+      }
+    }
+    if(id==='140:427'&&active!=='step4-intro'&&(!active||stepFor(active)!==4))id='attack-introduction';
+    const target=frames.get(id);
+    const ordinary=key=>key&&key!==flow.home&&key!==flow.menu&&!key.startsWith('search-');
+    if(target&&ordinary(id)&&!introDefinitions.has(id)&&!introDefinitions.has(active)){
+      const nextStep=stepFor(id),previousStep=ordinary(active)?stepFor(active):null;
+      if(nextStep!==previousStep){
+        const intro=introStarts[nextStep-1];pendingIntro={intro,to:id};id=intro;
+      }
+    }
+    closeMenu(false);return window.BangRouter.go(route(id),{action:{transitionType:'DISSOLVE'},...options});
+  }
   function back(){
     closeMenu(false);
     if(history.state?.bang&&history.state.index>0)window.BangRouter.back();
@@ -103,7 +146,7 @@
     if(detail){menu.innerHTML='<img src="assets/back-vector.svg" alt="">';bind(menu,'역할 목록으로 돌아가기',()=>go('94:185'));}else bind(menu,'목차 열기',openMenu);
     const stepLabel=frame.text.find(t=>/^Step /.test(t));if(stepLabel){const header=element('div','learning-step-label');header.textContent=stepLabel;}
     if(frame.id==='94:185'){
-      panel.classList.add('learning-role-exploration');const hint=element('span','learning-role-hint',panel);hint.textContent='> 카드를 클릭하세요!';
+      panel.classList.add('learning-role-exploration');const hint=element('span','learning-role-hint',panel);hint.textContent='카드를 눌러 역할을 확인합니다.';
       const roleIds=['94:200','94:224','94:248','94:272'];
       const names=['sceriffo','vice','fuorilegge','rinnegato'];
       for(const [i,node]of [...stage.querySelectorAll('.design-card-target')].entries()){
@@ -121,7 +164,6 @@
       if(link.to==='5:229'){window.BangMusic?.start();window.BangRouter.go('5:229');return;}
       window.BangMusic?.start();go(link.to);return;
     }
-    if(link.to==='140:427'){message('Step 4는 준비 중입니다.');return;}
     // The unresolved Figma links below must never enter or modify the simulation.
     if(link.to==='42:2064'||link.to==='8:258'){message('이어서 볼 설명은 준비 중입니다. 목차에서 다른 STEP을 선택해 주세요.');return;}
     if(frames.has(link.to)){go(link.to,{replace:link.trigger==='AFTER_TIMEOUT'});return;}
@@ -215,6 +257,31 @@
     ],{duration:2350,delay:200,easing:'linear',fill:'both'});
     drawAnimations.push(animation);
   }
+  function prepareCardDiscard(){
+    if(active!=='139:265')return;
+    delete stage.dataset.discardMotionPlayed;
+    const card=find('139:345');if(!card)return;
+    card.classList.add('learning-discarded-card');
+    card.style.transformOrigin='center';card.style.zIndex='7';
+    if(new URLSearchParams(location.search).get('review')!=='1'&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches)card.style.visibility='hidden';
+  }
+  function playCardDiscard(){
+    if(active!=='139:265'||stage.dataset.discardMotionPlayed)return;
+    stage.dataset.discardMotionPlayed='1';
+    const card=find('139:345');if(!card)return;card.style.visibility='';
+    if(new URLSearchParams(location.search).get('review')==='1'||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+    // Match the original hand's Jail to its original discarded pose over the vintage pile.
+    const template=document.createElement('template');template.innerHTML=data.scenes['139:351'];
+    const target=template.content.querySelector('[data-node-id="139:370"]');if(!target)return;
+    const size=n=>({x:parseFloat(n.style.left)+parseFloat(n.style.width)/2,y:parseFloat(n.style.top)+parseFloat(n.style.height)/2,w:parseFloat(n.style.width)});
+    const from=size(card),to=size(target),dx=to.x-from.x,dy=to.y-from.y,scale=to.w/from.w;
+    const animation=card.animate([
+      {transform:'translate(0,0) scale(1)',offset:0},
+      {transform:`translate(${dx*.7}px,${dy*.55}px) scale(${1+(scale-1)*.65})`,offset:.45},
+      {transform:`translate(${dx}px,${dy}px) scale(${scale})`,offset:1}
+    ],{duration:850,delay:250,easing:'cubic-bezier(.25,.6,.3,1)',fill:'both'});
+    drawAnimations.push(animation);
+  }
   // Missing Figma labels inherit their section, independent of navigation history.
   function ensureStepLabel(frame){
     if(frame.id===flow.home||frame.id===flow.menu||frame.id===flow.cards||menuIds.has(frame.id)||covers.has(frame.id))return;
@@ -243,7 +310,7 @@
       const image=element('img',cls,root);image.src=src;image.alt='';image.draggable=false;
     }
     const previous=element('button','learning-menu-button search-choice-back',root);previous.type='button';
-    previous.innerHTML='<img src="assets/back-vector.svg" alt="">';bind(previous,'홈으로 돌아가기',()=>go(flow.home));
+    previous.innerHTML='<img src="assets/back-vector.svg" alt="">';bind(previous,active==='search-situations'?'카드&규칙 찾기로 돌아가기':'이전 페이지로 돌아가기',()=>active==='search-situations'?go('search-menu'):window.BangRouter.go(searchReturn));
     const heading=element('h1','search-choice-heading',root);heading.textContent='카드&규칙 찾기';
     const choices=element('nav','search-choice-buttons',root);choices.setAttribute('aria-label','찾는 방법 선택');
     const cards=element('button','search-choice-button',choices);cards.type='button';cards.textContent='카드 도감';
@@ -253,14 +320,34 @@
     situations.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 4h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-8l-6 4v-4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/><path d="M10 8a2 2 0 1 1 3 1.7c-1 .6-1 1-1 2.3M12 15h.01"/></svg><span>상황별 규칙</span>';
     bind(situations,'상황별 규칙',()=>go('search-situations'));
   }
+  let searchTabTimer=null;
   function mountSearchTabs(parent,selected){
+    clearTimeout(searchTabTimer);searchTabTimer=null;
     parent.querySelector('.search-page-tabs')?.remove();
-    const nav=element('nav','search-page-tabs',parent);nav.setAttribute('aria-label','카드와 상황 찾기 전환');
+    const nav=element('nav','search-page-tabs',parent);nav.setAttribute('aria-label','카드와 상황 찾기 전환');nav.dataset.selected=selected;
     for(const [key,label]of [['cards','카드 도감'],['situations','상황별 규칙']]){
       if(key==='situations'){const divider=element('span','search-page-divider',nav);divider.textContent='ㅣ';divider.setAttribute('aria-hidden','true');}
       const button=element('button','search-page-tab',nav);button.type='button';button.textContent=label;
       if(key===selected)button.setAttribute('aria-current','page');
-      button.onclick=()=>{if(key===selected)return;if(key==='cards')window.BangRouter.go(flow.cards);else go('search-situations');};
+      button.dataset.tab=key;
+      button.onclick=()=>{
+        if(nav.dataset.selected===key)return;
+        clearTimeout(searchTabTimer);searchTabTimer=null;
+        nav.dataset.selected=key;
+        nav.querySelectorAll('.search-page-tab').forEach(tab=>{
+          if(tab.dataset.tab===key)tab.setAttribute('aria-current','page');else tab.removeAttribute('aria-current');
+        });
+        if(key===selected)return;
+        const origin=window.BangRouter.current;
+        const navigate=()=>{
+          searchTabTimer=null;
+          if(!nav.isConnected||window.BangRouter.current!==origin)return;
+          // Finish the slide before changing canvases, with no footer dissolve or restart.
+          if(key==='cards')window.BangRouter.go(flow.cards,{instant:true});else go('search-situations',{instant:true});
+        };
+        if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)navigate();
+        else searchTabTimer=setTimeout(navigate,300);
+      };
     }
     return nav;
   }
@@ -268,21 +355,67 @@
     renderSearchMenu();surface.setAttribute('aria-label','상황별 규칙');
     const root=stage.querySelector('.search-choice');root.querySelector('.search-choice-buttons').remove();
     root.querySelector('.search-choice-heading').textContent='상황별 규칙';
-    const note=element('p','search-situations-pending',root);note.textContent='상황별 규칙 안내를 준비 중입니다.';
+    window.BangSituationRules.mount(root);
     mountSearchTabs(root,'situations');
   }
   function render(id){
     cancel();active=source(id);const frame=frames.get(active);if(!frame)throw new Error('Unknown learning route '+id);
+    if(frame.redirect){go(frame.redirect,{replace:true,instant:true});return stage;}
     stage.className='design-stage learning-stage';stage.dataset.learningFrame=active;delete stage.dataset.screen;
     surface.setAttribute('aria-label',active===flow.home?'BANG! 홈':active===flow.menu?'STEP 목차':active.startsWith('139:')?'Step 3 : 내 턴':frame.text.find(t=>/^Step /.test(t))||'학습 설명');
+    if(introDefinitions.has(active)){
+      const info=introDefinitions.get(active),destination=pendingIntro?.intro===active?pendingIntro.to:info.to;pendingIntro=null;
+      // Keep the existing dark STEP cover artwork; use live text and one cover per STEP.
+      stage.innerHTML=data.scenes['42:1668'];
+      for(const p of stage.querySelectorAll('p')){
+        if(p.textContent==='Step 1')p.textContent='Step '+info.step;
+        if(p.textContent==='카드 종류 설명 & 세팅')p.textContent=titles[info.step-1];
+      }
+      let done=false;
+      introAdvance=()=>{if(done)return;done=true;clearTimeout(timer);introAdvance=null;go(destination,{replace:true});};
+      const skip=element('button','learning-step-intro-skip');skip.type='button';skip.setAttribute('aria-label','Step '+info.step+' 설명 시작');skip.onclick=()=>introAdvance?.();
+      return stage;
+    }
+    if(window.BangFieldLesson.has(active)){stage.replaceChildren();window.BangFieldLesson.render(stage,active,{go,openMenu,back});return stage;}
+    if(window.BangRoleExplore.has(active))return window.BangRoleExplore.render(stage,active,{go,openMenu,back});
     if(active==='search-menu'){renderSearchMenu();return stage;}
     if(active==='search-situations'){renderSituationSearch();return stage;}
     if(window.BangTurnLesson.frames.some(f=>f.id===active)){
       stage.replaceChildren();window.BangTurnLesson.render(stage,active,{go,openMenu,back});return stage;
     }
-    if(data.scenes[active])stage.innerHTML=data.scenes[active];else reuse(frame);
+    if(active==='setup-share-abilities'){
+      stage.innerHTML=data.scenes['136:197'];
+      const copy=find('136:202');copy.replaceChildren();
+      for(const [i,line]of ['각자 가진 인물 카드의 능력이 무엇인지','다른 사람들과 공유합니다.'].entries()){
+        const p=document.createElement('p');p.textContent=line;p.style.lineHeight='100.03%';p.style.marginBottom=i?'0':'14px';copy.append(p);
+      }
+      const note=element('p','setup-share-note');note.textContent='역할카드와 인물카드는 다릅니다. 뒷면에 총알이 그려진 카드가 인물카드 입니다.';
+      // Reuse the same five player positions as the distance illustration.
+      for(const id of ['136:213','136:214','136:215','136:216','136:217','136:218','136:219','136:222','136:223','136:224'])find(id)?.remove();
+      const template=document.createElement('template');template.innerHTML=data.scenes['131:1268'];
+      const table=template.content.querySelector('[data-node-id="131:1285"]').cloneNode(true);stage.append(table);
+      const characters=['03_calamityjanet','04_elgringo','14_suzylafayette','09_paulregret','08_luckyduke'];
+      window.BangFieldLesson.seats.forEach((seat,i)=>{
+        const image=element('img','setup-share-character');image.src='assets/source/share-'+characters[i]+'.png';image.alt=['재앙의 자넷','엘 그링고','수지 라파예트','폴 리그레트','럭키 듀크'][i]+' 인물 카드';image.draggable=false;
+        image.style.left=(seat.x-23)+'px';image.style.top=(seat.y-36)+'px';
+      });
+    }else if(active==='intro-goal'){
+      stage.innerHTML=data.scenes['8:330'];
+      const copy=find('8:362');copy.replaceChildren();
+      for(const [i,line] of ['서로의 역할을 추리하고','각자의 목표를 완수하세요!'].entries()){
+        const p=document.createElement('p');p.textContent=line;p.style.lineHeight='100.03%';p.style.marginBottom=i?'0':'14px';copy.append(p);
+      }
+    }else if(data.scenes[active])stage.innerHTML=data.scenes[active];else reuse(frame);
     roughFrame();decorateButtons();
     for(const node of stage.querySelectorAll('img')){node.draggable=false;if(!node.alt)node.setAttribute('aria-hidden','true');}
+    if(active===flow.menu){
+      for(const id of ['47:2567','90:32','90:39','90:46','90:53'])find(id)?.remove();
+      const panel=element('section','learning-contents-page');panel.setAttribute('aria-label','STEP과 세부 단계 목차');
+      const shortcuts=document.createElement('nav');shortcuts.className='learning-drawer-shortcuts';shortcuts.hidden=true;
+      mainContentsCleanup=window.BangContents.mount(panel,shortcuts,{currentStep:1,currentId:active,go,message});
+      bind(find('47:2544'),'홈으로 돌아가기',()=>go(flow.home));
+      return stage;
+    }
     const controls=new Map();
     for(const link of frame.links.filter(l=>l.trigger==='ON_CLICK')){
       // Prefer a containing interaction over duplicate nested prototype targets.
@@ -298,8 +431,7 @@
       control.addEventListener('pointercancel',()=>{start=null;});
     }
     if(active===flow.menu){
-      bind(find('90:53'),'Step 5 준비 중',()=>message('Step 5는 준비 중입니다.'));
-      window.BangTurnLesson.links(stage,go,'turn-menu-topics');
+      bind(find('90:53'),'Step 5 초보자들을 위한 Tip!',()=>go('tips-end'));
       const logo=find('47:2544');bind(logo,'홈으로 돌아가기',()=>go(flow.home));
     }
     // Sources use copied Step 2 labels inside the dedicated Step 3 frames.
@@ -316,27 +448,44 @@
       for(const n of [4,5,6,7]){const option=document.createElement('option');option.value=n;option.textContent=n+'명';select.append(option);}select.value=sessionStorage.getItem('bang-learning-players')||'5';
       const update=()=>{const counts={4:[1,0,2,1],5:[1,1,2,1],6:[1,1,3,1],7:[1,2,3,1]}[select.value];['124:961','124:962','124:963','124:964'].forEach((id,i)=>{const n=find(id)?.querySelector('p');if(n)n.textContent=counts[i]+'장';});sessionStorage.setItem('bang-learning-players',select.value);};select.onchange=update;update();
     }
+    window.BangTurnLesson.enhanceOriginal(stage,active);
     ensureStepLabel(frame);
     prepareCardDraw();
     prepareCardUse();
+    prepareCardDiscard();
     makeDialogueClickable(frame,controls);
     for(const menu of stage.querySelectorAll('[aria-label="목차 열기"]')){
       menu.classList.add('learning-menu-normalized');
       menu.innerHTML='<span class="learning-menu-icon"><img src="assets/learning/0a3d10c2-d2f3-4d00-b8a6-9dace2b6209f.svg" alt=""></span>';
     }
+    window.BangComponentHelp.mount(stage,active);
     return stage;
   }
   function activate(){
-    clearTimeout(timer);if(!active)return;
+    clearTimeout(timer);autoAdvanceCleanup?.();autoAdvanceCleanup=null;if(!active)return;
+    if(introAdvance){timer=setTimeout(()=>introAdvance?.(),1200);return;}
     playCardDraw();
     playCardUse();
+    playCardDiscard();
     const frame=frames.get(active);
     const auto=frame.links.find(l=>l.trigger==='AFTER_TIMEOUT'&&frames.has(l.to));
     // Ignore the stale title timeout on the component explanation: it loops back.
     if(new URLSearchParams(location.search).get('review')==='1')return;
-    if(auto&&active!=='8:398')timer=setTimeout(()=>follow(frame,auto),Math.max(covers.has(active)?650:400,(auto.delay||0)*1000));
+    if(auto&&active!=='8:398'){
+      const current=active;let advanced=false;
+      const advance=()=>{if(advanced||active!==current||drawer)return;advanced=true;clearTimeout(timer);follow(frame,auto);};
+      const click=event=>{
+        if(event.defaultPrevented||event.target.closest('button,a,input,select,textarea,[role="button"],[role="dialog"],.learning-drawer-backdrop'))return;
+        advance();
+      };
+      const key=event=>{if(event.target===stage&&(event.key==='Enter'||event.key===' ')){event.preventDefault();advance();}};
+      const oldTabIndex=stage.getAttribute('tabindex');stage.tabIndex=0;
+      stage.addEventListener('click',click);stage.addEventListener('keydown',key);
+      autoAdvanceCleanup=()=>{stage.removeEventListener('click',click);stage.removeEventListener('keydown',key);if(oldTabIndex===null)stage.removeAttribute('tabindex');else stage.setAttribute('tabindex',oldTabIndex);};
+      timer=setTimeout(advance,Math.max(covers.has(active)?650:400,(auto.delay||0)*1000));
+    }
   }
-  function cancel(){window.BangHomeMotion?.cancel(stage);for(const animation of drawAnimations)animation.cancel();drawAnimations=[];clearTimeout(timer);timer=null;active=null;closeMenu(false);}
+  function cancel(){autoAdvanceCleanup?.();autoAdvanceCleanup=null;introAdvance=null;clearTimeout(searchTabTimer);searchTabTimer=null;mainContentsCleanup?.();mainContentsCleanup=null;window.BangComponentHelp.close(false);window.BangHomeMotion?.cancel(stage);for(const animation of drawAnimations)animation.cancel();drawAnimations=[];clearTimeout(timer);timer=null;active=null;closeMenu(false);}
   function closeMenu(focus=true){
     if(!drawer)return;
     const closing=drawer;
@@ -372,6 +521,6 @@
     drawer.addEventListener('keydown',e=>{if(e.key==='Escape'){e.preventDefault();closeMenu();}if(e.key==='Tab'){const list=[...panel.querySelectorAll('button')].filter(button=>!button.closest('[inert]'));if(e.shiftKey&&document.activeElement===list[0]){e.preventDefault();list.at(-1).focus();}else if(!e.shiftKey&&document.activeElement===list.at(-1)){e.preventDefault();list[0].focus();}}});
     close.focus();
   }
-  function stepFor(id){const f=frames.get(id);if(f?.y>=3671)return 3;return f?.y>=1500?2:1;}
+  function stepFor(id){const f=frames.get(id);if(f?.step)return f.step;if(f?.y>=3671)return 3;return f?.y>=1500?2:1;}
   window.BangLearning={surface,has,render,activate,cancel,go,frames,mountSearchTabs};
 })();

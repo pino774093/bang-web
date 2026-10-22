@@ -1,0 +1,41 @@
+/* STEP 4 only. Same fixed illustration/dialogue composition as the existing lessons. */
+.attack-story-title {position:absolute;left:28px;right:28px;top:105px;margin:0;color:#111;text-align:center;font-size:22px;line-height:30px;}
+.attack-story-illustration,.attack-story-art {position:absolute;left:0;top:0;width:390px;height:584px;}
+.attack-story-illustration {pointer-events:none;}
+.attack-story-art {pointer-events:none;}
+.attack-story-path {position:absolute;left:0;top:0;width:390px;height:584px;pointer-events:none;}
+.attack-story-path polyline {fill:none;stroke:#f0b367;stroke-width:3;stroke-dasharray:6 4;stroke-linejoin:round;}
+.learning-stage .attack-story-player {position:absolute;pointer-events:auto;width:50px;height:50px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;outline:2px solid #75614c;outline-offset:3px;color:#fff;line-height:1.1;cursor:pointer;}
+.attack-story-player-name {font-size:18px;}
+.attack-story-player-distance {font-size:13px;line-height:18px;}
+.learning-stage .attack-story-player.is-reachable,.learning-stage .attack-story-player.is-changed {outline-color:#efaa59;}
+.learning-stage .attack-story-player.is-selected {outline:3px solid #f62504;}
+.learning-stage .attack-story-player:disabled {cursor:default;}
+.attack-story-cards {position:absolute;left:28px;right:28px;top:458px;display:flex;justify-content:center;gap:2px;}
+.learning-stage .attack-story-card {flex:0 0 54px;display:flex;flex-direction:column;align-items:center;gap:3px;color:#111;font-size:11px;line-height:1.3;cursor:pointer;}
+.attack-story-card img {display:block;width:54px;height:84px;object-fit:contain;filter:drop-shadow(2px 3px 1px #000b);}
+.attack-story-card-range {font-size:10px;}
+.attack-story-card[aria-pressed="true"]>span:first-of-type {text-decoration:underline;text-decoration-color:#be240e;text-decoration-thickness:2px;text-underline-offset:3px;}
+.attack-story-card[aria-pressed="true"] img {filter:drop-shadow(0 0 3px #e43a1b) drop-shadow(2px 3px 1px #000b);}
+.attack-story[data-scene="3"] .attack-story-cards {top:452px;gap:38px;}
+.attack-story[data-scene="3"] .attack-story-card {flex-basis:70px;font-size:13px;}
+.attack-story[data-scene="3"] .attack-story-card img {width:64px;height:100px;}
+.attack-story-dialogue {position:absolute;left:0;top:584px;width:390px;height:321px;border-radius:59px 59px 0 0;background:#111;color:#fff;}
+.attack-story-copy {position:absolute;left:28px;right:28px;top:48px;text-align:center;pointer-events:none;}
+.attack-story-text {white-space:pre-line;font-size:16px;line-height:29px;word-break:keep-all;overflow-wrap:anywhere;}
+.attack-story-note {white-space:pre-line;font-size:13px;line-height:23px;color:#c8b69e;word-break:keep-all;overflow-wrap:anywhere;}
+.attack-story .attack-story-note {margin-top:18px;}
+.attack-story-navigation {position:absolute;left:0;top:0;display:flex;width:390px;height:260px;}
+.learning-stage .attack-story-navigation button {position:relative;width:195px;height:260px;cursor:pointer;color:#aa2e1b;font-size:14px;line-height:20px;}
+.attack-story-navigation span {position:absolute;top:212px;pointer-events:none;}
+.attack-story-prev span {left:28px;}
+.attack-story-next span {right:20px;}
+.attack-story :is(button):focus-visible {outline:2px solid #eab67d;outline-offset:-3px;}
+.attack-story .field-menu {pointer-events:auto;}
+
+/* Same player-count control as personal setup; positioned above the range diagram. */
+.attack-story .attack-story-player-count {top:111px;z-index:2;}
+
+.attack-story[data-scene="range-introduction"] .attack-story-cards {top:235px;gap:35px;}
+.attack-story[data-scene="range-introduction"] .attack-story-card {flex-basis:112px;font-size:15px;gap:12px;}
+.attack-story[data-scene="range-introduction"] .attack-story-card img {width:112px;height:174px;}

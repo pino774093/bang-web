@@ -40,7 +40,7 @@
    const description=document.createElement('p');description.className='card-library-description';description.textContent=window.BANG_CARD_DESCRIPTIONS?.[card.name.replace(/^\d+_/,'')]||'이 카드의 설명을 준비 중입니다.';
    const page=window.BANG_CARD_DETAIL_PAGES?.[card.name.replace(/^\d+_/,'')];
    if(page)renderDetailPage(detail,card,page);else detail.append(label,title,img,description);
-  }else{arrowBack(nav,()=>window.BangRouter.go('home'),'홈으로 돌아가기');renderList();}
+  }else{arrowBack(nav,()=>window.BangLearning.go('search-menu'),'카드&규칙 찾기로 돌아가기');renderList();}
   function renderDetailPage(detail,card,page){
    detail.classList.add('card-guide');
    const add=(tag,cls,parent,text)=>{const n=document.createElement(tag);n.className=cls;if(text)n.textContent=text;parent.append(n);return n;};

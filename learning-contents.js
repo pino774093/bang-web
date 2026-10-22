@@ -1,17 +1,19 @@
 /* Expandable contents for learning screens only. Coordinates are in the 390px canvas. */
 (() => {
   const steps=[
-    {title:'카드 종류 설명 & 세팅',topics:[['구성','8:398'],['개인 세팅','8:489'],['전체 세팅','128:1063']]},
+    {title:'카드 종류 설명 & 세팅',topics:[['구성','8:398'],['개인 세팅','124:909'],['전체 세팅','128:1063']]},
     {title:'각 역할과 승리 조건',topics:[['보안관','35:1114'],['부관','42:1728'],['무법자','35:1212'],['배신자','35:1228'],['역할 탐색','94:185']]},
-    {title:'내 턴에는 뭘 해야할까?',topics:[['카드 뽑기','139:236'],['카드 사용','139:249'],['카드 버리기','139:265'],['사용 타이밍','turn-timing'],['내 턴 주의사항','turn-cautions']]},
-    {title:'누구를 공격할 수 있을까?',topics:[]},
-    {title:'초보자들을 위한 Tip!',topics:[]}
+    {title:'내 턴에는 뭘 해야할까?',topics:[['카드 뽑기','139:236'],['카드 사용','139:249'],['카드 버리기','139:265']]},
+    {title:'사정거리와 판정',topics:[['사정거리','attack-introduction'],['판정','attack-draw']]},
+    {title:'초보자들을 위한 Tip!',topics:[['보안관 전략','tips-end'],['부관 전략','tips-rules'],['무법자 전략','tips-special'],['배신자 전략','tips-roles'],['공통 심리전','tips-mind']]}
   ];
   // Several animation/text frames belong to the same visible subtopic.
   const pageGroups=[
-    [['8:398','8:422','8:435','8:449','8:473','47:80','47:94','128:1041'],['8:489','8:501','8:514','8:540','8:566','8:581','124:980','8:685','128:1017','128:996','124:909'],['128:1063','136:12','136:37','131:1268','136:118','136:197']],
+    [['8:398','8:422','8:435','8:449','8:473','47:80','47:94','128:1041'],['124:909','8:489','8:501','8:514','8:540','8:566','8:581','124:980','8:685','128:1017','128:996'],['128:1063','136:12','136:37','131:1268','136:118','136:197','setup-share-abilities']],
     [['35:1114','35:1131','94:200'],['42:1728','94:224'],['35:1212','94:248'],['35:1228','35:1374','35:1390','35:1406','94:272'],['94:185']],
-    [['139:236'],['139:249'],['139:265','139:351'],['turn-timing','turn-start'],['turn-cautions']]
+    [['139:236'],['139:249'],['139:265','139:351']],
+    [['attack-introduction','140:427','attack-range','attack-effects'],['attack-draw','attack-draw-examples']],
+    [['tips-end'],['tips-rules'],['tips-special'],['tips-roles'],['tips-mind']]
   ];
   function topicFor(id){
     for(let step=0;step<pageGroups.length;step++)for(let topic=0;topic<pageGroups[step].length;topic++){
@@ -19,17 +21,17 @@
     }
     return null;
   }
-  function layout(expanded){
+  function layout(expanded,spacing=112){
     const rows=[],positions=[];let y=16;
     steps.forEach((step,i)=>{
       positions.push(y);rows.push({key:'step:'+i,step:i,center:y+21});
       if(i===expanded)step.topics.forEach(([label,to],j)=>rows.push({key:`topic:${i}:${j}`,step:i,topic:j,label,to,center:y+82+j*44+20}));
-      y+=112+(i===expanded?step.topics.length*44+14:0);
+      y+=spacing+(i===expanded?step.topics.length*44+14:0);
     });
     return {rows,positions,footerTop:y,height:y+148};
   }
   function nearest(rows,y){return rows.reduce((a,b)=>Math.abs(a.center-y)<=Math.abs(b.center-y)?a:b);}
-  function mount(panel,shortcuts,{currentStep,currentId,go,message}){
+  function mount(panel,shortcuts,{currentStep,currentId,go,message,rowSpacing=112}){
     const currentTopic=topicFor(currentId);
     const create=(tag,cls,parent)=>{const n=document.createElement(tag);n.className=cls;parent.append(n);return n;};
     const viewport=create('div','learning-contents-scroll',panel);
@@ -37,7 +39,7 @@
     const track=create('div','learning-drawer-track',content);track.setAttribute('aria-hidden','true');
     const live=create('p','sr-only',panel);live.setAttribute('role','status');
     let expanded=-1,selected='step:'+Math.max(0,Math.min(4,currentStep-1)),previewKey=selected,drag=null,raf=null,disposed=false;
-    let geometry=layout(expanded);
+    let geometry=layout(expanded,rowSpacing);
     const main=[],lists=[],dots=[];
     steps.forEach((step,i)=>{
       const button=create('button','learning-drawer-step',content);button.type='button';button.dataset.step=String(i+1);
@@ -63,7 +65,7 @@
       for(const b of content.querySelectorAll('.learning-contents-subtopic'))b.classList.toggle('is-drag-target',!!drag&&b.dataset.target===item.to);
     }
     function draw(){
-      geometry=layout(expanded);
+      geometry=layout(expanded,rowSpacing);
       main.forEach((button,i)=>{
         const y=geometry.positions[i],open=i===expanded;
         button.style.top=y+'px';dots[i].style.top=y+16+'px';

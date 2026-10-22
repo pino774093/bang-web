@@ -1,0 +1,5 @@
+/* STEP 2 role exploration only. Smaller alpha-aware shadows and a simple card turn. */
+.learning-stage[data-learning-frame="94:185"] .learning-role-flip {perspective:800px;}
+.learning-role-flip-turn {position:absolute;inset:0;display:block;transform-style:preserve-3d;}
+.learning-role-flip-turn img {backface-visibility:hidden;-webkit-backface-visibility:hidden;}
+.learning-role-flip-face {transform:rotateY(180deg);}

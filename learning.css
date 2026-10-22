@@ -226,3 +226,76 @@
 .card-guide-core-list {margin:0;padding-left:20px;}
 .card-guide-core-list li+li {margin-top:9px;}
 .card-guide-core-list li::marker {color:#eab67d;}
+
+/* STEP 3 original dialogue only; keeps the existing title, artwork and navigation. */
+.learning-stage .step3-rule-copy {position:absolute;left:28px;top:666px;width:334px;text-align:center;color:#fff;pointer-events:none;white-space:pre-line;}
+.learning-stage .step3-rule-copy p {margin:0;font-weight:400;}
+.learning-stage .step3-rule-main {font-size:16px;line-height:24px;word-break:keep-all;}
+.learning-stage .step3-rule-main em {font-style:normal;color:#f62504;}
+.learning-stage .step3-rule-copy .step3-rule-note {margin-top:10px;font-size:12px;line-height:18px;color:#d3c5b3;word-break:keep-all;}
+
+.learning-stage[data-learning-frame="turn-start"] .turn-sheet {word-break:keep-all;}
+
+
+
+/* Standalone contents follows the overlay contents, under the existing BANG! header. */
+.learning-contents-page {position:absolute;inset:0;color:#fff;pointer-events:none;}
+.learning-contents-page .learning-contents-scroll {top:204px;left:24px;right:24px;bottom:28px;pointer-events:auto;}
+.learning-stage .learning-contents-page .learning-drawer-step {width:294px;}
+.learning-contents-page .learning-drawer-step::before {width:328px;}
+.learning-stage .learning-contents-page .learning-contents-subtopic {width:240px;}
+.learning-contents-page .learning-drawer-shortcuts[hidden] {display:none;}
+
+/* One rounded selection surface slides over the unchanged western tab artwork. */
+.search-page-tabs::before,
+.search-page-tabs:has(>button:first-child[aria-current="page"])::before {background:rgba(17,17,17,.504);z-index:-2;}
+.search-page-tabs::after {content:'';position:absolute;left:5px;top:4px;width:calc((100% - 29px)/2);height:36px;border-radius:11px;background:#b53420;box-shadow:inset 0 1px 0 #ec8b6938,inset 0 -1px 0 #4c0f0c66;z-index:-1;pointer-events:none;transform:translateX(0);transition:transform 300ms cubic-bezier(.22,.61,.36,1);}
+.search-page-tabs[data-selected="situations"]::after {transform:translateX(calc(100% + 14px));}
+.design-stage .search-page-tabs button {position:relative;z-index:1;}
+@media(prefers-reduced-motion:reduce){.search-page-tabs::after {transition:none;}}
+
+.learning-stage .learning-step-intro-skip {position:absolute;inset:0;width:390px;height:844px;background:transparent;border:0;cursor:pointer;z-index:50;}
+.learning-step-intro-skip:focus-visible {outline:2px solid #eab67d;outline-offset:-10px;}
+
+/* Character sharing belongs only to the final STEP 1 setup scene. */
+.setup-share-note {position:absolute;left:28px;right:28px;top:724px;margin:0;color:#d3c5b3;font-size:12px;line-height:20px;text-align:center;word-break:keep-all;pointer-events:none;}
+.setup-share-character {position:absolute;width:46px;height:72px;object-fit:contain;filter:drop-shadow(3px 3px 1px #000b);pointer-events:none;}
+
+/* Fit the full card-use explanation above the existing back/next controls. */
+.learning-stage[data-learning-frame="139:249"] .step3-rule-copy {top:611px;}
+
+/* STEP 3 reference scenes follow the original hero + lower black dialogue layout. */
+.turn-story .turn-heading {top:105px;font-size:22px;line-height:30px;}
+.turn-story-tabs,.turn-story-rules {position:absolute;left:28px;right:28px;top:184px;display:grid;gap:8px;}
+.turn-story-tabs {grid-template-columns:repeat(4,minmax(0,1fr));}
+.turn-story-rules {grid-template-columns:repeat(2,minmax(0,1fr));}
+.learning-stage .turn-story-choice {min-height:44px;padding:7px 6px;border:1px solid #88613d;color:#37261b;background:#e1c293;font-size:13px;line-height:20px;cursor:pointer;font-weight:400;}
+.learning-stage .turn-story-choice:is([aria-selected=true],[aria-pressed=true]) {color:#fff;background:#211b17;border-color:#211b17;}
+.turn-story-art {position:absolute;left:28px;right:28px;top:293px;display:flex;align-items:center;justify-content:center;gap:28px;}
+.turn-story-art .turn-card {width:92px;height:143px;}
+.learning-stage[data-learning-frame="turn-cautions"] .turn-story-art {top:370px;}
+.turn-story-dialogue {position:absolute;left:0;top:584px;width:390px;height:321px;background:#111;color:#fff;border-radius:59px 59px 0 0;}
+.turn-story-copy {position:absolute;left:28px;right:28px;top:35px;height:160px;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;text-align:center;font-size:15px;line-height:25px;word-break:keep-all;}
+.turn-story-copy h2 {margin:0 0 13px;font-size:17px;line-height:26px;font-weight:400;}
+.turn-story-copy ul {list-style:none;padding:0;margin:0;}
+.turn-story-copy li+li {margin-top:8px;}
+.turn-story-copy p {margin:0;}
+.turn-story-copy em {color:#f62504;font-style:normal;}
+.turn-story-copy .turn-story-note {margin-top:14px;color:#d3c5b3;font-size:12px;line-height:20px;}
+.learning-stage .turn-story-related {position:absolute;left:28px;top:536px;width:334px;min-height:32px;padding:4px;background:transparent;color:#37261b;text-decoration:underline;text-underline-offset:4px;font-size:13px;cursor:pointer;}
+.turn-story-related[hidden] {display:none;}
+.turn-story-navigation {position:absolute;left:0;top:200px;width:390px;display:flex;}
+.learning-stage .turn-story-navigation button {width:195px;height:48px;background:transparent;color:#aa2e1b;font-size:14px;cursor:pointer;}
+.turn-story-back {text-align:left;padding-left:28px;}.turn-story-next {text-align:right;padding-right:20px;}
+.turn-story button:focus-visible,.turn-story-copy:focus-visible {outline:2px solid #eab67d;outline-offset:2px;}
+
+/* Enlarge only the card-use dialogue; preserve every word and the original navigation. */
+.learning-stage[data-learning-frame="139:249"] [data-node-id="139:310"] {top:544px!important;height:361px!important;z-index:10;}
+.learning-stage[data-learning-frame="139:249"] .step3-rule-copy {top:574px;z-index:11;}
+.learning-stage[data-learning-frame="139:249"] .step3-rule-main {line-height:25px;}
+.learning-stage[data-learning-frame="139:249"] .step3-rule-note {margin-top:14px;line-height:20px;}
+
+/* Reserve a visible heading row above the full card-use explanation. */
+.learning-stage[data-learning-frame="139:249"] [data-node-id="139:310"] {top:514px!important;height:391px!important;}
+.learning-stage[data-learning-frame="139:249"] [data-node-id="139:316"] {top:548px!important;z-index:12;}
+.learning-stage[data-learning-frame="139:249"] [data-node-id="139:316"] ol {margin:0;}

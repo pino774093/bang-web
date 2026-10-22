@@ -1,0 +1,22 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>카드 도감 보강 모바일 검증</title><style>body{margin:0;background:#303030;color:#fff;font:13px sans-serif}#result{margin:4px}iframe{display:block;width:390px;height:844px;border:0;margin:auto}</style><p id="result">대상 8종 보강 검증 중…</p><iframe title="카드 도감 모바일 화면" src="../index.html?catalog-review=42#/figma/30:726?card=0"></iframe><script>
+const f=document.querySelector('iframe'),result=document.querySelector('#result');
+f.onload=async()=>{const w=f.contentWindow,d=f.contentDocument;let checks=0;const assert=(value,label)=>{if(!value)throw Error(label);checks++;};const wait=async(fn)=>{for(let i=0;i<150;i++){if(fn())return;await new Promise(r=>setTimeout(r,40));}throw Error('이동 대기 초과');};const turn=()=>Promise.resolve();const pause=()=>new Promise(r=>setTimeout(r,160));
+try{
+ await wait(()=>d.querySelector('.card-guide'));await d.fonts.ready;for(const [key,count] of Object.entries({duello:3,birra:4,saloon:3,emporio:5,gatling:4,barile:4,dinamite:5,prigione:4}))assert(w.BANG_CARD_DETAIL_PAGES[key].faq.length===count,key+' 보강 데이터 로드');
+ const entries=w.BANG_CARDS.map((card,index)=>({card,index,key:card.name.replace(/^\d+_/,'')})).filter(e=>['duello','birra','saloon','emporio','gatling','barile','dinamite','prigione'].includes(e.key));
+ for(const entry of entries){
+  const page=w.BANG_CARD_DETAIL_PAGES[entry.key];w.BangRouter.go(w.BANG_FIGMA_FLOW.cards,{card:entry.index});await pause();await wait(()=>d.querySelector('.card-guide h2')?.textContent===page.title);await turn();
+  const guide=d.querySelector('.card-guide'),area=d.querySelector('.card-library'),stage=d.querySelector('#reference-screen .design-stage');
+  assert(Math.abs(stage.getBoundingClientRect().width-390)<1,'390px 구성');
+  assert(guide.querySelector('.card-guide-core-list').children.length===page.coreRules.length,entry.key+' 핵심 규칙');
+  const img=guide.querySelector('.card-guide-image');await wait(()=>img.complete);assert(img.naturalWidth>0,entry.key+' 원본 이미지');
+  assert(area.scrollWidth<=area.clientWidth+1,entry.key+' 가로 넘침');
+  for(const detail of guide.querySelectorAll('details')){assert(!detail.open,'접힌 초기 상태');detail.querySelector('summary').click();await turn();assert(detail.open&&area.scrollWidth<=area.clientWidth+1,entry.key+' 펼침과 줄바꿈');const content=detail.querySelector('p,ul');assert(content&&content.getBoundingClientRect().bottom<=detail.getBoundingClientRect().bottom+1,entry.key+' 펼친 내용 잘림 없음');detail.querySelector('summary').click();assert(!detail.open,'다시 접기');}
+  const tabs=d.querySelector('.search-page-tabs');assert(area.getBoundingClientRect().bottom<tabs.getBoundingClientRect().top,'하단 메뉴 겹침 없음');
+
+ }
+ const example=entries.find(e=>e.key==='emporio');w.BangRouter.go(w.BANG_FIGMA_FLOW.cards,{card:example.index});await wait(()=>d.querySelector('.card-guide h2')?.textContent==='잡화점 (General Store)');const last=[...d.querySelectorAll('.card-guide details')].at(-1);last.open=true;last.scrollIntoView({block:'center'});
+ result.textContent='PASS · 대상 8종 · '+checks+'개 검사 · 390×844 · 이미지/핵심 규칙/아코디언/가로 넘침/하단 메뉴';
+}catch(e){result.textContent='FAIL · '+e.message;}
+};
+</script></html>

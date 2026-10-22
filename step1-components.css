@@ -1,0 +1,12 @@
+/* Original STEP 1 artwork stays at its original coordinates above the blurred scene. */
+.learning-stage .component-help-trigger {cursor:pointer;touch-action:manipulation;}
+.component-help-trigger:focus-visible {outline:2px solid #a52b18;outline-offset:4px;}
+.component-help-backdrop {position:absolute;inset:0;z-index:100;background:#0003;backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);}
+.component-help-art {position:absolute;inset:0;pointer-events:none;}
+.component-help-paper {position:absolute;left:0;top:584px;width:390px;height:260px;box-sizing:border-box;padding:24px 28px 45px;border-radius:59px 59px 0 0;background:#111;color:#fff;word-break:keep-all;}
+.component-help-paper h2 {margin:0 0 10px;font-size:18px;line-height:24px;}
+.component-help-copy {max-height:157px;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#aa805a #111;font-size:13px;line-height:20px;}
+.component-help-copy p {margin:0 0 8px;}
+.component-help-copy .component-help-note {font-size:11px;line-height:18px;color:#d3b48e;}
+.learning-stage .component-help-close {position:absolute;right:20px;bottom:8px;width:56px;height:36px;margin:0;padding:0;color:#aa2e1b;background:transparent;font-size:14px;cursor:pointer;}
+.component-help-close:focus-visible {outline:2px solid #eab67d;outline-offset:-2px;}
