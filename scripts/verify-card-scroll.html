@@ -1,0 +1,31 @@
+<!doctype html><meta charset="utf-8"><title>Card scroll regression</title>
+<pre id="result">RUNNING</pre><iframe width="393" height="659" src="../index.html?scroll-check=2#/figma/30:726?card=0"></iframe><script>
+const frame=document.querySelector('iframe');
+frame.onload=async()=>{
+ const w=frame.contentWindow,d=frame.contentDocument;
+ const wait=()=>new Promise(r=>setTimeout(r,50));
+ try{
+  for(let i=0;i<100&&!d.querySelector('.card-guide');i++)await wait();
+  for(let i=0;i<100&&d.documentElement.classList.contains('bang-fonts-pending');i++)await wait();
+  const stage=d.querySelector('.card-library').parentElement,results=[];
+  const check=(condition,label)=>{if(!condition)throw Error(label);};
+  for(const [index,card] of w.BANG_CARDS.entries()){
+   if(card.name.replace(/^\d+_/,'')==='뒷장')continue;
+   w.history.replaceState(null,'',`#/figma/30:726?card=${index}`);w.BangCards.mount(stage);
+   const area=d.querySelector('.card-library'),style=w.getComputedStyle(area);
+   check(style.overflowY==='auto'&&style.touchAction.includes('pan-y'),card.name+' native scroll: '+style.overflowY+' / '+style.touchAction+' / '+d.querySelector('link[href*=screens]').href);
+   check(area.scrollHeight>area.clientHeight,card.name+' scrollable');
+   for(const img of area.querySelectorAll('img')){
+    check(!img.draggable&&w.getComputedStyle(img).pointerEvents==='none',card.name+' artwork drag');
+   }
+   const image=area.querySelector('.card-guide-image'),r=image.getBoundingClientRect();
+   const target=d.elementFromPoint(r.x+r.width/2,r.y+r.height/2);
+   check(target&&area.contains(target)&&target!==image,card.name+' image passes gestures');
+   area.scrollTop=100;check(area.scrollTop>0,card.name+' scroll movement');
+   const summary=area.querySelector('summary');summary.click();check(summary.parentElement.open,card.name+' accordion click');
+   const related=area.querySelector('.card-guide-related-card');check(related&&w.getComputedStyle(related).pointerEvents==='auto',card.name+' related button');
+   results.push(card.name);
+  }
+  document.querySelector('#result').textContent='PASS: '+results.length+' card details; image hit targets, native scrolling, accordions, related buttons';
+ }catch(e){document.querySelector('#result').textContent='FAIL: '+e.message;}
+};</script>

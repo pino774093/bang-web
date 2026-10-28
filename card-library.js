@@ -98,5 +98,6 @@
    const rulesTitle=document.createElement('h3');rulesTitle.id='card-library-rules-title';rulesTitle.textContent='자주 헷갈리는 규칙';rules.append(rulesTitle);
    const list=document.createElement('ol');for(const text of trickyRules){const item=document.createElement('li');item.textContent=text;list.append(item);}rules.append(list);content.append(rules);
   }
+  area.querySelectorAll('img').forEach(image=>{image.draggable=false;});
  }};
 })();

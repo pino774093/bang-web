@@ -52,7 +52,10 @@
 .design-stage button:not([aria-disabled=true]),.intro-panel{cursor:pointer}
 .interaction-hotspot{position:absolute;padding:0;border:0;background:transparent;cursor:pointer;touch-action:manipulation}
 .interaction-hotspot:focus-visible{outline:2px solid #fff;outline-offset:2px}
-.card-library{position:absolute;left:45px;top:114px;width:299px;height:684px;overflow:auto;overscroll-behavior:contain;color:white;font-family:inherit}
+.card-library{position:absolute;left:45px;top:114px;width:299px;height:684px;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;touch-action:pan-y pinch-zoom;-webkit-overflow-scrolling:touch;color:white;font-family:inherit}
+/* Card artwork must pass touch gestures to the native scroll container.
+   Keep related-card buttons interactive while disabling native image dragging. */
+.card-library img{pointer-events:none;user-select:none;-webkit-user-select:none;-webkit-user-drag:none}
 .card-library-content{padding-bottom:16px;scroll-behavior:smooth}
 .card-category-section{scroll-margin-top:80px}
 .card-category-tabs{position:sticky;top:41px;z-index:1;display:flex;gap:5px;padding:5px 0 8px;background:#111}
