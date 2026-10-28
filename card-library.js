@@ -74,17 +74,30 @@
    const content=document.createElement('div');content.className='card-library-content';area.append(content);
    const tabs=document.createElement('nav');tabs.className='card-category-tabs';tabs.setAttribute('aria-label','카드 종류');content.append(tabs);
    const sections=new Map();
+   function selectCategory(id){
+    activeCategory=id;
+    tabs.querySelectorAll('button').forEach((button,index)=>{
+     const active=categories[index].id===id;
+     button.classList.toggle('is-active',active);button.setAttribute('aria-pressed',String(active));
+    });
+   }
+   // Geometry is measured in viewport pixels; scrollTop uses unscaled stage pixels.
+   const scale=()=>area.getBoundingClientRect().height/area.offsetHeight||1;
+   function syncCategory(){
+    const threshold=tabs.getBoundingClientRect().bottom+8*scale();
+    let current=categories[0].id;
+    for(const item of categories){
+     if(sections.get(item.id).getBoundingClientRect().top<=threshold+1)current=item.id;
+    }
+    selectCategory(current);
+   }
    for(const item of categories){
-    const tab=button(item.label,()=>{
-     activeCategory=item.id;
-     tabs.querySelectorAll('button').forEach((button,index)=>{
-      const active=categories[index].id===item.id;
-      button.classList.toggle('is-active',active);button.setAttribute('aria-pressed',String(active));
-     });
+    button(item.label,()=>{
      const section=sections.get(item.id);
-     if(section){const areaTop=area.getBoundingClientRect().top;const sectionTop=section.getBoundingClientRect().top;area.scrollTo({top:Math.max(0,area.scrollTop+sectionTop-areaTop-80),behavior:'smooth'});}
+     const stickyBottom=area.getBoundingClientRect().top+(parseFloat(getComputedStyle(tabs).top)+tabs.offsetHeight+8)*scale();
+     const delta=(section.getBoundingClientRect().top-stickyBottom)/scale();
+     area.scrollTo({top:Math.max(0,area.scrollTop+delta),behavior:'smooth'});
     },tabs);
-    tab.setAttribute('aria-pressed',String(activeCategory===item.id));if(activeCategory===item.id)tab.classList.add('is-active');
    }
    for(const item of categories){
     const section=document.createElement('section');section.className='card-category-section';section.id=`card-category-${item.id}`;sections.set(item.id,section);content.append(section);
@@ -97,6 +110,9 @@
    const rules=document.createElement('section');rules.className='card-library-rules';rules.setAttribute('aria-labelledby','card-library-rules-title');
    const rulesTitle=document.createElement('h3');rulesTitle.id='card-library-rules-title';rulesTitle.textContent='자주 헷갈리는 규칙';rules.append(rulesTitle);
    const list=document.createElement('ol');for(const text of trickyRules){const item=document.createElement('li');item.textContent=text;list.append(item);}rules.append(list);content.append(rules);
+   area.addEventListener('scroll',syncCategory,{passive:true});
+   syncCategory();
+   requestAnimationFrame(()=>{if(area.isConnected)syncCategory();});
   }
   area.querySelectorAll('img').forEach(image=>{image.draggable=false;});
  }};

@@ -1,0 +1,21 @@
+<!doctype html><meta charset="utf-8"><pre id="result">RUNNING</pre><script>
+(async()=>{let checks=0;const assert=(ok,msg)=>{if(!ok)throw Error(msg);checks++;};const pause=ms=>new Promise(r=>setTimeout(r,ms));try{
+for(const [width,height] of [[390,844],[393,659]]){
+ const f=document.createElement('iframe');f.width=width;f.height=height;f.src='../index.html?category-check=3#/figma/30:726';const loaded=new Promise(r=>f.onload=r);document.body.append(f);await loaded;
+ const w=f.contentWindow,d=f.contentDocument;
+ for(let i=0;i<100&&(!d.querySelector('.card-category-tabs')||d.documentElement.classList.contains('bang-fonts-pending'));i++)await pause(50);
+ const area=d.querySelector('.card-library'),tabs=d.querySelector('.card-category-tabs'),buttons=[...tabs.querySelectorAll('button')];
+ let phase='initial';const selected=index=>{assert(buttons.every((b,i)=>b.classList.contains('is-active')===(i===index)),phase+' '+width+' active '+index+' actual '+buttons.findIndex(b=>b.classList.contains('is-active'))+' scroll '+area.scrollTop+' section '+d.querySelectorAll('.card-category-section')[index].getBoundingClientRect().top+' tabs '+tabs.getBoundingClientRect().bottom);assert(buttons.every((b,i)=>b.getAttribute('aria-pressed')===String(i===index)),width+' aria '+index);};
+ selected(0);
+ for(const index of [1,2,1,0]){phase='manual';
+  const section=d.querySelectorAll('.card-category-section')[index],scale=area.getBoundingClientRect().height/area.offsetHeight;
+  area.scrollTop=Math.max(0,area.scrollTop+(section.getBoundingClientRect().top-area.getBoundingClientRect().top)/scale-parseFloat(w.getComputedStyle(tabs).top)-tabs.offsetHeight);
+  area.dispatchEvent(new w.Event('scroll'));await pause(80);selected(index);
+ }
+ area.scrollTop=area.scrollHeight;area.dispatchEvent(new w.Event('scroll'));await pause(80);selected(2);
+ const nativeScroll=area.scrollTo.bind(area);area.scrollTo=options=>{assert(options.behavior==='smooth','smooth category navigation');nativeScroll({...options,behavior:'instant'});area.dispatchEvent(new w.Event('scroll'));};
+ for(const index of [0,1,2]){phase='click';buttons[index].click();await pause(900);selected(index);}
+ f.remove();
+}
+document.querySelector('#result').textContent='PASS: '+checks+' checks; manual scroll both directions, bottom, category buttons, aria-pressed, full/scaled viewports';
+}catch(e){document.querySelector('#result').textContent='FAIL: '+e.message;}})();</script>
