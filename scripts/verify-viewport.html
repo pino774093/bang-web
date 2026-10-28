@@ -1,0 +1,13 @@
+<!doctype html><meta charset="utf-8"><pre id="result">RUNNING</pre><script>
+(async()=>{
+const results=[];
+for(const [width,height] of [[320,480],[375,559],[390,664],[393,659],[430,740],[844,390],[1366,768]]){
+const frame=document.createElement('iframe');frame.width=width;frame.height=height;frame.style.border='0';
+const loaded=new Promise(resolve=>frame.onload=resolve);frame.src='../index.html';document.body.append(frame);await loaded;
+await new Promise(resolve=>setTimeout(resolve,100));
+const doc=frame.contentDocument,box=doc.querySelector('#app').getBoundingClientRect();
+const pass=box.left>=-.5&&box.top>=-.5&&box.right<=width+.5&&box.bottom<=height+.5&&doc.documentElement.scrollHeight<=height+1&&Math.abs(box.width/box.height-390/844)<.002;
+results.push({width,height,pass,appWidth:box.width,appHeight:box.height,scrollHeight:doc.documentElement.scrollHeight});frame.remove();
+}
+document.querySelector('#result').textContent=JSON.stringify(results);document.title=results.every(x=>x.pass)?'PASS':'FAIL';
+})();</script>

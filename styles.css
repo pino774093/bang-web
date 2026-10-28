@@ -18,15 +18,14 @@ html.bang-fonts-pending #app { visibility: hidden; }
 * { box-sizing: border-box; }
 body {
   margin: 0;
-  min-height: 100dvh;
+  height: 100vh;
+  height: 100dvh;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px)
     env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
-  overflow-x: hidden;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
+  overflow: hidden;
 }
 /* A fixed composition in Figma. Container units scale all its layers together. */
 .home { position: relative; width: min(100%, 390px); aspect-ratio: 390 / 844; container-type: inline-size; overflow: hidden; background: white; isolation: isolate; }
@@ -60,7 +59,15 @@ body {
 .logo-slot { z-index: 1; }
 
 /* Route container: the home composition above remains unchanged. */
-#app { width: min(100%, 390px); max-width: 390px; min-width: 0; flex: 0 1 390px; }
+/* Fit the entire 390 × 844 composition inside the usable viewport.
+   Dynamic height follows mobile browser bars; safe areas stay outside the art. */
+#app {
+  width: min(100%, 390px, calc((100vh - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px)) * 390 / 844));
+  width: min(100%, 390px, calc((100dvh - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px)) * 390 / 844));
+  max-width: 390px;
+  min-width: 0;
+  flex: 0 0 auto;
+}
 #app .home { width: 100%; }
 #app { position: relative; isolation: isolate; }
 #app > .screen-transition-layer { position: absolute; inset: 0 auto auto 0; width: 100%; height: auto; aspect-ratio: 390 / 844; z-index: 10; pointer-events: none; overflow: hidden; }
