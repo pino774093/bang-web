@@ -1,5 +1,9 @@
 /* Only situation search: original frame, heading, back and footer stay in place. */
-.situation-rules-page .search-choice-heading {top:109px;font-size:27px;}
+/* Match the catalog's title, inset panel and content-level back control. */
+.situation-rules-page .search-choice-heading {left:60.094px;right:auto;top:36.667px;width:120px;font-size:20px;line-height:21px;text-align:center;z-index:2;}
+.situation-rules-page::after {content:'';position:absolute;left:18px;top:94px;width:354px;height:732px;border-radius:59px 59px 0 0;background:#111;z-index:-1;}
+.learning-stage .situation-page-back {left:45px;top:114px;width:40px;height:40px;margin:0;padding:0;background:transparent;color:#f2e8d7;}
+.situation-page-back svg {display:block;width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;}
 .situation-rules-scroll {position:absolute;left:34px;right:34px;top:169px;bottom:104px;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#8a6745 transparent;color:#fff;padding:0 4px 12px;box-sizing:border-box;}
 .situation-rules-intro {margin:0 0 15px;text-align:center;font-size:12px;line-height:20px;color:#d3c5b3;}
 .situation-rule {border-top:1px solid #846344;}
@@ -20,17 +24,31 @@
 .situation-rules-scroll {left:30px;right:30px;padding:0 6px 28px;}
 .situation-rules-intro {font-size:14px;line-height:24px;margin-bottom:20px;}
 .learning-stage .situation-rule-toggle {min-height:70px;padding:16px 6px;font-size:18px;line-height:27px;}
-.situation-rule-panel {padding:8px 6px 30px;font-size:16px;line-height:29px;}
+.situation-rule-panel {padding:12px 6px 30px 24px;font-size:16px;line-height:29px;}
 .situation-rule-panel .situation-rule-list {list-style:none;margin:0;padding:0;}
 .situation-rule-panel .situation-rule-item+li {margin-top:30px;padding-top:26px;border-top:1px solid #84634455;}
 .situation-rule-prose p {margin:0;}
 .situation-rule-prose p+p {margin-top:12px;}
-.situation-rule-cards {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 14px;justify-items:center;margin:0 0 22px;}
-.situation-rule-card {margin:0;width:100%;max-width:124px;text-align:center;}
-.situation-rule-card img {display:block;width:100px;height:156px;object-fit:contain;margin:0 auto;filter:drop-shadow(3px 3px 1px #000b);}
-.situation-rule-card figcaption {margin-top:10px;color:#ead6bd;font-size:13px;line-height:22px;word-break:keep-all;}
+.situation-rule-item:has(> .situation-rule-cards) {display:grid;grid-template-columns:84px minmax(0,1fr);gap:16px;align-items:start;}
+.situation-rule-prose {min-width:0;}
+.situation-rule-cards {display:flex;flex-direction:column;gap:18px;align-items:center;margin:0;}
+.situation-rule-card {margin:0;width:84px;max-width:100%;text-align:center;}
+.situation-rule-card img {display:block;width:84px;height:131px;object-fit:contain;margin:0 auto;filter:drop-shadow(3px 3px 1px #000b);}
+.situation-rule-card figcaption {margin-top:8px;color:#ead6bd;font-size:12px;line-height:19px;word-break:keep-all;}
 .situation-rule-important {margin:28px 0 0;padding-top:18px;font-size:16px;line-height:29px;}
 
 /* Fixed guidance stays directly above the existing bottom switcher. */
 .situation-rules-page .situation-rules-scroll {bottom:162px;}
 .situation-catalog-hint {position:absolute;left:36px;right:36px;top:695px;margin:0;color:#d3c5b3;font-size:12px;line-height:20px;text-align:center;word-break:keep-all;pointer-events:none;}
+
+/* Common rules follow all situation entries inside the same scroll area. */
+.situation-tricky-rules {margin:20px 0 0;padding:14px 13px;border:1px solid #d8c09d;background:#171411;color:#f2e8d7;}
+.situation-tricky-rules h2 {margin:0 0 10px;color:#d8c09d;font-size:17px;line-height:1.5;}
+.learning-stage .situation-tricky-rules ol {margin:0;padding-left:21px;list-style-position:outside;}
+.situation-tricky-rules li {padding-bottom:8px;font-size:13px;line-height:1.55;}
+.situation-tricky-rules li:last-child {padding-bottom:0;}
+
+.situation-title-sign {left:8px;top:9px;width:225px;height:78px;z-index:1;pointer-events:none;}
+.situation-title-star {position:absolute;left:231px;top:26px;width:63px;height:61px;z-index:1;pointer-events:none;}
+
+.situation-page-back img {display:block;width:100%;height:100%;object-fit:contain;}

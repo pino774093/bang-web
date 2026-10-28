@@ -1,0 +1,38 @@
+<!doctype html><meta charset="utf-8"><pre id="result">RUNNING</pre><script>
+(async()=>{
+ let checks=0,phase='start';const pause=ms=>new Promise(r=>setTimeout(r,ms));
+ const check=(ok,label)=>{if(!ok)throw Error(label);checks++;};
+ const wait=async fn=>{for(let i=0;i<150;i++){if(fn())return;await pause(30);}throw Error('timeout '+phase);};
+ try{
+ for(const [width,height]of [[390,844],[393,659],[320,480],[768,1024]]){
+  const f=document.createElement('iframe');f.width=width;f.height=height;const loaded=new Promise(r=>f.onload=r);f.src='../?review=1&bookmark=icon1#/figma/learn:8:398';document.body.append(f);await loaded;
+  const w=f.contentWindow,d=f.contentDocument;phase='initial '+width;await wait(()=>w.BangRuleBookmark&&!d.documentElement.classList.contains('bang-fonts-pending'));
+  d.documentElement.style.setProperty('--duration-dissolve','1ms');
+  if(!new URLSearchParams(location.search).has('preview')){const style=d.createElement('style');style.textContent='.rule-bookmark-button,.rule-bookmark-button span{transition:none!important}';d.head.append(style);}
+  const root=d.querySelector('.rule-bookmark'),button=root.querySelector('button'),span=button.querySelector('span'),stage=d.querySelector('.learning-stage');
+  check(root.querySelectorAll('button').length===1&&!root.querySelector('img')&&root.querySelector('.rule-bookmark-icon'),'one CSS button with search icon');
+  const rect=root.getBoundingClientRect(),app=d.querySelector('#app').getBoundingClientRect(),scale=app.width/390;
+  check(Math.abs(rect.right-app.right)<1&&rect.left>=app.left,'inside screen right edge '+width);
+  check(rect.top>=app.top&&rect.bottom<=app.bottom,'vertical fit');
+  check(w.getComputedStyle(root).overflow==='hidden'&&w.getComputedStyle(span).opacity==='0','clipped tip without text');
+  const b=button.getBoundingClientRect();check(rect.right-b.left>0&&rect.right-b.left<=36,'only narrow tip visible');
+  const hit=d.elementFromPoint(rect.right-5,rect.top+80);check(hit===button,'tip receives touch');
+  check(d.documentElement.scrollWidth<=width&&d.documentElement.scrollHeight<=height,'no page scroll');
+  const geometry=()=>JSON.stringify([...stage.children].map(n=>{const r=n.getBoundingClientRect();return [n.className,r.x,r.y,r.width,r.height];}));await d.fonts.ready;await pause(300);const before=geometry();
+  button.click();await pause(400);
+  if(new URLSearchParams(location.search).has('preview')){document.querySelector('#result').remove();document.body.style.margin='0';f.style.border='0';f.style.display='block';return;}
+  check(button.getAttribute('aria-expanded')==='true'&&w.getComputedStyle(span).opacity==='1','open shows text');
+  check(button.getBoundingClientRect().right<=rect.right&&button.getBoundingClientRect().left>=rect.left,'whole button inside clipping window');
+  check(w.getComputedStyle(button).backgroundImage==='none','no button asset');
+  check(geometry()===before,'original geometry unchanged');
+  d.body.dispatchEvent(new w.PointerEvent('pointerdown',{bubbles:true}));check(button.getAttribute('aria-expanded')==='false','outside closes');
+  button.click();d.dispatchEvent(new w.KeyboardEvent('keydown',{key:'Escape',bubbles:true}));check(button.getAttribute('aria-expanded')==='false','escape closes');
+  button.click();button.click();phase='search';await wait(()=>w.BangRouter.current==='learn:search-menu'&&!d.querySelector('#app').hasAttribute('aria-busy'));check(root.hidden,'search page hides shortcut');
+  d.querySelector('.search-choice-back').click();phase='return';await wait(()=>w.BangRouter.current==='learn:8:398'&&!d.querySelector('#app').hasAttribute('aria-busy'));check(!root.hidden&&button.getAttribute('aria-expanded')==='false','return to original STEP with closed tip');
+  const menu=stage.querySelector('.learning-menu-button,.learning-menu-normalized');menu.click();check(root.hidden,'contents drawer hides shortcut');
+  for(const id of ['5:4','30:726','learn:search-situations','5:229']){phase=id;w.BangRouter.go(id,{instant:true,force:true});await wait(()=>w.BangRouter.current===id);check(root.hidden,'excluded '+id);}
+  f.remove();
+ }
+ document.querySelector('#result').textContent='PASS: '+checks+' checks at 390×844, 393×659, 320×480, 768×1024; one CSS button, hidden tip, screen bounds, unchanged geometry, open/close, original STEP return';
+ }catch(e){document.querySelector('#result').textContent='FAIL: '+e.message;}
+})();</script>

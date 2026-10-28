@@ -6,7 +6,6 @@ const entries=cards.map((card,index)=>({card,index,key:card.name.replace(/^\d+_/
 assert.equal(entries.length,42);assert.equal(Object.keys(pages).length,42);
 const source=fs.readFileSync('card-library.js','utf8');
 const renderer=source.slice(source.indexOf('  function renderDetailPage('),source.indexOf('  function renderList('));
-let routeChecks=0;
 for(const entry of entries){
  const page=pages[entry.key];assert(page,entry.key);
  assert(page.coreRules.length>=2&&page.coreRules.length<=4,entry.key+' core count');
@@ -23,8 +22,7 @@ for(const entry of entries){
  for(let n=core;n;n=n.parent)assert.notEqual(n.tag,'details');
  const details=nodes.filter(n=>n.tag==='details');assert.equal(details.length,page.rules.length+page.faq.length);assert(details.every(n=>!n.open));
  const headings=nodes.filter(n=>n.tag==='h3');assert.equal(headings[0].textContent,page.effectTitle||'카드 효과');
- const related=nodes.filter(n=>n.className==='card-guide-related-card');assert.equal(related.length,page.related.length,entry.key+' broken related link');
- for(const link of related){link.onclick();const target=calls.pop();assert.equal(target.route,'30:726');assert(pages[cards[target.card].name.replace(/^\d+_/,'')]);routeChecks++;}
+ assert(!nodes.some(n=>n.className==='card-guide-related-card'||n.textContent==='관련 카드'),entry.key+' related cards removed');
 }
 assert.equal(entries.filter(e=>pages[e.key].type==='갈색 게임 카드').length,12);
 assert.equal(entries.filter(e=>pages[e.key].type==='파란색 게임 카드').length,10);
@@ -32,4 +30,4 @@ assert.equal(entries.filter(e=>pages[e.key].kind==='character').length,16);
 assert.equal(entries.filter(e=>pages[e.key].kind==='role').length,4);
 const summary=entries.map(e=>({key:e.key,title:pages[e.key].title,core:pages[e.key].coreRules.length,rules:pages[e.key].rules.map(r=>r.title),faq:pages[e.key].faq.length}));
 fs.writeFileSync('/tmp/bang-card-catalog-summary.json',JSON.stringify(summary,null,2));
-console.log(`PASS: 42 pages, always-visible core rules, closed accordions, formal prose, existing hero layout, ${routeChecks} related-card routes.`);
+console.log(`PASS: 42 pages, always-visible core rules, closed accordions, formal prose, existing hero layout, no related-card section.`);

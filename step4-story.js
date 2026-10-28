@@ -22,10 +22,10 @@
   if(id==='attack-introduction'){
    const root=render(stage,'140:427',{go,openMenu,back});root.dataset.scene='range-introduction';
    root.querySelector('.attack-story-player-count').remove();root.querySelector('.attack-story-illustration').remove();
-   root.querySelector('.attack-story-text').textContent="'뱅!'과 '강탈' 카드를 원하는 상대에게 사용하기 위해선 사정거리를 확인해야 합니다. 그럼 그 사정거리에 대해 알아볼까요?";
+   root.querySelector('.attack-story-text').textContent="'뱅!'과 '강탈!' 카드를 원하는 상대에게 사용하기 위해선 사정거리를 확인해야 합니다. 그럼 그 사정거리에 대해 알아볼까요?";
    root.querySelector('.attack-story-note').remove();
-   const area=root.querySelector('.attack-story-cards');area.setAttribute('aria-label','뱅!과 강탈 카드');
-   for(const [key,label]of [['bang','뱅!'],['panico','강탈']]){
+   const area=root.querySelector('.attack-story-cards');area.setAttribute('aria-label','뱅!과 강탈! 카드');
+   for(const [key,label]of [['bang','뱅!'],['panico','강탈!']]){
     const card=make('div','attack-story-card',area);img(card,window.BANG_CARDS.find(c=>c.name.replace(/^\d+_/,'')===key).src,'',label);make('span','',card,label);
    }
    root.querySelector('.attack-story-next').onclick=()=>go('140:427');return root;

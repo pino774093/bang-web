@@ -350,6 +350,7 @@
       if(thumbnail)thumbnail.style.opacity='0';
     }
     if(mode!=='learning')window.BangInteractions.mountFrame(frame,root);
+    window.BangRuleBookmark?.update(id);
     return root;
   }
   async function change(id,{instant=false,action={},motion=null}={}){

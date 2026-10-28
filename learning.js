@@ -354,7 +354,13 @@
   function renderSituationSearch(){
     renderSearchMenu();surface.setAttribute('aria-label','상황별 규칙');
     const root=stage.querySelector('.search-choice');root.querySelector('.search-choice-buttons').remove();
-    root.querySelector('.search-choice-heading').textContent='상황별 규칙';
+    root.querySelector('.turn-paper').src='assets/intro-paper.png';
+    const heading=root.querySelector('.search-choice-heading');heading.textContent='상황별 규칙';
+    const header=element('div','design-detail-header situation-title-sign',root);header.setAttribute('aria-hidden','true');
+    element('div','design-detail-header-line',header);
+    const star=element('img','situation-title-star',root);star.src='assets/sheriff.svg';star.alt='';star.draggable=false;
+    const back=root.querySelector('.search-choice-back');back.classList.add('situation-page-back');
+    back.innerHTML='<img src="assets/back-vector-a73e2a.svg" alt="" aria-hidden="true" draggable="false">';
     window.BangSituationRules.mount(root);
     mountSearchTabs(root,'situations');
   }
@@ -444,7 +450,10 @@
     if(active==='124:909'){
       find('124:934')?.remove();
       const label=element('label','learning-player-count');label.textContent='플레이 인원 ';
-      const select=element('select','',label);select.setAttribute('aria-label','플레이 인원');
+      const field=element('span','learning-player-select',label);
+      const select=element('select','',field);select.setAttribute('aria-label','플레이 인원');
+      const arrow=document.createElementNS('http://www.w3.org/2000/svg','svg');arrow.setAttribute('viewBox','0 0 14 10');arrow.setAttribute('class','learning-player-select-arrow');arrow.setAttribute('aria-hidden','true');arrow.setAttribute('focusable','false');
+      const path=document.createElementNS('http://www.w3.org/2000/svg','path');path.setAttribute('d','M2 2 7 7 12 2');arrow.append(path);field.append(arrow);
       for(const n of [4,5,6,7]){const option=document.createElement('option');option.value=n;option.textContent=n+'명';select.append(option);}select.value=sessionStorage.getItem('bang-learning-players')||'5';
       const update=()=>{const counts={4:[1,0,2,1],5:[1,1,2,1],6:[1,1,3,1],7:[1,2,3,1]}[select.value];['124:961','124:962','124:963','124:964'].forEach((id,i)=>{const n=find(id)?.querySelector('p');if(n)n.textContent=counts[i]+'장';});sessionStorage.setItem('bang-learning-players',select.value);};select.onchange=update;update();
     }
@@ -493,7 +502,7 @@
       if(drawer!==closing)return;
       clearTimeout(drawerCloseTimer);drawerCloseTimer=null;
       drawerCleanup?.();drawerCleanup=null;
-      closing.remove();drawer=null;
+      closing.remove();drawer=null;window.BangRuleBookmark?.suspend(false);
       for(const [node,inert]of menuInert)node.inert=inert;menuInert=[];
       if(focus)restoreFocus?.focus();restoreFocus=null;activate();
     };
@@ -506,7 +515,7 @@
     drawerCloseTimer=setTimeout(finish,300);
   }
   function openMenu(){
-    if(drawer)return;clearTimeout(timer);restoreFocus=document.activeElement;
+    if(drawer)return;window.BangRuleBookmark?.suspend(true);clearTimeout(timer);restoreFocus=document.activeElement;
     drawer=element('div','learning-drawer-backdrop');drawer.setAttribute('role','presentation');
     menuInert=[...stage.children].filter(node=>node!==drawer).map(node=>[node,node.inert]);for(const [node]of menuInert)node.inert=true;
     const panel=element('section','learning-drawer',drawer);panel.setAttribute('role','dialog');panel.setAttribute('aria-modal','true');panel.setAttribute('aria-label','목차');
@@ -522,5 +531,5 @@
     close.focus();
   }
   function stepFor(id){const f=frames.get(id);if(f?.step)return f.step;if(f?.y>=3671)return 3;return f?.y>=1500?2:1;}
-  window.BangLearning={surface,has,render,activate,cancel,go,frames,mountSearchTabs};
+  window.BangLearning={surface,has,render,activate,cancel,go,frames,mountSearchTabs,pauseRuleBookmark:()=>clearTimeout(timer),resumeRuleBookmark:activate};
 })();

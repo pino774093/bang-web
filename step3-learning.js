@@ -3,7 +3,7 @@
   const frames=[{id:'turn-start',name:'Step 3 : 내 턴',y:4000,text:['Step 3 : 내 턴'],links:[]}];
   function node(tag,cls,parent,text){const n=document.createElement(tag);n.className=cls;if(text)n.textContent=text;parent.append(n);return n;}
   function button(parent,text,action,cls='turn-text-link'){const b=node('button',cls,parent,text);b.type='button';b.onclick=action;return b;}
-  function card(parent,name){const source=window.BANG_CARDS.find(c=>c.name===name);if(!source)return;const img=node('img','turn-card',parent);img.src=source.src;img.alt={'01_bang':'뱅!','03_volcanic':'볼캐닉','08_mancato':'빗나감!','02_birra':'맥주','01_barile':'통','04_mustang':'야생마','02_dinamite':'다이너마이트','03_prigione':'감옥'}[name]||name;img.draggable=false;}
+  function card(parent,name){const source=window.BANG_CARDS.find(c=>c.name===name);if(!source)return;const img=node('img','turn-card',parent);img.src=source.src;img.alt={'01_bang':'뱅!','03_volcanic':'볼캐닉','08_mancato':'빗나감!','02_birra':'맥주','01_barile':'술통','04_mustang':'야생마','02_dinamite':'다이너마이트','03_prigione':'감옥'}[name]||name;img.draggable=false;}
   function render(stage,id,{go,openMenu,back}){
     const root=node('section','turn-lesson',stage);
     const wood=node('img','turn-wood',root);wood.src='assets/intro-wood.png';wood.alt='';
@@ -19,7 +19,7 @@
       node('p','turn-callout',sheet,'주의! 감옥에 있어도 다이너마이트부터 판정합니다. 생존했다면 감옥 판정을 진행합니다.');
       node('h2','',sheet,'판정(Draw!) 방법');
       node('p','',sheet,'카드 더미 맨 위 한 장을 공개해 무늬와 숫자를 확인합니다. 조건과 비교한 뒤 결과와 관계없이 버린 카드 더미에 놓습니다.');
-      const checks=[['통(술통) · 하트이면 공격을 피합니다','뱅! 공격을 받으면 판정할 수 있습니다. 하트가 아니어도 빗나감!으로 대응할 수 있습니다.'],['감옥 · 하트이면 벗어납니다','판정 후 감옥은 버립니다. 하트이면 턴을 진행하며, 아니면 카드 뽑기·사용 없이 턴을 마칩니다. 보안관에게는 놓을 수 없습니다.'],['다이너마이트 · 스페이드 2~9이면 폭발합니다','폭발하면 다이너마이트를 버리고 생명력 3을 잃습니다. 폭발하지 않으면 왼쪽 플레이어에게 넘깁니다.']];
+      const checks=[['술통 · 하트이면 공격을 피합니다','뱅! 공격을 받으면 판정할 수 있습니다. 하트가 아니어도 빗나감!으로 대응할 수 있습니다.'],['감옥 · 하트이면 벗어납니다','판정 후 감옥은 버립니다. 하트이면 턴을 진행하며, 아니면 카드 뽑기·사용 없이 턴을 마칩니다. 보안관에게는 놓을 수 없습니다.'],['다이너마이트 · 스페이드 2~9이면 폭발합니다','폭발하면 다이너마이트를 버리고 생명력 3을 잃습니다. 폭발하지 않으면 왼쪽 플레이어에게 넘깁니다.']];
       checks.forEach(([title,copy])=>{const d=node('details','turn-rule',sheet);node('summary','',d,title);node('p','',d,copy);});
       node('p','turn-small',sheet,'주의! 판정 카드의 일반 효과는 사용하지 않습니다. 럭키 듀크 등 판정에 영향을 주는 인물 능력은 해당 지시를 따릅니다.');
       node('p','',sheet,'턴 시작 효과를 처리한 뒤 카드 2장을 손패로 가져옵니다. 판정할 카드가 없으면 바로 뽑습니다.');

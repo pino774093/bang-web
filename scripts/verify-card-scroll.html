@@ -23,9 +23,9 @@ frame.onload=async()=>{
    check(target&&area.contains(target)&&target!==image,card.name+' image passes gestures');
    area.scrollTop=100;check(area.scrollTop>0,card.name+' scroll movement');
    const summary=area.querySelector('summary');summary.click();check(summary.parentElement.open,card.name+' accordion click');
-   const related=area.querySelector('.card-guide-related-card');check(related&&w.getComputedStyle(related).pointerEvents==='auto',card.name+' related button');
+   const related=area.querySelector('.card-guide-related-card');check(!related,card.name+' related section removed');
    results.push(card.name);
   }
-  document.querySelector('#result').textContent='PASS: '+results.length+' card details; image hit targets, native scrolling, accordions, related buttons';
+  document.querySelector('#result').textContent='PASS: '+results.length+' card details; image hit targets, native scrolling, accordions, related section removed';
  }catch(e){document.querySelector('#result').textContent='FAIL: '+e.message;}
 };</script>

@@ -1,5 +1,13 @@
 /* Situation reference only. Existing navigation and card/STEP data remain independent. */
 (() => {
+ const trickyRules=[
+  '자신이 사망하는 순간에 맥주를 들고 있으면 마셔서 생존할 수 있습니다. (생존 비어)',
+  '결투는 지목된 상대부터 뱅 카드를 내야 합니다.',
+  '기관총은 빗나감으로 회피가 가능하나, 인디언은 회피가 불가능합니다.',
+  '강탈은 이미 장착한 카드도 자기 손으로 들고 올 수 있습니다. (무기, 야생마, 술통, 조준경 등)',
+  '캣 벌로우로 감옥이나 다이너마이트를 제거해줄 수 있습니다.',
+  '잡화점을 사용할 경우 자신이 몇 번째로 가져가는지 확인합니다.'
+ ];
  const situations=[
   {title:'내 턴이 아닐 때',rules:[
    '빗나감!: 공격받았을 때 사용할 수 있습니다.',
@@ -51,6 +59,16 @@
    '탈락 후 승리 조건이 충족되었는지 확인합니다.'
   ]}
  ];
+ // Images illustrate each rule's subject, not every card mentioned in its prose.
+ const ruleCardKeys=[
+  [['mancato'],['birra'],['barile'],['duello','indiani'],['emporio']],
+  [[],['bang'],[],[]],
+  [['birra'],['saloon'],[],[],[],[]],
+  [['bang','gatling'],['barile'],['duello'],['indiani'],[]],
+  [[],[],['remington'],[]],
+  [[],[],['barile'],['prigione'],['dinamite'],[],[]],
+  [[],[],[],[]]
+ ];
  function mount(root){
   root.classList.add('situation-rules-page');
   const hint=document.createElement('p');hint.className='situation-catalog-hint';hint.textContent='정확히 어떤 카드에 대한 문제일 때에는, 카드 도감을 보는 것이 더 편리할 수 있습니다!';root.append(hint);
@@ -63,19 +81,18 @@
    const button=create('button','situation-rule-toggle',heading);button.type='button';button.setAttribute('aria-expanded','false');button.setAttribute('aria-controls','situation-rule-'+i);
    create('span','situation-rule-number',button,String(i+1).padStart(2,'0'));create('span','situation-rule-title',button,s.title);const marker=create('span','situation-rule-marker',button,'+');marker.setAttribute('aria-hidden','true');
    const panel=create('div','situation-rule-panel',section);panel.id='situation-rule-'+i;panel.hidden=true;
-   const references=[['빗나감!','mancato'],['맥주','birra'],['술통','barile'],['결투','duello'],['인디언!','indiani'],['잡화점','emporio'],['뱅!','bang'],['주점','saloon'],['기관총','gatling'],['감옥','prigione'],['다이너마이트','dinamite']];
-   const shown=new Set();
+   const references=[['빗나감!','mancato'],['맥주','birra'],['술통','barile'],['결투','duello'],['인디언!','indiani'],['잡화점','emporio'],['뱅!','bang'],['주점','saloon'],['기관총','gatling'],['감옥','prigione'],['다이너마이트','dinamite'],['무기 카드 예시 · 레밍턴','remington']];
    const list=create('ul','situation-rule-list',panel);
-   s.rules.forEach(rule=>{
+   s.rules.forEach((rule,ruleIndex)=>{
     const item=create('li','situation-rule-item',list);
-    const cards=references.filter(([label,key])=>rule.includes(label)&&!shown.has(key));
-    if(rule.includes('무기 카드')&&!shown.has('remington'))cards.push(['무기 카드 예시 · 레밍턴','remington']);
+    const keys=ruleCardKeys[i][ruleIndex];
+    const cards=keys.map(key=>references.find(reference=>reference[1]===key));
     if(cards.length){
      const gallery=create('div','situation-rule-cards',item);
      cards.forEach(([label,key])=>{
       const card=window.BANG_CARDS.find(c=>c.name.replace(/^\d+_/,'')===key);if(!card)return;
-      shown.add(key);const figure=create('figure','situation-rule-card',gallery);
-      const image=create('img','',figure);image.src=card.src;image.alt=label;image.loading='lazy';image.decoding='async';image.draggable=false;image.width=100;image.height=156;
+      const figure=create('figure','situation-rule-card',gallery);
+      const image=create('img','',figure);image.src=card.src;image.alt=label;image.loading='lazy';image.decoding='async';image.draggable=false;image.width=84;image.height=131;
       create('figcaption','',figure,label);
      });
     }
@@ -92,6 +109,9 @@
    };
    return {button,panel,marker};
   });
+  const common=create('section','situation-tricky-rules',viewport);
+  const heading=create('h2','',common,'자주 헷갈리는 규칙');heading.id='situation-tricky-rules-title';common.setAttribute('aria-labelledby',heading.id);
+  const list=create('ol','',common);trickyRules.forEach(text=>create('li','',list,text));
   return viewport;
  }
  window.BangSituationRules={mount,situations};

@@ -98,3 +98,17 @@
 .role-smart-card.role-smart-flat img{position:absolute;inset:0;width:100%;height:100%;object-fit:fill;filter:drop-shadow(3px 3px 1px #000b)}
 .role-smart-motion .role-smart-card.role-smart-flat img{transform:none;backface-visibility:visible}
 .design-stage:is([data-screen="133"],[data-screen="134"],[data-screen="135"],[data-screen="136"]) .role-revealed-card{filter:drop-shadow(3px 3px 1px #000b)}
+
+/* Search stays beside the back arrow above the sticky category controls. */
+.card-library-searchable .card-library-nav {align-items:center;min-height:56px;}
+.card-library-search {display:block;flex:1;min-width:0;}
+.card-library-search input {display:block;box-sizing:border-box;width:100%;height:40px;margin:0;padding:8px 10px;border:1px solid #d8c09d;border-radius:6px;background:#1b1713;color:#fff;font:16px omnigothic,sans-serif;}
+.card-library-search input::placeholder {color:#cdb89b;opacity:1;}
+.card-library-search input:focus-visible {outline:2px solid #eab67d;outline-offset:1px;}
+.card-library-searchable .card-category-tabs {top:56px;}
+.card-category-tabs button:disabled {opacity:.4;cursor:default;}
+.card-search-status {margin:8px 3px 14px;color:#ead6bd;font-size:13px;line-height:1.6;}
+
+/* Reuse the original red back artwork for catalog list/detail navigation. */
+.card-library .card-detail-back {width:40px;height:40px;padding:0;border:0;background:transparent;}
+.card-detail-back img {display:block;width:100%;height:100%;object-fit:contain;}

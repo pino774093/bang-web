@@ -1,0 +1,11 @@
+<!doctype html><meta charset="utf-8"><pre id="result">RUNNING</pre><script>
+(async()=>{let checks=0;const pause=ms=>new Promise(r=>setTimeout(r,ms));const check=(ok,msg)=>{if(!ok)throw Error(msg);checks++;};try{
+for(const [width,height]of [[390,844],[393,659],[320,480]]){
+ const f=document.createElement('iframe');f.width=width;f.height=height;const loaded=new Promise(r=>f.onload=r);f.src='../?review=1&select-arrow=1#/figma/learn:124:909';document.body.append(f);await loaded;
+ const w=f.contentWindow,d=f.contentDocument;for(let i=0;i<150&&(!d.querySelector('.learning-player-select-arrow')||d.documentElement.classList.contains('bang-fonts-pending'));i++)await pause(30);
+ const select=d.querySelector('.learning-player-select select'),arrow=d.querySelector('.learning-player-select-arrow');check(!!arrow,'explicit arrow');const a=arrow.getBoundingClientRect(),s=select.getBoundingClientRect(),style=w.getComputedStyle(arrow);
+ check(a.width>0&&a.height>0&&style.stroke==='rgb(255, 255, 255)','visible white SVG');check(a.left>=s.left&&a.right<=s.right&&a.top>=s.top&&a.bottom<=s.bottom,'arrow inside select');check(style.pointerEvents==='none','does not intercept touch');check(w.getComputedStyle(select).appearance==='none','native arrow replaced');
+ for(const [n,counts]of [[4,[1,0,2,1]],[5,[1,1,2,1]],[6,[1,1,3,1]],[7,[1,2,3,1]]]){select.value=n;select.dispatchEvent(new w.Event('change'));const shown=['124:961','124:962','124:963','124:964'].map(id=>d.querySelector(`[data-node-id="${id}"] p`).textContent);check(shown.join(',')===counts.map(n=>n+'장').join(','),'role counts '+n);}
+ check(d.documentElement.scrollWidth<=width,'no horizontal overflow');f.remove();
+}document.querySelector('#result').textContent='PASS: '+checks+' checks; SVG visibility, selection touch, 4–7 player role counts at 3 mobile viewport sizes';}catch(e){document.querySelector('#result').textContent='FAIL: '+e.message;}})();
+</script>

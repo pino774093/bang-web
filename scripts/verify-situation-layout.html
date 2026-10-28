@@ -1,0 +1,15 @@
+<!doctype html><meta charset="utf-8"><pre id="result">RUNNING</pre><script>
+(async()=>{let count=0;try{for(const [width,height]of [[390,844],[393,659]]){
+ const f=document.createElement('iframe');f.width=width;f.height=height;f.src='../?layout=side-1#/figma/learn:search-situations';const loaded=new Promise(r=>f.onload=r);document.body.append(f);await loaded;
+ const d=f.contentDocument;for(let i=0;i<100&&!d.querySelector('.situation-rules-scroll');i++)await new Promise(r=>setTimeout(r,50));
+ const area=d.querySelector('.situation-rules-scroll');if(!area)throw Error('missing situation screen');
+ for(const panel of area.querySelectorAll('.situation-rule-panel')){
+ panel.hidden=false;
+ for(const row of panel.querySelectorAll('.situation-rule-item:has(.situation-rule-cards)')){
+ const art=row.querySelector('.situation-rule-cards').getBoundingClientRect(),text=row.querySelector('.situation-rule-prose').getBoundingClientRect();
+ if(text.left<art.right||Math.abs(text.top-art.top)>1)throw Error('not side by side');count++;
+ }
+ if(area.scrollWidth>area.clientWidth+1)throw Error('horizontal overflow');panel.hidden=true;
+ }
+ if(area.lastElementChild.querySelectorAll('li').length!==6)throw Error('common rules missing');f.remove();
+ }document.querySelector('#result').textContent='PASS: '+count+' image/text rows at 2 viewport sizes; no horizontal overflow; common rules at bottom';}catch(e){document.querySelector('#result').textContent='FAIL: '+e.message;}})();</script>

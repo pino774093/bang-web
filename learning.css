@@ -299,3 +299,12 @@
 .learning-stage[data-learning-frame="139:249"] [data-node-id="139:310"] {top:514px!important;height:391px!important;}
 .learning-stage[data-learning-frame="139:249"] [data-node-id="139:316"] {top:548px!important;z-index:12;}
 .learning-stage[data-learning-frame="139:249"] [data-node-id="139:316"] ol {margin:0;}
+
+/* Indent FAQ answers beneath their questions. */
+.card-guide-faq .card-guide-accordion>p {padding-left:27px;}
+.card-guide-faq .card-guide-accordion>ul {margin-left:28px;}
+
+/* Native select arrows vary across iOS/Android; draw an explicit, noninteractive chevron. */
+.learning-player-select {position:relative;display:inline-flex;align-items:center;}
+.learning-player-count .learning-player-select select {-webkit-appearance:none;appearance:none;min-width:76px;padding-right:28px;border-radius:0;}
+.learning-player-select-arrow {position:absolute;right:9px;top:50%;width:14px;height:10px;transform:translateY(-50%);pointer-events:none;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
