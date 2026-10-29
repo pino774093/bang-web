@@ -87,7 +87,7 @@
   function normalizeStepLabels(step){for(const p of stage.querySelectorAll('p'))if(/^Step\s+\d+(?:\s*:|$)/i.test(p.textContent.trim()))p.textContent=p.textContent.replace(/^Step\s+\d+/i,'Step '+step);}
   let searchReturn=flow.home;
   try{searchReturn=sessionStorage.getItem('bang-search-return')||flow.home;}catch{}
-  function go(id,options={}){
+  function go(id,{skipStepIntro=false,...options}={}){
     if(id==='search-menu'){
       const current=window.BangRouter.current;
       if(current&&current!==flow.cards&&!['learn:search-menu','learn:search-situations'].includes(current)){
@@ -97,7 +97,7 @@
     if(id==='140:427'&&active!=='step4-intro'&&(!active||stepFor(active)!==4))id='attack-introduction';
     const target=frames.get(id);
     const ordinary=key=>key&&key!==flow.home&&key!==flow.menu&&!key.startsWith('search-');
-    if(target&&ordinary(id)&&!introDefinitions.has(id)&&!introDefinitions.has(active)){
+    if(!skipStepIntro&&target&&ordinary(id)&&!introDefinitions.has(id)&&!introDefinitions.has(active)){
       const nextStep=stepFor(id),previousStep=ordinary(active)?stepFor(active):null;
       if(nextStep!==previousStep){
         const intro=introStarts[nextStep-1];pendingIntro={intro,to:id};id=intro;

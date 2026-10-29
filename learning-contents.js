@@ -78,7 +78,9 @@
       preview(selected);
     }
     function choose(item){
-      if(item.to){go(item.to);return;}
+      // A table-of-contents destination is an explicit deep link. Skip the
+      // step-change intro so the selected subtopic opens immediately.
+      if(item.to){go(item.to,{skipStepIntro:true});return;}
       if(!steps[item.step].topics.length){message(`Step ${item.step+1}는 준비 중입니다.`);preview(selected);return;}
       expanded=expanded===item.step?-1:item.step;
       selected=expanded===currentTopic?.step?currentTopic.key:item.key;draw();
