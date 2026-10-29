@@ -35,11 +35,21 @@
  }
  function mount(){
   if(cleanup&&!stage.querySelector('.victory-help-overlay'))cleanup();
-  if(stage.querySelector('.victory-help-trigger')||!stage.children.length)return;
   const id=stage.dataset.learningFrame;
-  if(!id||['94:60','124:745','131:1141'].includes(id))return;
+  const flow=window.BANG_FIGMA_FLOW;
+  const route=decodeURIComponent(location.hash).split('?')[0].replace(/^#\/figma\//,'').replace(/^learn:/,'');
+  const menus=['47:2539','5:4','94:60','124:745','131:1141',flow?.menu,flow?.home];
+  const isMenu=menus.includes(route)||!id||menus.includes(id)||!!stage.querySelector('.learning-drawer-backdrop');
+  document.documentElement.toggleAttribute('data-hide-victory-help',isMenu);
+  if(isMenu){
+   if(cleanup)cleanup();
+   document.querySelectorAll('.victory-help-trigger').forEach(n=>n.remove());
+   return;
+  }
+  if(stage.querySelector('.victory-help-trigger')||!stage.children.length)return;
   const trigger=make('button','victory-help-trigger',stage);trigger.type='button';trigger.setAttribute('aria-haspopup','dialog');
   const icon=make('span','victory-help-icon',trigger,'?');icon.setAttribute('aria-hidden','true');make('span','',trigger,'그래서 어떻게 이기더라?');trigger.onclick=e=>{e.stopPropagation();open(trigger);};
  }
+ window.addEventListener('hashchange',mount);
  new MutationObserver(mount).observe(stage,{childList:true,attributes:true,attributeFilter:['data-learning-frame']});mount();
 })();

@@ -20,3 +20,6 @@
 dialog.victory-help-overlay {position:fixed;inset:0;width:100vw;height:100dvh;max-width:none;max-height:none;box-sizing:border-box;margin:0;padding:20px;border:0;background:transparent;overflow:auto;}
 dialog.victory-help-overlay::backdrop {background:#0006;}
 dialog.victory-help-overlay .victory-help-note {width:min(330px,100%);max-height:calc(100dvh - 40px);}
+.learning-stage:has(.learning-drawer-backdrop) .victory-help-trigger {display:none!important;}
+html[data-hide-victory-help] .victory-help-trigger {display:none!important;}
+.learning-stage[data-learning-frame="47:2539"] .victory-help-trigger {display:none!important;}
