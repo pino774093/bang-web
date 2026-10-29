@@ -1,19 +1,19 @@
 /* Expandable contents for learning screens only. Coordinates are in the 390px canvas. */
 (() => {
   const steps=[
-    {title:'카드 종류 설명 & 세팅',topics:[['구성','8:398'],['개인 세팅','124:909'],['전체 세팅','128:1063']]},
-    {title:'각 역할과 승리 조건',topics:[['보안관','35:1114'],['부관','42:1728'],['무법자','35:1212'],['배신자','35:1228'],['역할 탐색','94:185']]},
+    {title:'어떤 게임일까?',topics:[['게임 소개','game-intro-one'],['역할과 승리 조건','35:1260']]},
+    {title:'게임을 준비해 볼까?',topics:[['구성','8:398'],['인원수 별 역할 개수','124:909'],['개인 세팅','8:489'],['전체 세팅','128:1063']]},
     {title:'내 턴에는 뭘 해야할까?',topics:[['카드 뽑기','139:236'],['카드 사용','139:249'],['카드 버리기','139:265']]},
     {title:'사정거리와 판정',topics:[['사정거리','attack-introduction'],['판정','attack-draw']]},
-    {title:'초보자들을 위한 Tip!',topics:[['보안관 전략','tips-end'],['부관 전략','tips-rules'],['무법자 전략','tips-special'],['배신자 전략','tips-roles'],['공통 심리전','tips-mind']]}
+    {title:'초보자들을 위한 Tip!',topics:[['역할 별 전략','tips-role-select'],['공통 심리전','tips-mind']]}
   ];
   // Several animation/text frames belong to the same visible subtopic.
   const pageGroups=[
-    [['8:398','8:422','8:435','8:449','8:473','47:80','47:94','128:1041'],['124:909','8:489','8:501','8:514','8:540','8:566','8:581','124:980','8:685','128:1017','128:996'],['128:1063','136:12','136:37','131:1268','136:118','136:197','setup-share-abilities']],
-    [['35:1114','35:1131','94:200'],['42:1728','94:224'],['35:1212','94:248'],['35:1228','35:1374','35:1390','35:1406','94:272'],['94:185']],
+    [['game-intro-one','game-intro-two'],['30:931','30:960','35:1260','35:1114','42:1728','35:1212','35:1228','35:1374','35:1406']],
+    [['8:398','8:422','8:435','8:449','8:473','47:80','47:94','128:1041'],['124:909'],['8:489','8:501','8:514','8:540','8:566','8:581','124:980','8:685','128:1017','128:996'],['128:1063','136:12','136:37','131:1268','136:118','136:197','setup-share-abilities']],
     [['139:236'],['139:249'],['139:265','139:351']],
     [['attack-introduction','140:427','attack-range','attack-effects'],['attack-draw','attack-draw-examples']],
-    [['tips-end'],['tips-rules'],['tips-special'],['tips-roles'],['tips-mind']]
+    [['tips-role-select','tips-end','tips-rules','tips-special','tips-roles'],['tips-mind']]
   ];
   function topicFor(id){
     for(let step=0;step<pageGroups.length;step++)for(let topic=0;topic<pageGroups[step].length;topic++){

@@ -17,7 +17,7 @@
   const area=document.createElement('section');area.className='card-library';area.setAttribute('aria-label','카드 목록 및 상세 보기');stage.append(area);
   const nav=document.createElement('nav');nav.className='card-library-nav';nav.setAttribute('aria-label','이전 화면 이동');area.append(nav);
   function button(label,action,parent=nav){const b=document.createElement('button');b.type='button';b.textContent=label;b.onclick=action;parent.append(b);return b;}
-  function arrowBack(parent,action,label){const b=button(label,action,parent);b.className='card-detail-back';b.setAttribute('aria-label',label);b.innerHTML='<img src="assets/back-vector-a73e2a.svg" alt="" aria-hidden="true" draggable="false">';return b;}
+  function arrowBack(parent,action,label){const b=button(label,action,parent);b.className='card-detail-back';b.setAttribute('aria-label',label);b.innerHTML='<img src="assets/back-vector-a73e2a.svg?v=red1" alt="" aria-hidden="true" draggable="false">';return b;}
   const catalog=BANG_CARDS.map((card,index)=>({card,index,category:categoryId(card)})).filter(entry=>entry.category);
   const query=new URLSearchParams(location.hash.split('?')[1]||'');
   const selected=query.has('card')?Number(query.get('card')):null;

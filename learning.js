@@ -4,6 +4,8 @@
   const frames=new Map(data.frames.map(frame=>[frame.id,frame]));
   const introGoal=frames.get('8:330');
   frames.set('intro-goal',{...introGoal,id:'intro-goal',text:['서로의 역할을 추리하고 각자의 목표를 완수하세요!','> 클릭!']});
+  frames.set('game-intro-one',{id:'game-intro-one',step:1,name:'게임 소개',text:['마피아 게임, 해본 적 있나요?','정체를 숨기고, 말과 행동으로 서로를 의심하는 게임.','BANG!에서는 그 심리전이 서부의 총격전으로 펼쳐집니다.','> 클릭!'],links:[{source:'intro-next',trigger:'ON_CLICK',to:'game-intro-two'}]});
+  frames.set('game-intro-two',{id:'game-intro-two',step:1,name:'게임 소개',text:['누가 내 편인지 모른 채,\n총격전이 시작됩니다.','카드를 사용해 공격하고, 피하고, 서로를 돕습니다.','하지만 모두의 목표가 같지는 않습니다.','당신이 맡은 역할에 따라\n이기는 방법이 달라집니다.','> 역할 알아보기'],links:[{source:'intro-next',trigger:'ON_CLICK',to:'30:931'}]});
   // Confirmed learning continuation; retain the untouched Figma export as the audit source.
   const stepThreeEnd=frames.get('139:351');
   frames.set(stepThreeEnd.id,{...stepThreeEnd,links:stepThreeEnd.links.map(link=>link.to==='42:2064'?{...link,to:'attack-introduction'}:link)});
@@ -14,30 +16,59 @@
   frames.set('search-situations',{id:'search-situations',name:'상황별 규칙',text:['상황별 규칙'],links:[]});
   // Extend only the isolated learning graph; the original simulation graph stays intact.
   const continueTo=(id,oldTarget,newTarget)=>{const f=frames.get(id);frames.set(id,{...f,links:f.links.map(l=>l.to===oldTarget?{...l,to:newTarget}:l)});};
+  // Skip only the exported staggered reveal (Sheriff, then the other roles).
+  // Keep the complete order: four-card overview, sequential role lessons,
+  // then the clickable role explorer.
+  const roleIntro=frames.get('30:931');
+  frames.set('30:931',{...roleIntro,links:roleIntro.links.map(link=>link.to==='30:960'?{...link,to:'35:1260',transition:{type:'DISSOLVE',duration:0}}:link)});
+  const roleCards=frames.get('30:960');
+  frames.set('30:960',{...roleCards,links:roleCards.links.map(link=>link.trigger==='AFTER_TIMEOUT'?{...link,to:'35:1260',transition:{type:'DISSOLVE',duration:0}}:link)});
+  // The Sheriff and Renegade facts from these scenes are consolidated in their
+  // clickable card details, so skip the duplicate standalone scenes.
+  continueTo('35:1114','35:1131','42:1728');
+  continueTo('35:1374','35:1390','35:1406');
+  frames.delete('35:1131');frames.delete('35:1390');
   continueTo('139:249','42:2064','139:265');
   continueTo('139:265','42:2064','attack-introduction');
   continueTo('139:265','139:351','attack-introduction');
   continueTo('139:236','42:2064','139:249');
+  // Put the player-count and role-card-count page at the start of STEP 2.
+  continueTo('124:909','8:398','8:489');
   // Personal setup: reveal Sheriff → life points → character bullets → Sheriff +1 → table setup.
   continueTo('8:330','8:398','intro-goal');
   continueTo('8:685','47:80','128:996');
   continueTo('128:996','47:80','128:1017');
   continueTo('128:1017','47:80','128:1063');
   const setupLast=frames.get('136:197');
-  frames.set('setup-share-abilities',{...setupLast,id:'setup-share-abilities',step:1,text:['각자 가진 인물 카드의 능력이 무엇인지 다른 사람들과 공유합니다.','> 클릭!','Step 1 : 전체 세팅'],links:setupLast.links.map(link=>({...link}))});
+  frames.set('setup-share-abilities',{...setupLast,id:'setup-share-abilities',step:2,text:['각자 가진 인물 카드의 능력이 무엇인지 다른 사람들과 공유합니다.','> 클릭!','Step 2 : 전체 세팅'],links:setupLast.links.map(link=>({...link,to:link.to==='42:1687'?'131:1124':link.to}))});
   continueTo('136:197','42:1687','setup-share-abilities');
   const menuIds=new Set(['94:60','124:745','131:1141']);
   const covers=new Set(['35:1427','42:1668','42:1687','42:1695','131:1124','131:1132']);
-  const stepStarts=['35:1427','42:1687','131:1124','attack-introduction','tips-end'];
-  const titles=['카드 종류 설명 & 세팅','각 역할과 승리 조건','내 턴에는 뭘 해야할까?','사정거리와 판정','초보자들을 위한 Tip!'];
-  const introStarts=['35:1427','42:1687','131:1124','step4-intro','step5-intro'];
+  const stepStarts=['game-intro-one','8:398','131:1124','attack-introduction','tips-role-select'];
+  const titles=['어떤 게임일까?','게임을 준비해 볼까?','내 턴에는 뭘 해야할까?','사정거리와 판정','초보자들을 위한 Tip!'];
+  const introStarts=['game-intro-one','42:1687','131:1124','step4-intro','step5-intro'];
   const introDefinitions=new Map([
-    ['35:1427',{step:1,to:'8:330'}],['42:1668',{step:1,to:'8:330'}],
-    ['42:1687',{step:2,to:'30:931'}],['42:1695',{step:2,to:'30:931'}],
+    ['35:1427',{step:1,to:'game-intro-one'}],['42:1668',{step:1,to:'game-intro-one'}],
+    ['42:1687',{step:2,to:'8:398'}],['42:1695',{step:2,to:'8:398'}],
     ['131:1124',{step:3,to:'131:1182'}],['131:1132',{step:3,to:'131:1182'}],
-    ['step4-intro',{step:4,to:'attack-introduction'}],['step5-intro',{step:5,to:'tips-end'}]
+    ['step4-intro',{step:4,to:'attack-introduction'}],['step5-intro',{step:5,to:'tips-role-select'}]
   ]);
   for(const [id,info]of introDefinitions)if(!frames.has(id))frames.set(id,{id,step:info.step,name:'Step '+info.step,text:['Step '+info.step],links:[]});
+  const homeFlow=frames.get(flow.home);if(homeFlow)homeFlow.links=homeFlow.links.map(link=>link.to==='35:1427'||link.to==='42:1687'?{...link,to:'game-intro-one'}:link);
+  const contentsFlow=frames.get(flow.menu);if(contentsFlow)contentsFlow.links=contentsFlow.links.map(link=>link.to==='35:1427'?{...link,to:'game-intro-one'}:link.to==='42:1687'?{...link,to:'8:398'}:link);
+  for(const id of ['94:185','94:200','94:224','94:248','94:272','35:1114','42:1728','35:1212','35:1228','35:1374','35:1406'])if(frames.has(id))frames.set(id,{...frames.get(id),step:1});
+  for(const id of ['8:398','8:422','8:435','8:449','8:473','47:80','47:94','128:1041','124:909','8:489','8:501','8:514','8:540','8:566','8:581','124:980','8:685','128:1017','128:996','128:1063','136:12','136:37','131:1268','136:118','136:197','setup-share-abilities'])if(frames.has(id))frames.set(id,{...frames.get(id),step:2});
+  const roleCopy={
+    '94:200':['보안관','무법자와 배신자를 모두 탈락시키는 것이 목표입니다.\n역할을 처음부터 공개하지만, 다른 플레이어 중 누가 자신의 편인지는 모른 채 시작합니다.\n보안관은 체력이 1 더 많고 감옥에 갇히지 않습니다. 부관을 직접 제거하면 손패와 장비를 모두 잃습니다.'],
+    '94:224':['부관','보안관과 같은 편으로, 보안관이 목표를 달성하도록 돕습니다.\n부관은 정체를 숨기며, 보안관도 누가 부관인지 처음부터 알지 못합니다.'],
+    '94:248':['무법자','보안관을 탈락시키는 것이 목표입니다.\n무법자들은 목표를 공유하지만 서로의 정체를 처음부터 확인하지 않습니다. 보안관이 탈락했을 때 무법자가 남아 있으면, 누가 보안관을 탈락시켰든 무법자 팀이 승리합니다.'],
+    '94:272':['배신자','마지막까지 혼자 살아남는 것이 목표입니다. 배신자는 무법자와 같은 편이 아닌 독립된 역할입니다.\n자신 외에 다른 플레이어가 남아 있는데 보안관이 먼저 탈락하면 무법자 팀이 승리하므로 목표를 달성할 수 없습니다.\n\n무법자는 보안관의 탈락이 목표, 배신자는 자신의 단독 생존이 목표입니다.']
+  };
+  for(const [id,[name,copy]]of Object.entries(roleCopy)){const f=frames.get(id);frames.set(id,{...f,step:1,roleName:name,roleCopy:copy,text:[copy,'> 상세 설명','Step 1 : 역할과 승리 조건'],links:f.links.filter(l=>l.source!=='8:258')});}
+  const roleExplore=frames.get('94:185');
+  frames.set('94:185',{...roleExplore,step:1,text:['역할을 탐색하세요!','> 카드를 선택해 상세 설명을 확인하세요.','> 역할 알아보기를 마쳤어요!'],links:roleExplore.links.filter(l=>!['94:189','94:190','94:191','94:192','94:195'].includes(l.source)).map(l=>l.source==='144:454'?{...l,to:'8:398'}:l)});
+  const legacyRoleSequence=new Set(['30:931','30:960','35:1260','35:1114','42:1728','35:1212','35:1228','35:1374','35:1406']);
+  for(const id of legacyRoleSequence){const f=frames.get(id);if(f)frames.set(id,{...f,step:1});}
   let pendingIntro=null,introAdvance=null,autoAdvanceCleanup=null;
 
   let active=null,timer=null,drawer=null,restoreFocus=null,menuInert=[],drawerCloseTimer=null,drawAnimations=[],drawerCleanup=null,mainContentsCleanup=null;
@@ -53,6 +84,7 @@
   function source(id){return id.startsWith('learn:')?id.slice(6):id;}
   function has(id){return id===flow.home||id===flow.menu||id?.startsWith('learn:');}
   function element(tag,cls,parent=stage){const n=document.createElement(tag);n.className=cls;parent.append(n);return n;}
+  function normalizeStepLabels(step){for(const p of stage.querySelectorAll('p'))if(/^Step\s+\d+(?:\s*:|$)/i.test(p.textContent.trim()))p.textContent=p.textContent.replace(/^Step\s+\d+/i,'Step '+step);}
   let searchReturn=flow.home;
   try{searchReturn=sessionStorage.getItem('bang-search-return')||flow.home;}catch{}
   function go(id,options={}){
@@ -124,6 +156,8 @@
   function reuse(frame){
     const legacy=flow.frames[legacyRoleScreens[frame.id]||frame.id];
     if(!legacy)throw new Error('Missing learning frame '+frame.id);
+    // Keep each original role-detail screen and its card entrance treatment.
+    // Only the preceding role overview (35:1260) uses the four-card tableau.
     window.BangDesign.render(legacy.screenId);
     const old=document.querySelector('#reference-screen .design-stage');
     stage.replaceChildren(...[...old.childNodes].map(n=>n.cloneNode(true)));
@@ -138,13 +172,17 @@
     copy.textContent=frame.text.filter(t=>!t.startsWith('>')&&!/^Step /.test(t)&&t!=='<').join('\n');
     if(detail){copy.textContent=frame.text.find(t=>t.length>30).replace(/\u2028+/g,'\n');const heading=element('h2','learning-role-name',panel);heading.textContent=frame.text.find(t=>['보안관','부관','무법자','배신자'].includes(t));}
     const next=element(detail?'span':'button','learning-role-next',panel);if(!detail)next.type='button';next.textContent=frame.id==='94:185'?'> 다음 step으로 이동':'> 클릭!';
-    const nextLink=frame.links.find(l=>l.to&&!menuIds.has(l.to)&&l.to!=='8:258'&&(frame.id!=='94:185'||l.to==='131:1124'));
+    const nextLink=frame.links.find(l=>l.to&&!menuIds.has(l.to)&&l.to!=='8:258'&&(frame.id!=='94:185'||l.to==='8:398'));
     if(nextLink&&!detail)bind(next,next.textContent,()=>follow(frame,nextLink));
     const menu=element('button','learning-menu-button');menu.type='button';menu.setAttribute('aria-label','목차 열기');
     const template=document.createElement('template');template.innerHTML=data.scenes['131:1182'];
     const icon=template.content.querySelector('[data-node-id="131:1190"]');if(icon)menu.innerHTML=icon.innerHTML;
     if(detail){menu.innerHTML='<img src="assets/back-vector.svg" alt="">';bind(menu,'역할 목록으로 돌아가기',()=>go('94:185'));}else bind(menu,'목차 열기',openMenu);
-    const stepLabel=frame.text.find(t=>/^Step /.test(t));if(stepLabel){const header=element('div','learning-step-label');header.textContent=stepLabel;}
+    const stepLabel=frame.text.find(t=>/^Step /.test(t));if(stepLabel){
+      const header=element('div','learning-step-label');
+      header.textContent=legacyRoleSequence.has(frame.id)?'Step 1 : 역할과 승리 조건':stepLabel;
+      if(legacyRoleSequence.has(frame.id))Object.assign(header.style,{width:'220px',boxSizing:'border-box',whiteSpace:'nowrap'});
+    }
     if(frame.id==='94:185'){
       panel.classList.add('learning-role-exploration');const hint=element('span','learning-role-hint',panel);hint.textContent='카드를 눌러 역할을 확인합니다.';
       const roleIds=['94:200','94:224','94:248','94:272'];
@@ -187,7 +225,8 @@
       const hint=hints[0],hintRect=hint?.getBoundingClientRect(),hintStyle=hint?getComputedStyle(hint):null;
       const top=Math.max(0,(rect.top-origin.top)/scale),bottom=Math.min(844,(rect.bottom-origin.top)/scale),width=rect.width/scale;
       const rightX=hintRect?(hintRect.left+hintRect.width/2-rect.left)/scale:width-42;
-      const y=hintRect?(hintRect.top+hintRect.height/2-origin.top)/scale-top:bottom-top-36;
+      const roleNavigationOffset=legacyRoleSequence.has(frame.id)?10:0;
+      const y=(hintRect?(hintRect.top+hintRect.height/2-origin.top)/scale-top:bottom-top-36)+roleNavigationOffset;
       for(const h of hints)h.style.visibility='hidden';
       const makeSide=(isBack,action)=>{
         const button=element('button',isBack?'learning-dialogue-back':'learning-dialogue-next');button.type='button';button.dataset.dialoguePanel=panel.dataset.nodeId||'reused';
@@ -360,7 +399,7 @@
     element('div','design-detail-header-line',header);
     const star=element('img','situation-title-star',root);star.src='assets/sheriff.svg';star.alt='';star.draggable=false;
     const back=root.querySelector('.search-choice-back');back.classList.add('situation-page-back');
-    back.innerHTML='<img src="assets/back-vector-a73e2a.svg" alt="" aria-hidden="true" draggable="false">';
+    back.innerHTML='<img src="assets/back-vector-a73e2a.svg?v=red1" alt="" aria-hidden="true" draggable="false">';
     window.BangSituationRules.mount(root);
     mountSearchTabs(root,'situations');
   }
@@ -382,12 +421,31 @@
       const skip=element('button','learning-step-intro-skip');skip.type='button';skip.setAttribute('aria-label','Step '+info.step+' 설명 시작');skip.onclick=()=>introAdvance?.();
       return stage;
     }
-    if(window.BangFieldLesson.has(active)){stage.replaceChildren();window.BangFieldLesson.render(stage,active,{go,openMenu,back});return stage;}
-    if(window.BangRoleExplore.has(active))return window.BangRoleExplore.render(stage,active,{go,openMenu,back});
+    if(active==='game-intro-one'||active==='game-intro-two'){
+      stage.innerHTML=data.scenes['8:330'];
+      find('8:380')?.remove();
+      const title=active==='game-intro-one'?'마피아 게임, 해본 적 있나요?':'누가 내 편인지 모른 채,\n총격전이 시작됩니다.';
+      const body=active==='game-intro-one'?['정체를 숨기고, 말과 행동으로 서로를 의심하는 게임.','BANG!에서는 그 심리전이 서부의 총격전으로 펼쳐집니다.']:['카드를 사용해 공격하고, 피하고, 서로를 돕습니다.','하지만 모두의 목표가 같지는 않습니다.','당신이 맡은 역할에 따라\n이기는 방법이 달라집니다.'];
+      const copy=find('8:362');copy.replaceChildren();copy.style.top='377px';copy.style.height='142px';copy.classList.add('game-intro-copy');
+      copy.classList.add('game-intro-one-copy');stage.append(copy);
+      if(active==='game-intro-one'||active==='game-intro-two'){
+        find('8:396')?.remove();
+        element('div','game-intro-one-backdrop',stage).setAttribute('aria-hidden','true');
+      }
+      const topTitle=element('h1','game-intro-title');topTitle.textContent=title;if(active==='game-intro-two')topTitle.style.whiteSpace='pre-line';
+      body.forEach((line,index)=>{const p=document.createElement('p');if(active==='game-intro-one'&&index===0){p.textContent='정체를 숨기고, 말과 행동으로';p.append(document.createElement('br'),'서로를 의심하는 게임.');}else if(active==='game-intro-one'&&index===1){p.textContent='BANG!에서는 그 심리전이 서부의 총격전으로';p.append(document.createElement('br'),'펼쳐집니다.');}else if(active==='game-intro-two'&&index===2){p.textContent='당신이 맡은 역할에 따라';p.append(document.createElement('br'),'이기는 방법이 달라집니다.');}else p.textContent=line;copy.append(p);});
+      const next=element('button','learning-dialogue-next game-intro-next');next.type='button';next.textContent=active==='game-intro-two'?'>역할 알아보기':'> 다음';next.setAttribute('aria-label',active==='game-intro-two'?'역할 알아보기':'다음 장면');next.onclick=()=>go(active==='game-intro-one'?'game-intro-two':'30:931');
+      const previous=element('button','learning-dialogue-back game-intro-previous');previous.type='button';previous.textContent='< 뒤로';previous.setAttribute('aria-label','이전 화면으로 돌아가기');previous.onclick=()=>active==='game-intro-two'?go('game-intro-one'):back();
+      const badge=element('div','learning-step-label');badge.textContent='Step 1 : 게임 소개';
+      const menu=element('button','learning-menu-button');menu.type='button';menu.setAttribute('aria-label','목차 열기');menu.innerHTML='<span class="learning-menu-icon"><img src="assets/learning/0a3d10c2-d2f3-4d00-b8a6-9dace2b6209f.svg" alt=""></span>';menu.onclick=openMenu;
+      return stage;
+    }
+    if(window.BangFieldLesson.has(active)){stage.replaceChildren();window.BangFieldLesson.render(stage,active,{go,openMenu,back});normalizeStepLabels(stepFor(active));return stage;}
+    if(window.BangRoleExplore.has(active)){const rendered=window.BangRoleExplore.render(stage,active,{go,openMenu,back});normalizeStepLabels(stepFor(active));return rendered;}
     if(active==='search-menu'){renderSearchMenu();return stage;}
     if(active==='search-situations'){renderSituationSearch();return stage;}
     if(window.BangTurnLesson.frames.some(f=>f.id===active)){
-      stage.replaceChildren();window.BangTurnLesson.render(stage,active,{go,openMenu,back});return stage;
+      stage.replaceChildren();window.BangTurnLesson.render(stage,active,{go,openMenu,back});normalizeStepLabels(stepFor(active));return stage;
     }
     if(active==='setup-share-abilities'){
       stage.innerHTML=data.scenes['136:197'];
@@ -412,10 +470,19 @@
         const p=document.createElement('p');p.textContent=line;p.style.lineHeight='100.03%';p.style.marginBottom=i?'0':'14px';copy.append(p);
       }
     }else if(data.scenes[active])stage.innerHTML=data.scenes[active];else reuse(frame);
+    if(active==='30:931'){
+      const copy=find('30:941');if(copy){
+        copy.replaceChildren();const p=document.createElement('p');
+        p.style.lineHeight='1.4';p.style.wordBreak='keep-all';p.style.overflowWrap='normal';
+        ['그럼 이제 어떻게 해야','이길 수 있는지 알아볼까요?','이는 마피아 게임처럼 각자의','역할에 따라 달라집니다.'].forEach((line,i)=>{if(i)p.append(document.createElement('br'));p.append(document.createTextNode(line));});
+        copy.append(p);
+      }
+    }
     roughFrame();decorateButtons();
     for(const node of stage.querySelectorAll('img')){node.draggable=false;if(!node.alt)node.setAttribute('aria-hidden','true');}
     if(active===flow.menu){
       for(const id of ['47:2567','90:32','90:39','90:46','90:53'])find(id)?.remove();
+      for(const p of stage.querySelectorAll('p')){if(p.textContent.trim()==='카드 종류 설명 & 세팅')p.textContent='어떤 게임일까?';if(p.textContent.trim()==='각 역할과 승리 조건')p.textContent='게임을 준비해 볼까?';}
       const panel=element('section','learning-contents-page');panel.setAttribute('aria-label','STEP과 세부 단계 목차');
       const shortcuts=document.createElement('nav');shortcuts.className='learning-drawer-shortcuts';shortcuts.hidden=true;
       mainContentsCleanup=window.BangContents.mount(panel,shortcuts,{currentStep:1,currentId:active,go,message});
@@ -437,7 +504,7 @@
       control.addEventListener('pointercancel',()=>{start=null;});
     }
     if(active===flow.menu){
-      bind(find('90:53'),'Step 5 초보자들을 위한 Tip!',()=>go('tips-end'));
+      bind(find('90:53'),'Step 5 초보자들을 위한 Tip!',()=>go('tips-role-select'));
       const logo=find('47:2544');bind(logo,'홈으로 돌아가기',()=>go(flow.home));
     }
     // Sources use copied Step 2 labels inside the dedicated Step 3 frames.
@@ -448,6 +515,7 @@
       for(const p of stage.querySelectorAll('p'))if(p.textContent.includes('윌리 더 키드'))p.textContent='(볼캐닉 장착 / 윌리 더 키드의 능력은 예외)';
     }
     if(active==='124:909'){
+      const setupIntro=find('124:921')?.querySelector('p');if(setupIntro)setupIntro.textContent='잠깐! 본격적으로 시작하기 전에';
       find('124:934')?.remove();
       const label=element('label','learning-player-count');label.textContent='플레이 인원 ';
       const field=element('span','learning-player-select',label);
@@ -458,7 +526,21 @@
       const update=()=>{const counts={4:[1,0,2,1],5:[1,1,2,1],6:[1,1,3,1],7:[1,2,3,1]}[select.value];['124:961','124:962','124:963','124:964'].forEach((id,i)=>{const n=find(id)?.querySelector('p');if(n)n.textContent=counts[i]+'장';});sessionStorage.setItem('bang-learning-players',select.value);};select.onchange=update;update();
     }
     window.BangTurnLesson.enhanceOriginal(stage,active);
+    if(!legacyRoleSequence.has(active))normalizeStepLabels(stepFor(active));
+    if(legacyRoleSequence.has(active)){
+      for(const p of stage.querySelectorAll('p'))if(/^Step\s+\d+(?:\s*:.*)?$/i.test(p.textContent.trim())){
+        p.textContent='Step 1 : 역할과 승리 조건';p.style.whiteSpace='nowrap';p.style.wordBreak='keep-all';p.style.overflowWrap='normal';
+        const textBox=p.parentElement,badge=textBox?.parentElement;
+        if(textBox){textBox.style.width='188px';textBox.style.whiteSpace='nowrap';}
+        const shape=badge&&[...badge.children].find(node=>node.style.background==='rgb(17, 17, 17)'&&node.style.height==='46px');
+        if(shape)shape.style.width='220px';
+      }
+    }
     ensureStepLabel(frame);
+    for(const button of stage.querySelectorAll('button')){
+      const left=parseFloat(button.style.left),top=parseFloat(button.style.top);
+      if(Number.isFinite(left)&&Number.isFinite(top)&&left<=16&&top<=20&&parseFloat(button.style.width)>=55&&parseFloat(button.style.height)>=55)button.style.zIndex='40';
+    }
     prepareCardDraw();
     prepareCardUse();
     prepareCardDiscard();

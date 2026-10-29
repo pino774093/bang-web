@@ -1,6 +1,6 @@
 /* STEP 4–5 reference tools only. No dependency on the original game simulation. */
 (() => {
- const topics=[['140:427','기본 거리'],['attack-range','무기 사정거리'],['attack-effects','거리 변경 효과'],['tips-end','보안관 전략'],['tips-rules','부관 전략'],['tips-special','무법자 전략'],['tips-roles','배신자 전략'],['tips-mind','공통 심리전']];
+ const topics=[['140:427','기본 거리'],['attack-range','무기 사정거리'],['attack-effects','거리 변경 효과'],['tips-role-select','역할 별 전략'],['tips-end','역할 전략 · 보안관'],['tips-rules','역할 전략 · 부관'],['tips-special','역할 전략 · 무법자'],['tips-roles','역할 전략 · 배신자'],['tips-mind','공통 심리전']];
  const frames=topics.map(([id,label],i)=>({id,name:`Step ${i<3?4:5} : ${label}`,step:i<3?4:5,y:i<3?6000:8000,text:[`Step ${i<3?4:5} : ${label}`],links:[]}));
  frames.push({id:'attack-introduction',name:'Step 4 : 사정거리',step:4,y:5900,text:['Step 4 : 사정거리'],links:[]});
  frames.push({id:'attack-draw-examples',name:'Step 4 : 판정 예시',step:4,y:6100,text:['Step 4 : 판정'],links:[]});
@@ -45,7 +45,7 @@
  function detail(parent,title,copy){const n=make('details','field-detail',parent);make('summary','',n,title);make('p','',n,copy);return n;}
  function render(stage,id,{go,openMenu,back}){
   if(['attack-introduction','140:427','attack-range','attack-effects','attack-draw','attack-draw-examples'].includes(id))return window.BangAttackStory.render(stage,id,{go,openMenu,back});
-  if(['tips-end','tips-rules','tips-special','tips-roles','tips-mind'].includes(id))return window.BangTipsStory.render(stage,id,{go,openMenu,back});
+  if(['tips-role-select','tips-end','tips-rules','tips-special','tips-roles','tips-mind'].includes(id))return window.BangTipsStory.render(stage,id,{go,openMenu,back});
   const index=topics.findIndex(t=>t[0]===id),step=index<3?4:5;
   const root=make('section','field-lesson field-step-'+step,stage);
   image(root,'assets/intro-wood.png','field-wood');image(root,'assets/intro-paper.png','field-paper');image(root,'assets/frame.png','field-frame');

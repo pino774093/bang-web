@@ -3,3 +3,25 @@
 .learning-role-flip-turn {position:absolute;inset:0;display:block;transform-style:preserve-3d;}
 .learning-role-flip-turn img {backface-visibility:hidden;-webkit-backface-visibility:hidden;}
 .learning-role-flip-face {transform:rotateY(180deg);}
+.learning-stage .game-intro-card {position:absolute;z-index:4;top:31px;width:94px;height:146px;object-fit:cover;filter:drop-shadow(3px 3px 1px rgba(0,0,0,.8));}
+.learning-stage .game-intro-card-back {left:83px;transform:rotate(-7deg);}
+.learning-stage .game-intro-card-front {left:211px;transform:rotate(7deg);}
+.learning-stage .game-intro-title {position:absolute;z-index:3;left:43px;top:235px;width:304px;margin:0;color:#fff;text-align:center;font-size:20px;line-height:28px;font-weight:600;}
+.learning-stage .game-intro-copy {z-index:3;left:42px!important;width:306px!important;top:340px!important;height:184px!important;transform:none!important;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;line-height:23px!important;font-size:14px!important;}
+.learning-stage .game-intro-copy p {margin:0;line-height:23px;white-space:normal;}
+.learning-stage[data-learning-frame="game-intro-one"] .game-intro-title {top:223px;line-height:28px;}
+.learning-stage .game-intro-one-backdrop {position:absolute;z-index:2;left:24px;right:24px;top:20px;bottom:20px;border-radius:0;background:#111;}
+.learning-stage .game-intro-one-copy {left:28px!important;width:334px!important;top:276px!important;height:184px!important;padding:0!important;background:transparent!important;border:0!important;box-shadow:none!important;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:7px;line-height:24px!important;font-size:15px!important;text-align:center;}
+.learning-stage[data-learning-frame="game-intro-two"] .game-intro-title {left:28px;width:334px;top:204px;font-size:18px;line-height:24px;}
+.learning-stage[data-learning-frame="game-intro-two"] .game-intro-one-copy {top:270px!important;}
+.learning-stage .game-intro-one-copy p {line-height:24px;white-space:normal;}
+.learning-stage .game-intro-next {position:absolute;z-index:34;left:236px;top:528px;width:102px;height:28px;color:#aa2e1b!important;font-size:14px!important;cursor:pointer;}
+.learning-stage .game-intro-previous {position:absolute;z-index:34;left:50px;top:528px;width:102px;height:28px;background:transparent;color:#aa2e1b!important;font-size:14px!important;cursor:pointer;}
+.learning-stage .learning-step-label {z-index:20;}
+.learning-stage[data-learning-frame="94:185"] .role-explore-click-hint {position:absolute;z-index:4;left:28px;top:674px;width:334px;margin:0;color:#fff;text-align:left;font-size:14px;line-height:20px;pointer-events:none;}
+.learning-stage .learning-role-detail-heading {position:absolute;z-index:12;left:34px;top:478px;height:40px;margin:0;display:flex;align-items:center;gap:10px;color:#fff;font-size:24px;line-height:30px;font-weight:600;}
+.learning-stage .learning-role-detail-star {position:static;display:block;width:32px;height:32px;object-fit:contain;filter:invert(1);flex:none;}
+.learning-stage .learning-role-detail-copy {position:absolute;z-index:11;left:34px;right:27px;top:530px;bottom:22px;overflow:auto;padding:0 5px 8px 0;border:0;color:#fff;font-size:15px;line-height:23px;white-space:pre-line;text-align:left;overscroll-behavior:contain;touch-action:pan-y;-webkit-overflow-scrolling:touch;}
+.learning-stage .learning-role-detail-copy p {margin:0 0 14px;}
+.learning-stage .learning-role-detail-copy .learning-role-goal {margin-bottom:16px;color:#ffd19e;font-weight:600;}
+.learning-stage .learning-role-detail-copy strong {display:block;color:#ffd19e;font-weight:600;}

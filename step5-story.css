@@ -2,8 +2,8 @@
 .tips-story-kicker {position:absolute;left:28px;right:28px;top:91px;text-align:center;font-size:12px;color:#735238;}
 .tips-story-title {position:absolute;left:28px;right:28px;top:125px;margin:0;text-align:center;color:#111;font-size:26px;line-height:34px;}
 .tips-story-visual {position:absolute;left:0;top:0;width:390px;height:584px;pointer-events:none;}
-.tips-story-role-image {position:absolute;left:110px;top:225px;width:170px;height:265px;object-fit:contain;filter:drop-shadow(3px 3px 1px #000b);}
-.tips-story-dialogue {position:absolute;left:0;top:584px;width:390px;height:321px;border-radius:59px 59px 0 0;background:#111;color:white;}
+.tips-story-role-image {position:absolute;left:110px;top:190px;width:170px;height:265px;object-fit:contain;filter:drop-shadow(3px 3px 1px #000b);}
+.tips-story-dialogue {position:absolute;left:0;top:500px;width:390px;height:405px;border-radius:59px 59px 0 0;background:#111;color:white;}
 .tips-story-scene-title {position:absolute;left:26px;right:26px;top:28px;margin:0;text-align:center;font-size:19px;line-height:29px;word-break:keep-all;}
 .tips-story-copy {position:absolute;left:28px;right:28px;top:81px;text-align:center;pointer-events:none;word-break:keep-all;white-space:pre-line;}
 .tips-story-text {margin:0;font-size:14px;line-height:23px;}
@@ -11,6 +11,18 @@
 .tips-story-note {margin:7px 0 0;font-size:11px;line-height:17px;color:#d3c5b3;}
 .tips-story-navigation {position:absolute;left:0;top:0;width:390px;height:260px;display:flex;}
 .learning-stage .tips-story-navigation button {position:relative;width:195px;height:260px;color:#aa2e1b;font-size:14px;cursor:pointer;}
-.tips-story-navigation span {position:absolute;top:212px;pointer-events:none;}
+.tips-story-navigation span {position:absolute;top:296px;pointer-events:none;color:#aa2e1b;}
+.tips-story-dialogue .tips-story-navigation button {height:344px;}
 .tips-story-prev span {left:28px;}.tips-story-next span {right:20px;}
 .tips-story button:focus-visible {outline:2px solid #bf6a33;outline-offset:3px;}
+.tips-role-select-title {position:absolute;left:28px;right:28px;top:24px;margin:0;text-align:center;color:#fff;font-size:23px;line-height:30px;}
+.tips-role-select-hint {position:absolute;left:28px;right:28px;top:62px;margin:0;text-align:center;color:#fff;font-size:13px;line-height:20px;}
+.tips-role-select-grid {position:absolute;left:0;top:132px;width:390px;display:grid;grid-template-columns:112px 112px;justify-content:center;column-gap:56px;row-gap:16px;}
+.tips-role-select-item {width:112px;height:190px;display:flex;flex-direction:column;align-items:center;}
+.learning-stage .tips-role-card {width:112px;height:168px;flex:none;padding:0;background:transparent;color:#111;cursor:pointer;}
+.tips-role-select-card-image {display:block;width:112px;height:168px;object-fit:contain;filter:drop-shadow(3px 3px 1px #000b);}
+.tips-role-select-card-name {display:block;margin-top:2px;text-align:center;color:#22170e;font-size:14px;line-height:20px;}
+.tips-role-select-footer {position:absolute;left:0;top:584px;width:390px;height:321px;border-radius:59px 59px 0 0;background:#111;color:#fff;}
+.tips-role-select-footer .tips-story-navigation {top:100px;height:160px;}
+.tips-role-select-footer .tips-story-navigation button {height:160px;}
+.tips-role-select-footer .tips-story-navigation span {top:132px;}

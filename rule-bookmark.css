@@ -1,6 +1,12 @@
 /* Clip the shortcut itself; never clip, resize or move the learning surface. */
 .rule-bookmark {position:fixed;width:78px;height:234px;overflow:hidden;z-index:50;pointer-events:none;isolation:isolate;}
-.rule-bookmark-button {position:relative;display:flex;align-items:center;justify-content:center;box-sizing:border-box;width:62px;height:224px;margin:2px 8px 8px;padding:46px 8px 20px;border:4px solid #111;border-radius:13px 11px 14px 12px;background:#f62504;color:#fff;box-shadow:-4px 5px 3px #000a,inset 1px 1px 0 #ffffff25;transform:translateX(40px);transition:transform 240ms ease-in-out;pointer-events:auto;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent;font-family:var(--bang-font-family);font-size:17px;line-height:22px;}
+.rule-bookmark.is-snapped {transition:left 220ms ease-out,top 220ms ease-out;}
+.rule-bookmark.is-dragging {transition:none;}
+.rule-bookmark.edge-left .rule-bookmark-button {transform:translateX(-40px);}
+.rule-bookmark.edge-left.is-open .rule-bookmark-button {transform:translateX(0);}
+.rule-bookmark.is-dragging .rule-bookmark-button {transform:translateX(0);transition:none;cursor:grabbing;}
+.rule-bookmark.is-dragging .rule-bookmark-button span {opacity:1;transition:none;}
+.rule-bookmark-button {position:relative;display:flex;align-items:center;justify-content:center;box-sizing:border-box;width:62px;height:224px;margin:2px 8px 8px;padding:46px 8px 20px;border:4px solid #111;border-radius:13px 11px 14px 12px;background:#f62504;color:#fff;box-shadow:-4px 5px 3px #000a,inset 1px 1px 0 #ffffff25;transform:translateX(40px);transition:transform 240ms ease-in-out;pointer-events:auto;cursor:grab;touch-action:none;-webkit-tap-highlight-color:transparent;font-family:var(--bang-font-family);font-size:17px;line-height:22px;}
 .rule-bookmark-button span {writing-mode:vertical-rl;text-orientation:upright;white-space:nowrap;letter-spacing:1px;opacity:0;transition:opacity 120ms ease-in-out;pointer-events:none;}
 .rule-bookmark.is-open .rule-bookmark-button {transform:translateX(0);}
 .rule-bookmark.is-open .rule-bookmark-button span {opacity:1;transition-delay:100ms;}
