@@ -20,7 +20,6 @@
   pending.set(stage,state);stage.setAttribute('aria-busy','true');
   group.classList.add('home-menu-stamped');star?.classList.add('home-star-selected');
   // Keep playback inside the originating user gesture, as on the original home.
-  if(id!=='89:12')window.BangMusic?.start();
   const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   state.timer=setTimeout(()=>{
    // The outgoing screen is cloned by the router: freeze the fill before cloning.

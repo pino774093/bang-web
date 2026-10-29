@@ -52,7 +52,6 @@
   }
   function run(item,button){
     if(document.querySelector('#app').hasAttribute('aria-busy'))return;
-    if(active?.id===flow.home&&item.source==='8:326')window.BangMusic?.start();
     const kind=item.action.navigationType;
     if(kind==='SWAP_STATE'){
       if(!button||!item.component?.length)return;

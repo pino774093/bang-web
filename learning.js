@@ -199,8 +199,8 @@
     if(menuIds.has(link.to)){openMenu();return;}
     if(frame.id===flow.home){
       if(link.to===flow.cards){go('search-menu');return;}
-      if(link.to==='5:229'){window.BangMusic?.start();window.BangRouter.go('5:229');return;}
-      window.BangMusic?.start();go(link.to);return;
+      if(link.to==='5:229'){window.BangRouter.go('5:229');return;}
+      go(link.to);return;
     }
     // The unresolved Figma links below must never enter or modify the simulation.
     if(link.to==='42:2064'||link.to==='8:258'){message('이어서 볼 설명은 준비 중입니다. 목차에서 다른 STEP을 선택해 주세요.');return;}
@@ -605,7 +605,7 @@
     const close=element('button','learning-drawer-close',panel);close.type='button';close.setAttribute('aria-label','목차 닫기');close.innerHTML='<img src="assets/back-vector.svg" alt="">';close.onclick=()=>closeMenu();
     const shortcuts=element('nav','learning-drawer-shortcuts',panel);shortcuts.setAttribute('aria-label','바로가기');
     const icons={home:'<path d="m3 10 9-7 9 7M5 9v12h5v-7h4v7h5V9"/>',search:'<circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/>',game:'<path d="M8 7h8c3 0 4 2 5 6l1 5c.5 3-2 4-4 2l-3-3H9l-3 3c-2 2-4.5 1-4-2l1-5c1-4 2-6 5-6Z"/><path d="M7 10v6M4 13h6"/><circle cx="16" cy="11" r=".7"/><circle cx="19" cy="14" r=".7"/>'};
-    const destinations=[['홈으로','home',()=>go(flow.home)],['카드&규칙 찾기','search',()=>go('search-menu')],['시뮬레이션 하기','game',()=>{closeMenu(false);window.BangMusic?.start();window.BangRouter.go('5:229');}]];
+    const destinations=[['홈으로','home',()=>go(flow.home)],['카드&규칙 찾기','search',()=>go('search-menu')],['시뮬레이션 하기','game',()=>{closeMenu(false);window.BangRouter.go('5:229');}]];
     destinations.forEach(([label,icon,navigate])=>{const button=element('button','learning-drawer-shortcut',shortcuts);button.type='button';button.innerHTML=`<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">${icons[icon]}</svg><span></span>`;button.lastElementChild.textContent=label;button.onclick=navigate;});
     drawerCleanup=window.BangContents.mount(panel,shortcuts,{currentStep:stepFor(active),currentId:active,go,message});
     drawer.onclick=e=>{if(e.target===drawer)closeMenu();};
