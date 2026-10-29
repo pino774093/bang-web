@@ -2,15 +2,18 @@
 (() => {
   const data=window.BANG_LEARNING_SCENES,flow=window.BANG_FIGMA_FLOW;
   const frames=new Map(data.frames.map(frame=>[frame.id,frame]));
+  const cardUseFrame=frames.get('139:249');
+  data.scenes['139:249-guide']=data.scenes['139:249'];
+  frames.set('139:249-guide',{...cardUseFrame,id:'139:249-guide',step:3,name:'카드 사용 설명',text:['2. 카드 사용하기','> 클릭!','Step 3 : 내 턴'],links:[...cardUseFrame.links.filter(link=>link.source==='139:401'),{source:'139:309',trigger:'ON_CLICK',type:'NODE',to:'139:265',transition:{type:'DISSOLVE',duration:.3}}]});
   const introGoal=frames.get('8:330');
   frames.set('intro-goal',{...introGoal,id:'intro-goal',text:['서로의 역할을 추리하고 각자의 목표를 완수하세요!','> 클릭!']});
   frames.set('game-intro-one',{id:'game-intro-one',step:1,name:'게임 소개',text:['마피아 게임, 해본 적 있나요?','정체를 숨기고, 말과 행동으로 서로를 의심하는 게임.','BANG!에서는 그 심리전이 서부의 총격전으로 펼쳐집니다.','> 클릭!'],links:[{source:'intro-next',trigger:'ON_CLICK',to:'game-intro-two'}]});
   frames.set('game-intro-two',{id:'game-intro-two',step:1,name:'게임 소개',text:['누가 내 편인지 모른 채,\n총격전이 시작됩니다.','카드를 사용해 공격하고, 피하고, 서로를 돕습니다.','하지만 모두의 목표가 같지는 않습니다.','당신이 맡은 역할에 따라\n이기는 방법이 달라집니다.','> 역할 알아보기'],links:[{source:'intro-next',trigger:'ON_CLICK',to:'30:931'}]});
   // Confirmed learning continuation; retain the untouched Figma export as the audit source.
   const stepThreeEnd=frames.get('139:351');
-  frames.set(stepThreeEnd.id,{...stepThreeEnd,links:stepThreeEnd.links.map(link=>link.to==='42:2064'?{...link,to:'attack-introduction'}:link)});
+  frames.set(stepThreeEnd.id,{...stepThreeEnd,links:stepThreeEnd.links.map(link=>link.to==='42:2064'?{...link,to:'game-attack'}:link)});
   for(const frame of window.BangTurnLesson.frames)frames.set(frame.id,frame);
-  for(const id of ['turn-timing','turn-cautions'])frames.set(id,{id,name:'Step 4',step:3,text:[],links:[],redirect:'attack-introduction'});
+  for(const id of ['turn-timing','turn-cautions'])frames.set(id,{id,name:'Step 4',step:3,text:[],links:[],redirect:'game-attack'});
   for(const frame of window.BangFieldLesson.frames)frames.set(frame.id,frame);
   frames.set('search-menu',{id:'search-menu',name:'카드&규칙 찾기',text:['카드&규칙 찾기'],links:[]});
   frames.set('search-situations',{id:'search-situations',name:'상황별 규칙',text:['상황별 규칙'],links:[]});
@@ -28,9 +31,10 @@
   continueTo('35:1114','35:1131','42:1728');
   continueTo('35:1374','35:1390','35:1406');
   frames.delete('35:1131');frames.delete('35:1390');
-  continueTo('139:249','42:2064','139:265');
-  continueTo('139:265','42:2064','attack-introduction');
-  continueTo('139:265','139:351','attack-introduction');
+  continueTo('139:249','42:2064','139:249-guide');
+  continueTo('139:249','139:265','139:249-guide');
+  continueTo('139:265','42:2064','game-attack');
+  continueTo('139:265','139:351','game-attack');
   continueTo('139:236','42:2064','139:249');
   // Put the player-count and role-card-count page at the start of STEP 2.
   continueTo('124:909','8:398','8:489');
@@ -40,18 +44,18 @@
   continueTo('128:996','47:80','128:1017');
   continueTo('128:1017','47:80','128:1063');
   const setupLast=frames.get('136:197');
-  frames.set('setup-share-abilities',{...setupLast,id:'setup-share-abilities',step:2,text:['각자 가진 인물 카드의 능력이 무엇인지 다른 사람들과 공유합니다.','> 클릭!','Step 2 : 전체 세팅'],links:setupLast.links.map(link=>({...link,to:link.to==='42:1687'?'131:1124':link.to}))});
+  frames.set('setup-share-abilities',{...setupLast,id:'setup-share-abilities',step:2,text:['각자 가진 인물 카드의 능력이 무엇인지 다른 사람들과 공유합니다.','> 클릭!','Step 2 : 전체 세팅'],links:setupLast.links.map(link=>({...link,to:link.to==='42:1687'?'game-start':link.to}))});
   continueTo('136:197','42:1687','setup-share-abilities');
   const menuIds=new Set(['94:60','124:745','131:1141']);
   const covers=new Set(['35:1427','42:1668','42:1687','42:1695','131:1124','131:1132']);
-  const stepStarts=['game-intro-one','8:398','131:1124','attack-introduction','tips-role-select'];
-  const titles=['어떤 게임일까?','게임을 준비해 볼까?','내 턴에는 뭘 해야할까?','사정거리와 판정','초보자들을 위한 Tip!'];
+  const stepStarts=['game-intro-one','8:398','131:1124','game-attack','tips-role-select'];
+  const titles=['어떤 게임일까?','게임을 준비해 볼까?','내 턴에는 뭘 해야할까?','게임은 어떻게 진행될까?','초보자들을 위한 Tip!'];
   const introStarts=['game-intro-one','42:1687','131:1124','step4-intro','step5-intro'];
   const introDefinitions=new Map([
     ['35:1427',{step:1,to:'game-intro-one'}],['42:1668',{step:1,to:'game-intro-one'}],
     ['42:1687',{step:2,to:'8:398'}],['42:1695',{step:2,to:'8:398'}],
     ['131:1124',{step:3,to:'131:1182'}],['131:1132',{step:3,to:'131:1182'}],
-    ['step4-intro',{step:4,to:'attack-introduction'}],['step5-intro',{step:5,to:'tips-role-select'}]
+    ['step4-intro',{step:4,to:'game-attack'}],['step5-intro',{step:5,to:'tips-role-select'}]
   ]);
   for(const [id,info]of introDefinitions)if(!frames.has(id))frames.set(id,{id,step:info.step,name:'Step '+info.step,text:['Step '+info.step],links:[]});
   const homeFlow=frames.get(flow.home);if(homeFlow)homeFlow.links=homeFlow.links.map(link=>link.to==='35:1427'||link.to==='42:1687'?{...link,to:'game-intro-one'}:link);
@@ -59,7 +63,7 @@
   for(const id of ['94:185','94:200','94:224','94:248','94:272','35:1114','42:1728','35:1212','35:1228','35:1374','35:1406'])if(frames.has(id))frames.set(id,{...frames.get(id),step:1});
   for(const id of ['8:398','8:422','8:435','8:449','8:473','47:80','47:94','128:1041','124:909','8:489','8:501','8:514','8:540','8:566','8:581','124:980','8:685','128:1017','128:996','128:1063','136:12','136:37','131:1268','136:118','136:197','setup-share-abilities'])if(frames.has(id))frames.set(id,{...frames.get(id),step:2});
   const roleCopy={
-    '94:200':['보안관','무법자와 배신자를 모두 탈락시키는 것이 목표입니다.\n역할을 처음부터 공개하지만, 다른 플레이어 중 누가 자신의 편인지는 모른 채 시작합니다.\n보안관은 체력이 1 더 많고 감옥에 갇히지 않습니다. 부관을 직접 제거하면 손패와 장비를 모두 잃습니다.'],
+    '94:200':['보안관','무법자와 배신자를 모두 탈락시키는 것이 목표입니다.\n역할을 처음부터 공개하지만, 다른 플레이어 중 누가 자신의 편인지는 모른 채 시작합니다.\n보안관은 체력(총알)을 기본보다 하나 더 갖습니다. 카드 ‘감옥’도 보안관에게는 통하지 않습니다. 부관을 직접 제거하면 손패와 장비를 모두 잃습니다.'],
     '94:224':['부관','보안관과 같은 편으로, 보안관이 목표를 달성하도록 돕습니다.\n부관은 정체를 숨기며, 보안관도 누가 부관인지 처음부터 알지 못합니다.'],
     '94:248':['무법자','보안관을 탈락시키는 것이 목표입니다.\n무법자들은 목표를 공유하지만 서로의 정체를 처음부터 확인하지 않습니다. 보안관이 탈락했을 때 무법자가 남아 있으면, 누가 보안관을 탈락시켰든 무법자 팀이 승리합니다.'],
     '94:272':['배신자','마지막까지 혼자 살아남는 것이 목표입니다. 배신자는 무법자와 같은 편이 아닌 독립된 역할입니다.\n자신 외에 다른 플레이어가 남아 있는데 보안관이 먼저 탈락하면 무법자 팀이 승리하므로 목표를 달성할 수 없습니다.\n\n무법자는 보안관의 탈락이 목표, 배신자는 자신의 단독 생존이 목표입니다.']
@@ -105,10 +109,10 @@
     }
     closeMenu(false);return window.BangRouter.go(route(id),{action:{transitionType:'DISSOLVE'},...options});
   }
-  function back(){
+  function back(fallback=flow.menu){
     closeMenu(false);
-    if(history.state?.bang&&history.state.index>0)window.BangRouter.back();
-    else go(flow.menu);
+    const target=typeof fallback==='string'&&fallback.startsWith('learn:')?fallback:route(fallback);
+    window.BangRouter.back(target);
   }
   function message(text){stage.querySelector('.learning-message')?.remove();const n=element('p','learning-message');n.setAttribute('role','status');n.textContent=text;setTimeout(()=>n.remove(),4000);}
   function labelFor(frame,link){
@@ -177,7 +181,7 @@
     const menu=element('button','learning-menu-button');menu.type='button';menu.setAttribute('aria-label','목차 열기');
     const template=document.createElement('template');template.innerHTML=data.scenes['131:1182'];
     const icon=template.content.querySelector('[data-node-id="131:1190"]');if(icon)menu.innerHTML=icon.innerHTML;
-    if(detail){menu.innerHTML='<img src="assets/back-vector.svg" alt="">';bind(menu,'역할 목록으로 돌아가기',()=>go('94:185'));}else bind(menu,'목차 열기',openMenu);
+    if(detail){menu.innerHTML='<img src="assets/back-vector.svg" alt="">';bind(menu,'역할 목록으로 돌아가기',()=>back('94:185'));}else bind(menu,'목차 열기',openMenu);
     const stepLabel=frame.text.find(t=>/^Step /.test(t));if(stepLabel){
       const header=element('div','learning-step-label');
       header.textContent=legacyRoleSequence.has(frame.id)?'Step 1 : 역할과 승리 조건':stepLabel;
@@ -349,7 +353,7 @@
       const image=element('img',cls,root);image.src=src;image.alt='';image.draggable=false;
     }
     const previous=element('button','learning-menu-button search-choice-back',root);previous.type='button';
-    previous.innerHTML='<img src="assets/back-vector.svg" alt="">';bind(previous,active==='search-situations'?'카드&규칙 찾기로 돌아가기':'이전 페이지로 돌아가기',()=>active==='search-situations'?go('search-menu'):window.BangRouter.go(searchReturn));
+    previous.innerHTML='<img src="assets/back-vector.svg" alt="">';bind(previous,active==='search-situations'?'카드&규칙 찾기로 돌아가기':'이전 페이지로 돌아가기',()=>active==='search-situations'?back('search-menu'):window.BangRouter.back(searchReturn));
     const heading=element('h1','search-choice-heading',root);heading.textContent='카드&규칙 찾기';
     const choices=element('nav','search-choice-buttons',root);choices.setAttribute('aria-label','찾는 방법 선택');
     const cards=element('button','search-choice-button',choices);cards.type='button';cards.textContent='카드 도감';
@@ -435,7 +439,7 @@
       const topTitle=element('h1','game-intro-title');topTitle.textContent=title;if(active==='game-intro-two')topTitle.style.whiteSpace='pre-line';
       body.forEach((line,index)=>{const p=document.createElement('p');if(active==='game-intro-one'&&index===0){p.textContent='정체를 숨기고, 말과 행동으로';p.append(document.createElement('br'),'서로를 의심하는 게임.');}else if(active==='game-intro-one'&&index===1){p.textContent='BANG!에서는 그 심리전이 서부의 총격전으로';p.append(document.createElement('br'),'펼쳐집니다.');}else if(active==='game-intro-two'&&index===2){p.textContent='당신이 맡은 역할에 따라';p.append(document.createElement('br'),'이기는 방법이 달라집니다.');}else p.textContent=line;copy.append(p);});
       const next=element('button','learning-dialogue-next game-intro-next');next.type='button';next.textContent=active==='game-intro-two'?'>역할 알아보기':'> 다음';next.setAttribute('aria-label',active==='game-intro-two'?'역할 알아보기':'다음 장면');next.onclick=()=>go(active==='game-intro-one'?'game-intro-two':'30:931');
-      const previous=element('button','learning-dialogue-back game-intro-previous');previous.type='button';previous.textContent='< 뒤로';previous.setAttribute('aria-label','이전 화면으로 돌아가기');previous.onclick=()=>active==='game-intro-two'?go('game-intro-one'):back();
+      const previous=element('button','learning-dialogue-back game-intro-previous');previous.type='button';previous.textContent='< 뒤로';previous.setAttribute('aria-label','이전 화면으로 돌아가기');previous.onclick=()=>back('game-intro-one');
       const badge=element('div','learning-step-label');badge.textContent='Step 1 : 게임 소개';
       const menu=element('button','learning-menu-button');menu.type='button';menu.setAttribute('aria-label','목차 열기');menu.innerHTML='<span class="learning-menu-icon"><img src="assets/learning/0a3d10c2-d2f3-4d00-b8a6-9dace2b6209f.svg" alt=""></span>';menu.onclick=openMenu;
       return stage;
@@ -470,11 +474,21 @@
         const p=document.createElement('p');p.textContent=line;p.style.lineHeight='100.03%';p.style.marginBottom=i?'0':'14px';copy.append(p);
       }
     }else if(data.scenes[active])stage.innerHTML=data.scenes[active];else reuse(frame);
+    if(active==='136:197'){
+      const copy=find('136:202');
+      if(copy){
+        copy.replaceChildren();Object.assign(copy.style,{left:'195px',width:'330px',whiteSpace:'normal'});
+        for(const line of ['이 카드 뭉치 옆에는 사용하거나 버린 카드를 모아둘 겁니다.']){
+          const p=document.createElement('p');p.textContent=line;Object.assign(p.style,{lineHeight:'1.4',margin:'0 0 8px',wordBreak:'keep-all'});copy.append(p);
+        }
+        const note=document.createElement('p');note.textContent='굳이 사용한 카드와 버린 카드를 나누지 않아도 됩니다.';Object.assign(note.style,{lineHeight:'1.4',margin:'0',fontSize:'12px',color:'#d3c5b3',wordBreak:'keep-all'});copy.append(note);
+      }
+    }
     if(active==='30:931'){
       const copy=find('30:941');if(copy){
         copy.replaceChildren();const p=document.createElement('p');
         p.style.lineHeight='1.4';p.style.wordBreak='keep-all';p.style.overflowWrap='normal';
-        ['그럼 이제 어떻게 해야','이길 수 있는지 알아볼까요?','이는 마피아 게임처럼 각자의','역할에 따라 달라집니다.'].forEach((line,i)=>{if(i)p.append(document.createElement('br'));p.append(document.createTextNode(line));});
+        ['그럼 이제 어떻게 해야','이길 수 있는지 알아볼까요?','이기는 방법은 역할마다 다릅니다.'].forEach((line,i)=>{if(i)p.append(document.createElement('br'));p.append(document.createTextNode(line));});
         copy.append(p);
       }
     }
@@ -507,9 +521,32 @@
       bind(find('90:53'),'Step 5 초보자들을 위한 Tip!',()=>go('tips-role-select'));
       const logo=find('47:2544');bind(logo,'홈으로 돌아가기',()=>go(flow.home));
     }
-    // Sources use copied Step 2 labels inside the dedicated Step 3 frames.
+    if(active==='131:1182'){
+      const copy=find('131:1188');
+      if(copy){
+        copy.replaceChildren();
+        Object.assign(copy.style,{height:'auto',lineHeight:'24px'});
+        for(const [i,line]of ['그럼 내 턴이 왔을 때에는','무엇을 해야할까요?','크게','1. 카드 뽑기','2. 카드 사용하기','3. 카드 버리기','로 순서가 나뉩니다.'].entries()){
+          const p=document.createElement('p');p.textContent=line;
+          Object.assign(p.style,{margin:i===1?'0 0 12px':'0',lineHeight:'24px'});
+          if(i>=3&&i<=5)p.style.color='#f62504';
+          copy.append(p);
+        }
+      }
+    }
+    // Match the numbered contents in every original STEP 3 lesson, including
+    // the follow-up discard explanation, while retaining the original badge.
     if(active.startsWith('139:')){
-      for(const n of stage.querySelectorAll('[data-node-id]'))if(n.children.length===1&&n.firstElementChild?.tagName==='P'&&n.textContent.includes('Step 2 : 보안관'))n.firstElementChild.textContent='Step 3 : 내 턴';
+      const topic=window.BangContents.topicFor(active);
+      if(topic)for(const p of stage.querySelectorAll('p')){
+        if(/^Step\s+\d+\s*:/i.test(p.textContent.trim())){
+          p.textContent=`Step 3 : ${topic.label}`;
+          const text=p.parentElement,badge=text.parentElement;
+          badge.classList.add('step3-numbered-badge');
+          text.classList.add('step3-numbered-badge-text');
+          for(const child of badge.children)if(child!==text)child.classList.add('step3-numbered-badge-shape');
+        }
+      }
     }
     if(active==='139:249'){
       for(const p of stage.querySelectorAll('p'))if(p.textContent.includes('윌리 더 키드'))p.textContent='(볼캐닉 장착 / 윌리 더 키드의 능력은 예외)';

@@ -5,6 +5,8 @@
  frames.push({id:'attack-introduction',name:'Step 4 : 사정거리',step:4,y:5900,text:['Step 4 : 사정거리'],links:[]});
  frames.push({id:'attack-draw-examples',name:'Step 4 : 판정 예시',step:4,y:6100,text:['Step 4 : 판정'],links:[]});
  frames.push({id:'attack-draw',name:'Step 4 : 판정',step:4,y:6000,text:['Step 4 : 판정'],links:[]});
+ for(const id of ['range-summary','game-start','game-attack','game-response','game-resolution','game-elimination','game-beer','game-rewards','game-ending'])frames.push({id,name:`Step ${id==='game-start'?2:4} : 게임 진행`,step:id==='game-start'?2:4,text:[`Step ${id==='game-start'?2:4} : 게임 진행`],links:[]});
+ frames.push({id:'attack-draw-other',name:'Step 4 : 판정',step:4,text:['Step 4 : 판정'],links:[]});
  const weapons=[['colt','콜트 .45',1,null],['volcanic','볼캐닉',1,'03_volcanic'],['schofield','스코필드',2,'07_schofield'],['remington','레밍턴',3,'05_remington'],['carabine','카빈',4,'06_carabine'],['winchester','윈체스터',5,'09_winchester']];
  // Exact five-seat arrangement from cached Figma frame 131:1268 (STEP 1 overall setup).
  const seats=[
@@ -44,14 +46,14 @@
  function cardLink(parent,key,label){const i=window.BANG_CARDS.findIndex(c=>c.name.replace(/^\d+_/,'')===key);return button(parent,label+' ›',()=>window.BangRouter.go(window.BANG_FIGMA_FLOW.cards,{card:i}),'field-card-link');}
  function detail(parent,title,copy){const n=make('details','field-detail',parent);make('summary','',n,title);make('p','',n,copy);return n;}
  function render(stage,id,{go,openMenu,back}){
-  if(['attack-introduction','140:427','attack-range','attack-effects','attack-draw','attack-draw-examples'].includes(id))return window.BangAttackStory.render(stage,id,{go,openMenu,back});
+  if(['range-summary','game-start','game-attack','game-response','game-resolution','game-elimination','game-beer','game-rewards','game-ending','attack-introduction','140:427','attack-range','attack-effects','attack-draw','attack-draw-examples','attack-draw-other'].includes(id))return window.BangAttackStory.render(stage,id,{go,openMenu,back});
   if(['tips-role-select','tips-end','tips-rules','tips-special','tips-roles','tips-mind'].includes(id))return window.BangTipsStory.render(stage,id,{go,openMenu,back});
   const index=topics.findIndex(t=>t[0]===id),step=index<3?4:5;
   const root=make('section','field-lesson field-step-'+step,stage);
   image(root,'assets/intro-wood.png','field-wood');image(root,'assets/intro-paper.png','field-paper');image(root,'assets/frame.png','field-frame');
   const menu=button(root,'',openMenu,'field-menu');menu.setAttribute('aria-label','목차 열기');menu.innerHTML='<img src="assets/learning/0a3d10c2-d2f3-4d00-b8a6-9dace2b6209f.svg" alt="">';
   make('p','field-step-label',root,`Step ${step} : ${step===4?'공격 대상':'실전 Tip'}`);
-  make('h1','field-title',root,step===4?'사정거리와 판정':'초보자들을 위한 Tip!');
+  make('h1','field-title',root,step===4?'게임은 어떻게 진행될까?':'초보자들을 위한 Tip!');
   const nav=make('nav','field-tabs',root);nav.setAttribute('aria-label',`STEP ${step} 소주제`);
   topics.slice(step===4?0:3,step===4?3:7).forEach(([to,label])=>{const b=button(nav,label,()=>go(to),'field-tab');if(to===id)b.setAttribute('aria-current','page');});
   const body=make('div','field-body',root);body.setAttribute('role','region');body.setAttribute('aria-label',topics[index][1]);body.tabIndex=0;

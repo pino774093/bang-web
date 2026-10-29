@@ -5,18 +5,18 @@
  const button=(parent,cls,label,action)=>{const n=make('button',cls,parent,label);n.type='button';n.onclick=action;return n;};
  const card=key=>window.BANG_CARDS.find(c=>c.name.replace(/^\d+_/,'')===key).src;
  function render(stage,{go,openMenu},id='attack-draw'){
-  const isExample=id==='attack-draw-examples';
+  const isExample=id==='attack-draw-examples'||id==='attack-draw-other';
   const root=make('section','field-lesson attack-story judgment-story'+(isExample?' judgment-example-scene':' judgment-intro-scene'),stage);
   image(root,'assets/intro-wood.png','field-wood');image(root,'assets/intro-paper.png','field-paper');image(root,'assets/frame.png','field-frame');
   const menu=button(root,'field-menu','',openMenu);menu.setAttribute('aria-label','목차 열기');menu.innerHTML='<img src="assets/learning/0a3d10c2-d2f3-4d00-b8a6-9dace2b6209f.svg" alt="">';
-  make('p','field-step-label',root,'Step 4 : 판정');make('h1','attack-story-title',root,isExample?'카드로 판정을 확인합니다':'판정이란?');
+  make('p','field-step-label',root,'Step 4 : 판정');make('h1','attack-story-title',root,isExample?'카드로 판정을 확인합니다':'한 장 뒤집어 확인해요');
   if(!isExample){
    image(root,'assets/source/step4-judgment-suit-example.png','judgment-intro-card','판정에서 확인하는 카드의 숫자와 무늬');
   }
   const dialogue=make('section','attack-story-dialogue',root);dialogue.setAttribute('aria-label','판정 설명');
   const copy=make('div','attack-story-copy',dialogue);copy.setAttribute('role','status');copy.setAttribute('aria-live','polite');copy.setAttribute('aria-atomic','true');
-  const text=make('p','attack-story-text',copy,'판정이 필요한 상황에서는 카드 더미 맨 위의 카드를 한 장 공개합니다. 공개한 카드의 무늬와 숫자가 조건에 맞는지 확인합니다.');
-  const note=make('p','attack-story-note',copy,'판정에 사용한 카드는 성공 여부와 관계없이 버린 카드 더미에 놓습니다.');
+  const text=make('p','attack-story-text',copy,'어떤 효과는 카드 한 장으로 결과를 정해요.\n맨 위 카드를 뒤집고, 무늬나 숫자를 확인하세요.\n이걸 ‘판정’이라고 해요.');
+  const note=make('p','attack-story-note',copy,'확인한 카드는 손에 가져오지 않고 버려요.');
   if(isExample){
    text.textContent="카드 뒷면을 눌러 공개 예시를 확인하세요!\n아래 카드는 '판정'이 필요한 카드들입니다.\n판정 조건과 함께 비교해 주세요.";
    note.textContent='카드의 일반 효과를 사용하는 행동과는 다릅니다.';
@@ -73,8 +73,8 @@
    });
   }
   const nav=make('nav','attack-story-navigation',dialogue);nav.setAttribute('aria-label','이전 장면과 다음 장면');
-  const prev=button(nav,'attack-story-prev','',()=>go(isExample?'attack-draw':'attack-effects'));prev.setAttribute('aria-label',isExample?'판정 설명으로':'사정거리 마지막 장면으로');make('span','',prev,'뒤로<');
-  const next=button(nav,'attack-story-next','',()=>go(isExample?'tips-end':'attack-draw-examples'));next.setAttribute('aria-label',isExample?'STEP 5로 이동':'판정 예시로 이동');make('span','',next,'>클릭!');return root;
+  const prev=button(nav,'attack-story-prev','',()=>back(isExample?'attack-draw':'range-summary'));prev.setAttribute('aria-label',isExample?'판정 설명으로':'사정거리 마지막 장면으로');make('span','',prev,'뒤로<');
+  const next=button(nav,'attack-story-next','',()=>go(isExample?'game-elimination':'attack-draw-examples'));next.setAttribute('aria-label',isExample?'탈락과 게임 종료로 이동':'판정 예시로 이동');make('span','',next,'>클릭!');return root;
  }
  window.BangJudgmentLesson={render};
 })();

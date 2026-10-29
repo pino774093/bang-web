@@ -1,0 +1,22 @@
+.learning-stage .victory-help-trigger {position:absolute;right:14px;top:38px;transform:translateY(-50%);z-index:45;display:flex;align-items:center;gap:5px;padding:5px 7px;border:2px solid #55412d;border-radius:0;background:#f2dfbb;color:#55412d;font-size:10px;line-height:16px;cursor:pointer;white-space:nowrap;}
+.victory-help-icon {display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border:1px solid currentColor;border-radius:50%;font-size:11px;font-weight:600;}
+.victory-help-overlay {position:absolute;inset:0;z-index:200;background:#0006;display:flex;align-items:center;justify-content:center;}
+.victory-help-note {position:relative;box-sizing:border-box;width:330px;padding:28px 22px 23px;background:#f2dfbb;color:#211b17;border:1px solid #937655;border-radius:5px;box-shadow:4px 8px 15px #0006;max-height:740px;overflow:auto;}
+.victory-help-note h2 {margin:0 20px 22px 0;font-size:18px;line-height:26px;font-weight:600;}
+.learning-stage .victory-help-close {position:absolute;right:10px;top:10px;width:32px;height:32px;font-size:25px;color:#55412d;cursor:pointer;background:transparent;}
+.victory-help-roles {margin:0;display:flex;flex-direction:column;gap:17px;}
+.victory-help-role {display:flex;align-items:center;gap:13px;}
+.victory-help-role img {width:42px;height:65px;object-fit:contain;flex:none;filter:drop-shadow(2px 2px 1px #0008);}
+.victory-help-role dt {margin:0 0 4px;font-size:15px;font-weight:600;line-height:20px;}
+.victory-help-role dd {margin:0;font-size:13px;line-height:21px;word-break:keep-all;}
+.victory-help-tip {margin:22px 0 0;padding-top:14px;border-top:1px solid #93765566;font-size:11px;line-height:18px;color:#66513d;}
+.victory-help-trigger:focus-visible,.victory-help-close:focus-visible {outline:2px solid #aa2e1b;outline-offset:2px;}
+
+/* A filled paper note with a small folded corner. */
+.learning-stage button.victory-help-trigger {background:#f2dfbb!important;border:2px solid #55412d;padding:6px 15px 6px 8px;box-shadow:2px 3px 1px #0006;isolation:isolate;overflow:hidden;}
+.learning-stage button.victory-help-trigger::after {content:'';position:absolute;right:-1px;top:-1px;width:10px;height:10px;background:linear-gradient(45deg,#cbb58d 0 48%,#55412d 49% 58%,#f7ebd5 59%);border-left:1px solid #937655;border-bottom:1px solid #937655;pointer-events:none;}
+.victory-help-context {margin:-8px 0 22px;font-size:13px;line-height:21px;color:#55412d;word-break:keep-all;}
+/* The browser's modal top layer sits above page stacking contexts. */
+dialog.victory-help-overlay {position:fixed;inset:0;width:100vw;height:100dvh;max-width:none;max-height:none;box-sizing:border-box;margin:0;padding:20px;border:0;background:transparent;overflow:auto;}
+dialog.victory-help-overlay::backdrop {background:#0006;}
+dialog.victory-help-overlay .victory-help-note {width:min(330px,100%);max-height:calc(100dvh - 40px);}

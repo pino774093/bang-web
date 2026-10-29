@@ -25,14 +25,14 @@
   if(selectedEntry)activeCategory=selectedEntry.category;
   if(selectedEntry){
    nav.remove();
-   arrowBack(area,()=>window.BangRouter.go(BANG_FIGMA_FLOW.cards),'카드 목록으로 돌아가기');
+   arrowBack(area,()=>window.BangRouter.back(BANG_FIGMA_FLOW.cards),'카드 목록으로 돌아가기');
    const {card,category}=selectedEntry,detail=document.createElement('article');detail.className='card-library-detail';area.append(detail);
    const label=document.createElement('p');label.className='card-library-category-label';label.textContent=categories.find(item=>item.id===category).label;
    const title=document.createElement('h2');title.textContent=name(card);const img=document.createElement('img');img.src=card.src;img.alt=name(card);
    const description=document.createElement('p');description.className='card-library-description';description.textContent=window.BANG_CARD_DESCRIPTIONS?.[card.name.replace(/^\d+_/,'')]||'이 카드의 설명을 준비 중입니다.';
    const page=window.BANG_CARD_DETAIL_PAGES?.[card.name.replace(/^\d+_/,'')];
    if(page)renderDetailPage(detail,card,page);else detail.append(label,title,img,description);
-  }else{arrowBack(nav,()=>window.BangLearning.go('search-menu'),'카드&규칙 찾기로 돌아가기');renderList();}
+  }else{arrowBack(nav,()=>window.BangRouter.back('learn:search-menu'),'카드&규칙 찾기로 돌아가기');renderList();}
   function renderDetailPage(detail,card,page){
    detail.classList.add('card-guide');
    const add=(tag,cls,parent,text)=>{const n=document.createElement(tag);n.className=cls;if(text)n.textContent=text;parent.append(n);return n;};
@@ -44,6 +44,7 @@
    const effect=section(page.effectTitle||'카드 효과');page.effect.forEach((line,i)=>{const p=add('p','',effect);add(i===0?'strong':'span','',p,line);});
    const core=section('핵심 규칙');core.classList.add('card-guide-core');
    const coreList=add('ul','card-guide-core-list',core);page.coreRules.forEach(line=>add('li','',coreList,line));
+   if(page.coreNote)add('p','card-guide-core-note',core,page.coreNote);
    function accordion(parent,entry){
     const row=add('details','card-guide-accordion',parent);add('summary','',row,entry.title);
     if(entry.points){const list=add('ul','',row);entry.points.forEach(point=>add('li','',list,point));}

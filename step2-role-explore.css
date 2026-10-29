@@ -18,10 +18,14 @@
 .learning-stage .game-intro-next {position:absolute;z-index:34;left:236px;top:528px;width:102px;height:28px;color:#aa2e1b!important;font-size:14px!important;cursor:pointer;}
 .learning-stage .game-intro-previous {position:absolute;z-index:34;left:50px;top:528px;width:102px;height:28px;background:transparent;color:#aa2e1b!important;font-size:14px!important;cursor:pointer;}
 .learning-stage .learning-step-label {z-index:20;}
-.learning-stage[data-learning-frame="94:185"] .role-explore-click-hint {position:absolute;z-index:4;left:28px;top:674px;width:334px;margin:0;color:#fff;text-align:left;font-size:14px;line-height:20px;pointer-events:none;}
+.learning-stage[data-learning-frame="94:185"] .role-explore-click-hint {position:absolute;z-index:4;left:28px;top:674px;width:334px;margin:0;color:#fff;text-align:center;font-size:14px;line-height:20px;pointer-events:none;}
 .learning-stage .learning-role-detail-heading {position:absolute;z-index:12;left:34px;top:478px;height:40px;margin:0;display:flex;align-items:center;gap:10px;color:#fff;font-size:24px;line-height:30px;font-weight:600;}
 .learning-stage .learning-role-detail-star {position:static;display:block;width:32px;height:32px;object-fit:contain;filter:invert(1);flex:none;}
 .learning-stage .learning-role-detail-copy {position:absolute;z-index:11;left:34px;right:27px;top:530px;bottom:22px;overflow:auto;padding:0 5px 8px 0;border:0;color:#fff;font-size:15px;line-height:23px;white-space:pre-line;text-align:left;overscroll-behavior:contain;touch-action:pan-y;-webkit-overflow-scrolling:touch;}
 .learning-stage .learning-role-detail-copy p {margin:0 0 14px;}
 .learning-stage .learning-role-detail-copy .learning-role-goal {margin-bottom:16px;color:#ffd19e;font-weight:600;}
 .learning-stage .learning-role-detail-copy strong {display:block;color:#ffd19e;font-weight:600;}
+
+.learning-stage[data-learning-frame="94:185"] .role-explore-centered-heading {text-align:center!important;display:flex;justify-content:center;}
+.learning-stage[data-learning-frame="94:185"] .role-explore-centered-heading> * {text-align:center!important;transform-origin:center;}
+.learning-stage[data-learning-frame="94:185"] .role-explore-catalog-hint {position:absolute;z-index:4;left:28px;top:706px;width:334px;margin:0;color:#c8b69e;text-align:center;font-size:12px;line-height:20px;pointer-events:none;}

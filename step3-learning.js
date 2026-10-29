@@ -38,15 +38,16 @@
   // Images, interaction nodes, card motion and the original export remain intact.
   function enhanceOriginal(stage,id){
     const copies={
-      '139:236':['139:297','카드 더미에서 게임 카드 <em>2장</em>을 뽑습니다.','주의! 다이너마이트나 감옥이 있다면 판정을 먼저 한 후 카드를 뽑습니다. 감옥에 있을 때 다이너마이트 카드를 맞닥뜨린다면, 다이너마이트를 먼저 판정합니다. (판정에 대한 설명은 Step 4 에서!)'],
-      '139:249':['139:311','사용 가능한 카드를 원하는 만큼 사용합니다. 한 장도 사용하지 않아도 됩니다. 갈색 카드는 소모하여 카드 더미에 놓고, 장착 가능한 파란 카드는 이때 장착합니다.','주의! 뱅은 기본적으로 한 턴에 한 장입니다. 파란 카드 중 무기(총) 카드는 새로 장착할 떄 원래 장착하고 있던 무기 카드을 버려야 합니다.'],
-      '139:265':['139:338','사용을 마친 뒤 손에 든 카드가 <em>현재 총알 개수</em>보다 많다면, 카드를 버려 <em>현재 총알 개수</em>에 맞춰줍니다.','주의! 초과하는 것이 아니라면 임의로 버릴 수 없습니다. 카드 수가 현재 총알 개수를 초과 했을 때만 해당됩니다.'],
+      '139:236':['139:297','카드 더미에서 게임 카드 <em>2장</em>을 뽑습니다.','주의! 다이너마이트나 감옥이 있다면 판정을 먼저 한 후 카드를 뽑습니다. (판정에 대한 설명은 Step 4 에서!)'],
+      '139:249':['139:311',"손에 든 카드를 원하는 만큼 사용합니다. 한 장도 사용하지 않아도 됩니다. 이때, '뱅!'카드는 기본적으로 한 턴에 한 장만 사용할 수 있습니다.",''],
+      '139:249-guide':['139:311','갈색 게임 카드 : 카드에 적혀진 설명에 따라 소모하여 카드 더미에 놓습니다.\n파란 게임 카드 : 이때(본인의 턴에서) 장착합니다.','파란 카드 중 무기(총) 카드는 새로 장착할 때 원래 장착하고 있던 무기 카드를 버려야 합니다.'],
+      '139:265':['139:338','사용을 마친 뒤 손에 든 카드가 <em>현재 총알 개수</em>보다 많다면, 카드를 버려 <em>현재 총알 개수</em>에 맞춰줍니다.','주의! 초과하는 것이 아니라면 임의로 버릴 수 없습니다.'],
       '139:351':['139:365','카드 사용은 효과를 적용하는 행동입니다.\n턴 종료의 버리기는 초과 손패 정리입니다.','주의! 현재 생명력보다 많은 카드만 버립니다.\n제한 이하라면 임의로 버리지 않습니다.\n카드 효과에 따른 버리기는 예외입니다.']
     };
     const copy=copies[id];if(!copy)return;
     const target=stage.querySelector(`[data-node-id="${copy[0]}"]`);if(!target)return;
     target.removeAttribute('style');target.classList.add('step3-rule-copy');target.replaceChildren();
-    node('p','step3-rule-main',target).innerHTML=copy[1];node('p','step3-rule-note',target,copy[2]);
+    node('p','step3-rule-main',target).innerHTML=copy[1];if(copy[2])node('p','step3-rule-note',target,copy[2]);
   }
   window.BangTurnLesson={frames,render,enhanceOriginal};
 })();

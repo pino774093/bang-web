@@ -111,7 +111,7 @@
       if(screen.id===146){const header=node('div','design-detail-header');box(header,{x:8,y:9,w:225,h:78});const inside=node('div','design-detail-header-line',header);image('assets/sheriff.svg',231,26,63,61);}
       for(const t of screen.text)text(t);
       for(const b of screen.buttons)button(b);
-      if(screen.back){const b=node('button','design-back');b.type='button';b.setAttribute('aria-label','뒤로 가기');image('assets/back-vector.svg',0,0,68,68,b);b.addEventListener('click',()=>{if(history.state?.bang&&history.state.index>0)history.back();else location.hash='#/home';});}
+      if(screen.back){const b=node('button','design-back');b.type='button';b.setAttribute('aria-label','뒤로 가기');image('assets/back-vector.svg',0,0,68,68,b);b.addEventListener('click',()=>window.BangRouter.back('home'));}
       if(screen.id===33)renderPlayerTable();
       if(screen.speech){for(const bubble of screen.speech){
         const el=node('div','design-speech');box(el,bubble);

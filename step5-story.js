@@ -10,15 +10,25 @@
  const make=(tag,cls,parent,text)=>{const n=document.createElement(tag);n.className=cls;if(text)n.textContent=text;parent.append(n);return n;};
  const image=(parent,src,cls,alt='')=>{const n=make('img',cls,parent);n.src=src;n.alt=alt;n.draggable=false;return n;};
  const button=(parent,cls,label,action)=>{const n=make('button',cls,parent,label);n.type='button';n.onclick=action;return n;};
+ let cardTravelBusy=false;
  function animateCardTravel(source,destination,action){
+  if(cardTravelBusy)return;
   if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){action();return;}
+  cardTravelBusy=true;
   const origin=source.getBoundingClientRect(),root=source.closest('.tips-story'),stageRect=root.getBoundingClientRect(),scale=stageRect.width/390;
-  const target={left:stageRect.left+destination.left*scale,top:stageRect.top+destination.top*scale,width:destination.width*scale,height:destination.height*scale};
+  const dx=stageRect.left+destination.left*scale-origin.left,dy=stageRect.top+destination.top*scale-origin.top;
+  const sx=destination.width*scale/origin.width,sy=destination.height*scale/origin.height;
   const clone=source.cloneNode(true);clone.removeAttribute('id');
-  Object.assign(clone.style,{position:'fixed',left:origin.left+'px',top:origin.top+'px',width:origin.width+'px',height:origin.height+'px',maxWidth:'none',margin:'0',zIndex:'2147483000',pointerEvents:'none',viewTransitionName:'none'});
+  Object.assign(clone.style,{position:'fixed',left:origin.left+'px',top:origin.top+'px',width:origin.width+'px',height:origin.height+'px',maxWidth:'none',margin:'0',zIndex:'2147483000',pointerEvents:'none',viewTransitionName:'none',transformOrigin:'top left',willChange:'transform',filter:'none'});
   document.body.append(clone);source.style.visibility='hidden';
-  const animation=clone.animate([{left:origin.left+'px',top:origin.top+'px',width:origin.width+'px',height:origin.height+'px'},{left:target.left+'px',top:target.top+'px',width:target.width+'px',height:target.height+'px'}],{duration:480,easing:'cubic-bezier(.18,.72,.24,1)',fill:'forwards'});
-  animation.finished.then(()=>{action();window.setTimeout(()=>clone.remove(),360);}).catch(()=>clone.remove());
+  const animation=clone.animate([{transform:'translate(0,0) scale(1,1)'},{transform:`translate(${dx}px,${dy}px) scale(${sx},${sy})`}],{duration:240,easing:'cubic-bezier(.22,.65,.28,1)',fill:'forwards'});
+  animation.finished.then(()=>{
+   action();
+   requestAnimationFrame(()=>requestAnimationFrame(()=>clone.remove()));
+  }).catch(()=>clone.remove()).finally(()=>{
+   if(source.isConnected)source.style.visibility='';
+   cardTravelBusy=false;
+  });
  }
  function renderRoleSelect(stage,{go,openMenu,back}){
   const root=make('section','field-lesson tips-story tips-role-select',stage);
@@ -29,7 +39,7 @@
   scenes.slice(0,4).forEach(scene=>{
    const card=window.BANG_CARDS.find(c=>c.name.replace(/^\d+_/,'')===scene.card);
    const item=make('div','tips-role-select-item',grid);
-   const choice=button(item,'tips-role-card','',()=>animateCardTravel(cardImage,{left:110,top:190,width:170,height:265},()=>go(scene.id)));choice.setAttribute('aria-label',scene.role+' 전략 보기');
+   const choice=button(item,'tips-role-card','',()=>animateCardTravel(cardImage,{left:110,top:190,width:170,height:265},()=>go(scene.id,{instant:true})));choice.setAttribute('aria-label',scene.role+' 전략 보기');
    const cardImage=image(choice,card.src,'tips-role-select-card-image',scene.role+' 역할 카드');
    make('span','tips-role-select-card-name',item,scene.role);
   });
@@ -59,7 +69,12 @@
   make('p','tips-story-text',copy,scene.copy);
   const nav=make('nav','tips-story-navigation',dialogue);nav.setAttribute('aria-label','이전 장면과 다음 장면');
   const roleIndex=index;
-  const prev=button(nav,'tips-story-prev','',()=>animateCardTravel(roleImage,{left:55+(roleIndex%2)*168,top:132+Math.floor(roleIndex/2)*206,width:112,height:168},()=>go('tips-role-select')));make('span','',prev,'뒤로< 역할 선택');prev.setAttribute('aria-label','역할 카드 선택으로 돌아가기');
+  if(index<4){
+   menu.innerHTML='<img src="assets/back-vector.svg" alt="">';
+   menu.setAttribute('aria-label','역할 카드 선택으로 돌아가기');
+   menu.onclick=()=>animateCardTravel(roleImage,{left:55+(roleIndex%2)*168,top:132+Math.floor(roleIndex/2)*206,width:112,height:168},()=>window.BangRouter.back('learn:tips-role-select'));
+  }
+  const prev=button(nav,'tips-story-prev','',()=>animateCardTravel(roleImage,{left:55+(roleIndex%2)*168,top:132+Math.floor(roleIndex/2)*206,width:112,height:168},()=>window.BangRouter.back('learn:tips-role-select')));make('span','',prev,'뒤로< 역할 선택');prev.setAttribute('aria-label','역할 카드 선택으로 돌아가기');
   const next=button(nav,'tips-story-next','',()=>go(index<4?'tips-mind':window.BANG_FIGMA_FLOW.menu));make('span','',next,index<4?'> 공통 심리전':'> 목차로');next.setAttribute('aria-label',index<4?'공통 심리전으로 이동':'STEP 목차로 이동');
   return root;
  }

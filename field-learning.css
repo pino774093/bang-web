@@ -73,3 +73,5 @@
 
 .field-lesson .field-note {margin:11px 0;}
 .field-body {word-break:keep-all;overflow-wrap:anywhere;}
+
+.field-step-label {width:max-content;max-width:calc(100% - 75px);box-sizing:border-box;white-space:nowrap;}

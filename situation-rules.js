@@ -52,11 +52,18 @@
    '다이너마이트는 설치한 즉시 판정하지 않고, 다음 자신의 턴부터 판정합니다.',
    '다이너마이트와 감옥이 함께 있다면 다이너마이트를 먼저 판정합니다.'
   ],important:'다이너마이트는 몇 바퀴를 돌아도 자동으로 사라지지 않습니다. 폭발하거나 다른 카드 효과로 제거될 때까지 남습니다.'},
+  {title:'감옥과 다이너마이트가 함께 있을 때',rules:[
+   '내 턴이 시작되면 카드를 뽑기 전에 다이너마이트를 먼저 판정합니다.',
+   '다이너마이트가 폭발하지 않으면 왼쪽 플레이어에게 넘깁니다. 폭발하면 다이너마이트를 버리고 생명력 3을 잃습니다.',
+   '다이너마이트를 처리한 뒤 살아 있다면, 새 판정 카드를 공개하여 감옥을 판정합니다.',
+   '감옥 판정에서 하트가 나오면 정상적으로 턴을 진행합니다. 하트가 아니면 턴을 건너뜁니다. 감옥 카드는 어느 경우든 버립니다.'
+  ],important:'감옥에 있어도 다이너마이트 판정을 생략하지 않습니다. 두 카드는 각각 별도의 카드로 판정하며, 감옥 때문에 턴을 건너뛰어도 이미 처리한 다이너마이트 결과는 유지됩니다.'},
   {title:'누군가 탈락했을 때',rules:[
    '탈락한 플레이어는 역할 카드를 공개하고, 자신의 손패와 장착 카드를 모두 버립니다.',
    '무법자를 탈락시킨 플레이어는 카드 3장을 뽑습니다.',
    '보안관이 부관을 탈락시킨 경우 보안관은 손패와 장착한 카드를 모두 버립니다.',
-   '탈락 후 승리 조건이 충족되었는지 확인합니다.'
+   '탈락 후 승리 조건이 충족되었는지 확인합니다.',
+   '탈락한 사람은 빼고 거리를 셉니다.'
   ]}
  ];
  // Images illustrate each rule's subject, not every card mentioned in its prose.
@@ -67,13 +74,14 @@
   [['bang','gatling'],['barile'],['duello'],['indiani'],[]],
   [[],[],['remington'],[]],
   [[],[],['barile'],['prigione'],['dinamite'],[],[]],
-  [[],[],[],[]]
+  [['prigione','dinamite'],['dinamite'],['prigione'],[]],
+  [[],[],[],[],[]]
  ];
  function mount(root){
   root.classList.add('situation-rules-page');
   const hint=document.createElement('p');hint.className='situation-catalog-hint';hint.textContent='정확히 어떤 카드에 대한 문제일 때에는, 카드 도감을 보는 것이 더 편리할 수 있습니다!';root.append(hint);
   const create=(tag,cls,parent,text)=>{const n=document.createElement(tag);n.className=cls;if(text)n.textContent=text;parent.append(n);return n;};
-  const viewport=create('section','situation-rules-scroll',root);viewport.setAttribute('aria-label','7가지 상황별 규칙');
+  const viewport=create('section','situation-rules-scroll',root);viewport.setAttribute('aria-label',`${situations.length}가지 상황별 규칙`);
   create('p','situation-rules-intro',viewport,'확인할 상황을 선택합니다.');
   const entries=situations.map((s,i)=>{
    const section=create('section','situation-rule',viewport);

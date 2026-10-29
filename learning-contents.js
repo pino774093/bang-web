@@ -2,17 +2,17 @@
 (() => {
   const steps=[
     {title:'어떤 게임일까?',topics:[['게임 소개','game-intro-one'],['역할과 승리 조건','35:1260']]},
-    {title:'게임을 준비해 볼까?',topics:[['구성','8:398'],['인원수 별 역할 개수','124:909'],['개인 세팅','8:489'],['전체 세팅','128:1063']]},
-    {title:'내 턴에는 뭘 해야할까?',topics:[['카드 뽑기','139:236'],['카드 사용','139:249'],['카드 버리기','139:265']]},
-    {title:'사정거리와 판정',topics:[['사정거리','attack-introduction'],['판정','attack-draw']]},
+    {title:'게임을 준비해 볼까?',topics:[['구성','8:398'],['인원수 별 역할 개수','124:909'],['개인 세팅','8:489'],['전체 세팅','128:1063'],['게임 시작과 턴 순서','game-start']]},
+    {title:'내 턴에는 뭘 해야할까?',topics:[['1. 카드 뽑기','139:236'],['2. 카드 사용하기','139:249'],['3. 카드 버리기','139:265']]},
+    {title:'게임은 어떻게 진행될까?',topics:[['사용과 대응','game-attack'],['거리와 사정거리','attack-introduction'],['판정','attack-draw'],['탈락과 게임 종료','game-elimination']]},
     {title:'초보자들을 위한 Tip!',topics:[['역할 별 전략','tips-role-select'],['공통 심리전','tips-mind']]}
   ];
   // Several animation/text frames belong to the same visible subtopic.
   const pageGroups=[
     [['game-intro-one','game-intro-two'],['30:931','30:960','35:1260','35:1114','42:1728','35:1212','35:1228','35:1374','35:1406']],
-    [['8:398','8:422','8:435','8:449','8:473','47:80','47:94','128:1041'],['124:909'],['8:489','8:501','8:514','8:540','8:566','8:581','124:980','8:685','128:1017','128:996'],['128:1063','136:12','136:37','131:1268','136:118','136:197','setup-share-abilities']],
-    [['139:236'],['139:249'],['139:265','139:351']],
-    [['attack-introduction','140:427','attack-range','attack-effects'],['attack-draw','attack-draw-examples']],
+    [['8:398','8:422','8:435','8:449','8:473','47:80','47:94','128:1041'],['124:909'],['8:489','8:501','8:514','8:540','8:566','8:581','124:980','8:685','128:1017','128:996'],['128:1063','136:12','136:37','131:1268','136:118','136:197','setup-share-abilities'],['game-start']],
+    [['139:236'],['139:249','139:249-guide'],['139:265','139:351']],
+    [['game-attack','game-response','game-resolution'],['attack-introduction','140:427','attack-range','attack-effects','range-summary'],['attack-draw','attack-draw-examples','attack-draw-other'],['game-elimination','game-beer','game-rewards','game-ending']],
     [['tips-role-select','tips-end','tips-rules','tips-special','tips-roles'],['tips-mind']]
   ];
   function topicFor(id){

@@ -3,7 +3,7 @@
  const sources={'94:185':'5:229','94:200':'35:1451','94:224':'42:1479','94:248':'42:1515','94:272':'42:1535'};
  const ids=['94:200','94:224','94:248','94:272'];
  function register(flow){for(const [id,source] of Object.entries(sources))flow.frames['learn:'+id].screenId=flow.frames[source].screenId;}
- function render(stage,id,{go,openMenu}){
+ function render(stage,id,{go,openMenu,back}){
   const flow=window.BANG_FIGMA_FLOW,source=flow.frames[sources[id]];
   window.BangDesign.render(source.screenId);
   const original=document.querySelector('#reference-screen .design-stage');
@@ -16,13 +16,14 @@
   for(const button of stage.querySelectorAll('.design-action'))if(button.textContent.includes('이 역할로 플레이'))button.remove();
   if(id==='94:185'){
    for(const copy of stage.querySelectorAll('.design-copy'))if(copy.textContent.trim()==='체험할 역할을 뽑아볼까요?'){
-    const text=copy.firstElementChild||copy;text.textContent='역할을 더 자세히 알아볼까요?';
+    const text=copy.firstElementChild||copy;text.textContent='역할을 더 자세히 알아볼까요?';copy.classList.add('role-explore-centered-heading');
     Object.assign(copy.style,{left:'28px',width:'334px',textAlign:'center'});
    }
    for(const hint of stage.querySelectorAll('.design-copy'))if(hint.textContent.trim()==='> 카드를 클릭하세요!')hint.remove();
    const cardHint=document.createElement('p');cardHint.className='role-explore-click-hint';cardHint.textContent='카드를 클릭하세요!';stage.append(cardHint);
+   const catalogHint=document.createElement('p');catalogHint.className='role-explore-catalog-hint';catalogHint.textContent='카드 도감에서도 확인할 수 있습니다.';stage.append(catalogHint);
    const previous=document.createElement('button');previous.type='button';previous.className='learning-role-list-back';previous.textContent='뒤로<';previous.setAttribute('aria-label','이전 역할 설명으로 돌아가기');
-   Object.assign(previous.style,{position:'absolute',left:'28px',top:'778px',width:'96px',height:'40px',padding:'0',border:'0',background:'transparent',font:'inherit',fontSize:'16px',color:'#aa2e1b',textAlign:'left',cursor:'pointer'});previous.onclick=()=>go('35:1406',{action:{transitionType:'SMART_ANIMATE'}});stage.append(previous);
+   Object.assign(previous.style,{position:'absolute',left:'28px',top:'778px',width:'96px',height:'40px',padding:'0',border:'0',background:'transparent',font:'inherit',fontSize:'16px',color:'#aa2e1b',textAlign:'left',cursor:'pointer'});previous.onclick=()=>back('35:1406');stage.append(previous);
    const next=document.createElement('button');next.type='button';next.className='learning-role-next-step';next.textContent='> 게임 준비하기';
    Object.assign(next.style,{position:'absolute',right:'28px',top:'778px',width:'124px',height:'40px',padding:'0',border:'0',background:'transparent',font:'inherit',fontSize:'16px',color:'#aa2e1b',textAlign:'right',cursor:'pointer'});next.onclick=()=>go('124:909');stage.append(next);
    const roles=['보안관','부관','무법자','배신자'];
@@ -43,7 +44,7 @@
    menu.innerHTML='<span class="learning-menu-icon"><img src="assets/learning/0a3d10c2-d2f3-4d00-b8a6-9dace2b6209f.svg" alt=""></span>';menu.onclick=()=>openMenu();stage.append(menu);
   }else{
    const back=stage.querySelector('.design-back');
-   if(back){back.setAttribute('aria-label','역할 카드 목록으로 돌아가기');back.onclick=()=>go('94:185',{action:{transitionType:'SMART_ANIMATE'}});}
+   if(back){back.setAttribute('aria-label','역할 카드 목록으로 돌아가기');back.onclick=()=>window.BangRouter.back('learn:94:185');}
   }
   if(id!=='94:185'){
    const labels={'94:200':'보안관','94:224':'부관','94:248':'무법자','94:272':'배신자'};

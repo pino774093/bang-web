@@ -449,7 +449,7 @@
       .find(item=>item.target===toId);
     return edge?.action||{};
   }
-  window.BangRouter={go,back:()=>history.state?.bang&&history.state.index>0?history.back():go('home'),get current(){return current;},address};
+  window.BangRouter={go,back:(fallback='home')=>history.state?.bang&&history.state.index>0?history.back():go(fallback,{replace:true}),get current(){return current;},address};
   let lastURL=location.href;
   function sync(){if(location.href===lastURL&&current===fromURL()&&history.state?.card===undefined)return;lastURL=location.href;const target=fromURL();void change(target,{action:transitionFromHistory(current,target)});}
   window.addEventListener('popstate',()=>{lastURL='';sync();});

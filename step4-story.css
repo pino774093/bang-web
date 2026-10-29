@@ -1,5 +1,6 @@
 /* STEP 4 only. Same fixed illustration/dialogue composition as the existing lessons. */
 .attack-story-title {position:absolute;left:28px;right:28px;top:105px;margin:0;color:#111;text-align:center;font-size:22px;line-height:30px;}
+.judgment-intro-scene .attack-story-title {font-weight:700;}
 .attack-story-illustration,.attack-story-art {position:absolute;left:0;top:0;width:390px;height:584px;}
 .attack-story-illustration {pointer-events:none;}
 .attack-story-art {pointer-events:none;}
@@ -36,6 +37,47 @@
 /* Same player-count control as personal setup; positioned above the range diagram. */
 .attack-story .attack-story-player-count {top:111px;z-index:2;}
 
-.attack-story[data-scene="range-introduction"] .attack-story-cards {top:235px;gap:35px;}
-.attack-story[data-scene="range-introduction"] .attack-story-card {flex-basis:112px;font-size:15px;gap:12px;}
-.attack-story[data-scene="range-introduction"] .attack-story-card img {width:112px;height:174px;}
+
+.attack-story[data-scene="game-progress"] .attack-story-cards {top:235px;gap:35px;}
+.attack-story[data-scene="game-progress"] .attack-story-card {flex-basis:112px;font-size:15px;gap:12px;}
+.attack-story[data-scene="game-progress"] .attack-story-card img {width:112px;height:174px;}
+.attack-story[data-scene="game-progress"] .attack-story-text {font-size:15px;line-height:25px;}
+.attack-story[data-scene="game-progress"] .attack-story-note {margin-top:12px;font-size:12px;line-height:20px;}
+.attack-story.game-start-screen .attack-story-dialogue {top:550px;}
+.attack-story.game-start-screen .attack-story-cards {top:130px;}
+.attack-story.game-start-screen .attack-story-card {flex-basis:180px;}
+.attack-story.game-start-screen .attack-story-card img {width:180px;height:280px;}
+
+.learning-stage .use-response-flow {position:absolute;left:28px;right:28px;top:161px;display:grid;grid-template-columns:1fr 1fr 1.35fr;gap:3px;list-style:none;padding:4px;margin:0;border:1px solid #75614c;border-radius:12px;background:#e8d5b9;color:#65584a;font-size:13px;line-height:20px;white-space:nowrap;box-sizing:border-box;}
+.learning-stage .use-response-flow li {display:block;list-style:none;margin:0;padding:7px 3px;text-align:center;border-radius:8px;}
+.learning-stage .use-response-flow li::before,.learning-stage .use-response-flow li::marker {content:none;}
+.learning-stage .use-response-flow [aria-current="step"] {background:#ceb18a;color:#382c20;font-weight:600;text-decoration:none;}
+
+.response-summary {position:absolute;left:28px;right:28px;top:219px;color:#111;}
+.response-card-rows {display:flex;flex-direction:column;gap:12px;}
+.response-card-row {display:grid;grid-template-columns:126px 24px 1fr;align-items:center;min-height:86px;}
+.response-card-group {display:flex;gap:10px;justify-content:center;}
+.response-card-figure {margin:0;display:flex;flex-direction:column;align-items:center;gap:3px;}
+.response-card-figure img {width:43px;height:67px;object-fit:contain;filter:drop-shadow(2px 2px 1px #0008);}
+.response-card-figure figcaption {font-size:11px;line-height:15px;white-space:nowrap;}
+.response-card-arrow {font-size:24px;text-align:center;color:#aa2e1b;}
+.response-card-answer {display:flex;align-items:center;gap:9px;padding-left:8px;}
+.response-card-caption {margin:0;font-size:12px;line-height:19px;word-break:keep-all;}
+.learning-stage .response-summary .response-summary-note {margin:14px 0 0;font-size:10px;line-height:15px;text-align:center;white-space:pre-line;color:#65584a;}
+
+.attack-story[data-scene="range-introduction"] .attack-story-cards {display:none;}
+/* Match the standalone panel in the overall-setup introduction. */
+.attack-story[data-scene="range-introduction"] .attack-story-dialogue {left:30px;top:188px;width:329px;height:378px;border-radius:59px;}
+.attack-story[data-scene="range-introduction"] .attack-story-copy {left:32px;right:32px;top:155.5px;transform:translateY(-50%);}
+.attack-story[data-scene="range-introduction"] .attack-story-text {margin:0;font-size:16px;line-height:29px;}
+.attack-story[data-scene="range-introduction"] .attack-story-navigation {width:329px;height:378px;}
+.learning-stage .attack-story[data-scene="range-introduction"] .attack-story-navigation button {width:50%;height:378px;}
+.attack-story[data-scene="range-introduction"] .attack-story-navigation span {top:330px;}
+.attack-story[data-scene="range-introduction"] .attack-story-prev span {left:40px;}
+.attack-story[data-scene="range-introduction"] .attack-story-next span {right:40px;}
+
+.range-exercise .attack-story-title {top:80px;font-size:20px;}
+.attack-story.range-exercise .attack-story-player-count {top:125px;}
+
+.attack-story.elimination-story .attack-story-dialogue {top:514px;}
+.attack-story.elimination-story .attack-story-navigation {top:70px;}
